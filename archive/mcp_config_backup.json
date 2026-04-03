@@ -1,0 +1,35 @@
+{
+  "notebooklm": {
+    "description": "NotebookLM integration via notebooklm-py v0.3.4",
+    "python_executable": "C:\\Users\\Sasha  Baron\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "auth_storage": "C:\\Users\\Sasha  Baron\\.notebooklm\\storage_state.json",
+    "browser_profile": "C:\\Users\\Sasha  Baron\\.notebooklm\\browser_profile",
+    "skill_path": "C:\\Users\\Sasha  Baron\\Downloads\\NotebookLM\\.agents\\skills\\notebooklm_antigravity\\SKILL.md",
+    "commands": {
+      "list": "notebooklm list",
+      "login": "notebooklm login",
+      "auth_check": "notebooklm auth check",
+      "auth_check_full": "notebooklm auth check --test",
+      "version": "notebooklm --version",
+      "reinstall_skill": "notebooklm skill install"
+    },
+    "notes": [
+      "Python 3.12.10 installed via winget",
+      "notebooklm-py[browser] v0.3.4 installed via pip",
+      "Playwright Chromium v1208 installed",
+      "Run 'notebooklm login' to re-authenticate if session expires (~20 min)",
+      "Use PATH refresh: $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')"
+    ]
+  },
+  "mcpServers": {
+    "cloudrun": {
+      "$typeName": "exa.cascade_plugins_pb.CascadePluginCommandTemplate",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@google-cloud/cloud-run-mcp"
+      ],
+      "env": {}
+    }
+  }
+}

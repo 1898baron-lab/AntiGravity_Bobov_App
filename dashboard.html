@@ -343,15 +343,15 @@
   <header>
     <div class="header-inner">
       <div class="logo">⚡</div>
-      <div class="header-text">
-        <h1>AntiGravity × NotebookLM</h1>
-        <p>Командный центр проекта — версия April 2026</p>
-      </div>
+    <div class="header-text">
+      <h1>AntiGravity Командный центр <span style="font-size: 0.5em; vertical-align: middle; opacity: 0.6;">v2.4 Exclusive</span></h1>
+      <p>Cloud Mirror: GitHub Active | Local: C:\ANTIGRAVITY\1\AI_Project_Backup</p>
+    </div>
       <div class="status-bar">
-        <div class="status-pill"><div class="dot green"></div> NotebookLM MCP</div>
-        <div class="status-pill"><div class="dot green"></div> PDF-воронка</div>
-        <div class="status-pill"><div class="dot yellow"></div> Дело Бобова</div>
-      </div>
+      <div class="status-pill"><div class="dot green"></div> Sync: C-Drive ↔ G-Drive</div>
+      <div class="status-pill" style="border-color: var(--accent);"><i class="fab fa-github" style="margin-right:5px"></i> GitHub: Synchronized</div>
+      <div class="status-pill">PS 7.6.0</div>
+    </div>
     </div>
   </header>
 
@@ -916,25 +916,7 @@ $env:CHANNEL_URL = "https://t.me/твой_канал"</div>
       </div>
     </div>
 
-    <div class="divider"></div>
-    <div class="section-title">☁️ Дистанционное хранилище (Google Drive)</div>
-    <div class="grid grid-3">
-      <div class="card" style="--card-color:#ff6b6b">
-        <div class="card-header"><div class="card-icon">⚖️</div><div><div class="card-title">Legal Dossier</div></div></div>
-        <div class="card-body">Полное досье дела Бобова (PDF).</div>
-        <a href="https://drive.google.com/file/d/1uOJmXKdPp4F_rajITxDpAnPrD6nUtFxP/view?usp=sharing" target="_blank" class="btn-action primary">Открыть PDF</a>
-      </div>
-      <div class="card" style="--card-color:#a78bfa">
-        <div class="card-header"><div class="card-icon">🔬</div><div><div class="card-title">Research Data</div></div></div>
-        <div class="card-body">Транскрипты aiBoomb для овервью.</div>
-        <a href="https://docs.google.com/document/d/1ofTuDwmatFzSmkx9y5kmCAe9_fCGY-3GJzG0-drxTjg/edit?usp=sharing" target="_blank" class="btn-action">Открыть Текст</a>
-      </div>
-      <div class="card" style="--card-color:#00d4aa">
-        <div class="card-header"><div class="card-icon">📄</div><div><div class="card-title">Funnel PDF</div></div></div>
-        <div class="card-body">10 hardcore-промптов.</div>
-        <a href="https://drive.google.com/file/d/1I_6xK85xOjHyX8AP08XT8IpziZT1nV-Y/view?usp=sharing" target="_blank" class="btn-action">Скачать PDF</a>
-      </div>
-    </div>
+    <!-- Google Drive Cards Removed for v2.4 -->
 
     <div class="divider"></div>
     <div class="section-title">📂 Быстрый доступ (Диск C:)</div>
@@ -979,37 +961,31 @@ $env:CHANNEL_URL = "https://t.me/твой_канал"</div>
 
   <!-- PANEL: Sync -->
   <div id="panel-sync" class="panel">
-    <div class="section-title">🔄 Автосинхронизация (C: ↔ G:)</div>
+    <div class="section-title">🔄 GitHub Exclusive Sync (Cloud Mirror)</div>
     <div class="alert alert-success">
-      ✅ <strong>Зеркало настроено:</strong> Основная работа идет на <strong>диске C:</strong>, а Google Диск <strong>(G:)</strong> служит облачным бэкапом и мостом для второго ПК.
+      ✅ <strong>Нативный Гит-Синхрон:</strong> Теперь твои данные летают через GitHub. Google Drive больше не требуется для работы AntiGravity.
     </div>
 
     <div class="divider"></div>
-    <div class="section-title" style="font-size:18px">📲 Ручная синхронизация</div>
+    <div class="section-title" style="font-size:18px">📲 Полная синхронизация</div>
     <div class="alert alert-info">
-      Запускай этот скрипт, если хочешь мгновенно обновить облако или подтянуть изменения с другого ПК.
+      Эта кнопка закроет текущие изменения и подтянет обновления из облака в один клик.
     </div>
     <div class="code">
 <button class="copy-btn" onclick="copyCode(this)">Копировать</button>
 powershell -ExecutionPolicy ByPass -File scripts/sync_project.ps1</div>
-
-    <div class="divider"></div>
-    <div class="section-title" style="font-size:18px">🧠 Синхронизация "Мозга" (Сессии)</div>
-    <div class="alert alert-warn">
-      ⚠️ <strong>Для объединения истории:</strong> Выполни эту команду в <strong>PowerShell от имени администратора</strong> (один раз на каждом ПК):
-    </div>
-    <div class="code">
-<button class="copy-btn" onclick="copyCode(this)">Копировать</button>
-$user = $env:USERNAME; cmd /c mklink /D "C:\Users\$user\.gemini\antigravity" "G:\Мой диск\AntiGravity\.gemini\antigravity"</div>
     
     <div class="divider"></div>
-    <div class="section-title" style="font-size:18px">🐙 GitHub (Резерв кода)</div>
-    <div class="code">
-<button class="copy-btn" onclick="copyCode(this)">Копировать</button>
-cd "C:\ANTIGRAVITY\1\AI_Project_Backup"
-git add .
-git commit -m "Sync $(Get-Date -Format 'yyyy-MM-dd')"
-git push origin main</div>
+    <div class="section-title" style="font-size:18px">📂 Соединение "Мозга" (Portable)</div>
+    <div class="alert alert-warn">
+      ⚠️ <strong>Status:</strong> Все настройки сессии (.cursor) теперь летят в репозиторий автоматически. Никаких симлинков больше не нужно!
+    </div>
+    
+    <div class="card" style="--card-color: #24292e; margin-top:20px">
+      <div class="card-header"><div class="card-icon">🐙</div><div><div class="card-title">GitHub Repository</div></div></div>
+      <div class="card-body">Прямой доступ к твоим исходникам и юридическим документам Бобова в облаке.</div>
+      <a href="https://github.com/1898baron-lab/AntiGravity_Bobov_App" target="_blank" class="btn-action primary">Перейти на GitHub</a>
+    </div>
   </div>
 
 <footer>

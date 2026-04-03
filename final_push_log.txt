@@ -1,0 +1,3 @@
+To https://github.com/1898baron-lab/AntiGravity_Bobov_App.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at ec5509bc41b857d22f5cee9bd0f7b7a90b68956d but expected 8757deec1a4a5d67fe846c6d71575ed1d7fc4bba)
+error: failed to push some refs to 'https://github.com/1898baron-lab/AntiGravity_Bobov_App.git'

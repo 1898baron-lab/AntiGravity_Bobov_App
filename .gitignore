@@ -23,19 +23,20 @@ __pycache__/
 desktop.ini
 .vscode/
 .idea/
-.cursor/
+# .cursor/  <-- Разрешено для синхронизации Brain.MD
 
 # 4. Временные данные и бэкапы
 tmp/
-archive/
+# archive/  <-- Разрешено
 .gemini/
 .DS_Store
 
-# 5. Крупные бинарники (их лучше хранить на Google Диске)
-*.pdf
-*.docx
-*.vtt
-*.mp3
-*.mp4
- legal_dossier_output/
- pdf_funnel_output/*.pdf
+# 5. Документы (Основа проекта)
+# Разрешено для GitHub Exclusive Sync
+# *.pdf
+# *.docx
+# *.vtt
+# *.mp3
+# *.mp4
+#  legal_dossier_output/
+#  pdf_funnel_output/*.pdf

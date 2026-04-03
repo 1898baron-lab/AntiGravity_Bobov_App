@@ -1,21 +1,40 @@
-# AntiGravity Sync Script (v1.0)
-# Bidirectional sync between C: and G:
+# AntiGravity: GitHub Exclusive Synchronization Engine 🐙🦾
+# --------------------------------------------------------
+# Version: 1.0 (Git Edition)
+# Path: scripts/sync_project.ps1
 
-$localPath = "C:\ANTIGRAVITY\1\AI_Project_Backup"
-$cloudPath = "G:\Мой диск\AntiGravity\AI_Project_Backup"
+$git = "C:\ANTIGRAVITY\1\PortableGit\bin\git.exe"
+$projectDir = "C:\ANTIGRAVITY\1\AI_Project_Backup"
 
-Write-Host "--- AntiGravity Sync Starting ---" -ForegroundColor Cyan
+Clear-Host
+Write-Host "--- AntiGravity: GitHub Exclusive Sync ---" -ForegroundColor Cyan
+Write-Host "Mode: Git Pull/Push (Cloud Mirror)" -ForegroundColor Gray
 
-# 1. Push: Local -> Cloud (Only newer files)
-Write-Host "[1/2] Синхронизация: Локальный -> Облако..." -ForegroundColor Yellow
-robocopy $localPath $cloudPath /E /XO /XJ /R:3 /W:5 /MT:32 /NP /LOG+:sync_push.log
-# Добавляем синхронизацию .cursor настроек (если есть)
-if (Test-Path "$localPath\.cursor") { robocopy "$localPath\.cursor" "$cloudPath\.cursor" /E /XO /XJ /R:3 /W:5 /NP /LOG+:sync_cursor_push.log }
+# 1. Проверка Git
+if (-not (Test-Path $git)) {
+    Write-Host "ERROR: Portable Git not found at $git" -ForegroundColor Red
+    exit 1
+}
 
-# 2. Pull: Cloud -> Local (Only newer files)
-Write-Host "[2/2] Синхронизация: Облако -> Локальный..." -ForegroundColor Yellow
-robocopy $cloudPath $localPath /E /XO /XJ /R:3 /W:5 /MT:32 /NP /LOG+:sync_pull.log
-# Затягиваем .cursor настройки
-if (Test-Path "$cloudPath\.cursor") { robocopy "$cloudPath\.cursor" "$localPath\.cursor" /E /XO /XJ /R:3 /W:5 /NP /LOG+:sync_cursor_pull.log }
+cd $projectDir
 
-Write-Host "--- Синхронизация завершена! ---" -ForegroundColor Green
+# 2. Подготовка (Stage everything)
+Write-Host "`n[1/4] Indexing Project Files..." -ForegroundColor Yellow
+& $git add .
+
+# 3. Коммит локальных изменений
+Write-Host "[2/4] Capturing Local Context (Commit)..." -ForegroundColor Yellow
+$timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+$commitMsg = "Session Sync: $timestamp"
+& $git commit -m $commitMsg
+
+# 4. Подтягивание изменений (Pull)
+Write-Host "[3/4] Fetching Cloud Updates (Pull/Rebase)..." -ForegroundColor Yellow
+& $git pull --rebase origin main
+
+# 5. Выгрузка в облако (Push)
+Write-Host "[4/4] Synchronizing with GitHub (Push)..." -ForegroundColor Yellow
+& $git push origin main
+
+Write-Host "`n--- Sync Complete ---" -ForegroundColor Green
+Write-Host "Project is live on GitHub Mirror." -ForegroundColor Gray
