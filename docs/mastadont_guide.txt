@@ -1,0 +1,861 @@
+Пошаговый план выхода на первые 100.000 на ИИ — Teletype
+
+window.yaContextCb = window.yaContextCb || []
+
+window.__INITIAL_STATE__={"config":{"version":"4.41.14","app_version":"4.41.14-4105","build_number":4105,"app":{"name":"teletype","title":"Teletype","url":{"assets":"https:\u002F\u002Fteletype.in","media":"https:\u002F\u002Fteletype.in\u002Ffiles","site":"https:\u002F\u002Fteletype.in","api":"https:\u002F\u002Fteletype.in\u002Fapi","updater":"wss:\u002F\u002Fteletype.in\u002Fupdater","media_api":"https:\u002F\u002Fteletype.in\u002Fmedia"},"links":{"tos":"https:\u002F\u002Fjournal.teletype.in\u002Flegal","journal":"https:\u002F\u002Fjournal.teletype.in\u002F","privacy":"https:\u002F\u002Fjournal.teletype.in\u002Flegal-privacy","domains":"https:\u002F\u002Fjournal.teletype.in\u002Fdomains","features":"https:\u002F\u002Fjournal.teletype.in\u002Ffeatures","updates":"https:\u002F\u002Fjournal.teletype.in\u002F+updates","email":"mailbox@teletype.in","cloudtips":{"tos":"https:\u002F\u002Fstatic.cloudpayments.ru\u002Fdocs\u002FCloudTips\u002Fcloudtips_oferta_teletype.pdf","agreement":"https:\u002F\u002Fstatic.cloudpayments.ru\u002Fdocs\u002FCloudTips\u002Fcloudtips_agreement_teletype.pdf","policy":"https:\u002F\u002Fstatic.cloudpayments.ru\u002Fdocs\u002Fpolicy-cloudpayments.pdf"}},"service":{"metrika":"42100904","ga":"G-74SRE9LWC4","facebook_id":560168947526654,"facebook_pages":"124472808071141","facebook_redirect":"https:\u002F\u002Fteletype.in\u002F.fb-callback","google_id":"589698636327-74fehjo4inhlnkc237ulk51petqlem42.apps.googleusercontent.com","google_redirect":"https:\u002F\u002Fteletype.in\u002F.google-callback","vk_id":51923672,"vk_redirect":"https:\u002F\u002Fteletype.in\u002F.vk-callback","yandex_pay_id":"aca5092b-9bd5-4dd1-875e-0e0be05aff00","yandex_pay_env":"Production","yandex_pay_gw":"cloudpayments","yandex_pay_gw_id":null,"tg_iv":"g7j8\u002FrPFXfhyrq5q0QQV7EsYWv4=","tg_login":"TeletypeAppBot","tg_link":"https:\u002F\u002Ft.me\u002FTeletypeAppBot","twitch_id":"lxc0c8o0u0l42bo1smeno623bnlxhs","twitch_redirect":"https:\u002F\u002Fteletype.in\u002F.twitch-callback","apple_id":"in.teletype.web","apple_redirect":"https:\u002F\u002Fteletype.in\u002F.siwa","recaptcha":"6Lf-zgAVAAAAAJIxQX0tdkzpFySG2e607DdgqRF-","recaptcha_v2":"6Lfm6TEfAAAAAK_crKCAL3BUBLmdZnrsvOeTHMNj","yandes_pay_gw_id":""},"pushes":{"app_id":"9185fd40-8599-4ea3-a2e7-f4e88560970e","auto_register":false,"notify_button":false,"iframe_path":"pushes","subscribe_path":"pushes\u002Fsubscribe"},"domains":{"protocol":"http:","port":null},"articles_on_page":10,"max_users_topics":10,"max_menu_items":10,"max_user_blogs":5,"autosave_timeout":15000,"views_scrolls":null,"articles_reactions":{"default":["👍","👎"],"max_uniq":10},"comments":{"can_edit_period":300000,"autoupdate_period":15000,"max_depth":3,"compact_from":2,"thread_collapse":25,"whitelist":{"formats":["bold","italic","strike","code","link","code"],"items":["p","blockquote","pre","image","youtube","vimeo","rutube","vkvideo"]}},"media":{"accept":[{"ext":".jpg","type":"jpg","types":["image\u002Fjpeg"]},{"ext":".png","type":"png","types":["image\u002Fpng"]},{"ext":".gif","type":"gif","types":["image\u002Fgif"]}],"max_size":5242880,"max_userpic_size":1048576},"langs":{"aliases":{"ru":["ru","be","uk","ky","ab","mo","et","lv"],"en":["en"]},"default":"en"}},"data":{"ttl":{"account":60000,"blog_articles":600000,"app_settings":600000,"showcase":60000,"article":60000,"blog":5000,"search":5000,"unsplash":60000,"comments":15000,"notifications":60000,"emoji":10000000}}},"domain":null,"timezone":0,"lid":"232fecc4-bb48-53bc-8bbe-850bc3a9fe38","url":"https:\u002F\u002Fteletype.in\u002F@mastadont\u002Fmoney","account":{"_loading":false,"id":null,"blog_id":null,"blogs":null,"uri":null,"name":null,"userpic":null,"lang":null,"darkmode":null,"can_create_blog":null,"tfa_enabled":null,"popup_open":false,"wallet":{"loaded":false,"enabled":false,"available":false,"card":null,"balance":null,"receiver":null,"donations":{"params":{"from_date":null,"to_date":null,"blog_id":null},"total":0,"amount":0,"list":[]},"transactions":{"params":{"from_date":null,"to_date":null},"total":0,"amount":0,"list":[]},"payouts":{"params":{"from_date":null,"to_date":null},"total":0,"amount":0,"list":[]},"payout":{"open":false}}},"langs":{"lang":"en"},"app_settings":{"data":{"ad":{"params":{"article-under-text":{"id":"R-A-2565196-12","el":true,"disabled":true,"disableAdult":true,"exclude":[4102528]},"feed-article-under-text":{"id":"R-A-2565196-3","el":true},"article-floor":{"disabled":true,"type":"floorAd","platform":"touch","timeout":5000,"exclude":[4102528]},"blog-floor":{"disabled":true,"type":"floorAd","platform":"touch","timeout":5000,"exclude":[4102528]},"main-floor":{"disabled":true,"type":"floorAd","platform":"touch","timeout":10000},"blog-list":{"id":"R-A-2565196-13","el":true,"every":6,"start":1,"disableAdult":true,"exclude":[4102528]},"main-list":{"id":"R-A-2565196-14","el":true,"every":4},"main-trending-list":{"id":"R-A-2565196-14","disabled":true,"el":true,"every":4,"start":4},"main-following-list":{"id":"R-A-2565196-15","disabled":true,"el":true,"every":4,"start":4},"main-feed":{"id":"R-A-2565196-16","disabled":false,"type":"feed","el":true,"start":4,"every":0,"feedCardCount":4,"mobile":{"feedCardCount":4}},"article-feed":{"id":"R-A-2565196-17","disabled":false,"type":"feed","el":true,"feedCardCount":4,"disableAdult":true,"exclude":[4102528]},"article-above-text":{"id":"R-A-2565196-18","disabled":false,"el":true,"disableAdult":true,"exclude":[4102528]}},"exclude":[4102528]},"unsplash":[{"url":"https:\u002F\u002Fimages.unsplash.com\u002Fphoto-1439123068749-20f4035bd7ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w2MzEyfDB8MXxyYW5kb218fHx8fHx8fHwxNzc0MzUwMDAxfA&ixlib=rb-4.1.0&q=85","author":"Pierre Bouillot","link":"https:\u002F\u002Funsplash.com\u002F@pbouillot"}],"updater":{"enabled":true},"example_blogs":[65,71297,111029],"giphy":["https:\u002F\u002Fmedia0.giphy.com\u002Fmedia\u002Fv1.Y2lkPTU2YzQ5MjdlNTZ1azNuZGRxM3lobnJqbnRsbHJqd2hubTBmdG05eDRyY3huYWZ1byZlcD12MV9naWZzX2dpZklkJmN0PWc\u002F14SAx6S02Io1ThOlOY\u002Fgiphy.gif","https:\u002F\u002Fmedia3.giphy.com\u002Fmedia\u002Fv1.Y2lkPTU2YzQ5MjdlbzdtMTl2YnNkdnVoc2h5NmF4bGxjdXBobzlkeDAxcmhnZHgxNmNxeCZlcD12MV9naWZzX2dpZklkJmN0PWc\u002FLdOyjZ7io5Msw\u002Fgiphy.gif","https:\u002F\u002Fmedia3.giphy.com\u002Fmedia\u002Fv1.Y2lkPTU2YzQ5MjdlZXlvc3B2a2MwbXBlandmMTFkOHdpenExbmpyZHdneXNpYXR1bjI2ZiZlcD12MV9naWZzX2dpZklkJmN0PWc\u002FlptjRBxFKCJmFoibP3\u002Fgiphy-downsized.gif","https:\u002F\u002Fmedia0.giphy.com\u002Fmedia\u002Fv1.Y2lkPTU2YzQ5MjdlZHRnYjZ3NTlobjNzNnZ1am5veXk0Y2loNW9peDM3OHBmYnhrMTFxcSZlcD12MV9naWZzX2dpZklkJmN0PWc\u002FLCdPNT81vlv3y\u002Fgiphy-downsized.gif","https:\u002F\u002Fmedia2.giphy.com\u002Fmedia\u002Fv1.Y2lkPTU2YzQ5MjdlejVhaW5xaHJ6azFqd3c1Y3RmZWtzb3p0MnNyanp1MjZmcXI2eWV6ciZlcD12MV9naWZzX2dpZklkJmN0PWc\u002FbPdI2MXEbnDUs\u002Fgiphy.gif","https:\u002F\u002Fmedia1.giphy.com\u002Fmedia\u002Fv1.Y2lkPTU2YzQ5MjdlNzFjYWN5b2ZrbHBwbHJjaHJqMnBpZWgxeGRnZGMwN3ZjNDM1Ym9pNCZlcD12MV9naWZzX2dpZklkJmN0PWc\u002FEXmE33UEtfuQo\u002Fgiphy.gif","https:\u002F\u002Fmedia3.giphy.com\u002Fmedia\u002Fv1.Y2lkPTU2YzQ5MjdlOWZkcnh5YTN2dXR3czc2N3N1MXJvNmx0ZzQ1Y3E2cTRxaTBvYWVjdiZlcD12MV9naWZzX2dpZklkJmN0PWc\u002FJLELwGi2ksYTu\u002Fgiphy.gif","https:\u002F\u002Fmedia4.giphy.com\u002Fmedia\u002Fv1.Y2lkPTU2YzQ5MjdlODlyaTZmcDExbGh5aWw2YXdmOGJlcDVzM2lndWx3cnd6cDE0bmtwMCZlcD12MV9naWZzX2dpZklkJmN0PWc\u002F56t3lKn4Xym0DQ2Zn7\u002Fgiphy-downsized.gif","https:\u002F\u002Fmedia1.giphy.com\u002Fmedia\u002Fv1.Y2lkPTU2YzQ5MjdlM2p6OGVzOXh0Yndnd2Vpb3ZxZDdoOWk5d2hmZ3NneTFzMXQ1M2p3dSZlcD12MV9naWZzX2dpZklkJmN0PWc\u002F3Jhdg8Qro5kMo\u002Fgiphy.gif","https:\u002F\u002Fmedia3.giphy.com\u002Fmedia\u002Fv1.Y2lkPTU2YzQ5Mjdlazl5dXUxM3A0dWFvcWR2Z2I5cWIyZDQ2eGFyaDQxcmV5OXlpdWZ3bSZlcD12MV9naWZzX2dpZklkJmN0PWc\u002F3osxYamKD88c6pXdfO\u002Fgiphy.gif","https:\u002F\u002Fmedia4.giphy.com\u002Fmedia\u002Fv1.Y2lkPTU2YzQ5MjdlNmg3M3A4a2JteGdxdDBvcW13YXk5MW02OGxtcXlhd3BvaWQ2Njg2MSZlcD12MV9naWZzX2dpZklkJmN0PWc\u002FMOMKdGBAWJDmkYtBUW\u002Fgiphy-downsized.gif"],"_loadTime":1774351072132},"loading":null},"articles":{"items":{"8215235":{"id":8215235,"uri":"money","created_at":"2026-02-12T14:23:54.802Z","published_at":"2026-02-12T14:23:54.785Z","last_edited_at":"2026-03-03T06:50:57.491Z","title":"Пошаговый план выхода на первые 100.000 на ИИ","text":"\u003Cdocument\u003E\n\u003Csection bg=\"hsl(34,  84%, var(--autocolor-background-lightness, 95%))\" anchor=\"j2Y8\"\u003E\n\u003Ch2 anchor=\"IBD7\"\u003E🧱 БЛОК 0. ТЕНЕВОЙ ДОСТУП (Читать первым)\u003C\u002Fh2\u003E\n\u003C\u002Fsection\u003E\n\u003Csection bg=\"hsl(34,  84%, var(--autocolor-background-lightness, 95%))\" anchor=\"kSAv\"\u003E\n\u003Cp anchor=\"q7yh\"\u003E\u003Ca href=\"https:\u002F\u002Fwww.youtube.com\u002F@aiBoomb\" unwrapped-href=\"https:\u002F\u002Fwww.youtube.com\u002F@aiBoomb?cbrd=1&ucbcb=1\"\u003E\u003Cstrong\u003EПро доход на ИИ тут - https:\u002F\u002Fwww.youtube.com\u002F@aiBoomb\u003C\u002Fstrong\u003E\n\u003C\u002Fa\u003E\u003C\u002Fp\u003E\n\u003Cp anchor=\"dmll\"\u003E\u003Cstrong\u003E\u003Ca href=\"https:\u002F\u002Ft.me\u002F+-v1b8_c1zuQ3ZDky\"\u003EТГ Мастодонта (зайдут не все) - https:\u002F\u002Ft.me\u002F+-v1b8_c1zuQ3ZDky\u003C\u002Fa\u003E\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\n\u003C\u002Fsection\u003E\n\u003Ch2 anchor=\"ou2G\"\u003E\n\n\n\n\u003Cstrong\u003E\u003Ca href=\"#aweP\"\u003EСРАЗУ ЗАБРАТЬ ОБЕЩАННЫЙ ПЛАН ЗАРАБОТКА БЕЗ ЛИШНИХ СЛОВ\u003C\u002Fa\u003E\u003C\u002Fstrong\u003E\n\n\n\n\u003C\u002Fh2\u003E\n\u003Cp anchor=\"6QjU\"\u003E🛑 \u003Cstrong\u003EСТОП! ПРЕЖДЕ ЧЕМ ИДТИ ДАЛЬШЕ\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\n\u003Cp anchor=\"EK2e\"\u003EМы в 2026 году. Google AI Studio, NotebookLM и Gemini 3 Pro в РФ не открываются без \u003Cstrong\u003Eправильного\u003C\u002Fstrong\u003E ключа.\u003C\u002Fp\u003E\n\u003Cp anchor=\"VBng\"\u003E\nОбычные VPN умирают. Если у тебя &quot;бесконечное соединение&quot; - ты теряешь деньги+время.\u003C\u002Fp\u003E\n\u003Cp anchor=\"j9MJ\"\u002F\u003E\n\u003Csection bg=\"hsl(323, 50%, var(--autocolor-background-lightness, 95%))\" anchor=\"klVr\"\u003E\n\u003Cp anchor=\"y6pP\"\u003E\u003Cstrong\u003EВот 3 способа пробить стену и забрать инструменты:\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\n\u003C\u002Fsection\u003E\n\u003Ch3 anchor=\"Y3FV\"\u002F\u003E\n\u003Ch3 anchor=\"eJlX\"\u003E🔻 \u003Cstrong\u003EСпособ 1. «Невидимка» (Самый надежный)\u003C\u002Fstrong\u003E\u003C\u002Fh3\u003E\n\u003Cp anchor=\"ndEV\"\u002F\u003E\n\u003Cp anchor=\"V9rO\"\u003EЭто \u003Cstrong\u003EAmnezia VPN\u003C\u002Fstrong\u003E на своем сервере.\n\n\u003Cstrong\u003EСуть:\u003C\u002Fstrong\u003E Ты арендуешь VPS (свой сервак) за 150-200₽\u002Fмес и ставишь туда свой личный VPN.\n\n\u003Cstrong\u003EКиллер-фича:\u003C\u002Fstrong\u003E Протокол \u003Cstrong\u003EVLESS Reality\u003C\u002Fstrong\u003E или \u003Cstrong\u003EAmneziaWG\u003C\u002Fstrong\u003E. Для провайдера это выглядит как обычный заход на сайт с котиками. Блокировок - 0.\n\n\u003Cstrong\u003EСложность (ВСТАВЬ В ЛЮБУЮ НЕЙРОНКУ ЭТОТ ПРОМПТ, ОНА ПРОВЕДЕТ ЗА РУКУ):\u003C\u002Fstrong\u003E \u003C\u002Fp\u003E\n\u003Csection bg=\"hsl(55,  86%, var(--autocolor-background-lightness, 95%))\" anchor=\"oU2k\"\u003E\n\u003Cp anchor=\"QUBs\"\u003E\u003Ccode\u003E\u003Cstrong\u003EДействуй как эксперт по сетевой безопасности и системный администратор.\u003C\u002Fstrong\u003E &gt; \u003Cstrong\u003EЗадача:\u003C\u002Fstrong\u003E Составь подробнейшую инструкцию для новичка по настройке личного VPN через приложение \u003Cstrong\u003EAmnezia VPN\u003C\u002Fstrong\u003E (версия 2026 года). Цель — сделать работающий интернет в России, который не заблокирует провайдер.\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\n\u003Cp anchor=\"N41w\"\u003E\u003Cstrong\u003E\u003Ccode\u003EИнструкция должна включать 5 четких этапов:\u003C\u002Fcode\u003E\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\n\u003Col anchor=\"16Qa\"\u003E\n\u003Cli anchor=\"psAh\"\u003E\u003Ccode\u003E\u003Cstrong\u003EГде купить сервер (VPS):\u003C\u002Fstrong\u003E Напиши 3 конкретных хостинга, которые принимают оплату картами МИР или через СБП (например, Timeweb, VDSina или AdminVPS). Укажи, какие характеристики сервера выбрать (ОС Ubuntu 22.04\u002F24.04, локация - Европа).\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\n\u003Cli anchor=\"MVLW\"\u003E\u003Ccode\u003E\u003Cstrong\u003EДанные для входа:\u003C\u002Fstrong\u003E Объясни, какие 3 параметра мне нужно скопировать из личного кабинета хостинга после покупки сервера (IP, логин root, пароль).\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\n\u003Cli anchor=\"YsFp\"\u003E\u003Ccode\u003E\u003Cstrong\u003EНастройка в приложении:\u003C\u002Fstrong\u003E Пошагово опиши, куда нажать в Amnezia VPN, чтобы добавить сервер.\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\n\u003Cli anchor=\"tjEt\"\u003E\u003Ccode\u003E\u003Cstrong\u003EВыбор протокола (ВАЖНО):\u003C\u002Fstrong\u003E Объясни, почему нужно выбирать именно \u003Cstrong\u003EXray VLESS Reality\u003C\u002Fstrong\u003E или \u003Cstrong\u003EAmneziaWG\u003C\u002Fstrong\u003E. Напиши, в каком меню это включается.\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\n\u003Cli anchor=\"shx7\"\u003E\u003Ccode\u003E\u003Cstrong\u003EКак раздать на телефон:\u003C\u002Fstrong\u003E Как сгенерировать QR-код или конфиг, чтобы VPN заработал на айфоне\u002Fандроиде.\u003C\u002Fcode\u003E\u003C\u002Fli\u003E\n\u003C\u002Fol\u003E\n\u003Cp anchor=\"X7fw\"\u003E\u003Ccode\u003E\u003Cstrong\u003EСтиль изложения:\u003C\u002Fstrong\u003E Пиши максимально просто, без сложных терминов. Если есть нюанс, где можно ошибиться - выдели его как «ВНИМАНИЕ». В конце добавь пункт: «Что делать, если кнопка Connect крутится, но не подключается»\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\n\u003C\u002Fsection\u003E\n\u003Cp anchor=\"DO4f\"\u002F\u003E\n\u003Ch3 anchor=\"1f9G\"\u003E🔻 \u003Cstrong\u003EСпособ 2. «Ленивый» (Платные сервисы)\u003C\u002Fstrong\u003E\u003C\u002Fh3\u003E\n\u003Cp anchor=\"QmpC\"\u002F\u003E\n\u003Cp anchor=\"D1cn\"\u003EЕсли лень настраивать сервер, бери эти. Они используют обфускацию (маскировку).\n\n1. \u003Cstrong\u003EBlancVPN:\u003C\u002Fstrong\u003E Топ за свои деньги. Юзают VLESS\u002FShadowsocks. Принимают карты РФ\u002FСБП.\n2. \u003Cstrong\u003EZoogVPN:\u003C\u002Fstrong\u003E Ищи протокол ZoogShadow. Тоже можно оплатить картой РФ.\n3. \u003Cstrong\u003EAstrill:\u003C\u002Fstrong\u003E Дорогой, но мощный. Принимает крипту.\u003C\u002Fp\u003E\n\u003Cp anchor=\"bGJ5\"\u002F\u003E\n\u003Ch3 anchor=\"v1o9\"\u003E🔻 \u003Cstrong\u003EСпособ 3. «Бомж-стайл» (Бесплатно)\u003C\u002Fstrong\u003E\u003C\u002Fh3\u003E\n\u003Cp anchor=\"1fvV\"\u002F\u003E\n\u003Cp anchor=\"OQfD\"\u003EНа свой страх и риск. \n\n1. \u003Cstrong\u003EPsiphon:\u003C\u002Fstrong\u003E это проект канадских ученых, но он \u003Cstrong\u003Eочень медленный\u003C\u002Fstrong\u003E. Видео в 1080p не посмотришь, чисто для текста и новостей.\u003C\u002Fp\u003E\n\u003Cp anchor=\"wCTj\"\u003E\u003Cstrong\u003E2. Planet VPN (качаешь из App Store или Google Play)\u003C\u002Fstrong\u003E\n\u003Cstrong\u003EОпасно!\u003C\u002Fstrong\u003E Не в плане вирусов, которые крадут пароли, а в плане агрессивного сбора данных. Плюс, по свежим отзывам февраля 2026, их бесплатные сервера в РФ лежат 90% времени. Платная подписка у них сейчас часто «лагает», а деньги возвращают неохотно.\u003C\u002Fp\u003E\n\u003Cp anchor=\"C4OP\"\u002F\u003E\n\u003Csection bg=\"hsl(34,  84%, var(--autocolor-background-lightness, 95%))\" anchor=\"LPZ2\"\u003E\n\u003Ch2 anchor=\"Jzpf\"\u003E🧰 БЛОК 1. ТЕНЕВОЙ СТЕК 2026 (Инструменты за $0)\u003C\u002Fh2\u003E\n\u003C\u002Fsection\u003E\n\u003Cp anchor=\"LGed\"\u002F\u003E\n\u003Cp anchor=\"1Ejt\"\u003E💡 \u003Cstrong\u003EСУТЬ:\u003C\u002Fstrong\u003E Зачем платить OpenAl, если Google дает доступ к \u003Cstrong\u003EGemini 3 Pro\u003C\u002Fstrong\u003E и \u003Cstrong\u003EAntigravity\u003C\u002Fstrong\u003E бесплатно?\u003C\u002Fp\u003E\n\u003Cp anchor=\"6T9U\"\u003E\nЭти инструменты работают быстрее, у них огромный контекст (помнят всю твою жизнь) и они не тупят на сложных задачах.\u003C\u002Fp\u003E\n\u003Cp anchor=\"VPCD\"\u002F\u003E\n\u003Cp anchor=\"mDJQ\"\u003E\u003Cstrong\u003EЗабирай доступ, пока лавочку не прикрыли:\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\n\u003Ch3 anchor=\"8xk7\"\u002F\u003E\n\u003Ch3 anchor=\"INgN\"\u003E🔻 \u003Cstrong\u003E1. Google AI Studio (Мозг)\u003C\u002Fstrong\u003E\n\u003C\u002Fh3\u003E\n\u003Cp anchor=\"MXbN\"\u003EЭто админка для разработчиков, но мы юзаем её как бесплатный чат.\u003C\u002Fp\u003E\n\u003Cp anchor=\"7Ms8\"\u003E\u003Cstrong\u003EМодель:\u003C\u002Fstrong\u003E Gemini 3 Pro (самая мощная на февраль 2026).\u003C\u002Fp\u003E\n\u003Cp anchor=\"tj6v\"\u003E\u003Cstrong\u003EФишка:\u003C\u002Fstrong\u003E Огромное окно контекста. Можно закинуть книгу, видео или код всего проекта - она съест и не поперхнется.\u003C\u002Fp\u003E\n\u003Cp anchor=\"NTRw\"\u003E\u003Cstrong\u003EГде брать:\u003C\u002Fstrong\u003E \u003Ca href=\"https:\u002F\u002Fwww.google.com\u002Furl?sa=E&q=https%3A%2F%2Faistudio.google.com%2F\"\u003Eaistudio.google.com\u003C\u002Fa\u003E (Включай VPN VLESS!).\u003C\u002Fp\u003E\n\u003Cp anchor=\"t7G4\"\u003E\u003Cstrong\u003EЦена:\u003C\u002Fstrong\u003E Бесплатно. Постоянно пользуюсь (могут быть устаревшие данные, поэтому настаивайте чтоб гуглила (для актуальных данных), проверить гуглила он или нет, можно глянул в конец ее сообщения, там будет что-то типо:\n\n\u003C\u002Fp\u003E\n\u003Cimage src=\"https:\u002F\u002Fimg2.teletype.in\u002Ffiles\u002F52\u002Fdf\u002F52df2e53-0f6a-4411-b710-6a2a3bd6befc.png\" anchor=\"SaBD\" size=\"original\" width=\"1183\" height=\"512\" naturalWidth=\"1183\" naturalHeight=\"512\"\u003E\n\u003Ccaption\u002F\u003E\n\u003C\u002Fimage\u003E\n\u003Ch3 anchor=\"hV3A\"\u002F\u003E\n\u003Ch3 anchor=\"z9Eh\"\u003E🔻 \u003Cstrong\u003E2. Google Antigravity (Завод)\u003C\u002Fstrong\u003E\n\u003C\u002Fh3\u003E\n\u003Cp anchor=\"kpgw\"\u003EТот самый инструмент для \u003Cstrong\u003EVibe-Coding (разработка сайтов, приложений общением и даже голосом)\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\n\u003Cp anchor=\"iXcz\"\u003E\u003Cstrong\u003EСуть:\u003C\u002Fstrong\u003E Это облачная среда разработки. Тебе не надо ничего устанавливать на комп.\n\n\u003Cstrong\u003EКак это работает:\u003C\u002Fstrong\u003E Ты пишешь в чате: &quot;Сделай мне приложение для ресторана&quot;. Он пишет код, запускает предпросмотр и дает ссылку. \u003Ca href=\"https:\u002F\u002Ft.me\u002F+-v1b8_c1zuQ3ZDky\"\u003E\u003Cstrong\u003E\u003Cem\u003EСМОТРЕТЬ ГАЙДЫ ПО AntiGravity в ЗАКРЕПЕ МОЕГО ТГ КАНАЛА\u003C\u002Fem\u003E\u003C\u002Fstrong\u003E\n\u003C\u002Fa\u003E\n\u003Cstrong\u003EГде брать:\u003C\u002Fstrong\u003E \u003Ca href=\"https:\u002F\u002Fantigravity.google\u002F\"\u003Ehttps:\u002F\u002Fantigravity.google\u002F\u003C\u002Fa\u003E \n\n\u003Cstrong\u003EЦена:\u003C\u002Fstrong\u003E Бесплатно (нужен гугл аккаунт + запара с регистрацией из рф, может не пускать, чтоб пустило, читай инструкцию \u003Ca href=\"https:\u002F\u002Ft.me\u002F+-v1b8_c1zuQ3ZDky\"\u003Eв закрепе моего тг\u003C\u002Fa\u003E).\n\u003C\u002Fp\u003E\n\u003Cp anchor=\"jWSf\"\u002F\u003E\n\u003Ch3 anchor=\"Qlcv\"\u003E🔻 \u003Cstrong\u003E3. NotebookLM (Твой Ментор)\u003C\u002Fstrong\u003E\n\u003C\u002Fh3\u003E\n\u003Cp anchor=\"qzQC\"\u003EЭто инструмент, который превращает \u003Cstrong\u003Eлюбые файлы\u003C\u002Fstrong\u003E в умного консультанта.\u003C\u002Fp\u003E\n\u003Cp anchor=\"4S5v\"\u003E\u003Cstrong\u003EЗачем:\u003C\u002Fstrong\u003E Чтобы загрузить этот Лид-магнит туда и общаться с ним, а не читать глазами.\u003C\u002Fp\u003E\n\u003Cp anchor=\"k0k5\"\u003E\u003Cstrong\u003EГде брать:\u003C\u002Fstrong\u003E \u003Ca href=\"https:\u002F\u002Fwww.google.com\u002Furl?sa=E&q=https%3A%2F%2Fnotebooklm.google.com%2F\"\u003Enotebooklm.google.com\n\n\u003C\u002Fa\u003E\u003Cem\u003E(у меня был гайд, как им пользоваться + вывести его на иной уровень, чтоб не платить за пользование крутыми мозгами) - \u003Ca href=\"https:\u002F\u002Ft.me\u002Fc\u002F2488316478\u002F851\"\u003E\u003Cstrong\u003EСМОТРЕТЬ ГАЙД ПО NotebookLM + AntiGravity\u003C\u002Fstrong\u003E\u003C\u002Fa\u003E\u003C\u002Fem\u003E\u003C\u002Fp\u003E\n\u003Cp anchor=\"0L5Y\"\u002F\u003E\n\u003Chr\u002F\u003E\n\u003Ch3 anchor=\"ll8v\"\u002F\u003E\n\u003Csection bg=\"hsl(323, 50%, var(--autocolor-background-lightness, 95%))\" anchor=\"7a9g\"\u003E\n\u003Ch2 anchor=\"aweP\"\u003E🧱 БЛОК 3. План заработка \n\nЭТО НЕ ПРОСТО ТЕКСТ. ЭТО ИНФОРМАЦИЯ, КОТОРУЮ НУЖНО ВСТАВИТЬ В НЕЙРОНКУ - NOTEBOOKLM И ЗАДАВАТЬ ВОПРОСЫ ЕЙ\u003C\u002Fh2\u003E\n\u003C\u002Fsection\u003E\n\u003Ch3 anchor=\"0YCZ\"\u003E\nМы современные люди и поэтому лишний текст мы не читаем, чтобы пообщаться с этой информацией в формате диалога с нейронкой, нужно:\n\u003C\u002Fh3\u003E\n\u003Col anchor=\"Ruti\"\u003E\n\u003Cli anchor=\"bzXv\"\u003EЖми \u003Cstrong\u003ECtrl + A\u003C\u002Fstrong\u003E (Выделить всё на этой странице).\u003C\u002Fli\u003E\n\u003Cli anchor=\"2owg\"\u003EЖми \u003Cstrong\u003ECtrl + C\u003C\u002Fstrong\u003E (Скопировать).\u003C\u002Fli\u003E\n\u003Cli anchor=\"eLg1\"\u003EОткрой \u003Cstrong\u003E\u003Ca href=\"https:\u002F\u002Fnotebooklm.google.com\u002F\" unwrapped-href=\"https:\u002F\u002Faccounts.google.com\u002Fv3\u002Fsignin\u002Fidentifier?continue=https%3A%2F%2Fnotebooklm.google.com%2F&dsh=S-1509012541%3A1772520659788327&followup=https%3A%2F%2Fnotebooklm.google.com%2F&ifkv=ASfE1-p3zFSR0bgbxc29MjrRrD9T9fV8KsedSGyfAni-jsfgVpkdiaWHWDJahjvbY8mnWCaqcjyFVA&osid=1&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin\"\u003ENotebookLM \u003C\u002Fa\u003E\u003C\u002Fstrong\u003E→ «Создать блокнот» → «Скопированный текст» → «Вставляем» → «Добавить» → \u003Ca href=\"#eFEf\"\u003E«Вставить промпт»\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n\u003C\u002Fol\u003E\n\u003Cp anchor=\"C5xW\"\u003E\n\n\u003Cstrong\u003EВИЗУАЛЬНАЯ ИНСТРУКЦИЯ ТУТ 👇:\u003C\u002Fstrong\u003E\n\u003C\u002Fp\u003E\n\u003Cimage src=\"https:\u002F\u002Fimg1.teletype.in\u002Ffiles\u002F4a\u002Fbe\u002F4abe21c7-2e12-4ca7-a110-7dc3a3a65cc0.png\" anchor=\"4NdN\" size=\"column\" width=\"1865\" height=\"436\" naturalWidth=\"1912\" naturalHeight=\"447\"\u003E\n\u003Ccaption\u003E1. СОЗДАЕМ НОВЫЙ БЛОКНОТ\u003C\u002Fcaption\u003E\n\u003C\u002Fimage\u003E\n\u003Cp anchor=\"5l6I\"\u002F\u003E\n\u003Cimage src=\"https:\u002F\u002Fimg3.teletype.in\u002Ffiles\u002Fe4\u002Fe8\u002Fe4e88398-0746-4815-9b8c-3e10f06c81bd.png\" anchor=\"CcMk\" size=\"column\" width=\"1865\" height=\"921\" naturalWidth=\"1914\" naturalHeight=\"945\"\u003E\n\u003Ccaption\u003E2. Жмем скопированный текст\u003C\u002Fcaption\u003E\n\u003C\u002Fimage\u003E\n\u003Cp anchor=\"mu9A\"\u002F\u003E\n\u003Cimage src=\"https:\u002F\u002Fimg4.teletype.in\u002Ffiles\u002F39\u002F71\u002F39717b88-2716-48d1-8d3b-94d5b2e018b2.png\" anchor=\"TRq7\" size=\"column\" width=\"796\" height=\"557\" naturalWidth=\"796\" naturalHeight=\"557\"\u003E\n\u003Ccaption\u003E3. ВСТАВЛЯЕМ. ЖМЕМ &quot;ДОБАВИТЬ&quot;.\u003C\u002Fcaption\u003E\n\u003C\u002Fimage\u003E\n\u003Cp anchor=\"K6ky\"\u002F\u003E\n\u003Cimage src=\"https:\u002F\u002Fimg1.teletype.in\u002Ffiles\u002F46\u002F6b\u002F466bc5a3-e82a-42d7-8f15-bf9ae986cbfd.png\" anchor=\"XbWa\" size=\"column\" width=\"1865\" height=\"915\" naturalWidth=\"1916\" naturalHeight=\"940\"\u003E\n\u003Ccaption\u003E4. Вставляем промпт ниже и жмем стрелку и начинем общение\u003C\u002Fcaption\u003E\n\u003C\u002Fimage\u003E\n\u003Cp anchor=\"X7jW\"\u002F\u003E\n\u003Ch3 anchor=\"eFEf\"\u003E🧠 СИСТЕМНЫЙ ПРОМПТ (Скопируй это и вставь в чат, как загрузишь инфу)\n\u003C\u002Fh3\u003E\n\u003Csection bg=\"hsl(55,  86%, var(--autocolor-background-lightness, 95%))\" anchor=\"xKRv\"\u003E\n\u003Cp anchor=\"YYlo\"\u003EЧтобы NotebookLM работал на тебя как \u003Cstrong\u003Eстарший партнер\u003C\u002Fstrong\u003E, а не как тупой бот, вставь им эту инструкцию в самом начале диалога.\n\n\u003Ccode\u003EТы — мой бизнес-ассистент уровня Senior, специализирующийся на AI-автоматизации и рынке 2026 года.\nТвоя база знаний — этот загруженный файл.\nТвоя цель — помогать мне внедрять инструменты (Antigravity, n8n) и зарабатывать деньги.\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\n\u003Cp anchor=\"9R0f\"\u003E\u003Ccode\u003EПравила общения:\n1. Отвечай кратко, тезисно и цинично. Без воды и &quot;корпоративной вежливости&quot;.\n2. Если я туплю — критикуй и предлагай конкретное решение (код, текст, алгоритм).\n3. Всегда опирайся на цифры и факты из файла.\n4. Если я прошу идею для заработка — давай связку &quot;Инструмент + Кому продать + Чек&quot;.\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\n\u003Cp anchor=\"qzzi\"\u003E\u003Ccode\u003EЖду команду.\u003C\u002Fcode\u003E\u003C\u002Fp\u003E\n\u003C\u002Fsection\u003E\n\u003Ch2 anchor=\"xJVW\"\u003E\u003Cstrong\u003E\nКРАСОТА! ГОТОВО! \n\u003Cem\u003EДальше просто копируй CTRL+A и CTRL+C\u003C\u002Fem\u003E\u003C\u002Fstrong\u003E\n\u003Cem\u003Eбудут вопросы, п\u003Cstrong\u003Eиши в \u003Ca href=\"https:\u002F\u002Ft.me\u002F+-v1b8_c1zuQ3ZDky\"\u003Eкомменты в тг\u003C\u002Fa\u003E\n\u003C\u002Fstrong\u003E\u003C\u002Fem\u003E\u003C\u002Fh2\u003E\n\u003Ch2 anchor=\"AMEZ\"\u003E\u003Cstrong\u003E🔻 СИСТЕМНЫЕ ДАННЫЕ (SYSTEM DATA) 🔻\u003C\u002Fstrong\u003E\n\u003Cem\u003E(Для нейросети)\u003C\u002Fem\u003E\u003C\u002Fh2\u003E\n\u003Cp anchor=\"jqff\"\u002F\u003E\n\u003Cp anchor=\"4h6v\"\u003E🐘 ROADMAP 2026: Твой первый миллион на ИИ (Часть 1\u002F3)\nБлок 1: Теневой Стек и Эпоха «Дирижеров»\nМанифест Мастодонта: «Если ты это читаешь — ты уже победил. В 2026 году ИИ-агенты — это новые сайты из 90-х. Пока остальные «общаются» с чат-ботами, ты строишь армию автономных сотрудников, которые печатают деньги, пока ты спишь».\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"AuXZ\"\u003E🛠 1. Теневой Стек: Твой проходной билет в Высшую Лигу\nВ РФ и СНГ 2026 года доступ к технологиям — это не просто «включить VPN», а цифровая логистика. Без этого фундамента любая нейронка превращается в лагающую игрушку.\n1.1. Связь: Протокол VLESS Reality\nЗабудь про классические VPN. Системы DPI (глубокого анализа трафика) в 2026 году блокируют их на лету.\n• Твой стандарт: Протокол VLESS с технологией Reality на порту 443.\n• Почему это «пушка»: Он имитирует TLS-отпечаток обычного браузера. Для провайдера ты просто листаешь сайт, а на деле — твой API-трафик летает без задержек.\n1.2. Финансовая логистика: Оплата без границ\nВ 2026 году санкции только ужесточились, но Мастодонты используют две проверенные схемы:\u003C\u002Fp\u003E\n\u003Col anchor=\"QHGA\"\u003E\n\u003Cli anchor=\"eREl\"\u003EOplatym.ru (Для новичков): Оплата Claude Max и ChatGPT Plus через СБП или карту МИР прямо в Telegram. Подписка активируется за 15-60 минут.\u003C\u002Fli\u003E\n\u003Cli anchor=\"ZQDY\"\u003EAifory Pro (Для профи): Мгновенный выпуск виртуальных карт в USD. Первый депозит — от $25 (хватит на подписку и верификацию Stripe).\n◦ Важно: Имя в профиле OpenAI должно совпадать с именем на карте, чтобы избежать бана антифродом.\u003C\u002Fli\u003E\n\u003C\u002Fol\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"YBKm\"\u003E🏗 2. Google Antigravity: Твой новый «Центр Управления Миссиями»\nЗабудь про текстовые окошки чат-ботов. Главным инструментом 2026 года стала платформа Google Antigravity, которая превратила IDE (редакторы кода) в среду управления агентами.\n• Gemini 3 Pro: Доступна бесплатно с щедрыми квотами для личных Gmail-аккаунтов.\n• Planning Mode (Режим планирования): Ты не пишешь код. Ты ставишь задачу (например, «Собери сервис для авто-ответов селлера на Wildberries»), и агент сам составляет план, пишет код и тестирует его в браузере.\n• Artifacts (Артефакты) — ключ к продажам: Агент выдает не логи, а видео своей работы, скриншоты интерфейса и готовые схемы. Покажи это клиенту, и «пропасть недоверия» исчезнет мгновенно.\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"ZvWg\"\u003E🚀 3. Вайб-кодинг и n8n: Разработка через идеи\nВ 2026 году разработка ИТ-продуктов стала демократичной. Это называют Вайб-кодингом (Vibe Coding) — создание софта путем трансляции нейросети общей идеи и эстетики.\u003C\u002Fp\u003E\n\u003Col anchor=\"Vi6I\"\u003E\n\u003Cli anchor=\"Ho1q\"\u003En8n — твой оркестратор: Это визуальный конструктор, где ты соединяешь узлы (nodes) как пазл: «Заявка из Telegram» → «Обработка ИИ» → «Сделка в Битрикс24».\u003C\u002Fli\u003E\n\u003Cli anchor=\"Eb3E\"\u003EЭкономия времени: Внедрение одного сценария на n8n освобождает компании от 20 до 80 часов рутины в месяц.\u003C\u002Fli\u003E\n\u003Cli anchor=\"QkFW\"\u003ESelf-hosting: n8n можно развернуть на своем сервере (через Docker), что критично для соблюдения 152-ФЗ о персональных данных в РФ. Бизнес готов платить за это х2 к чеку.\u003C\u002Fli\u003E\n\u003C\u002Fol\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"etqQ\"\u003E🐘 4. «Elephant-Промпт»: Твой персональный ИИ-Стратег\nЧтобы не тонуть в хаосе инструментов, используй этот высокоточный промпт в Gemini 3 Pro. Он станет твоим консультантом по запуску.\nСкопируй и вставь это:\u003C\u002Fp\u003E\n\u003Cp anchor=\"MkzF\"\u003ERole Ты — Старший AI-Стратег в СНГ 2026 года. Твоя задача — помочь мне, новичку, заработать первые $1000 на ИИ через Вайб-кодинг.\u003C\u002Fp\u003E\n\u003Cp anchor=\"INrB\"\u003EContext У меня есть доступ к Google Antigravity и n8n. Я хочу создать систему, которая решает реальную боль бизнеса в РФ.\u003C\u002Fp\u003E\n\u003Cp anchor=\"fY1c\"\u003ETask Проведи со мной интервью из 5 вопросов, чтобы выявить мои сильные стороны. После моих ответов: 1. Предложи ОДНУ конкретную связку (например, ИИ-клон для блогера или автоматизация CRM). 2. Составь пошаговый план внедрения. 3. Напиши текст холодного оффера с расчетом ROI (экономия от 8 млн руб\u002Fгод).\n\n\u003C\u002Fp\u003E\n\u003Cp anchor=\"JaVC\"\u003E🐘 ROADMAP 2026: Твой первый миллион на ИИ (Часть 2\u002F3)\nБлок 2: 15 «Золотых связок» для захвата рынка СНГ\nВ 2026 году бизнес покупает не «нейросеть», а гарантированный операционный результат. Ты — SaaSo-провайдер (Service-as-a-Software): человек, который продает готовую систему под ключ.\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"YN8o\"\u003E🏆 Категория 1: «Тяжелый B2B» (Чеки 150 000 — 500 000 ₽)\nЗдесь мы внедряем ИИ-агентов, которые заменяют отделы или кратно растят прибыль.\u003C\u002Fp\u003E\n\u003Col anchor=\"yq72\"\u003E\n\u003Cli anchor=\"3fsh\"\u003E&quot;Travel Lead Reviver&quot; (Оживитель мертвых лидов):\n◦ Связка: n8n + WhatsApp Business API + база CRM.\n◦ Суть: ИИ-агент проходит по старой «холодной» базе клиентов компании и через персонализированный диалог возвращает их к покупке.\n◦ Профит: Кейс показывает доход в €80,000 за месяц для одного агентства.\u003C\u002Fli\u003E\n\u003Cli anchor=\"C0GM\"\u003E&quot;Speed-to-Lead&quot; Voice Agent (Недвижимость и услуги):\n◦ Связка: Vapi + n8n + Bitrix24\u002FamoCRM.\n◦ Суть: Голосовой ИИ-звонарь перезванивает клиенту через 5 секунд после заявки на сайте, квалифицирует его и назначает встречу.\n◦ Почему это «пушка»: Без ИИ среднее время ответа в B2B — 42 часа. Твое решение сокращает его до секунд, повышая конверсию в 100 раз.\u003C\u002Fli\u003E\n\u003Cli anchor=\"cr9L\"\u003EИИ-Клон для блогеров и ЛПР (DigiDoppel):\n◦ Связка: HeyGen + ElevenLabs + ManyChat.\n◦ Суть: Создание «цифрового двойника» предпринимателя, который сам генерирует видео-контент, отвечает в Директ и продает продукты голосом автора.\n◦ Чек: Ретейнер от $2,500 до $4,500 в месяц.\u003C\u002Fli\u003E\n\u003Cli anchor=\"RojM\"\u003ERAG-база знаний для корпораций:\n◦ Связка: n8n + Supabase (векторная БД) + Ollama.\n◦ Суть: Обучение ИИ исключительно на внутренних документах компании (прайсы, FAQ, регламенты). ИИ отвечает сотрудникам или клиентам без галлюцинаций.\n◦ Безопасность: Работает on-premise (на сервере клиента), соблюдая 152-ФЗ.\u003C\u002Fli\u003E\n\u003C\u002Fol\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"xAAO\"\u003E📦 Категория 2: «Ниши-чемпионы» (Чеки 60 000 — 120 000 ₽)\nАвтоматизация рутины, которая «болит» у каждого второго малого бизнеса.\n5. Маркетплейс-автоматизатор (Ozon\u002FWildberries):\n◦ Связка: n8n + API маркетплейса + @mpstudiopicbot.\n◦ Суть: Автоматическая синхронизация остатков «1С → Озон», генерация карточек товаров и интеллектуальные ответы на отзывы (только на 5 звезд).\n◦ Эффект: Экономия менеджеру 35 часов в месяц, снижение ошибок по ценам на 90%.\n6. HR-робот: Онбординг и найм:\n◦ Связка: n8n + Яндекс 360 + Bitrix24.\n◦ Суть: Автоматическое создание почт, доступов и чек-листов для нового сотрудника за 10 минут вместо 1.5 часов ручного труда.\n7. AI Lead Enrichment &quot;Sparky&quot;:\n◦ Связка: Firecrawl (веб-скрапинг) + Claude API + Google Sheets.\n◦ Суть: Система находит данные о потенциальном клиенте в сети, анализирует его сайт, находит боли и пишет персонализированный оффер для продажника.\n◦ Профит: Повышает открываемость писем на 300-500%.\n8. Мониторинг репутации (Yandex\u002FOtzovik):\n◦ Связка: HTTP Request node + Telegram Bot.\n◦ Суть: Бот парсит все отзывы о компании в реальном времени, классифицирует их по тональности и отправляет в чат поддержки готовый проект ответа.\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"xOmO\"\u003E⚡ Категория 3: «Быстрые деньги» (Фриланс 2.0: 5 000 — 50 000 ₽)\nЗадачи с низким порогом входа, которые можно закрыть за 1 вечер через &quot;Вайб-кодинг&quot; в Antigravity.\n9. Оживление семейных архивов: Услуга через @photolivegenbot. Анимация лиц на старых фото. Идеально продается на Авито как «Эмоциональный подарок».\n10. Генерация ИИ-фотосессий: Пакет из 50 фото в разных стилях для соцсетей через @clickclickgenbot.\n11. ИИ-рефераты и курсовые: Нишевый сервис на базе Referat+. Полное оформление работ по ГОСТу с высокой уникальностью.\n12. Создание Pitch Decks: Профессиональные презентации для стартапов через Generate Presentation+.\n13. Генератор ИИ-видео: Создание креативов для TikTok\u002FShorts за 60 секунд через @BananogenBot.\n14. Микро-разработка кода: Продажа скриптов на Python\u002FJS для мелких автоматизаций через Code Generator.\n15. Квалификация лидов в Telegram: Простой бот-проверщик подписки, выдающий лид-магнит (как тот, что ты сейчас читаешь).\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"QwTd\"\u003E📉 Железный аргумент для закрытия (ROI-математика)\nВ 2026 году ты не продаешь «бота». Ты продаешь математику экономии. Используй этот расчет из источников для любого B2B клиента:\n• Дано: Отдел из 5 менеджеров по обработке заявок.\n• Затраты клиента: 5 чел × 150 000 ₽ (з\u002Fп + налоги) = 750 000 ₽ \u002F мес.\n• Твой оффер: Внедрение ИИ-агента за 300 000 ₽ (разово) + 50 000 ₽ \u002F мес (поддержка).\n• Результат: Чистая экономия клиента за первый год — 8 100 000 ₽.\nElephant-фраза: «Вы платите мне 300 тысяч сейчас, чтобы сэкономить 8 миллионов за год. ИИ не уволится, не заболеет и будет отвечать вашим клиентам за 5 секунд 24\u002F7».\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"KEHB\"\u003E📈 Где искать этих клиентов?\nВ 2026 году игнорируй переполненный Kwork. Иди туда, где есть спрос, но мало Мастодонтов:\u003C\u002Fp\u003E\n\u003Col anchor=\"65Vs\"\u003E\n\u003Cli anchor=\"zEU5\"\u003EBinetex.ru: Твой приоритет. Модель 0% комиссии и мгновенные выплаты. Конкуренция минимальна.\u003C\u002Fli\u003E\n\u003Cli anchor=\"h56T\"\u003EАвито: Уже более 1000 объявлений по ИИ-агентам. Малый бизнес ищет спасение именно здесь.\u003C\u002Fli\u003E\n\u003Cli anchor=\"YK2c\"\u003ETenChat: Профессиональный нетворкинг. Идеально для выхода на ЛПР и владельцев компаний в РФ.\u003C\u002Fli\u003E\n\u003Cli anchor=\"6RFZ\"\u003EПрофессионалы 4.0: Площадка от «Газпром Нефти» для реализации серьезных проектов в гибких командах.\u003C\u002Fli\u003E\n\u003C\u002Fol\u003E\n\u003Cp anchor=\"IGiQ\"\u003E🐘 ROADMAP 2026: Твой первый миллион на ИИ (Часть 3\u002F3)\nБлок 3: Продажи «по-мастодонтски» и Юридический щит в СНГ\nВ 2026 году в СНГ рынок ИИ перешел в стадию прагматичного роста: 92% крупного и 68% малого бизнеса уже внедрили ИИ-решения. Предпринимателям больше не нужны «промпты» — им нужно снижение ФОТ и отсутствие ошибок. Твоя задача — продавать не технологию, а избавление от операционного ада.\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"pdev\"\u003E💰 1. Прайс-лист 2026: Сколько реально платят в СНГ?\nРынок СНГ сегментирован. Чтобы выйти на стабильную $1000 (≈95 000 ₽) в месяц, тебе нужно либо 3–4 клиента на поддержке, либо один проект среднего уровня сложности.\nУслуга \u002F Продукт\nСрок\nЦена (РФ\u002FСНГ)\nБазовый ИИ-агент (FAQ, ТГ-бот, без интеграций)\n3–5 дней\n30 000 – 45 000 ₽\nИИ-ассистент (Интеграция с Битрикс24\u002FamoCRM)\n1–2 недели\n60 000 – 150 000 ₽\nСложная система на n8n (Мультиагентный воркфлоу)\n3–5 недель\n150 000 – 300 000 ₽\nАудит бизнес-процессов (Поиск &quot;дыр&quot; и расчет ROI)\n1–2 дня\nБесплатно (как лид-магнит)\nЕжемесячное сопровождение (Поддержка API, RAG)\nМесяц\n15 000 – 25 000 ₽\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"WzBV\"\u003E🤝 2. Технология закрытия: «ROI-Таран»\nВ СНГ решение принимает собственник, который мыслит категориями «сколько я сэкономлю». Твой главный аргумент — расчет замены человеческого ресурса на цифрового агента.\nТвой «убойный» расчет для клиента (Case Study):\n• Расходы на отдел (5 менеджеров): З\u002Fп + налоги ≈ 750 000 ₽\u002Fмес.\n• Твое решение: 300 000 ₽ (внедрение) + 50 000 ₽\u002Fмес (поддержка и API).\n• Чистая экономия за год: 8 100 000 рублей.\nElephant-фраза: «Вы платите мне 300 тысяч сейчас, чтобы сэкономить 8 миллионов за год. Мой агент не болеет, не увольняется и отвечает клиенту за 5 секунд, пока ваши менеджеры спят».\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"8yx9\"\u003E🛡 3. Юридическая «Броня» (Legal Tech 2026)\nС 4 января 2026 года правила игры в РФ изменились. Ошибки в работе с данными теперь стоят до 10 млн рублей.\n3.1. Личные данные (152-ФЗ)\nБизнес в РФ дико боится утечек в западные облака.\n• Решение: Только Self-hosted n8n на серверах внутри РФ.\n• Стек: Используй Ollama для запуска локальных моделей внутри контура клиента. Это гарантирует безопасность данных и прохождение любого комплаенса.\n3.2. Авторское право: Кто хозяин?\nСогласно изменениям в ГК РФ от 2026 года, «чистый» результат работы ИИ не имеет автора.\n• Как закрепить права: Чтобы права принадлежали тебе или клиенту, результат должен быть творчески доработан человеком. Всегда прописывай в договоре, что ты проводишь финальную редактуру и коррекцию вывода агента.\n3.3. Ответственность за ошибки\nЕсли твой бот пообещает клиенту скидку 90% или оскорбит его, по закону РФ за это отвечает работодатель (владелец бизнеса), если в договоре не прописано иное.\n• Хак: Всегда внедряй в n8n узел «Human-in-the-loop» для согласования критических действий (транзакции, офферы).\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"Ipwi\"\u003E📈 4. Масштабирование: Путь к первым $1000\u002Fмес\nВ 2026 году ты не фрилансер, ты — Архитектор систем.\u003C\u002Fp\u003E\n\u003Col anchor=\"ZoB5\"\u003E\n\u003Cli anchor=\"vsLv\"\u003EМодель «ИИ-сотрудник по подписке»: Не продавай разово. Сдавай настроенных агентов в аренду за 25 000 ₽\u002Fмес. 4 таких клиента — и ты закрыл цель в $1000.\u003C\u002Fli\u003E\n\u003Cli anchor=\"hwUc\"\u003EМультиагентность: Используй Agent Manager в Antigravity. Запускай 5–10 агентов одновременно на разные задачи для разных клиентов. Это увеличивает твою пропускную способность в 5 раз без найма команды.\u003C\u002Fli\u003E\n\u003Cli anchor=\"tXSw\"\u003EGEO вместо SEO: В 2026 году трафик из поиска упал на 30%, потому что люди делегируют поиск ИИ. Сделай так, чтобы твои кейсы были в базе ответов локальных LLM (Alice AI, GigaChat) через упоминания в отраслевых чатах и медиа.\u003C\u002Fli\u003E\n\u003C\u002Fol\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"Aux1\"\u003E🏁 Финальный Спринт: Твой План на ближайшие 7 дней\n• День 1-2: Настрой VLESS Reality, оплати Claude через Oplatym.ru, установи Antigravity.\n• День 3: Выбери нишу (например, ИИ-продавец для Wildberries) и собери демо-проект в n8n.\n• День 4: Запиши видео «Артефакта» из Antigravity и выложи на Binetex.ru (0% комиссии) и Авито.\n• День 5-6: Оставь 10 экспертных комментов в чатах предпринимателей (TenChat, «Сиолошная»), предлагая бесплатный аудит.\n• День 7: Проведи аудит и закрой первого клиента, используя формулу ROI 8.1 млн ₽\u003C\u002Fp\u003E\n\u003Cp anchor=\"7BOm\"\u002F\u003E\n\u003Cp anchor=\"Fc1b\"\u003E🐘 ДОП-УРОК: Система продаж и поиска клиентов в СНГ 2026\n«Бизнесу в СНГ не нужен ИИ. Ему нужно, чтобы менеджеры не тупили, ФОТ не раздувался, а заявки обрабатывались за 5 секунд. Твоя задача — продавать не &quot;нейросеть&quot;, а избавление от операционного ада».\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"ODua\"\u003E📈 1. Где реально сидят клиенты (ТОП-5 точек входа)\nЗабудь про демпинг на старых биржах. В 2026 году Мастодонты охотятся там, где есть деньги и запрос на скорость.\u003C\u002Fp\u003E\n\u003Col anchor=\"1JFG\"\u003E\n\u003Cli anchor=\"jHkF\"\u003EБиржа Binetex (Приоритет №1):\n◦ Почему здесь: Это модель маркетплейса с 0% комиссии для фрилансера.\n◦ Как работать: Размещаешь услугу «ИИ-продавец для CRM» или «Автоматизация карточек WB\u002FOzon». Уведомления о заказах падают прямо в Telegram — реагируй мгновенно.\u003C\u002Fli\u003E\n\u003Cli anchor=\"PvKv\"\u003EАвито Услуги (Массовый рынок):\n◦ Контекст: Более 1000 объявлений по запросу «ИИ-агенты».\n◦ Твой оффер: «Создам ИИ-ассистента, который квалифицирует лидов и заполняет Битрикс24 за вас». Здесь сидит весь микробизнес РФ: от клиник до автосервисов.\u003C\u002Fli\u003E\n\u003Cli anchor=\"wEjx\"\u003ETenChat (Выход на ЛПР):\n◦ Метод: Это социальная сеть для деловых людей. Не пиши «продам бота». Пиши экспертные кейсы: «Как мой клиент в недвижимости сэкономил 8 млн руб за год». ЛПР (директора) сами придут в личку.\u003C\u002Fli\u003E\n\u003Cli anchor=\"r7BN\"\u003EПрофессионалы 4.0 (Крупный B2B):\n◦ Суть: Площадка от «Газпром Нефти» для реализации бизнес-проектов в гибких командах. Идеально, если ты готов заходить в серьезные корпоративные задачи.\u003C\u002Fli\u003E\n\u003Cli anchor=\"6ge6\"\u003EBuild in Public (YouTube\u002FTelegram):\n◦ Хак Мастодонта: Снимай 2-минутные ролики, как ты в Google Antigravity голосом заставляешь агента парсить сайты или отвечать клиентам. 200 целевых просмотров принесут больше денег, чем 100 000 «мусорных» подписчиков.\u003C\u002Fli\u003E\n\u003C\u002Fol\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"YhxW\"\u003E🤝 2. Технология «Продажа через Аудит» (Метод Мастодонта)\nНикогда не предлагай «купить бота» в первом сообщении. Используй трехшаговый алгоритм «доктора»:\n• Шаг 1. Бесплатный аудит процессов (15-20 мин):\n◦ Твой вопрос: «Какую рутину ваши менеджеры делают каждый день вручную по 2-3 часа?».\n◦ Твоя цель: Найти «дыру», где бизнес теряет время и деньги.\n• Шаг 2. Демонстрация «Артефактов»:\n◦ Прямо на созвоне открываешь Google Antigravity и включаешь Planning Mode.\n◦ Показываешь Artifacts — видео или скриншоты того, как твой агент заходит на сайт, находит информацию и вносит её в CRM. Клиент видит реальную работу, а не пустые обещания.\n• Шаг 3. Убойный ROI-аргумент:\n◦ Бизнес в СНГ понимает только цифры. Показывай таблицу сравнения:\n▪ Менеджеры (5 чел): 750 000 ₽\u002Fмес (з\u002Fп + налоги).\n▪ Твой ИИ-агент: 300 000 ₽ (разово) + 50 000 ₽\u002Fмес (поддержка).\n▪ Экономия за год: 8,1 млн рублей.\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"lqGl\"\u003E💵 3. Прайс-лист 2026: Реальные цифры СНГ\nНикаких «полторы тысячи долларов за консультацию». В РФ рынок работает в рублях и по четким тарифам:\nУслуга \u002F Продукт\nСредний чек в РФ\nЧто входит\nБазовый бот (FAQ)\n30 000 – 45 000 ₽\nПростые ответы в Telegram, без интеграций\nИИ-ассистент (CRM)\n60 000 – 150 000 ₽\nИнтеграция с Битрикс24\u002FamoCRM + мессенджеры\nСложная система n8n\n150 000 – 300 000 ₽\nМультиагентный воркфлоу, заменяющий отдел\nАбонентка (Support)\n15 000 – 25 000 ₽\u002Fмес\nОбновление базы знаний, поддержка API\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"i5z9\"\u003E🚀 4. Как масштабироваться до $1000\u002Fмес без команды?\nТвоя задача — пересесть с иглы разовых заказов на модель подписки.\n• Модель «ИИ-сотрудник как сервис»: Вместо того чтобы продать настройку за 60к один раз, отдавай систему в аренду за 25 000 ₽ в месяц.\n• Математика успеха: 4 клиента на абонентской плате = 100 000 ₽\u002Fмес (твоя стабильная $1000).\n• Управление: Используй Agent Manager в Antigravity — ты можешь следить за 10 клиентами одновременно, тратя на это 2 часа в неделю.\u003C\u002Fp\u003E\n\u003Chr\u002F\u003E\n\u003Cp anchor=\"181z\"\u003E🏁 Финальный Спринт: Твои действия завтра утром\u003C\u002Fp\u003E\n\u003Col anchor=\"7DzR\"\u003E\n\u003Cli anchor=\"Ejxl\"\u003EУпаковка: Создай в Notion витрину из 3 пакетов услуг (База, Бизнес, Custom).\u003C\u002Fli\u003E\n\u003Cli anchor=\"hAPT\"\u003EЗапуск: Зарегистрируйся на Binetex и выложи один оффер по «Автоматизации маркетплейсов» или «ИИ-продавцу для недвижимости».\u003C\u002Fli\u003E\n\u003Cli anchor=\"rrRJ\"\u003EДемо: Запиши на телефон экран того, как твой бот отвечает в Telegram за 5 секунд, и выложи это в Shorts и на Авито.\nТвоё время пришло, Мастодонт. Действуй, пока конкуренты только пишут промпты\u003C\u002Fli\u003E\n\u003C\u002Fol\u003E\n\u003Cp anchor=\"xLxD\"\u002F\u003E\n\u003Ch3 anchor=\"tPLQ\"\u003E🧱 ДОП-БЛОК 1. Психология «Якорения»: Как закрывать сделки на 300к+\u003C\u002Fh3\u003E\n\u003Cp anchor=\"kRnb\"\u002F\u003E\n\u003Cp anchor=\"iFEh\"\u003EВ 2026 году клиенты в СНГ стали искушенными. Чтобы не вступать в ценовые войны, мы используем стратегию \u003Cstrong\u003EGood-Better-Best\u003C\u002Fstrong\u003E. Твоя задача — не давать одну цену, а предлагать выбор, где средний вариант является «якорем».\u003C\u002Fp\u003E\n\u003Cimage src=\"https:\u002F\u002Fimg3.teletype.in\u002Ffiles\u002Fed\u002F2b\u002Fed2b1a93-500a-41c2-9fd1-efcb79104d06.png\" anchor=\"Q1Ib\" size=\"original\" width=\"700\" height=\"342\" naturalWidth=\"700\" naturalHeight=\"342\"\u003E\n\u003Ccaption\u002F\u003E\n\u003C\u002Fimage\u003E\n\u003Cp anchor=\"EWLg\"\u003EПакетРешениеЦена (РФ\u002FСНГ)Цель\u003Cstrong\u003E«Старт»\u003C\u002Fstrong\u003EБазовый FAQ-бот (Telegram) без памяти и CRM.\u003Cstrong\u003E30 000 – 45 000 ₽\u003C\u002Fstrong\u003EСнять первичный скепсис клиента.\u003Cstrong\u003E«Бизнес»ИИ-ассистент + CRM\u003C\u002Fstrong\u003E (Bitrix24\u002FamoCRM) + RAG-база знаний.\u003Cstrong\u003E120 000 – 150 000 ₽\u003C\u002Fstrong\u003EАвтоматизация 70% рутины отдела продаж.\u003Cstrong\u003E«VIP»Мультиагентная система на n8n\u003C\u002Fstrong\u003E + интеграция с 1С + обучение команды.\u003Cstrong\u003E350 000 ₽+\u003C\u002Fstrong\u003EПолная ИИ-трансформация бизнеса с ROI 8.1 млн ₽.\u003C\u002Fp\u003E\n\u003Ch3 anchor=\"RRra\"\u003E🛠 ДОП-БЛОК 2. Протокол безопасности «Анти-Галлюцинация»\u003C\u002Fh3\u003E\n\u003Cp anchor=\"7Y4M\"\u003EСогласно законодательству РФ 2026 года, гражданско-правовую ответственность за ошибки ИИ (например, обещание скидки 90% или некорректный финансовый совет) несет работодатель или внедривший систему. Чтобы обезопасить себя и клиента, мы внедряем систему \u003Cstrong\u003E«Дирижер-Контролер»\u003C\u002Fstrong\u003E.\u003C\u002Fp\u003E\n\u003Cp anchor=\"nXO0\"\u003E\u003Cstrong\u003EТвоя защита в n8n:\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\n\u003Col anchor=\"hP0w\"\u003E\n\u003Cli anchor=\"m6Go\"\u003E\u003Cstrong\u003EHuman-in-the-loop (Узел согласования):\u003C\u002Fstrong\u003E Агент в n8n не отправляет ответ сразу. Он создает черновик, который падает менеджеру в Telegram. Менеджер жмет кнопку «Одобрить» или «Правка».\u003C\u002Fli\u003E\n\u003Cli anchor=\"bUYt\"\u003E\u003Cstrong\u003ERAG (Retrieval-Augmented Generation):\u003C\u002Fstrong\u003E ИИ отвечает только на основе твоих документов (PDF, Excel, FAQ), загруженных в векторную базу Supabase. Если инфы нет в базе — агент обязан перевести диалог на человека.\u003C\u002Fli\u003E\n\u003Cli anchor=\"Y9Y6\"\u003E\u003Cstrong\u003EСтоп-слова:\u003C\u002Fstrong\u003E Настрой фильтр в n8n на слова «скидка», «бесплатно», «гарантия». При их появлении агент автоматически запрашивает проверку оператором.\u003C\u002Fli\u003E\n\u003C\u002Fol\u003E\n\u003Chr\u002F\u003E\n\u003Ch3 anchor=\"8JQI\"\u003E📈 ДОП-БЛОК 3. GEO: Захват трафика вместо мертвого SEO\u003C\u002Fh3\u003E\n\u003Cp anchor=\"pcS7\"\u003EВ 2026 году классическое SEO в СНГ просело на 30%, так как пользователи делегируют поиск ИИ-ассистентам вроде \u003Cstrong\u003EAlice AI\u003C\u002Fstrong\u003E и \u003Cstrong\u003EGigaChat\u003C\u002Fstrong\u003E. Вместо того чтобы бороться за «синие ссылки», мы делаем \u003Cstrong\u003EGEO (Generative Engine Optimization)\u003C\u002Fstrong\u003E.\u003C\u002Fp\u003E\n\u003Cp anchor=\"EOHa\"\u003E\u003Cstrong\u003EКак сделать, чтобы ИИ рекомендовал тебя:\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\n\u003Cul anchor=\"rCxP\"\u003E\n\u003Cli anchor=\"zOqs\"\u003E\u003Cstrong\u003EЦитируемость в локальных LLM:\u003C\u002Fstrong\u003E Твои кейсы должны упоминаться в базах, которые парсят российские модели (Habr, vc.ru, TenChat).\u003C\u002Fli\u003E\n\u003Cli anchor=\"8qch\"\u003E\u003Cstrong\u003EСтруктура ответов:\u003C\u002Fstrong\u003E Пиши контент в формате «Вопрос-Ответ» (FAQ) с использованием микроразметки Schema нового поколения. ИИ обожает готовые структуры для своих выжимок.\u003C\u002Fli\u003E\n\u003Cli anchor=\"kYqJ\"\u003E\u003Cstrong\u003ESemantic Clusters:\u003C\u002Fstrong\u003E Группируй статьи по темам (например, «ИИ в недвижимости», «ИИ в юриспруденции»), чтобы Alice AI видела в тебе «тематический авторитет».\u003C\u002Fli\u003E\n\u003C\u002Ful\u003E\n\u003Chr\u002F\u003E\n\u003Ch3 anchor=\"iWUV\"\u003E💵 ДОП-БЛОК 4. Интеграция с 1С и банками РФ (Мясо для B2B)\u003C\u002Fh3\u003E\n\u003Cp anchor=\"1srl\"\u003EБизнесу в СНГ плевать на красивые картинки. Ему нужно, чтобы деньги считались сами. В n8n через HTTP-узлы мы подключаем \u003Cstrong\u003E«святую троицу» российского учета:\u003C\u002Fstrong\u003E\u003C\u002Fp\u003E\n\u003Col anchor=\"1M77\"\u003E\n\u003Cli anchor=\"eNyb\"\u003E\u003Cstrong\u003EСбер \u002F Т-Банк:\u003C\u002Fstrong\u003E Автоматическое выставление ссылок на оплату через СБП прямо в чате с ИИ-агентом. Агент видит поступление денег и сам открывает доступ к продукту.\u003C\u002Fli\u003E\n\u003Cli anchor=\"iSxX\"\u003E\u003Cstrong\u003E1С: Предприятие:\u003C\u002Fstrong\u003E Синхронизация остатков на складе и цен. Если товар кончился, ИИ-продавец предложит аналог, не дожидаясь обновления менеджером.\u003C\u002Fli\u003E\n\u003Cli anchor=\"ljYl\"\u003E\u003Cstrong\u003EБитрикс24:\u003C\u002Fstrong\u003E Полная автоматизация лид-менеджмента. ИИ не просто создает сделку, а обогащает её данными о клиенте, найденными в сети через скрапинг (Enrichment).\u003C\u002Fli\u003E\n\u003C\u002Fol\u003E\n\u003Cp anchor=\"wC2p\"\u003E\u003Cstrong\u003EЭффект для клиента:\u003C\u002Fstrong\u003E\nВнедрение этой связки экономит бухгалтерии и отделу продаж до \u003Cstrong\u003E80 часов рутины в месяц\u003C\u002Fstrong\u003E. Это твой главный аргумент для продажи за \u003Cstrong\u003E150 000 ₽\u003C\u002Fstrong\u003E.\u003C\u002Fp\u003E\n\u003C\u002Fdocument\u003E","cut_text":"Про доход на ИИ тут - https:\u002F\u002Fwww.youtube.com\u002F@aiBoomb","cut_image":"https:\u002F\u002Fimg4.teletype.in\u002Ffiles\u002F38\u002Fce\u002F38ce1519-a2ac-4372-9c0b-9f283c89b665.jpeg","cut_article_id":null,"sharing_title":null,"sharing_text":"Про доход на ИИ тут - https:\u002F\u002Fwww.youtube.com\u002F@aiBoomb","sharing_image":"https:\u002F\u002Fimg1.teletype.in\u002Ffiles\u002F01\u002F86\u002F0186c132-f6e0-464f-810c-950455331b35.png","sharing_type":"image","comments_enabled":true,"reactions_enabled":true,"subscriptions_enabled":true,"donations_disabled":false,"reposts_enabled":true,"related_enabled":true,"sharing_enabled":true,"is_post":false,"visibility":"all","allow_indexing":true,"adult":false,"heading_style":{"title":{"align":"left"}},"views":null,"comments":0,"reactions":5,"reposts":3,"author_id":4426187,"creator_id":4426187,"author":{"id":4426187,"uri":"mastadont","domain":null,"domain_https":false,"name":"AI MASTODONT","userpic":"https:\u002F\u002Fimg4.teletype.in\u002Ffiles\u002Fb8\u002Fa3\u002Fb8a37e52-6c42-4bf5-ac0c-1643c39a9f9e.png","list_style":null,"verified":false,"comments_enabled":true,"reactions_enabled":true,"reposts_enabled":true,"related_enabled":true,"show_teammates":true},"creator":{"id":4426187,"uri":"mastadont","domain":null,"domain_https":false,"name":"AI MASTODONT","userpic":"https:\u002F\u002Fimg4.teletype.in\u002Ffiles\u002Fb8\u002Fa3\u002Fb8a37e52-6c42-4bf5-ac0c-1643c39a9f9e.png","verified":false},"topics":null,"articles_mentions":[],"_loadTime":1774351072146}},"loading":false,"related":{},"donations":{"article_id":null,"data":null,"_loadTime":0}},"error":null,"defer":null,"inited":false,"user_ga":null,"user_ym":null,"dom":{"screens":{"medium":false,"tablet":false,"mobile":false},"darkmode":false,"is_safari":false},"feed":{"following":[],"trending":[],"trending_widget":[],"featured_blogs":[]},"articles_reactions":{"items":{},"loading":false},"articles_reposts":{"items":[]},"comments":{"loading":false,"items":{},"info":{}},"blogs":{"items":[],"blocked_teammates":[],"blocked_users":[],"subscribed_users":{"blog_id":null,"total":0,"list":[]},"subscriptions_users":{"blog_id":null,"total":0,"list":[]},"donations":{"blog_id":null,"stats":null,"data":null,"_loadTime":0},"settings":{"items":[],"suggests":{"teammates":[],"topics":[]},"tfa_list":[],"settings":{"open":false,"blog_id":null,"section":null},"new_blog":{"open":false}}},"blog_articles":{"loading":false,"items":{}},"search":{"loading":{"search":false,"suggest":false},"search":{"query":"","blog_id":null,"articles":[],"blogs":[],"offset":{"blogs":0,"articles":0},"total":{"blogs":0,"articles":0}},"suggest":[]},"drafts":{"items":[]},"imports":{"items":[],"loading":false},"emojis":{"data":[],"loading":null,"loadTime":0,"query":""},"varlamov":{"footer":[],"trending":[],"youtube":[],"socials":{},"about":{},"editorial":{},"banners":null,"donations":null,"_full":null,"_loaded":false,"_loadTime":0}};window.__PUBLIC_PATH__='https://teletype.in/';
+
+About Teletype
+
+Join
+
+AI MASTODONT
+
+@mastadont
+
+February 12
+
+Пошаговый план выхода на первые 100.000 на ИИ
+
+🧱 БЛОК 0. ТЕНЕВОЙ ДОСТУП (Читать первым)
+
+Про доход на ИИ тут - https://www.youtube.com/@aiBoomb
+
+ТГ Мастодонта (зайдут не все) - https://t.me/+-v1b8_c1zuQ3ZDky
+
+СРАЗУ ЗАБРАТЬ ОБЕЩАННЫЙ ПЛАН ЗАРАБОТКА БЕЗ ЛИШНИХ СЛОВ
+
+🛑
+
+СТОП! ПРЕЖДЕ ЧЕМ ИДТИ ДАЛЬШЕ
+
+Мы в 2026 году. Google AI Studio, NotebookLM и Gemini 3 Pro в РФ не открываются без
+
+правильного
+
+ключа.
+
+Обычные VPN умирают. Если у тебя "бесконечное соединение" - ты теряешь деньги+время.
+
+Вот 3 способа пробить стену и забрать инструменты:
+
+🔻
+
+Способ 1. «Невидимка» (Самый надежный)
+
+Это
+
+Amnezia VPN
+
+на своем сервере.
+
+Суть:
+
+Ты арендуешь VPS (свой сервак) за 150-200₽/мес и ставишь туда свой личный VPN.
+
+Киллер-фича:
+
+Протокол
+
+VLESS Reality
+
+или
+
+AmneziaWG
+
+. Для провайдера это выглядит как обычный заход на сайт с котиками. Блокировок - 0.
+
+Сложность (ВСТАВЬ В ЛЮБУЮ НЕЙРОНКУ ЭТОТ ПРОМПТ, ОНА ПРОВЕДЕТ ЗА РУКУ):
+
+Действуй как эксперт по сетевой безопасности и системный администратор.
+
+>
+
+Задача:
+
+Составь подробнейшую инструкцию для новичка по настройке личного VPN через приложение
+
+Amnezia VPN
+
+(версия 2026 года). Цель — сделать работающий интернет в России, который не заблокирует провайдер.
+
+Инструкция должна включать 5 четких этапов:
+
+Где купить сервер (VPS):
+
+Напиши 3 конкретных хостинга, которые принимают оплату картами МИР или через СБП (например, Timeweb, VDSina или AdminVPS). Укажи, какие характеристики сервера выбрать (ОС Ubuntu 22.04/24.04, локация - Европа).
+
+Данные для входа:
+
+Объясни, какие 3 параметра мне нужно скопировать из личного кабинета хостинга после покупки сервера (IP, логин root, пароль).
+
+Настройка в приложении:
+
+Пошагово опиши, куда нажать в Amnezia VPN, чтобы добавить сервер.
+
+Выбор протокола (ВАЖНО):
+
+Объясни, почему нужно выбирать именно
+
+Xray VLESS Reality
+
+или
+
+AmneziaWG
+
+. Напиши, в каком меню это включается.
+
+Как раздать на телефон:
+
+Как сгенерировать QR-код или конфиг, чтобы VPN заработал на айфоне/андроиде.
+
+Стиль изложения:
+
+Пиши максимально просто, без сложных терминов. Если есть нюанс, где можно ошибиться - выдели его как «ВНИМАНИЕ». В конце добавь пункт: «Что делать, если кнопка Connect крутится, но не подключается»
+
+🔻
+
+Способ 2. «Ленивый» (Платные сервисы)
+
+Если лень настраивать сервер, бери эти. Они используют обфускацию (маскировку).
+
+1.
+
+BlancVPN:
+
+Топ за свои деньги. Юзают VLESS/Shadowsocks. Принимают карты РФ/СБП.
+
+2.
+
+ZoogVPN:
+
+Ищи протокол ZoogShadow. Тоже можно оплатить картой РФ.
+
+3.
+
+Astrill:
+
+Дорогой, но мощный. Принимает крипту.
+
+🔻
+
+Способ 3. «Бомж-стайл» (Бесплатно)
+
+На свой страх и риск.
+
+1.
+
+Psiphon:
+
+это проект канадских ученых, но он
+
+очень медленный
+
+. Видео в 1080p не посмотришь, чисто для текста и новостей.
+
+2. Planet VPN (качаешь из App Store или Google Play)
+
+Опасно!
+
+Не в плане вирусов, которые крадут пароли, а в плане агрессивного сбора данных. Плюс, по свежим отзывам февраля 2026, их бесплатные сервера в РФ лежат 90% времени. Платная подписка у них сейчас часто «лагает», а деньги возвращают неохотно.
+
+🧰 БЛОК 1. ТЕНЕВОЙ СТЕК 2026 (Инструменты за $0)
+
+💡
+
+СУТЬ:
+
+Зачем платить OpenAl, если Google дает доступ к
+
+Gemini 3 Pro
+
+и
+
+Antigravity
+
+бесплатно?
+
+Эти инструменты работают быстрее, у них огромный контекст (помнят всю твою жизнь) и они не тупят на сложных задачах.
+
+Забирай доступ, пока лавочку не прикрыли:
+
+🔻
+
+1. Google AI Studio (Мозг)
+
+Это админка для разработчиков, но мы юзаем её как бесплатный чат.
+
+Модель:
+
+Gemini 3 Pro (самая мощная на февраль 2026).
+
+Фишка:
+
+Огромное окно контекста. Можно закинуть книгу, видео или код всего проекта - она съест и не поперхнется.
+
+Где брать:
+
+aistudio.google.com
+
+(Включай VPN VLESS!).
+
+Цена:
+
+Бесплатно. Постоянно пользуюсь (могут быть устаревшие данные, поэтому настаивайте чтоб гуглила (для актуальных данных), проверить гуглила он или нет, можно глянул в конец ее сообщения, там будет что-то типо:
+
+🔻
+
+2. Google Antigravity (Завод)
+
+Тот самый инструмент для
+
+Vibe-Coding (разработка сайтов, приложений общением и даже голосом)
+
+Суть:
+
+Это облачная среда разработки. Тебе не надо ничего устанавливать на комп.
+
+Как это работает:
+
+Ты пишешь в чате: "Сделай мне приложение для ресторана". Он пишет код, запускает предпросмотр и дает ссылку.
+
+СМОТРЕТЬ ГАЙДЫ ПО AntiGravity в ЗАКРЕПЕ МОЕГО ТГ КАНАЛА
+
+Где брать:
+
+https://antigravity.google/
+
+Цена:
+
+Бесплатно (нужен гугл аккаунт + запара с регистрацией из рф, может не пускать, чтоб пустило, читай инструкцию
+
+в закрепе моего тг
+
+).
+
+🔻
+
+3. NotebookLM (Твой Ментор)
+
+Это инструмент, который превращает
+
+любые файлы
+
+в умного консультанта.
+
+Зачем:
+
+Чтобы загрузить этот Лид-магнит туда и общаться с ним, а не читать глазами.
+
+Где брать:
+
+notebooklm.google.com
+
+(у меня был гайд, как им пользоваться + вывести его на иной уровень, чтоб не платить за пользование крутыми мозгами) -
+
+СМОТРЕТЬ ГАЙД ПО NotebookLM + AntiGravity
+
+🧱 БЛОК 3. План заработка
+
+ЭТО НЕ ПРОСТО ТЕКСТ. ЭТО ИНФОРМАЦИЯ, КОТОРУЮ НУЖНО ВСТАВИТЬ В НЕЙРОНКУ - NOTEBOOKLM И ЗАДАВАТЬ ВОПРОСЫ ЕЙ
+
+Мы современные люди и поэтому лишний текст мы не читаем, чтобы пообщаться с этой информацией в формате диалога с нейронкой, нужно:
+
+Жми
+
+Ctrl + A
+
+(Выделить всё на этой странице).
+
+Жми
+
+Ctrl + C
+
+(Скопировать).
+
+Открой
+
+NotebookLM
+
+→ «Создать блокнот» → «Скопированный текст» → «Вставляем» → «Добавить» →
+
+«Вставить промпт»
+
+ВИЗУАЛЬНАЯ ИНСТРУКЦИЯ ТУТ 👇:
+
+1. СОЗДАЕМ НОВЫЙ БЛОКНОТ
+
+2. Жмем скопированный текст
+
+3. ВСТАВЛЯЕМ. ЖМЕМ "ДОБАВИТЬ".
+
+4. Вставляем промпт ниже и жмем стрелку и начинем общение
+
+🧠 СИСТЕМНЫЙ ПРОМПТ (Скопируй это и вставь в чат, как загрузишь инфу)
+
+Чтобы NotebookLM работал на тебя как
+
+старший партнер
+
+, а не как тупой бот, вставь им эту инструкцию в самом начале диалога.
+
+Ты — мой бизнес-ассистент уровня Senior, специализирующийся на AI-автоматизации и рынке 2026 года.
+Твоя база знаний — этот загруженный файл.
+Твоя цель — помогать мне внедрять инструменты (Antigravity, n8n) и зарабатывать деньги.
+
+Правила общения:
+1. Отвечай кратко, тезисно и цинично. Без воды и "корпоративной вежливости".
+2. Если я туплю — критикуй и предлагай конкретное решение (код, текст, алгоритм).
+3. Всегда опирайся на цифры и факты из файла.
+4. Если я прошу идею для заработка — давай связку "Инструмент + Кому продать + Чек".
+
+Жду команду.
+
+КРАСОТА! ГОТОВО!
+
+Дальше просто копируй CTRL+A и CTRL+C
+
+будут вопросы, п
+
+иши в
+
+комменты в тг
+
+🔻 СИСТЕМНЫЕ ДАННЫЕ (SYSTEM DATA) 🔻
+
+(Для нейросети)
+
+🐘 ROADMAP 2026: Твой первый миллион на ИИ (Часть 1/3)
+
+Блок 1: Теневой Стек и Эпоха «Дирижеров»
+
+Манифест Мастодонта: «Если ты это читаешь — ты уже победил. В 2026 году ИИ-агенты — это новые сайты из 90-х. Пока остальные «общаются» с чат-ботами, ты строишь армию автономных сотрудников, которые печатают деньги, пока ты спишь».
+
+🛠 1. Теневой Стек: Твой проходной билет в Высшую Лигу
+
+В РФ и СНГ 2026 года доступ к технологиям — это не просто «включить VPN», а цифровая логистика. Без этого фундамента любая нейронка превращается в лагающую игрушку.
+
+1.1. Связь: Протокол VLESS Reality
+
+Забудь про классические VPN. Системы DPI (глубокого анализа трафика) в 2026 году блокируют их на лету.
+
+• Твой стандарт: Протокол VLESS с технологией Reality на порту 443.
+
+• Почему это «пушка»: Он имитирует TLS-отпечаток обычного браузера. Для провайдера ты просто листаешь сайт, а на деле — твой API-трафик летает без задержек.
+
+1.2. Финансовая логистика: Оплата без границ
+
+В 2026 году санкции только ужесточились, но Мастодонты используют две проверенные схемы:
+
+Oplatym.ru (Для новичков): Оплата Claude Max и ChatGPT Plus через СБП или карту МИР прямо в Telegram. Подписка активируется за 15-60 минут.
+
+Aifory Pro (Для профи): Мгновенный выпуск виртуальных карт в USD. Первый депозит — от $25 (хватит на подписку и верификацию Stripe).
+
+◦ Важно: Имя в профиле OpenAI должно совпадать с именем на карте, чтобы избежать бана антифродом.
+
+🏗 2. Google Antigravity: Твой новый «Центр Управления Миссиями»
+
+Забудь про текстовые окошки чат-ботов. Главным инструментом 2026 года стала платформа Google Antigravity, которая превратила IDE (редакторы кода) в среду управления агентами.
+
+• Gemini 3 Pro: Доступна бесплатно с щедрыми квотами для личных Gmail-аккаунтов.
+
+• Planning Mode (Режим планирования): Ты не пишешь код. Ты ставишь задачу (например, «Собери сервис для авто-ответов селлера на Wildberries»), и агент сам составляет план, пишет код и тестирует его в браузере.
+
+• Artifacts (Артефакты) — ключ к продажам: Агент выдает не логи, а видео своей работы, скриншоты интерфейса и готовые схемы. Покажи это клиенту, и «пропасть недоверия» исчезнет мгновенно.
+
+🚀 3. Вайб-кодинг и n8n: Разработка через идеи
+
+В 2026 году разработка ИТ-продуктов стала демократичной. Это называют Вайб-кодингом (Vibe Coding) — создание софта путем трансляции нейросети общей идеи и эстетики.
+
+n8n — твой оркестратор: Это визуальный конструктор, где ты соединяешь узлы (nodes) как пазл: «Заявка из Telegram» → «Обработка ИИ» → «Сделка в Битрикс24».
+
+Экономия времени: Внедрение одного сценария на n8n освобождает компании от 20 до 80 часов рутины в месяц.
+
+Self-hosting: n8n можно развернуть на своем сервере (через Docker), что критично для соблюдения 152-ФЗ о персональных данных в РФ. Бизнес готов платить за это х2 к чеку.
+
+🐘 4. «Elephant-Промпт»: Твой персональный ИИ-Стратег
+
+Чтобы не тонуть в хаосе инструментов, используй этот высокоточный промпт в Gemini 3 Pro. Он станет твоим консультантом по запуску.
+
+Скопируй и вставь это:
+
+Role Ты — Старший AI-Стратег в СНГ 2026 года. Твоя задача — помочь мне, новичку, заработать первые $1000 на ИИ через Вайб-кодинг.
+
+Context У меня есть доступ к Google Antigravity и n8n. Я хочу создать систему, которая решает реальную боль бизнеса в РФ.
+
+Task Проведи со мной интервью из 5 вопросов, чтобы выявить мои сильные стороны. После моих ответов: 1. Предложи ОДНУ конкретную связку (например, ИИ-клон для блогера или автоматизация CRM). 2. Составь пошаговый план внедрения. 3. Напиши текст холодного оффера с расчетом ROI (экономия от 8 млн руб/год).
+
+🐘 ROADMAP 2026: Твой первый миллион на ИИ (Часть 2/3)
+
+Блок 2: 15 «Золотых связок» для захвата рынка СНГ
+
+В 2026 году бизнес покупает не «нейросеть», а гарантированный операционный результат. Ты — SaaSo-провайдер (Service-as-a-Software): человек, который продает готовую систему под ключ.
+
+🏆 Категория 1: «Тяжелый B2B» (Чеки 150 000 — 500 000 ₽)
+
+Здесь мы внедряем ИИ-агентов, которые заменяют отделы или кратно растят прибыль.
+
+"Travel Lead Reviver" (Оживитель мертвых лидов):
+
+◦ Связка: n8n + WhatsApp Business API + база CRM.
+
+◦ Суть: ИИ-агент проходит по старой «холодной» базе клиентов компании и через персонализированный диалог возвращает их к покупке.
+
+◦ Профит: Кейс показывает доход в €80,000 за месяц для одного агентства.
+
+"Speed-to-Lead" Voice Agent (Недвижимость и услуги):
+
+◦ Связка: Vapi + n8n + Bitrix24/amoCRM.
+
+◦ Суть: Голосовой ИИ-звонарь перезванивает клиенту через 5 секунд после заявки на сайте, квалифицирует его и назначает встречу.
+
+◦ Почему это «пушка»: Без ИИ среднее время ответа в B2B — 42 часа. Твое решение сокращает его до секунд, повышая конверсию в 100 раз.
+
+ИИ-Клон для блогеров и ЛПР (DigiDoppel):
+
+◦ Связка: HeyGen + ElevenLabs + ManyChat.
+
+◦ Суть: Создание «цифрового двойника» предпринимателя, который сам генерирует видео-контент, отвечает в Директ и продает продукты голосом автора.
+
+◦ Чек: Ретейнер от $2,500 до $4,500 в месяц.
+
+RAG-база знаний для корпораций:
+
+◦ Связка: n8n + Supabase (векторная БД) + Ollama.
+
+◦ Суть: Обучение ИИ исключительно на внутренних документах компании (прайсы, FAQ, регламенты). ИИ отвечает сотрудникам или клиентам без галлюцинаций.
+
+◦ Безопасность: Работает on-premise (на сервере клиента), соблюдая 152-ФЗ.
+
+📦 Категория 2: «Ниши-чемпионы» (Чеки 60 000 — 120 000 ₽)
+
+Автоматизация рутины, которая «болит» у каждого второго малого бизнеса.
+
+5. Маркетплейс-автоматизатор (Ozon/Wildberries):
+
+◦ Связка: n8n + API маркетплейса + @mpstudiopicbot.
+
+◦ Суть: Автоматическая синхронизация остатков «1С → Озон», генерация карточек товаров и интеллектуальные ответы на отзывы (только на 5 звезд).
+
+◦ Эффект: Экономия менеджеру 35 часов в месяц, снижение ошибок по ценам на 90%.
+
+6. HR-робот: Онбординг и найм:
+
+◦ Связка: n8n + Яндекс 360 + Bitrix24.
+
+◦ Суть: Автоматическое создание почт, доступов и чек-листов для нового сотрудника за 10 минут вместо 1.5 часов ручного труда.
+
+7. AI Lead Enrichment "Sparky":
+
+◦ Связка: Firecrawl (веб-скрапинг) + Claude API + Google Sheets.
+
+◦ Суть: Система находит данные о потенциальном клиенте в сети, анализирует его сайт, находит боли и пишет персонализированный оффер для продажника.
+
+◦ Профит: Повышает открываемость писем на 300-500%.
+
+8. Мониторинг репутации (Yandex/Otzovik):
+
+◦ Связка: HTTP Request node + Telegram Bot.
+
+◦ Суть: Бот парсит все отзывы о компании в реальном времени, классифицирует их по тональности и отправляет в чат поддержки готовый проект ответа.
+
+⚡ Категория 3: «Быстрые деньги» (Фриланс 2.0: 5 000 — 50 000 ₽)
+
+Задачи с низким порогом входа, которые можно закрыть за 1 вечер через "Вайб-кодинг" в Antigravity.
+
+9. Оживление семейных архивов: Услуга через @photolivegenbot. Анимация лиц на старых фото. Идеально продается на Авито как «Эмоциональный подарок».
+
+10. Генерация ИИ-фотосессий: Пакет из 50 фото в разных стилях для соцсетей через @clickclickgenbot.
+
+11. ИИ-рефераты и курсовые: Нишевый сервис на базе Referat+. Полное оформление работ по ГОСТу с высокой уникальностью.
+
+12. Создание Pitch Decks: Профессиональные презентации для стартапов через Generate Presentation+.
+
+13. Генератор ИИ-видео: Создание креативов для TikTok/Shorts за 60 секунд через @BananogenBot.
+
+14. Микро-разработка кода: Продажа скриптов на Python/JS для мелких автоматизаций через Code Generator.
+
+15. Квалификация лидов в Telegram: Простой бот-проверщик подписки, выдающий лид-магнит (как тот, что ты сейчас читаешь).
+
+📉 Железный аргумент для закрытия (ROI-математика)
+
+В 2026 году ты не продаешь «бота». Ты продаешь математику экономии. Используй этот расчет из источников для любого B2B клиента:
+
+• Дано: Отдел из 5 менеджеров по обработке заявок.
+
+• Затраты клиента: 5 чел × 150 000 ₽ (з/п + налоги) = 750 000 ₽ / мес.
+
+• Твой оффер: Внедрение ИИ-агента за 300 000 ₽ (разово) + 50 000 ₽ / мес (поддержка).
+
+• Результат: Чистая экономия клиента за первый год — 8 100 000 ₽.
+
+Elephant-фраза: «Вы платите мне 300 тысяч сейчас, чтобы сэкономить 8 миллионов за год. ИИ не уволится, не заболеет и будет отвечать вашим клиентам за 5 секунд 24/7».
+
+📈 Где искать этих клиентов?
+
+В 2026 году игнорируй переполненный Kwork. Иди туда, где есть спрос, но мало Мастодонтов:
+
+Binetex.ru: Твой приоритет. Модель 0% комиссии и мгновенные выплаты. Конкуренция минимальна.
+
+Авито: Уже более 1000 объявлений по ИИ-агентам. Малый бизнес ищет спасение именно здесь.
+
+TenChat: Профессиональный нетворкинг. Идеально для выхода на ЛПР и владельцев компаний в РФ.
+
+Профессионалы 4.0: Площадка от «Газпром Нефти» для реализации серьезных проектов в гибких командах.
+
+🐘 ROADMAP 2026: Твой первый миллион на ИИ (Часть 3/3)
+
+Блок 3: Продажи «по-мастодонтски» и Юридический щит в СНГ
+
+В 2026 году в СНГ рынок ИИ перешел в стадию прагматичного роста: 92% крупного и 68% малого бизнеса уже внедрили ИИ-решения. Предпринимателям больше не нужны «промпты» — им нужно снижение ФОТ и отсутствие ошибок. Твоя задача — продавать не технологию, а избавление от операционного ада.
+
+💰 1. Прайс-лист 2026: Сколько реально платят в СНГ?
+
+Рынок СНГ сегментирован. Чтобы выйти на стабильную $1000 (≈95 000 ₽) в месяц, тебе нужно либо 3–4 клиента на поддержке, либо один проект среднего уровня сложности.
+
+Услуга / Продукт
+
+Срок
+
+Цена (РФ/СНГ)
+
+Базовый ИИ-агент (FAQ, ТГ-бот, без интеграций)
+
+3–5 дней
+
+30 000 – 45 000 ₽
+
+ИИ-ассистент (Интеграция с Битрикс24/amoCRM)
+
+1–2 недели
+
+60 000 – 150 000 ₽
+
+Сложная система на n8n (Мультиагентный воркфлоу)
+
+3–5 недель
+
+150 000 – 300 000 ₽
+
+Аудит бизнес-процессов (Поиск "дыр" и расчет ROI)
+
+1–2 дня
+
+Бесплатно (как лид-магнит)
+
+Ежемесячное сопровождение (Поддержка API, RAG)
+
+Месяц
+
+15 000 – 25 000 ₽
+
+🤝 2. Технология закрытия: «ROI-Таран»
+
+В СНГ решение принимает собственник, который мыслит категориями «сколько я сэкономлю». Твой главный аргумент — расчет замены человеческого ресурса на цифрового агента.
+
+Твой «убойный» расчет для клиента (Case Study):
+
+• Расходы на отдел (5 менеджеров): З/п + налоги ≈ 750 000 ₽/мес.
+
+• Твое решение: 300 000 ₽ (внедрение) + 50 000 ₽/мес (поддержка и API).
+
+• Чистая экономия за год: 8 100 000 рублей.
+
+Elephant-фраза: «Вы платите мне 300 тысяч сейчас, чтобы сэкономить 8 миллионов за год. Мой агент не болеет, не увольняется и отвечает клиенту за 5 секунд, пока ваши менеджеры спят».
+
+🛡 3. Юридическая «Броня» (Legal Tech 2026)
+
+С 4 января 2026 года правила игры в РФ изменились. Ошибки в работе с данными теперь стоят до 10 млн рублей.
+
+3.1. Личные данные (152-ФЗ)
+
+Бизнес в РФ дико боится утечек в западные облака.
+
+• Решение: Только Self-hosted n8n на серверах внутри РФ.
+
+• Стек: Используй Ollama для запуска локальных моделей внутри контура клиента. Это гарантирует безопасность данных и прохождение любого комплаенса.
+
+3.2. Авторское право: Кто хозяин?
+
+Согласно изменениям в ГК РФ от 2026 года, «чистый» результат работы ИИ не имеет автора.
+
+• Как закрепить права: Чтобы права принадлежали тебе или клиенту, результат должен быть творчески доработан человеком. Всегда прописывай в договоре, что ты проводишь финальную редактуру и коррекцию вывода агента.
+
+3.3. Ответственность за ошибки
+
+Если твой бот пообещает клиенту скидку 90% или оскорбит его, по закону РФ за это отвечает работодатель (владелец бизнеса), если в договоре не прописано иное.
+
+• Хак: Всегда внедряй в n8n узел «Human-in-the-loop» для согласования критических действий (транзакции, офферы).
+
+📈 4. Масштабирование: Путь к первым $1000/мес
+
+В 2026 году ты не фрилансер, ты — Архитектор систем.
+
+Модель «ИИ-сотрудник по подписке»: Не продавай разово. Сдавай настроенных агентов в аренду за 25 000 ₽/мес. 4 таких клиента — и ты закрыл цель в $1000.
+
+Мультиагентность: Используй Agent Manager в Antigravity. Запускай 5–10 агентов одновременно на разные задачи для разных клиентов. Это увеличивает твою пропускную способность в 5 раз без найма команды.
+
+GEO вместо SEO: В 2026 году трафик из поиска упал на 30%, потому что люди делегируют поиск ИИ. Сделай так, чтобы твои кейсы были в базе ответов локальных LLM (Alice AI, GigaChat) через упоминания в отраслевых чатах и медиа.
+
+🏁 Финальный Спринт: Твой План на ближайшие 7 дней
+
+• День 1-2: Настрой VLESS Reality, оплати Claude через Oplatym.ru, установи Antigravity.
+
+• День 3: Выбери нишу (например, ИИ-продавец для Wildberries) и собери демо-проект в n8n.
+
+• День 4: Запиши видео «Артефакта» из Antigravity и выложи на Binetex.ru (0% комиссии) и Авито.
+
+• День 5-6: Оставь 10 экспертных комментов в чатах предпринимателей (TenChat, «Сиолошная»), предлагая бесплатный аудит.
+
+• День 7: Проведи аудит и закрой первого клиента, используя формулу ROI 8.1 млн ₽
+
+🐘 ДОП-УРОК: Система продаж и поиска клиентов в СНГ 2026
+
+«Бизнесу в СНГ не нужен ИИ. Ему нужно, чтобы менеджеры не тупили, ФОТ не раздувался, а заявки обрабатывались за 5 секунд. Твоя задача — продавать не "нейросеть", а избавление от операционного ада».
+
+📈 1. Где реально сидят клиенты (ТОП-5 точек входа)
+
+Забудь про демпинг на старых биржах. В 2026 году Мастодонты охотятся там, где есть деньги и запрос на скорость.
+
+Биржа Binetex (Приоритет №1):
+
+◦ Почему здесь: Это модель маркетплейса с 0% комиссии для фрилансера.
+
+◦ Как работать: Размещаешь услугу «ИИ-продавец для CRM» или «Автоматизация карточек WB/Ozon». Уведомления о заказах падают прямо в Telegram — реагируй мгновенно.
+
+Авито Услуги (Массовый рынок):
+
+◦ Контекст: Более 1000 объявлений по запросу «ИИ-агенты».
+
+◦ Твой оффер: «Создам ИИ-ассистента, который квалифицирует лидов и заполняет Битрикс24 за вас». Здесь сидит весь микробизнес РФ: от клиник до автосервисов.
+
+TenChat (Выход на ЛПР):
+
+◦ Метод: Это социальная сеть для деловых людей. Не пиши «продам бота». Пиши экспертные кейсы: «Как мой клиент в недвижимости сэкономил 8 млн руб за год». ЛПР (директора) сами придут в личку.
+
+Профессионалы 4.0 (Крупный B2B):
+
+◦ Суть: Площадка от «Газпром Нефти» для реализации бизнес-проектов в гибких командах. Идеально, если ты готов заходить в серьезные корпоративные задачи.
+
+Build in Public (YouTube/Telegram):
+
+◦ Хак Мастодонта: Снимай 2-минутные ролики, как ты в Google Antigravity голосом заставляешь агента парсить сайты или отвечать клиентам. 200 целевых просмотров принесут больше денег, чем 100 000 «мусорных» подписчиков.
+
+🤝 2. Технология «Продажа через Аудит» (Метод Мастодонта)
+
+Никогда не предлагай «купить бота» в первом сообщении. Используй трехшаговый алгоритм «доктора»:
+
+• Шаг 1. Бесплатный аудит процессов (15-20 мин):
+
+◦ Твой вопрос: «Какую рутину ваши менеджеры делают каждый день вручную по 2-3 часа?».
+
+◦ Твоя цель: Найти «дыру», где бизнес теряет время и деньги.
+
+• Шаг 2. Демонстрация «Артефактов»:
+
+◦ Прямо на созвоне открываешь Google Antigravity и включаешь Planning Mode.
+
+◦ Показываешь Artifacts — видео или скриншоты того, как твой агент заходит на сайт, находит информацию и вносит её в CRM. Клиент видит реальную работу, а не пустые обещания.
+
+• Шаг 3. Убойный ROI-аргумент:
+
+◦ Бизнес в СНГ понимает только цифры. Показывай таблицу сравнения:
+
+▪ Менеджеры (5 чел): 750 000 ₽/мес (з/п + налоги).
+
+▪ Твой ИИ-агент: 300 000 ₽ (разово) + 50 000 ₽/мес (поддержка).
+
+▪ Экономия за год: 8,1 млн рублей.
+
+💵 3. Прайс-лист 2026: Реальные цифры СНГ
+
+Никаких «полторы тысячи долларов за консультацию». В РФ рынок работает в рублях и по четким тарифам:
+
+Услуга / Продукт
+
+Средний чек в РФ
+
+Что входит
+
+Базовый бот (FAQ)
+
+30 000 – 45 000 ₽
+
+Простые ответы в Telegram, без интеграций
+
+ИИ-ассистент (CRM)
+
+60 000 – 150 000 ₽
+
+Интеграция с Битрикс24/amoCRM + мессенджеры
+
+Сложная система n8n
+
+150 000 – 300 000 ₽
+
+Мультиагентный воркфлоу, заменяющий отдел
+
+Абонентка (Support)
+
+15 000 – 25 000 ₽/мес
+
+Обновление базы знаний, поддержка API
+
+🚀 4. Как масштабироваться до $1000/мес без команды?
+
+Твоя задача — пересесть с иглы разовых заказов на модель подписки.
+
+• Модель «ИИ-сотрудник как сервис»: Вместо того чтобы продать настройку за 60к один раз, отдавай систему в аренду за 25 000 ₽ в месяц.
+
+• Математика успеха: 4 клиента на абонентской плате = 100 000 ₽/мес (твоя стабильная $1000).
+
+• Управление: Используй Agent Manager в Antigravity — ты можешь следить за 10 клиентами одновременно, тратя на это 2 часа в неделю.
+
+🏁 Финальный Спринт: Твои действия завтра утром
+
+Упаковка: Создай в Notion витрину из 3 пакетов услуг (База, Бизнес, Custom).
+
+Запуск: Зарегистрируйся на Binetex и выложи один оффер по «Автоматизации маркетплейсов» или «ИИ-продавцу для недвижимости».
+
+Демо: Запиши на телефон экран того, как твой бот отвечает в Telegram за 5 секунд, и выложи это в Shorts и на Авито.
+
+Твоё время пришло, Мастодонт. Действуй, пока конкуренты только пишут промпты
+
+🧱 ДОП-БЛОК 1. Психология «Якорения»: Как закрывать сделки на 300к+
+
+В 2026 году клиенты в СНГ стали искушенными. Чтобы не вступать в ценовые войны, мы используем стратегию
+
+Good-Better-Best
+
+. Твоя задача — не давать одну цену, а предлагать выбор, где средний вариант является «якорем».
+
+ПакетРешениеЦена (РФ/СНГ)Цель
+
+«Старт»
+
+Базовый FAQ-бот (Telegram) без памяти и CRM.
+
+30 000 – 45 000 ₽
+
+Снять первичный скепсис клиента.
+
+«Бизнес»ИИ-ассистент + CRM
+
+(Bitrix24/amoCRM) + RAG-база знаний.
+
+120 000 – 150 000 ₽
+
+Автоматизация 70% рутины отдела продаж.
+
+«VIP»Мультиагентная система на n8n
+
++ интеграция с 1С + обучение команды.
+
+350 000 ₽+
+
+Полная ИИ-трансформация бизнеса с ROI 8.1 млн ₽.
+
+🛠 ДОП-БЛОК 2. Протокол безопасности «Анти-Галлюцинация»
+
+Согласно законодательству РФ 2026 года, гражданско-правовую ответственность за ошибки ИИ (например, обещание скидки 90% или некорректный финансовый совет) несет работодатель или внедривший систему. Чтобы обезопасить себя и клиента, мы внедряем систему
+
+«Дирижер-Контролер»
+
+.
+
+Твоя защита в n8n:
+
+Human-in-the-loop (Узел согласования):
+
+Агент в n8n не отправляет ответ сразу. Он создает черновик, который падает менеджеру в Telegram. Менеджер жмет кнопку «Одобрить» или «Правка».
+
+RAG (Retrieval-Augmented Generation):
+
+ИИ отвечает только на основе твоих документов (PDF, Excel, FAQ), загруженных в векторную базу Supabase. Если инфы нет в базе — агент обязан перевести диалог на человека.
+
+Стоп-слова:
+
+Настрой фильтр в n8n на слова «скидка», «бесплатно», «гарантия». При их появлении агент автоматически запрашивает проверку оператором.
+
+📈 ДОП-БЛОК 3. GEO: Захват трафика вместо мертвого SEO
+
+В 2026 году классическое SEO в СНГ просело на 30%, так как пользователи делегируют поиск ИИ-ассистентам вроде
+
+Alice AI
+
+и
+
+GigaChat
+
+. Вместо того чтобы бороться за «синие ссылки», мы делаем
+
+GEO (Generative Engine Optimization)
+
+.
+
+Как сделать, чтобы ИИ рекомендовал тебя:
+
+Цитируемость в локальных LLM:
+
+Твои кейсы должны упоминаться в базах, которые парсят российские модели (Habr, vc.ru, TenChat).
+
+Структура ответов:
+
+Пиши контент в формате «Вопрос-Ответ» (FAQ) с использованием микроразметки Schema нового поколения. ИИ обожает готовые структуры для своих выжимок.
+
+Semantic Clusters:
+
+Группируй статьи по темам (например, «ИИ в недвижимости», «ИИ в юриспруденции»), чтобы Alice AI видела в тебе «тематический авторитет».
+
+💵 ДОП-БЛОК 4. Интеграция с 1С и банками РФ (Мясо для B2B)
+
+Бизнесу в СНГ плевать на красивые картинки. Ему нужно, чтобы деньги считались сами. В n8n через HTTP-узлы мы подключаем
+
+«святую троицу» российского учета:
+
+Сбер / Т-Банк:
+
+Автоматическое выставление ссылок на оплату через СБП прямо в чате с ИИ-агентом. Агент видит поступление денег и сам открывает доступ к продукту.
+
+1С: Предприятие:
+
+Синхронизация остатков на складе и цен. Если товар кончился, ИИ-продавец предложит аналог, не дожидаясь обновления менеджером.
+
+Битрикс24:
+
+Полная автоматизация лид-менеджмента. ИИ не просто создает сделку, а обогащает её данными о клиенте, найденными в сети через скрапинг (Enrichment).
+
+Эффект для клиента:
+
+Внедрение этой связки экономит бухгалтерии и отделу продаж до
+
+80 часов рутины в месяц
+
+. Это твой главный аргумент для продажи за
+
+150 000 ₽
+
+.
+
+AI MASTODONT
+
+February 12, 14:23
+
+0
+
+views
+
+5
+
+reactions
+
+0
+
+replies
+
+3
+
+reposts
+
+Repost
+
+Share

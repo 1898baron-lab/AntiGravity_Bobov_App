@@ -1,0 +1,41 @@
+# AntiGravity Repo: Security & Cleanup
+# -----------------------------------
+
+# 1. Секреты и токены (Критически важно!)
+*.env
+.env
+secret.json
+storage_state.json
+oauth_creds.json
+google_accounts.json
+
+# 2. Логи и кэш
+*.log
+sync_push.log
+sync_pull.log
+robocopy_sync.log
+robocopy_brain.log
+robocopy_restore.log
+__pycache__/
+*.pyc
+
+# 3. Служебные файлы Windows/Редакторов
+desktop.ini
+.vscode/
+.idea/
+.cursor/
+
+# 4. Временные данные и бэкапы
+tmp/
+archive/
+.gemini/
+.DS_Store
+
+# 5. Крупные бинарники (их лучше хранить на Google Диске)
+*.pdf
+*.docx
+*.vtt
+*.mp3
+*.mp4
+ legal_dossier_output/
+ pdf_funnel_output/*.pdf
