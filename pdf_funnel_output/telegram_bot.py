@@ -20,9 +20,11 @@ from aiogram.filters import CommandStart
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.types import FSInputFile, InlineKeyboardButton
 from aiogram.client.default import DefaultBotProperties
+from dotenv import load_dotenv
 
 # ── Конфигурация ──────────────────────────────────────────────────────────────
-BOT_TOKEN   = "8198121904:AAHosUWK7H7j8T_ycczH96x7eluWCjjHCPI"
+load_dotenv()
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # ── Тексты ────────────────────────────────────────────────────────────────────
 MSG_START = (

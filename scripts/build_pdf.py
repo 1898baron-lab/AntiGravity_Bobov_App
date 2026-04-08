@@ -15,20 +15,20 @@ from reportlab.pdfbase.ttfonts import TTFont
 
 # ─── Шрифт DejaVu (кириллица) ─────────────────────────────────────────────────
 FONT_DIR = os.path.join(os.path.dirname(__file__), "fonts")
-os.makedirs(FONT_DIR, exist_ok=True)
 
-FONTS = {
-    "DejaVu":       "https://cdn.jsdelivr.net/npm/dejavu-fonts-ttf@2.37.3/ttf/DejaVuSans.ttf",
-    "DejaVu-Bold":  "https://cdn.jsdelivr.net/npm/dejavu-fonts-ttf@2.37.3/ttf/DejaVuSans-Bold.ttf",
-    "DejaVu-Italic":"https://cdn.jsdelivr.net/npm/dejavu-fonts-ttf@2.37.3/ttf/DejaVuSans-Oblique.ttf",
-}
-
-for name, url in FONTS.items():
-    path = os.path.join(FONT_DIR, f"{name}.ttf")
-    if not os.path.exists(path):
-        print(f"Скачиваю шрифт {name}...")
-        urllib.request.urlretrieve(url, path)
-    pdfmetrics.registerFont(TTFont(name, path))
+def register_fonts():
+    os.makedirs(FONT_DIR, exist_ok=True)
+    FONTS = {
+        "DejaVu":       "https://cdn.jsdelivr.net/npm/dejavu-fonts-ttf@2.37.3/ttf/DejaVuSans.ttf",
+        "DejaVu-Bold":  "https://cdn.jsdelivr.net/npm/dejavu-fonts-ttf@2.37.3/ttf/DejaVuSans-Bold.ttf",
+        "DejaVu-Italic":"https://cdn.jsdelivr.net/npm/dejavu-fonts-ttf@2.37.3/ttf/DejaVuSans-Oblique.ttf",
+    }
+    for name, url in FONTS.items():
+        path = os.path.join(FONT_DIR, f"{name}.ttf")
+        if not os.path.exists(path):
+            print(f"Скачиваю шрифт {name}...")
+            urllib.request.urlretrieve(url, path)
+        pdfmetrics.registerFont(TTFont(name, path))
 
 # ─── Цветовая палитра (РОСАТОМ 2025) ──────────────────────────────────────────────
 C_BLUE   = colors.HexColor("#0033A0") # Official Primary Blue
