@@ -30,11 +30,11 @@ for name, url in FONTS.items():
         urllib.request.urlretrieve(url, path)
     pdfmetrics.registerFont(TTFont(name, path))
 
-# ─── Цветовая палитра ──────────────────────────────────────────────────────────
-C_BLUE   = colors.HexColor("#1A3C5E")
-C_ACCENT = colors.HexColor("#E8453C")
-C_LIGHT  = colors.HexColor("#F0F4F8")
-C_GRAY   = colors.HexColor("#6B7280")
+# ─── Цветовая палитра (РОСАТОМ 2025) ──────────────────────────────────────────────
+C_BLUE   = colors.HexColor("#0033A0") # Official Primary Blue
+C_ACCENT = colors.HexColor("#009EDB") # Official Secondary Blue (Cyan)
+C_LIGHT  = colors.HexColor("#F8FAFC")
+C_GRAY   = colors.HexColor("#64748B")
 C_WHITE  = colors.white
 
 # ─── Стили ────────────────────────────────────────────────────────────────────
@@ -44,17 +44,17 @@ def S(name, **kw):
     kw.setdefault("fontName", "DejaVu")
     return ParagraphStyle(name, **kw)
 
-sTitle     = S("sTitle",     fontName="DejaVu-Bold", fontSize=26, leading=32, textColor=C_WHITE, alignment=1, spaceAfter=6)
-sSubtitle  = S("sSubtitle",  fontName="DejaVu",      fontSize=13, leading=18, textColor=colors.HexColor("#B0C4DE"), alignment=1, spaceAfter=20)
+sTitle     = S("sTitle",     fontName="DejaVu-Bold", fontSize=24, leading=28, textColor=C_WHITE, alignment=1, spaceAfter=8)
+sSubtitle  = S("sSubtitle",  fontName="DejaVu",      fontSize=12, leading=16, textColor=colors.HexColor("#ffffff"), alignment=1, spaceAfter=20)
 sTagline   = S("sTagline",   fontName="DejaVu-Italic",fontSize=10, textColor=colors.HexColor("#90A4AE"), alignment=1)
 sH1        = S("sH1",        fontName="DejaVu-Bold", fontSize=15, leading=20, textColor=C_BLUE, spaceBefore=18, spaceAfter=6)
-sH2        = S("sH2",        fontName="DejaVu-Bold", fontSize=12, leading=16, textColor=C_ACCENT, spaceBefore=10, spaceAfter=4)
-sBody      = S("sBody",      fontSize=10, leading=15, textColor=colors.HexColor("#2D3748"), spaceAfter=6)
-sCode      = S("sCode",      fontSize=9,  leading=13, textColor=colors.HexColor("#1A202C"),
-               backColor=colors.HexColor("#EBF4FF"), leftIndent=12, rightIndent=12,
+sH2        = S("sH2",        fontName="DejaVu-Bold", fontSize=12, leading=16, textColor=C_BLUE, spaceBefore=10, spaceAfter=4)
+sBody      = S("sBody",      fontSize=10, leading=15, textColor=colors.HexColor("#1e293b"), spaceAfter=6)
+sCode      = S("sCode",      fontSize=9,  leading=13, textColor=colors.HexColor("#334155"),
+               backColor=colors.HexColor("#f1f5f9"), leftIndent=12, rightIndent=12,
                borderPadding=(6, 10, 6, 10), spaceAfter=8)
-sTip       = S("sTip",       fontName="DejaVu-Italic",fontSize=9.5, leading=14, textColor=colors.HexColor("#2F6B35"),
-               backColor=colors.HexColor("#F0FFF4"), leftIndent=14, borderPadding=(5, 8, 5, 8), spaceAfter=8)
+sTip       = S("sTip",       fontName="DejaVu-Italic",fontSize=9.5, leading=14, textColor=colors.HexColor("#00599d"),
+               backColor=colors.HexColor("#f8fafc"), leftIndent=14, borderPadding=(5, 8, 5, 8), spaceAfter=8)
 sFooter    = S("sFooter",    fontSize=8, textColor=C_GRAY, alignment=1)
 sNum       = S("sNum",       fontName="DejaVu-Bold", fontSize=38, leading=42, textColor=C_ACCENT, alignment=0)
 sTocItem   = S("sTocItem",   fontSize=10, leading=16, textColor=C_BLUE)
@@ -221,11 +221,11 @@ def cover_bg(canvas, doc):
     canvas.saveState()
     canvas.setFillColor(C_BLUE)
     canvas.rect(0, 0, A4[0], A4[1], fill=1, stroke=0)
-    canvas.setFillColor(C_ACCENT)
+    canvas.setFillColor(C_WHITE)
     canvas.setLineWidth(0)
-    for i in range(0, 600, 48):  # диагональные полосы
-        canvas.setFillAlpha(0.04)
-        canvas.rect(i, 0, 24, A4[1], fill=1, stroke=0)
+    for i in range(0, 600, 80):  # более редкие и строгие полосы
+        canvas.setFillAlpha(0.05)
+        canvas.rect(i, 0, 30, A4[1], fill=1, stroke=0)
     canvas.restoreState()
 
 story.append(Spacer(1, 3.5*cm))
@@ -301,8 +301,8 @@ story.append(Paragraph(
     sBody
 ))
 story.append(Spacer(1, 0.6*cm))
-story.append(Paragraph("Эта PDF создана через пайплайн AntiGravity × NotebookLM", sFooter))
-story.append(Paragraph("Версия 1.0  ·  2026  ·  Новоуральск", sFooter))
+story.append(Paragraph("Разработано в рамках цифровой экосистемы РОСАТОМ × AntiGravity", sFooter))
+story.append(Paragraph("Версия 3.0  ·  2026  ·  Новоуральск", sFooter))
 
 # ── Сборка ──
 doc.build(story)
