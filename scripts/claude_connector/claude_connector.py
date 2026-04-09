@@ -29,7 +29,7 @@ from playwright_stealth import Stealth
 # Конфиг
 # ──────────────────────────────────────────────
 PORT = 8765
-SESSION_FILE = "claude_session.json"   # сохранённая сессия браузера
+SESSION_FILE = r"C:\ANTIGRAVITY\1\claude_session.json"   # сохранённая сессия браузера
 HEADLESS = False                        # Включаем видимый режим для отладки
 CLAUDE_URL = "https://claude.ai/new"
 
