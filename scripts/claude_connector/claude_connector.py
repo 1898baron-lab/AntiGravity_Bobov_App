@@ -37,10 +37,7 @@ CLAUDE_URL = "https://claude.ai/new"
 INPUT_SELECTOR = '[contenteditable="true"][data-testid="composer-input"], \
                   [contenteditable="true"].ProseMirror, \
                   div[contenteditable="true"]'
-RESPONSE_SELECTOR = '[data-testid="ai-message"]:last-child, \
-                     .font-claude-response:last-child, \
-                     [data-testid="chat-message-content"]:last-child, \
-                     .font-claude-message:last-child'
+RESPONSE_SELECTOR = '.font-claude-response, .font-claude-message, [data-testid="chat-message-content"], [data-testid="ai-message"]'
 STOP_INDICATOR = '[data-testid="stop-button"]'   # кнопка «стоп» = генерация идёт
 
 # ──────────────────────────────────────────────
@@ -110,11 +107,11 @@ async def send_message(prompt: str) -> str:
 
     await asyncio.sleep(1)  # финальный буфер
 
-    # Читаем ответ
-    response_el = await page.query_selector(RESPONSE_SELECTOR)
-    if response_el:
-        return await response_el.inner_text()
-    return "Ошибка: не удалось получить ответ от Claude."
+    # Читаем ответ (берем самый последний на странице)
+    response_elements = await page.query_selector_all(RESPONSE_SELECTOR)
+    if response_elements:
+        return (await response_elements[-1].inner_text()).strip()
+    return "Ошибка: не удалось найти блок ответа Claude на странице."
 
 
 async def save_session():
