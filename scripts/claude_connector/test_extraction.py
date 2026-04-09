@@ -3,7 +3,7 @@ import os
 from playwright.async_api import async_playwright
 from playwright_stealth import Stealth
 
-SESSION_FILE = "C:\\ANTIGRAVITY\1\\scripts\\claude_connector\\claude_session.json"
+SESSION_FILE = r"C:\ANTIGRAVITY\1\scripts\claude_connector\claude_session.json"
 
 async def test_extraction():
     print("Testing extraction logic...")
@@ -18,11 +18,16 @@ async def test_extraction():
         await asyncio.sleep(5)
         
         # Test input
-        await page.fill('[contenteditable="true"]', "Tell me a short joke.")
-        await page.keyboard.press("Enter")
-        
+        try:
+            input_box = await page.wait_for_selector('[contenteditable="true"]', timeout=10000)
+            await input_box.fill("Tell me a short joke.")
+            await page.keyboard.press("Enter")
+        except Exception as e:
+            print(f"Failed to find input box: {e}")
+            await page.screenshot(path=r"C:\ANTIGRAVITY\1\logs\failed_to_find_input.png")
+
         print("Waiting for response...")
-        await asyncio.sleep(10) # Give it plenty of time
+        await asyncio.sleep(15) # More time for full generation
         
         # Dump possible response containers
         selectors = ['[data-testid="ai-message"]', '.font-claude-response', '.ProseMirror']
