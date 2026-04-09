@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "claude-web": {
+      "serverUrl": "http://localhost:8765",
+      "description": "Claude via claude.ai (Playwright bridge)"
+    }
+  }
+}
