@@ -55,6 +55,7 @@ async def get_page() -> Page:
         try:
             _browser = await pw.chromium.launch(
                 headless=HEADLESS,
+                executable_path=r"C:\Users\Sasha  Baron\AppData\Local\Yandex\YandexBrowser\Application\browser.exe",
                 args=[
                     "--disable-blink-features=AutomationControlled",
                     "--no-sandbox",
