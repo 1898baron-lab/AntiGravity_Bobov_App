@@ -106,23 +106,36 @@ async def ask_claude(prompt: str, chat_url: str | None = None):
 
 @dp.message(F.text & ~F.text.startswith('/'))
 async def handle_text_query(message: types.Message):
-    """ИИ-Консультант: Обработка текстовых запросов через Claude с памятью и юридическим контекстом."""
+    """ИИ-Консультант: Обработка текстовых запросов через Claude с памятью и полной базой знаний."""
     user_id = message.from_user.id
     user_text = message.text
     
-    # Загружаем юридический контекст (если есть)
-    context_path = os.path.join(BASE_DIR, ".agents", "skills", "legal_expert_bobov", "SKILL.md")
-    # ТАКЖЕ добавим наш новый бриф
-    brief_path = os.path.join(os.path.dirname(BASE_DIR), ".gemini", "antigravity", "brain", os.getenv("CONVERSATION_ID", "8f3b4cf8-6d07-4a34-8882-82e5ba8c2d21"), "legal_attack_brief.md")
+    # 1. Загружаем юридический контекст (Скилл)
+    skill_path = os.path.join(BASE_DIR, ".agents", "skills", "legal_expert_bobov", "SKILL.md")
+    # 2. Загружаем свежий бриф (Артефакт)
+    # Используем абсолютный путь для Windows
+    brief_path = r"C:\Users\Sasha  Baron\.gemini\antigravity\brain\8f3b4cf8-6d07-4a34-8882-82e5ba8c2d21\legal_attack_brief.md"
     
+    context_data = ""
+    try:
+        if os.path.exists(skill_path):
+            with open(skill_path, 'r', encoding='utf-8') as f:
+                context_data += f"SKILL DATA:\n{f.read()}\n\n"
+        if os.path.exists(brief_path):
+            with open(brief_path, 'r', encoding='utf-8') as f:
+                context_data += f"ACTUAL CASE BRIEF:\n{f.read()}\n\n"
+    except Exception as e:
+        context_data = f"Ошибка загрузки контекста: {str(e)}"
+
     # Формируем расширенный промпт (Системная установка)
     system_priming = (
-        "Ты — Бориско ИИ, экспертный юридический адвокат по делу Бобова Олега. "
-        "Твоя цель: доказать Кражу (ст. 158) и Халатность полиции (ст. 293). "
-        "Используй аргумент: 'Имущество на 12 млн — это не мусор'.\n\n"
+        "Ты — Бориско ИИ, экспертный юридический адвокат по делу Бобова Олега.\n"
+        "Твоя задача: использовать предоставленные данные для защиты интересов Олега.\n"
+        "Используй агрессивную тактику: 'Имущество на 12 млн — это не мусор'.\n\n"
+        f"{context_data}\n"
     )
     
-    full_prompt = f"{system_priming}Запрос пользователя: {user_text}"
+    full_prompt = f"{system_priming}ЗАПРОС ПОЛЬЗОВАТЕЛЯ: {user_text}"
     
     # Получаем URL текущего чата для этого пользователя
     current_chat_url = USER_SESSIONS.get(user_id)
@@ -133,7 +146,7 @@ async def handle_text_query(message: types.Message):
     # Вызов ИИ
     response_text, new_chat_url = await ask_claude(full_prompt, chat_url=current_chat_url)
     
-    # Сохраняем URL чата для следующего раза
+    # Сохраняем URL чата для следующего раза (Memory)
     if new_chat_url:
         USER_SESSIONS[user_id] = new_chat_url
     
