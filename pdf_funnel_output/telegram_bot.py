@@ -25,7 +25,9 @@ from aiogram.client.default import DefaultBotProperties
 from dotenv import load_dotenv
 
 # ── Конфигурация ──────────────────────────────────────────────────────────────
-load_dotenv()
+# Явный поиск .env в корне проекта
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+load_dotenv(os.path.join(BASE_DIR, ".env"))
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # ── Тексты ────────────────────────────────────────────────────────────────────
