@@ -37,7 +37,9 @@ CLAUDE_URL = "https://claude.ai/new"
 INPUT_SELECTOR = '[contenteditable="true"][data-testid="composer-input"], \
                   [contenteditable="true"].ProseMirror, \
                   div[contenteditable="true"]'
-RESPONSE_SELECTOR = '[data-testid="chat-message-content"]:last-child, \
+RESPONSE_SELECTOR = '[data-testid="ai-message"]:last-child, \
+                     .font-claude-response:last-child, \
+                     [data-testid="chat-message-content"]:last-child, \
                      .font-claude-message:last-child'
 STOP_INDICATOR = '[data-testid="stop-button"]'   # кнопка «стоп» = генерация идёт
 
