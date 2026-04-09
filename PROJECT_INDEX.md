@@ -89,10 +89,10 @@ C:\ANTIGRAVITY\1\
 & "C:\ANTIGRAVITY\1\.venv\Scripts\python.exe" -m pytest -v
 
 # Генерация PDF-гайда
-& "C:\ANTIGRAVITY\1\.venv\Scripts\python.exe" AI_Project_Backup\scripts\build_pdf.py
+& "C:\ANTIGRAVITY\1\scripts\build_pdf.py"
 
 # Запуск Telegram-бота
-& "C:\ANTIGRAVITY\1\.venv\Scripts\python.exe" AI_Project_Backup\pdf_funnel_output\telegram_bot.py
+& "C:\ANTIGRAVITY\1\pdf_funnel_output\telegram_bot.py"
 ```
 
 ---
