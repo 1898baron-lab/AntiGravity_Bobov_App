@@ -20,8 +20,8 @@ import uuid
 from contextlib import asynccontextmanager
 
 import uvicorn
-from fastapi import FastAPI, Request
-from fastapi.responses import JSONResponse, StreamingResponse
+from fastapi import FastAPI, Request, Response
+from fastapi.responses import JSONResponse, StreamingResponse, FileResponse
 from playwright.async_api import async_playwright, Browser, Page
 from playwright_stealth import Stealth
 
