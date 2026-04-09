@@ -23,6 +23,7 @@ import json
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import CommandStart
 from aiogram.utils.keyboard import InlineKeyboardBuilder
+import subprocess
 from aiogram.types import FSInputFile, InlineKeyboardButton
 from aiogram.client.default import DefaultBotProperties
 from dotenv import load_dotenv
@@ -78,7 +79,29 @@ async def handle_document(message: types.Message):
     file = await bot.get_file(file_id)
     await bot.download_file(file.file_path, destination)
     
-    await message.answer(f"✅ Документ <b>{file_name}</b> сохранён в базу (папка <code>legal</code>).\nПозже я смогу его анализировать и синхронизировать с GitHub!")
+    # 🐙 GitHub Auto-Sync (Skill #1)
+    try:
+        # Путь к корню проекта (на уровень выше от скрипта бота)
+        project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+        
+        # Выполнение цепочки команд Git через subprocess
+        subprocess.run(["git", "add", destination], cwd=project_root, check=True)
+        commit_msg = f"docs: добавлен файл {file_name} через SuperBot (Telegram)"
+        subprocess.run(["git", "commit", "-m", commit_msg], cwd=project_root, check=True)
+        subprocess.run(["git", "push"], cwd=project_root, check=True)
+        
+        # Формирование ссылки на файл в GitHub
+        repo_file_url = f"https://github.com/1898baron-lab/AntiGravity_Bobov_App/blob/main/legal/{file_name}"
+        
+        await message.answer(
+            f"✅ Документ <b>{file_name}</b> сохранён и синхронизирован с GitHub!\n"
+            f"🔗 <a href='{repo_file_url}'>Просмотреть в репозитории</a>"
+        )
+    except Exception as e:
+        await message.answer(
+            f"✅ Документ сохранён локально, но GitHub-синхронизация не удалась:\n"
+            f"<code>{str(e)}</code>"
+        )
 
 # ── ИИ-Интеграция ─────────────────────────────────────────────────────────────
 CLAUDE_URL = "http://localhost:8765/v1/messages"
