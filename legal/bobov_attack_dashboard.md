@@ -16,6 +16,7 @@
 
 | Документ | Статус | Описание |
 | :--- | :--- | :--- |
+| [📕 **ПОЛНОЕ ДОСЬЕ (PDF)**](file:///C:/ANTIGRAVITY/1/legal/Bobov_Legal_Attack_Complete_2026.pdf) | **FINAL** | Все документы в одном зашифрованном корпоративном формате. |
 | [📝 Жалоба ст. 125 УПК РФ](file:///C:/ANTIGRAVITY/1/legal/complaint_125_upk_v1.md) | **READY** | Агрессивный прокурорский иск против 13 лет бездействия. |
 | [📊 Синтез Доказательств 12.4M](file:///C:/ANTIGRAVITY/1/legal/evidence_synthesis_12m.md) | **READY** | Детальный расчет ущерба для ст. 158.4 УК РФ. |
 | [💸 Иск ФЗ-68 (Компенсация)](file:///C:/ANTIGRAVITY/1/legal/claim_fz68_compensation_v1.md) | **READY** | Требование выплат за системный саботаж полиции. |
