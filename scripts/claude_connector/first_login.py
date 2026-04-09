@@ -18,6 +18,7 @@ async def main():
     async with async_playwright() as p:
         browser = await p.chromium.launch(
             headless=False,
+            executable_path=r"C:\Users\Sasha  Baron\AppData\Local\Yandex\YandexBrowser\Application\browser.exe",
             args=[
                 "--disable-blink-features=AutomationControlled",
                 "--no-sandbox",
