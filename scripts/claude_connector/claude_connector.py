@@ -23,7 +23,7 @@ import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse, StreamingResponse
 from playwright.async_api import async_playwright, Browser, Page
-from playwright_stealth import stealth_async
+from playwright_stealth import Stealth
 
 # ──────────────────────────────────────────────
 # Конфиг
@@ -65,7 +65,7 @@ async def get_page() -> Page:
             _browser = await pw.chromium.launch(headless=False, **launch_args)
             context = await _browser.new_context()
         _page = await context.new_page()
-        await stealth_async(_page)
+        await Stealth().apply_stealth_async(_page)
         await _page.goto(CLAUDE_URL)
         await _page.wait_for_load_state("networkidle")
     return _page
