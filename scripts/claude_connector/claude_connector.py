@@ -55,6 +55,8 @@ POPUP_CLOSE_BUTTONS = [
     'button:has-text("Skip")'
 ]
 
+SEND_BUTTON_SELECTOR = '[aria-label="Send Message"], [data-testid="send-button"], button:has(svg[viewBox*="0 0 24 24"])'
+
 # ──────────────────────────────────────────────
 # Глобальный браузер
 # ──────────────────────────────────────────────
@@ -118,59 +120,70 @@ async def close_popups(page: Page):
             pass
 
 async def send_message(prompt: str) -> str:
-    """Отправляет промпт в claude.ai и возвращает ответ с защитой от сбоев."""
+    """Отправляет промпт в claude.ai (V3 - имитация человека)."""
     page = await get_page()
 
     # Попытка навигации с ретраями
     for i in range(3):
         try:
-            print(f"Navigating to Claude (Attempt {i+1})...")
+            print(f"[DEBUG] Navigating (Attempt {i+1})...")
             await page.goto(CLAUDE_URL, wait_until="load", timeout=30000)
             break
         except Exception as e:
-            print(f"Navigation error: {e}. Retrying...")
             await asyncio.sleep(2)
-            if i == 2:
-                return f"Ошибка навигации: {str(e)}"
+            if i == 2: return f"Ошибка навигации: {str(e)}"
 
     await asyncio.sleep(2)
     await close_popups(page)
 
-    # Находим поле ввода
+    # Находим поле ввода и имитируем набор текста
     try:
         input_box = await page.wait_for_selector(INPUT_SELECTOR, timeout=15000)
         await input_box.click()
-        await input_box.fill(prompt)
+        # Посимвольный ввод для обхода защиты (delay 10ms)
+        await page.keyboard.type(prompt, delay=10)
+        await asyncio.sleep(1)
+        
+        # Пробуем нажать Enter
         await page.keyboard.press("Enter")
-    except Exception as e:
-        return f"Ошибка: не удалось найти поле ввода Claude (возможно, сессия истекла). {str(e)}"
-
-    # Ждём начала и завершения генерации
-    await asyncio.sleep(2)
-    
-    # Ждём завершения (кнопка «стоп» исчезает)
-    try:
-        for _ in range(120):   # максимум 120 секунд
-            stop_visible = await page.query_selector(STOP_INDICATOR)
-            if stop_visible is None:
-                break
-            await asyncio.sleep(1)
-    except Exception:
-        pass
-
-    await asyncio.sleep(2)  # финальный буфер для рендеринга текста
-
-    # Читаем ответ (берем самый последний на странице)
-    response_elements = await page.query_selector_all(RESPONSE_SELECTOR)
-    if response_elements:
-        try:
-            text = (await response_elements[-1].inner_text()).strip()
-            if text:
-                return text
-        except Exception:
-            pass
+        
+        # Если кнопка "Send" всё еще видна и активна через 1 сек — нажимаем её принудительно
+        await asyncio.sleep(1)
+        send_btn = await page.query_selector(SEND_BUTTON_SELECTOR)
+        if send_btn and await send_btn.is_visible():
+            await send_btn.click()
+            print("[DEBUG] Forced click on Send button")
             
-    return "Ошибка: не удалось извлечь ответ из Claude (пустой блок или селектор не сработал)."
+    except Exception as e:
+        return f"Ошибка ввода: {str(e)}"
+
+    # Ждём начала генерации (Stop button)
+    print("[DEBUG] Waiting for generation...")
+    try:
+        await page.wait_for_selector(STOP_INDICATOR, timeout=10000)
+    except:
+        print("[DEBUG] Stop button not found, checking for text growth anyway")
+
+    # Цикл ожидания завершения и роста текста
+    last_text = ""
+    for _ in range(120): # до 2 минут
+        stop_btn = await page.query_selector(STOP_INDICATOR)
+        
+        # Получаем все блоки ответов
+        resp_elements = await page.query_selector_all(RESPONSE_SELECTOR)
+        if resp_elements:
+            current_text = (await resp_elements[-1].inner_text()).strip()
+            # Если текст перестал расти и кнопка стоп пропала — готово
+            if stop_btn is None and current_text and current_text == last_text:
+                return current_text
+            last_text = current_text
+        
+        await asyncio.sleep(1)
+
+    if last_text:
+        return last_text
+            
+    return "Ошибка: Claude не начал генерацию или селекторы не нашли текст. Попробуйте обновить страницу в браузере."
 
 
 async def save_session():
