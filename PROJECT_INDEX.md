@@ -58,26 +58,16 @@
 
 ```
 C:\ANTIGRAVITY\1\
-├── .venv\                    # Python-окружение
-├── pytest.ini                # Запуск тестов: .venv\Scripts\python.exe -m pytest -v
+├── .venv/                    # Python-окружение
 ├── PROJECT_INDEX.md          # Этот файл — главная навигация
-├── logs\                     # Системные логи (Git, sync)
-├── installers\               # Инсталляторы и расширения VS Code
-└── AI_Project_Backup\
-    ├── .env                  # 🔐 Токены бота (не в Git!)
-    ├── .gitignore
-    ├── legal\
-    │   ├── *.md / *.txt      # Жалобы, заявления, анализ
-    │   └── evidence\         # 📷 23 фото и скана (дело Бобова)
-    ├── Internship_NTD\       # Стажировка: Зевс, ПР, спецификации
-    ├── pdf_funnel_output\
-    │   └── telegram_bot.py   # Telegram-бот (РОСАТОМ × AntiGravity)
-    ├── scripts\
-    │   ├── build_pdf.py      # Генератор PDF-гайда
-    │   └── prompts_data.py   # 10 инженерных промптов (данные)
-    └── tests\
-        ├── test_bot_handlers.py  # ✅ PASSED
-        └── test_pdf_logic.py     # ✅ PASSED
+├── MASTADONT_DASHBOARD.md    # 📊 Панель управления (Status: ACTIVE)
+├── .agents/                  # 🧠 Скиллы и Ворклоу (Mastadont Logic)
+├── logs/                     # Системные логи
+├── scripts/                  # Скрипты (Claude Connector, PDF Builder)
+├── legal/                    # Юридическое дело Бобова
+├── Internship_NTD/           # Инженерные спецификации (Зевс)
+├── pdf_funnel_output/        # Telegram-бот и воронка
+└── tests/                    # Тесты (Pytest)
 ```
 
 ---
