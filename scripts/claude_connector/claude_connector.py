@@ -30,15 +30,30 @@ from playwright_stealth import Stealth
 # ──────────────────────────────────────────────
 PORT = 8765
 SESSION_FILE = "claude_session.json"   # сохранённая сессия браузера
-HEADLESS = True                         # False — для отладки (видно браузер)
+HEADLESS = False                        # Включаем видимый режим для отладки
 CLAUDE_URL = "https://claude.ai/new"
 
-# CSS-селекторы (актуальны на апрель 2026, могут меняться)
+# CSS-селекторы (улучшенные и расширенные)
 INPUT_SELECTOR = '[contenteditable="true"][data-testid="composer-input"], \
                   [contenteditable="true"].ProseMirror, \
+                  [aria-label*="Write a message"], \
                   div[contenteditable="true"]'
-RESPONSE_SELECTOR = '.font-claude-response, .font-claude-message, [data-testid="chat-message-content"], [data-testid="ai-message"]'
-STOP_INDICATOR = '[data-testid="stop-button"]'   # кнопка «стоп» = генерация идёт
+
+RESPONSE_SELECTOR = '[data-testid="ai-message"], \
+                     .font-claude-response, \
+                     .font-claude-message, \
+                     [data-testid="chat-message-content"]'
+
+STOP_INDICATOR = '[data-testid="stop-button"], [aria-label="Stop generating"]'
+
+# Кнопки закрытия поп-апов
+POPUP_CLOSE_BUTTONS = [
+    'button:has-text("Got it")',
+    'button:has-text("Close")',
+    'button:has-text("Remind me later")',
+    '[aria-label="Close modal"]',
+    'button:has-text("Skip")'
+]
 
 # ──────────────────────────────────────────────
 # Глобальный браузер
