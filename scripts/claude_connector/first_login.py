@@ -17,9 +17,17 @@ SESSION_FILE = "claude_session.json"
 async def main():
     async with async_playwright() as p:
         browser = await p.chromium.launch(
-            headless=False, 
-            executable_path=r"C:\Users\Sasha  Baron\AppData\Local\Yandex\YandexBrowser\Application\browser.exe",
-            args=["--disable-blink-features=AutomationControlled"],
+            headless=False,
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox",
+                "--disable-setuid-sandbox",
+                "--disable-infobars",
+                "--window-position=0,0",
+                "--ignore-certifcate-errors",
+                "--ignore-certifcate-errors-spki-list",
+                "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+            ],
             ignore_default_args=["--enable-automation"]
         )
         context = await browser.new_context()

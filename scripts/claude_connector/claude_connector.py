@@ -52,13 +52,21 @@ async def get_page() -> Page:
     global _browser, _page
     if _page is None or _page.is_closed():
         pw = await async_playwright().start()
-        launch_args = {
-            "executable_path": r"C:\Users\Sasha  Baron\AppData\Local\Yandex\YandexBrowser\Application\browser.exe",
-            "args": ["--disable-blink-features=AutomationControlled"],
-            "ignore_default_args": ["--enable-automation"]
-        }
         try:
-            _browser = await pw.chromium.launch(headless=HEADLESS, **launch_args)
+            _browser = await pw.chromium.launch(
+                headless=HEADLESS,
+                args=[
+                    "--disable-blink-features=AutomationControlled",
+                    "--no-sandbox",
+                    "--disable-setuid-sandbox",
+                    "--disable-infobars",
+                    "--window-position=0,0",
+                    "--ignore-certifcate-errors",
+                    "--ignore-certifcate-errors-spki-list",
+                    "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36"
+                ],
+                ignore_default_args=["--enable-automation"]
+            )
             context = await _browser.new_context(storage_state=SESSION_FILE)
         except Exception:
             # Если файла сессии нет — открываем без него (нужен ручной логин)
