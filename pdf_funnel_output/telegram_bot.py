@@ -36,11 +36,15 @@ BOT_TOKEN = os.getenv("BOT_TOKEN")
 # ── Тексты ────────────────────────────────────────────────────────────────────
 MSG_START = (
     "Привет! 👋\n\n"
-    "Я цифровой ассистент РОСАТОМ × AntiGravity.\n\n"
-    "Зачем я существую:\n"
-    "📁 <b>База знаний</b>: отправь мне любой документ в чат, и я автоматически сохраню его в корпоративный репозиторий.\n"
-    "🧠 <b>Аналитика текста</b>: напиши мне любой вопрос, и мой ИИ-движок обработает его."
+    "Я цифровой ассистент <b>Borisco AI FACTORY</b>.\n\n"
+    "Я работаю в режиме <b>непрерывного диалога</b> — я помню всё, что мы обсуждали ранее.\n\n"
+    "📁 <b>База знаний</b>: отправь мне документ, и я сохраню его в папку <code>legal</code>.\n"
+    "🧠 <b>Аналитика</b>: просто пиши мне вопросы.\n"
+    "🆕 <b>Сброс</b>: команда /new начнёт новый чат."
 )
+
+# Хранилище сессий (в памяти для простоты, можно заменить на JSON)
+USER_SESSIONS = {}
 
 # ── Инициализация ─────────────────────────────────────────────────────────────
 bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode="HTML"))
@@ -51,6 +55,14 @@ dp  = Dispatcher()
 async def handle_start(message: types.Message):
     """Команда /start → приветствие."""
     await message.answer(MSG_START)
+
+@dp.message(F.text == "/new")
+async def handle_new_chat(message: types.Message):
+    """Сброс контекста."""
+    user_id = message.from_user.id
+    if user_id in USER_SESSIONS:
+        del USER_SESSIONS[user_id]
+    await message.answer("✅ Контекст сброшен! Начинаю новый диалог.")
 
 @dp.message(F.document)
 async def handle_document(message: types.Message):
@@ -71,40 +83,51 @@ async def handle_document(message: types.Message):
 # ── ИИ-Интеграция ─────────────────────────────────────────────────────────────
 CLAUDE_URL = "http://localhost:8765/v1/messages"
 
-async def ask_claude(prompt: str):
-    """Вызов локального Claude Connector через MCP."""
+async def ask_claude(prompt: str, chat_url: str | None = None):
+    """Вызов локального Claude Connector через MCP с поддержкой URL чата."""
     payload = {
         "model": "claude-3-5-sonnet-20241022",
         "max_tokens": 1024,
-        "messages": [{"role": "user", "content": prompt}]
+        "messages": [{"role": "user", "content": prompt}],
+        "metadata": {"chat_url": chat_url}
     }
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.post(CLAUDE_URL, json=payload, timeout=60) as response:
+            async with session.post(CLAUDE_URL, json=payload, timeout=90) as response:
                 if response.status == 200:
                     data = await response.json()
-                    return data["content"][0]["text"]
+                    # Возвращаем текст и новый URL чата
+                    return data["content"][0]["text"], data.get("id")
                 else:
-                    return f"❌ Ошибка Claude (Status: {response.status})"
+                    err_text = await response.text()
+                    return f"❌ Ошибка Claude (Status: {response.status}): {err_text}", None
     except Exception as e:
-        return f"❌ Ошибка подключения к Claude Connector: {str(e)}"
+        return f"❌ Ошибка подключения к Claude Connector: {str(e)}", None
 
 @dp.message(F.text & ~F.text.startswith('/'))
 async def handle_text_query(message: types.Message):
-    """ИИ-Консультант: Обработка текстовых запросов через Claude."""
+    """ИИ-Консультант: Обработка текстовых запросов через Claude с памятью."""
+    user_id = message.from_user.id
     user_text = message.text
+    
+    # Получаем URL текущего чата для этого пользователя
+    current_chat_url = USER_SESSIONS.get(user_id)
     
     # Визуальный индикатор "печатает"
     await bot.send_chat_action(chat_id=message.chat.id, action="typing")
     
     # Вызов ИИ
-    response_text = await ask_claude(user_text)
+    response_text, new_chat_url = await ask_claude(user_text, chat_url=current_chat_url)
     
-    # Формируем ответ: если это ошибка (начинается с ❌ или "Ошибка:"), выводим её заметно
+    # Сохраняем URL чата для следующего раза
+    if new_chat_url:
+        USER_SESSIONS[user_id] = new_chat_url
+    
+    # Формируем ответ
     if response_text.startswith(("❌", "Ошибка:")):
         full_response = f"⚠️ <b>Проблема с ИИ-движком:</b>\n\n{response_text}"
     else:
-        full_response = f"🧠 <b>Ответ MASTADONT AI:</b>\n\n{response_text}"
+        full_response = f"🧠 <b>Borisco AI:</b>\n\n{response_text}"
     
     await message.answer(full_response)
 

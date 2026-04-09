@@ -119,19 +119,21 @@ async def close_popups(page: Page):
         except Exception:
             pass
 
-async def send_message(prompt: str) -> str:
-    """Отправляет промпт в claude.ai (V3 - имитация человека)."""
+async def send_message(prompt: str, chat_url: str | None = None) -> tuple[str, str]:
+    """Отправляет промпт в claude.ai (V3 - имитация человека). 
+    Если передан chat_url, переходит по нему для продолжения диалога."""
     page = await get_page()
+    target_url = chat_url if chat_url else CLAUDE_URL
 
     # Попытка навигации с ретраями
     for i in range(3):
         try:
-            print(f"[DEBUG] Navigating (Attempt {i+1})...")
-            await page.goto(CLAUDE_URL, wait_until="load", timeout=30000)
+            print(f"[DEBUG] Navigating to {target_url} (Attempt {i+1})...")
+            await page.goto(target_url, wait_until="load", timeout=30000)
             break
         except Exception as e:
             await asyncio.sleep(2)
-            if i == 2: return f"Ошибка навигации: {str(e)}"
+            if i == 2: return f"Ошибка навигации: {str(e)}", target_url
 
     await asyncio.sleep(2)
     await close_popups(page)
@@ -155,7 +157,7 @@ async def send_message(prompt: str) -> str:
             print("[DEBUG] Forced click on Send button")
             
     except Exception as e:
-        return f"Ошибка ввода: {str(e)}"
+        return f"Ошибка ввода: {str(e)}", page.url
 
     # Ждём начала генерации (Stop button)
     print("[DEBUG] Waiting for generation...")
@@ -175,15 +177,12 @@ async def send_message(prompt: str) -> str:
             current_text = (await resp_elements[-1].inner_text()).strip()
             # Если текст перестал расти и кнопка стоп пропала — готово
             if stop_btn is None and current_text and current_text == last_text:
-                return current_text
+                return current_text, page.url
             last_text = current_text
         
         await asyncio.sleep(1)
 
-    if last_text:
-        return last_text
-            
-    return "Ошибка: Claude не начал генерацию или селекторы не нашли текст. Попробуйте обновить страницу в браузере."
+    return (last_text if last_text else "Ошибка: извлечение не удалось"), page.url
 
 
 async def save_session():
@@ -227,14 +226,13 @@ async def messages(request: Request):
                 prompt = str(content)
             break
 
-    if not prompt:
-        return JSONResponse({"error": "No user message found"}, status_code=400)
+    chat_url = body.get("metadata", {}).get("chat_url") or body.get("chat_url")
+    
+    response_text, final_url = await send_message(prompt, chat_url=chat_url)
 
-    response_text = await send_message(prompt)
-
-    # Формат ответа Anthropic API
+    # Формат ответа Anthropic API (id используем для хранения URL чата)
     response = {
-        "id": f"msg_{uuid.uuid4().hex[:24]}",
+        "id": final_url,
         "type": "message",
         "role": "assistant",
         "content": [{"type": "text", "text": response_text}],
@@ -242,6 +240,7 @@ async def messages(request: Request):
         "stop_reason": "end_turn",
         "stop_sequence": None,
         "usage": {"input_tokens": len(prompt) // 4, "output_tokens": len(response_text) // 4},
+        "metadata": {"chat_url": final_url}
     }
 
     if stream:
