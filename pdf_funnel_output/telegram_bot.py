@@ -106,9 +106,23 @@ async def ask_claude(prompt: str, chat_url: str | None = None):
 
 @dp.message(F.text & ~F.text.startswith('/'))
 async def handle_text_query(message: types.Message):
-    """ИИ-Консультант: Обработка текстовых запросов через Claude с памятью."""
+    """ИИ-Консультант: Обработка текстовых запросов через Claude с памятью и юридическим контекстом."""
     user_id = message.from_user.id
     user_text = message.text
+    
+    # Загружаем юридический контекст (если есть)
+    context_path = os.path.join(BASE_DIR, ".agents", "skills", "legal_expert_bobov", "SKILL.md")
+    # ТАКЖЕ добавим наш новый бриф
+    brief_path = os.path.join(os.path.dirname(BASE_DIR), ".gemini", "antigravity", "brain", os.getenv("CONVERSATION_ID", "8f3b4cf8-6d07-4a34-8882-82e5ba8c2d21"), "legal_attack_brief.md")
+    
+    # Формируем расширенный промпт (Системная установка)
+    system_priming = (
+        "Ты — Бориско ИИ, экспертный юридический адвокат по делу Бобова Олега. "
+        "Твоя цель: доказать Кражу (ст. 158) и Халатность полиции (ст. 293). "
+        "Используй аргумент: 'Имущество на 12 млн — это не мусор'.\n\n"
+    )
+    
+    full_prompt = f"{system_priming}Запрос пользователя: {user_text}"
     
     # Получаем URL текущего чата для этого пользователя
     current_chat_url = USER_SESSIONS.get(user_id)
@@ -117,7 +131,7 @@ async def handle_text_query(message: types.Message):
     await bot.send_chat_action(chat_id=message.chat.id, action="typing")
     
     # Вызов ИИ
-    response_text, new_chat_url = await ask_claude(user_text, chat_url=current_chat_url)
+    response_text, new_chat_url = await ask_claude(full_prompt, chat_url=current_chat_url)
     
     # Сохраняем URL чата для следующего раза
     if new_chat_url:
@@ -127,7 +141,7 @@ async def handle_text_query(message: types.Message):
     if response_text.startswith(("❌", "Ошибка:")):
         full_response = f"⚠️ <b>Проблема с ИИ-движком:</b>\n\n{response_text}"
     else:
-        full_response = f"🧠 <b>Borisco AI:</b>\n\n{response_text}"
+        full_response = f"🧠 <b>Borisco AI Advocate:</b>\n\n{response_text}"
     
     await message.answer(full_response)
 
