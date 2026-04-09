@@ -67,7 +67,8 @@ async def get_page() -> Page:
         _page = await context.new_page()
         await Stealth().apply_stealth_async(_page)
         await _page.goto(CLAUDE_URL)
-        await _page.wait_for_load_state("networkidle")
+        await _page.wait_for_load_state("load")
+        await asyncio.sleep(2)  # Даём время JS-фреймворку
     return _page
 
 
@@ -77,8 +78,8 @@ async def send_message(prompt: str) -> str:
 
     # Открываем новый чат
     await page.goto(CLAUDE_URL)
-    await page.wait_for_load_state("networkidle")
-    await asyncio.sleep(1)
+    await page.wait_for_load_state("load")
+    await asyncio.sleep(2)
 
     # Находим поле ввода
     input_box = await page.wait_for_selector(INPUT_SELECTOR, timeout=15000)
@@ -192,6 +193,6 @@ async def save_session_endpoint():
 # Точка входа
 # ──────────────────────────────────────────────
 if __name__ == "__main__":
-    print(f"Claude Connector запущен на http://localhost:{PORT}")
-    print(f"Добавь в mcp_config.json: \"serverUrl\": \"http://localhost:{PORT}\"")
-    uvicorn.run(app, host="0.0.0.0", port=PORT, log_level="info")
+    print(f"Claude Connector запущен на http://127.0.0.1:{PORT}")
+    print(f"Добавь в mcp_config.json: \"serverUrl\": \"http://127.0.0.1:{PORT}\"")
+    uvicorn.run(app, host="127.0.0.1", port=PORT, log_level="info")
