@@ -106,38 +106,71 @@ async def get_page() -> Page:
     return _page
 
 
+async def close_popups(page: Page):
+    """Пытается закрыть мешающие всплывающие окна."""
+    for selector in POPUP_CLOSE_BUTTONS:
+        try:
+            btn = await page.query_selector(selector)
+            if btn and await btn.is_visible():
+                await btn.click()
+                print(f"Closed popup with selector: {selector}")
+        except Exception:
+            pass
+
 async def send_message(prompt: str) -> str:
-    """Отправляет промпт в claude.ai и возвращает ответ."""
+    """Отправляет промпт в claude.ai и возвращает ответ с защитой от сбоев."""
     page = await get_page()
 
-    # Открываем новый чат
-    await page.goto(CLAUDE_URL)
-    await page.wait_for_load_state("load")
+    # Попытка навигации с ретраями
+    for i in range(3):
+        try:
+            print(f"Navigating to Claude (Attempt {i+1})...")
+            await page.goto(CLAUDE_URL, wait_until="load", timeout=30000)
+            break
+        except Exception as e:
+            print(f"Navigation error: {e}. Retrying...")
+            await asyncio.sleep(2)
+            if i == 2:
+                return f"Ошибка навигации: {str(e)}"
+
     await asyncio.sleep(2)
+    await close_popups(page)
 
     # Находим поле ввода
-    input_box = await page.wait_for_selector(INPUT_SELECTOR, timeout=15000)
-    await input_box.click()
-    await input_box.fill(prompt)
-    await page.keyboard.press("Enter")
+    try:
+        input_box = await page.wait_for_selector(INPUT_SELECTOR, timeout=15000)
+        await input_box.click()
+        await input_box.fill(prompt)
+        await page.keyboard.press("Enter")
+    except Exception as e:
+        return f"Ошибка: не удалось найти поле ввода Claude (возможно, сессия истекла). {str(e)}"
 
-    # Ждём начала генерации
+    # Ждём начала и завершения генерации
     await asyncio.sleep(2)
-
+    
     # Ждём завершения (кнопка «стоп» исчезает)
-    for _ in range(120):   # максимум 120 секунд
-        stop_visible = await page.query_selector(STOP_INDICATOR)
-        if stop_visible is None:
-            break
-        await asyncio.sleep(1)
+    try:
+        for _ in range(120):   # максимум 120 секунд
+            stop_visible = await page.query_selector(STOP_INDICATOR)
+            if stop_visible is None:
+                break
+            await asyncio.sleep(1)
+    except Exception:
+        pass
 
-    await asyncio.sleep(1)  # финальный буфер
+    await asyncio.sleep(2)  # финальный буфер для рендеринга текста
 
     # Читаем ответ (берем самый последний на странице)
     response_elements = await page.query_selector_all(RESPONSE_SELECTOR)
     if response_elements:
-        return (await response_elements[-1].inner_text()).strip()
-    return "Ошибка: не удалось найти блок ответа Claude на странице."
+        try:
+            text = (await response_elements[-1].inner_text()).strip()
+            if text:
+                return text
+        except Exception:
+            pass
+            
+    return "Ошибка: не удалось извлечь ответ из Claude (пустой блок или селектор не сработал)."
 
 
 async def save_session():
