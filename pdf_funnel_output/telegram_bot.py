@@ -100,7 +100,13 @@ async def handle_text_query(message: types.Message):
     # Вызов ИИ
     response_text = await ask_claude(user_text)
     
-    await message.answer(f"🧠 <b>Ответ MASTADONT AI:</b>\n\n{response_text}")
+    # Формируем ответ: если это ошибка (начинается с ❌ или "Ошибка:"), выводим её заметно
+    if response_text.startswith(("❌", "Ошибка:")):
+        full_response = f"⚠️ <b>Проблема с ИИ-движком:</b>\n\n{response_text}"
+    else:
+        full_response = f"🧠 <b>Ответ MASTADONT AI:</b>\n\n{response_text}"
+    
+    await message.answer(full_response)
 
 # ── Запуск ────────────────────────────────────────────────────────────────────
 
