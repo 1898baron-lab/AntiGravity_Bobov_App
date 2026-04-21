@@ -233,19 +233,38 @@ async def handle_sse(request: Request):
 @app.post("/sse")
 @app.post("/messages")
 async def handle_mcp_messages(request: Request):
-    """Универсальный обработчик сообщений для ChatGPT."""
+    """Сверх-стабильный обработчик сообщений для ChatGPT.
+    Мы вручную доставляем сообщение и гарантируем правильный JSON-ответ."""
     try:
-        query_params = dict(request.query_params)
-        if "session_id" not in query_params:
+        body = await request.json()
+        session_id = request.query_params.get("session_id")
+        
+        # Если session_id нет (OpenAI его часто не шлет), берем последний активный
+        if not session_id:
             active_sessions = list(sse._read_stream_writers.keys())
             if active_sessions:
                 session_id = active_sessions[-1]
-                logger.info(f"Injecting session_id: {session_id}")
-                request.scope['query_string'] = f"session_id={session_id}".encode()
+            else:
+                logger.error("No active sessions found for incoming message")
+                return JSONResponse({"error": "no_session"}, status_code=200)
 
-        await sse.handle_post_message(request.scope, request.receive, request._send)
+        # Достаем 'писателя' потока для этой сессии
+        writer = sse._read_stream_writers.get(session_id)
+        if not writer:
+            logger.error(f"Session {session_id} writer not found")
+            return JSONResponse({"error": "writer_not_found"}, status_code=200)
+
+        # Напрямую записываем сообщение в поток сервера
+        logger.info(f"Manually routing message to session {session_id}")
+        await writer.write(json.dumps(body))
+        
+        # ГАРАНТИРУЕМ ответ, который хочет OpenAI
+        return JSONResponse(
+            content={"status": "received", "sessionId": session_id},
+            headers={"Content-Type": "application/json; charset=utf-8"}
+        )
     except Exception as e:
-        logger.error(f"Error in handle_mcp_messages: {e}")
+        logger.error(f"Critical error in message router: {e}")
         return JSONResponse(content={"error": str(e)}, status_code=200)
 
 # ─────────────────────────────────────────────
