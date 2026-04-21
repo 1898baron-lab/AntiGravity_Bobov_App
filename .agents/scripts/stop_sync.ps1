@@ -1,16 +1,16 @@
-# Скрипт остановки Master-Sync Daemon (Консолидированный)
-$DaemonFile = "master_sync_daemon.ps1"
+# Master-Sync Daemon Stop Script
+$DaemonFileName = "master_sync_daemon.ps1"
 
-# Поиск процессов powershell, которые выполняют наш скрипт
-$Processes = Get-WmiObject Win32_Process -Filter "Name = 'powershell.exe'" | Where-Object { $_.CommandLine -like "*$DaemonFile*" }
+# Find powershell processes running our specific daemon script
+$TargetProcesses = Get-WmiObject Win32_Process -Filter "Name = 'powershell.exe'" | Where-Object { $_.CommandLine -like "*$DaemonFileName*" }
 
-if ($Processes) {
-    foreach ($P in $Processes) {
-        Write-Host "Остановка процесса Master-Sync (PID: $($P.ProcessId))..."
-        Stop-Process -Id $P.ProcessId -Force
+if ($TargetProcesses) {
+    foreach ($Process in $TargetProcesses) {
+        Write-Host "Stopping Master-Sync process (PID: $($Process.ProcessId))..."
+        Stop-Process -Id $Process.ProcessId -Force
     }
-    Write-Host "Авто-синхронизация отключена."
+    Write-Host "Auto-sync disabled successfully."
 }
 else {
-    Write-Host "Процесс Master-Sync не найден."
+    Write-Host "Master-Sync process not found."
 }

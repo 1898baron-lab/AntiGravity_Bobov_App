@@ -1,41 +1,41 @@
-# Master-Sync Daemon v1.1
-# Автоматическая синхронизация проекта с GitHub
+# Master-Sync Daemon v1.2
+# Automated project synchronization with GitHub
 
-$IntervalSeconds = 600
+$SyncInterval = 600
 $ProjectRoot = "C:\ANTIGRAVITY\1"
-$LogFile = "$ProjectRoot\.agents\scripts\sync_log.txt"
+$LogFilePath = "$ProjectRoot\.agents\scripts\sync_log.txt"
 
-function Write-Log {
-    param($Message)
+function Write-LogEntry {
+    param($LogMessage)
     $TimeStamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-    "[$TimeStamp] $Message" | Out-File -FilePath $LogFile -Append
+    "[$TimeStamp] $LogMessage" | Out-File -FilePath $LogFilePath -Append -Encoding UTF8
 }
 
-Write-Log "Master-Sync перезапущен. Мониторинг активен."
+Write-LogEntry "Master-Sync Daemon started. Monitoring active."
 
 while($true) {
     try {
         Set-Location $ProjectRoot
-        $Status = git status --short
+        $GitStatus = git status --short
         
-        if ($Status) {
-            Write-Log "Обнаружены изменения. Начинаю синхронизацию..."
+        if ($GitStatus) {
+            Write-LogEntry "Changes detected. Starting synchronization..."
             git add -A
-            $CommitMsg = "auto-save: $(Get-Date -Format 'yyyy-MM-dd HH:mm') [Mastodont AI]"
-            git commit -m $CommitMsg
+            $CommitMessage = "auto-save: $(Get-Date -Format 'yyyy-MM-dd HH:mm') [Mastodont AI]"
+            git commit -m $CommitMessage
             
-            $PushResult = git push origin main 2>&1
+            $PushOutput = git push origin main 2>&1
             if ($LASTEXITCODE -eq 0) {
-                Write-Log "Синхронизация завершена успешно: $PushResult"
+                Write-LogEntry "Sync successful: $PushOutput"
             } else {
-                Write-Log "ПРЕДУПРЕЖДЕНИЕ: Ошибка при отправке на GitHub: $PushResult"
+                Write-LogEntry "WARNING: Push failed: $PushOutput"
             }
         }
     }
     catch {
-        $ErrorMessage = $_.Exception.Message
-        Write-Log "ОШИБКА ЦИКЛА: $ErrorMessage"
+        $ErrorDetail = $_.Exception.Message
+        Write-LogEntry "CRITICAL ERROR: $ErrorDetail"
     }
     
-    Start-Sleep -Seconds $IntervalSeconds
+    Start-Sleep -Seconds $SyncInterval
 }
