@@ -11,7 +11,7 @@
 | **Claude Connector** | 🟢 ACTIVE | `http://localhost:8765` |
 | **NotebookLM MCP** | 🟢 READY | [Control Panel](https://notebooklm.google.com) |
 | **Obsidian Brain** | 🟢 ACTIVE | `C:\ANTIGRAVITY\1\obsidian_brain` |
-| **ChatGPT Bridge** | 🟠 STANDBY | `scripts/mcp_chatgpt_bridge.py` |
+| **ChatGPT Bridge** | 🟢 ONLINE | [Refined RAG Server](file:///c:/ANTIGRAVITY/1/scripts/mcp_chatgpt_bridge.py) |
 | **Git Sync** | 🟢 SYNCED | [GitHub Repo](https://github.com/1898baron-lab/AntiGravity_Bobov_App) |
 
 ---
