@@ -22,14 +22,18 @@ files = [
     "Отчёт по анализу ответов ИИ в области машиностроения.pdf"
 ]
 
-for file in files:
-    full_path = os.path.join(base_path, file)
-    print(f"--- EXTRACTING: {file} ---")
-    try:
-        if file.endswith(".docx"):
-            print(extract_docx(full_path))
-        elif file.endswith(".pdf"):
-            print(extract_pdf(full_path))
-    except Exception as e:
-        print(f"Error reading {file}: {e}")
-    print("\n" + "="*50 + "\n")
+output_file = os.path.join(base_path, "extracted_knowledge_summary.md")
+with open(output_file, 'w', encoding='utf-8') as out:
+    for file in files:
+        full_path = os.path.join(base_path, file)
+        out.write(f"# EXTRACTING: {file}\n\n")
+        try:
+            content = ""
+            if file.endswith(".docx"):
+                content = extract_docx(full_path)
+            elif file.endswith(".pdf"):
+                content = extract_pdf(full_path)
+            out.write(content + "\n\n")
+            out.write("="*50 + "\n\n")
+        except Exception as e:
+            out.write(f"Error reading {file}: {e}\n\n")
