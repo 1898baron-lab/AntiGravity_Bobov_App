@@ -1,7 +1,7 @@
-# Master-Sync Daemon v1.0
+# Master-Sync Daemon v1.1
 # Автоматическая синхронизация проекта с GitHub
 
-$IntervalSeconds = 600 # Интервал проверки (10 минут)
+$IntervalSeconds = 600
 $ProjectRoot = "C:\ANTIGRAVITY\1"
 $LogFile = "$ProjectRoot\.agents\scripts\sync_log.txt"
 
@@ -11,29 +11,30 @@ function Write-Log {
     "[$TimeStamp] $Message" | Out-File -FilePath $LogFile -Append
 }
 
-Write-Log "Master-Sync запущен. Интервал: $IntervalSeconds сек."
+Write-Log "Master-Sync перезапущен. Мониторинг активен."
 
 while($true) {
     try {
         Set-Location $ProjectRoot
-        
-        # Проверка наличия изменений
         $Status = git status --short
         
         if ($Status) {
             Write-Log "Обнаружены изменения. Начинаю синхронизацию..."
-            
             git add -A
             $CommitMsg = "auto-save: $(Get-Date -Format 'yyyy-MM-dd HH:mm') [Mastodont AI]"
             git commit -m $CommitMsg
             
-            # Попытка отправки на GitHub
             $PushResult = git push origin main 2>&1
-            Write-Log "Синхронизация завершена успешно."
+            if ($LASTEXITCODE -eq 0) {
+                Write-Log "Синхронизация завершена успешно: $PushResult"
+            } else {
+                Write-Log "ПРЕДУПРЕЖДЕНИЕ: Ошибка при отправке на GitHub: $PushResult"
+            }
         }
     }
     catch {
-        Write-Log "ОШИБКА: $($_.Exception.Message)"
+        $ErrorMessage = $_.Exception.Message
+        Write-Log "ОШИБКА ЦИКЛА: $ErrorMessage"
     }
     
     Start-Sleep -Seconds $IntervalSeconds

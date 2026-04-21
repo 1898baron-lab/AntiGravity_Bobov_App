@@ -1,5 +1,4 @@
-# Скрипт остановки Master-Sync Daemon
-$ProcessName = "powershell"
+# Скрипт остановки Master-Sync Daemon (Консолидированный)
 $DaemonFile = "master_sync_daemon.ps1"
 
 # Поиск процессов powershell, которые выполняют наш скрипт
