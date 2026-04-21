@@ -11,10 +11,14 @@
             "id": "114164b8bb64cc48",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Граф"
+              "type": "markdown",
+              "state": {
+                "file": "_Skills/Engineering_Review_Skill.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Engineering_Review_Skill"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_Skills/Engineering_Review_Skill.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки"
+              "title": "Обратные ссылки для Engineering_Review_Skill"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "_Skills/Engineering_Review_Skill.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки"
+              "title": "Исходящие ссылки из Engineering_Review_Skill"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "_Skills/Engineering_Review_Skill.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура"
+              "title": "Структура Engineering_Review_Skill"
             }
           }
         ]
@@ -179,6 +186,9 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
+    "Home.md",
+    "CLAUDE.md",
+    "_Skills/Engineering_Review_Skill.md",
     "Engineering/Project_Zeus_Tech_Specs.md",
     "_Inbox/Integration_Success.md",
     "Legal/complaint_to_prosecutor_v1.md",
