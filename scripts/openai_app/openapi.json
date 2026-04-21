@@ -7,8 +7,8 @@
   },
   "servers": [
     {
-      "url": "https://qusys-194-180-188-162.run.pinggy-free.link",
-      "description": "Mastodont MCP Bridge (pinggy.io)"
+      "url": "https://fourth-implemented-tsunami-laser.trycloudflare.com",
+      "description": "Mastodont MCP Bridge (Cloudflare Tunnel)"
     }
   ],
   "paths": {
