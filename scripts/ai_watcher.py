@@ -1,20 +1,21 @@
 """
-Mastodont AI Watcher v1.0
-===========================
+Mastodont AI Watcher v1.1 — Direct Mode
+========================================
 Слушает изменения в TO_CHATGPT.md.
-При изменении:
-  1. Ищет релевантные документы в локальной базе знаний (через MCP KnowledgeStore).
-  2. Формирует "контекстно-обогащённый" запрос.
-  3. Записывает его в FROM_CHATGPT.md — готов к отправке в ChatGPT или автоматически через API.
+Напрямую использует KnowledgeStore (без HTTP-запросов).
+
+При изменении файла:
+  1. Сканирует Obsidian Engineering/ и находит релевантные документы.
+  2. Формирует обогащённый контекст в FROM_CHATGPT.md.
+  3. FROM_CHATGPT.md = готовый файл для вставки в ChatGPT или API-запрос.
 
 Запуск:
   .venv/Scripts/python.exe scripts/ai_watcher.py
 """
 
+import sys
 import time
-import json
 import logging
-import httpx
 from pathlib import Path
 
 # Настройка логирования
@@ -24,79 +25,113 @@ logging.basicConfig(
 )
 logger = logging.getLogger("ai_watcher")
 
+# Добавляем scripts/ в пути для импорта KnowledgeStore
+BASE = Path(__file__).parent.parent.resolve()
+sys.path.insert(0, str(BASE / "scripts"))
+
 # Пути
-BASE   = Path(__file__).parent.parent.resolve()
 TO_FILE   = BASE / "obsidian_brain/_AI_EXCHANGE/TO_CHATGPT.md"
 FROM_FILE = BASE / "obsidian_brain/_AI_EXCHANGE/FROM_CHATGPT.md"
-MCP_URL   = "http://localhost:8000"
+ENG_DIR   = BASE / "obsidian_brain/Engineering"
 POLL_INTERVAL = 3  # секунды
 
 
-def search_local_knowledge(query: str) -> list:
-    """Поиск в локальном MCP Bridge."""
-    try:
-        resp = httpx.post(
-            f"{MCP_URL}/messages",
-            json={
-                "jsonrpc": "2.0",
-                "id": 1,
-                "method": "tools/call",
-                "params": {
-                    "name": "search_knowledge",
-                    "arguments": {"query": query}
-                }
-            },
-            timeout=5.0
-        )
-        if resp.status_code == 200:
-            data = resp.json()
-            result_text = data.get("result", {}).get("content", [{}])[0].get("text", "{}")
-            return json.loads(result_text).get("results", [])
-    except Exception as e:
-        logger.warning(f"MCP search failed: {e}")
-    return []
+class LocalKnowledge:
+    """Минимальный локальный поиск по Obsidian без HTTP."""
+    def __init__(self, path: Path):
+        self.path = path
+        self.cache: dict = {}
+        self._load()
+
+    def _load(self):
+        logger.info(f"Indexing: {self.path}")
+        count = 0
+        for f in self.path.rglob("*.md"):
+            try:
+                self.cache[str(f.relative_to(self.path))] = f.read_text(encoding="utf-8")
+                count += 1
+            except Exception as e:
+                logger.warning(f"Skip {f}: {e}")
+        logger.info(f"Indexed {count} documents.")
+
+    def search(self, query: str, top_n: int = 3) -> list:
+        if not query.strip():
+            return []
+        q = query.lower()
+        results = []
+        for doc_id, content in self.cache.items():
+            c = content.lower()
+            if q in c or q in doc_id.lower():
+                score = c.count(q) + (10 if q in doc_id.lower() else 0)
+                results.append({
+                    "id": doc_id,
+                    "title": Path(doc_id).name,
+                    "score": score,
+                    "snippet": content[:400].replace("\n", " ")
+                })
+        return sorted(results, key=lambda x: x["score"], reverse=True)[:top_n]
 
 
-def extract_query_keywords(text: str) -> str:
-    """Простое извлечение ключевых слов из запроса."""
-    # Ищем строки типа "## Вопросы" или "query:" или просто берём первые слова
-    lines = [l.strip() for l in text.splitlines() if l.strip() and not l.startswith("#")]
-    for line in lines:
-        if len(line) > 15:
-            return line[:80]
-    return text[:80]
+def extract_mode_and_keywords(text: str) -> tuple:
+    """Извлекает MODE/PROJECT/TASK_TYPE и ключевые слова для поиска."""
+    meta = {}
+    for line in text.splitlines():
+        for key in ["MODE", "PROJECT", "TASK_TYPE"]:
+            if line.strip().startswith(f"## {key}:"):
+                meta[key] = line.split(":", 1)[1].strip()
+
+    # Ключевые слова: из PROJECT или первая значимая строка
+    keywords = meta.get("PROJECT", "")
+    if not keywords:
+        for line in text.splitlines():
+            line = line.strip()
+            if line and not line.startswith("#") and not line.startswith("*") and len(line) > 15:
+                keywords = line[:80]
+                break
+    return meta, keywords
 
 
-def build_enriched_output(request_text: str, found_docs: list) -> str:
-    """Формирует готовый к использованию ответ с контекстом из базы знаний."""
-    context_block = ""
-    if found_docs:
-        context_block = "## 📚 Контекст из базы знаний (найдено автоматически)\n\n"
-        for d in found_docs[:3]:
-            context_block += f"### `{d['title']}` (score: {d.get('score', '?')})\n"
-            context_block += f"{d.get('snippet', '')}\n\n"
-        context_block += "---\n\n"
+def build_output(text: str, docs: list, meta: dict) -> str:
+    mode    = meta.get("MODE", "GENERAL")
+    project = meta.get("PROJECT", "Unknown")
+    task    = meta.get("TASK_TYPE", "Unknown")
+
+    ctx = ""
+    if docs:
+        ctx = "## 📚 Релевантные документы из базы знаний\n\n"
+        for d in docs:
+            ctx += f"### `{d['title']}` _(score: {d['score']})_\n"
+            ctx += f"{d['snippet']}...\n\n"
     else:
-        context_block = "> ⚠️ Документы по запросу не найдены в локальной базе.\n\n---\n\n"
+        ctx = "> ⚠️ Документы по ключевым словам не найдены. Проверьте базу знаний.\n\n"
 
-    return f"""# 📥 Ответ от ChatGPT
+    preview = "\n".join(text.strip().splitlines()[:20])  # первые 20 строк запроса
 
-*Заполнено автоматически Mastodont Watcher в {time.strftime('%Y-%m-%d %H:%M:%S')}*
+    return f"""# 📥 Ответ — {project} [{mode}]
 
----
-
-## 📋 Оригинальный запрос (из TO_CHATGPT.md)
-
-{request_text[:500]}...
+*Обновлено Mastodont Watcher: {time.strftime('%Y-%m-%d %H:%M:%S')}*
+*TASK_TYPE: {task}*
 
 ---
 
-{context_block}## ✍️ Ответ ChatGPT
+## 📋 Запрос (превью)
 
-> ***Вставьте сюда ответ от ChatGPT или дождитесь API-версии***
+```
+{preview}
+```
 
 ---
-*Дайджест основных тезисов:*
+
+{ctx}---
+
+## ✍️ Ответ ChatGPT
+
+<!-- Вставьте сюда ответ от ChatGPT. Watcher не тронет файл, пока TO_CHATGPT.md не изменится. -->
+
+
+---
+
+**Тезисы:**
 - ...
 - ...
 - ...
@@ -104,12 +139,14 @@ def build_enriched_output(request_text: str, found_docs: list) -> str:
 
 
 def run():
-    logger.info("🟢 Mastodont AI Watcher запущен.")
-    logger.info(f"  Слушаю: {TO_FILE}")
-    logger.info(f"  Вывод:  {FROM_FILE}")
-    logger.info(f"  MCP:    {MCP_URL}")
-    logger.info(f"  Интервал: {POLL_INTERVAL} сек.\n")
+    logger.info("=" * 50)
+    logger.info("🟢 Mastodont AI Watcher v1.1 запущен (Direct Mode)")
+    logger.info(f"   TO:    {TO_FILE}")
+    logger.info(f"   FROM:  {FROM_FILE}")
+    logger.info(f"   База:  {ENG_DIR}")
+    logger.info("=" * 50)
 
+    kb = LocalKnowledge(ENG_DIR)
     last_hash = ""
 
     while True:
@@ -121,25 +158,23 @@ def run():
                 if text.strip() and current_hash != last_hash:
                     logger.info("🔔 Изменение обнаружено в TO_CHATGPT.md")
 
-                    # Извлекаем ключевые слова для поиска
-                    keywords = extract_query_keywords(text)
-                    logger.info(f"🔍 Поиск по ключевым словам: '{keywords}'")
+                    meta, keywords = extract_mode_and_keywords(text)
+                    logger.info(f"   MODE={meta.get('MODE')} | PROJECT={meta.get('PROJECT')} | TASK={meta.get('TASK_TYPE')}")
+                    logger.info(f"🔍 Поиск: '{keywords}'")
 
-                    # Ищем в локальной базе знаний
-                    found = search_local_knowledge(keywords)
-                    logger.info(f"📚 Найдено документов: {len(found)}")
+                    docs = kb.search(keywords)
+                    logger.info(f"📚 Найдено: {len(docs)} документов")
+                    for d in docs:
+                        logger.info(f"   └─ [{d['score']:>3}] {d['title']}")
 
-                    # Формируем выходной файл
-                    output = build_enriched_output(text, found)
+                    output = build_output(text, docs, meta)
                     FROM_FILE.write_text(output, encoding="utf-8")
 
-                    logger.info(f"✅ FROM_CHATGPT.md обновлен. Вставьте ответ ChatGPT в файл.")
+                    logger.info("✅ FROM_CHATGPT.md обновлен.")
                     last_hash = current_hash
-            else:
-                logger.warning(f"TO_CHATGPT.md не найден: {TO_FILE}")
 
         except Exception as e:
-            logger.error(f"Ошибка в цикле: {e}")
+            logger.error(f"Ошибка: {e}")
 
         time.sleep(POLL_INTERVAL)
 
