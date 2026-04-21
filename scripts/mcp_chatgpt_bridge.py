@@ -6,9 +6,9 @@ from pathlib import Path
 from dotenv import load_dotenv
 from fastapi import FastAPI, Header, HTTPException, Request
 from fastapi.responses import JSONResponse
-from mcp.server.fastapi import FastApiServer
 from mcp.server import Server
-from mcp.types import Tool, TextContent, ImageContent, EmbeddedResource
+from mcp.server.sse import SseServerTransport
+from mcp.types import Tool, TextContent
 
 # Настройка логирования
 logging.basicConfig(level=logging.INFO)
@@ -21,6 +21,7 @@ KNOWLEDGE_PATH = Path(os.getenv("KNOWLEDGE_PATH", "c:/ANTIGRAVITY/1/knowledge/")
 
 # Инициализация MCP сервера
 mcp_server = Server("mastodont-knowledge")
+sse = SseServerTransport("/messages")
 
 @mcp_server.list_tools()
 async def list_tools() -> List[Tool]:
@@ -56,25 +57,20 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
     if name == "search_knowledge":
         query = arguments.get("query", "").lower()
         results = []
-        
-        # Простой поиск по файлам в knowledge/
         for file in KNOWLEDGE_PATH.rglob("*.md"):
             try:
                 content = file.read_text(encoding="utf-8")
                 if query in content.lower() or query in file.name.lower():
-                    # Формируем краткое описание для ChatGPT
                     summary = content[:200].replace("\n", " ") + "..."
                     results.append({
                         "id": str(file.relative_to(KNOWLEDGE_PATH)),
                         "title": file.name,
-                        "url": f"local://{file.name}", # Заглушка URL
+                        "url": f"https://local-resource/{file.name}",
                         "snippet": summary
                     })
             except Exception as e:
                 logger.error(f"Error reading {file}: {e}")
         
-        # OpenAI требует обертку "results" внутри JSON-строки для Company Knowledge
-        # Но для обычных инструментов возвращаем просто текст
         response_data = {"results": results[:10]}
         return [TextContent(type="text", text=json.dumps(response_data, ensure_ascii=False))]
 
@@ -82,21 +78,19 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
         doc_id = arguments.get("id", "")
         file_path = (KNOWLEDGE_PATH / doc_id).resolve()
         
-        # Проверка безопасности: нельзя выходить за пределы KNOWLEDGE_PATH
         if not str(file_path).startswith(str(KNOWLEDGE_PATH)):
-            raise ValueError("Access Denied: Path outside of knowledge base")
+            raise ValueError("Access Denied")
             
         if not file_path.exists():
             return [TextContent(type="text", text="Ошибка: Документ не найден.")]
             
         try:
             content = file_path.read_text(encoding="utf-8")
-            # OpenAI Fetch формат: id, title, text
             fetch_data = {
                 "id": doc_id,
                 "title": file_path.name,
                 "text": content,
-                "url": f"local://{doc_id}"
+                "url": f"https://local-resource/{doc_id}"
             }
             return [TextContent(type="text", text=json.dumps(fetch_data, ensure_ascii=False))]
         except Exception as e:
@@ -105,22 +99,28 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
     else:
         raise ValueError(f"Unknown tool: {name}")
 
-# Создание FastAPI приложения с MCP адаптером
+# Создание FastAPI приложения
 app = FastAPI(title="Mastodont ChatGPT Bridge")
-mcp_app = FastApiServer(mcp_server)
+
+@app.get("/sse")
+async def handle_sse(request: Request):
+    """Подключение по SSE."""
+    async with sse.connect_sse(request.scope, request.receive, request._send) as (read_stream, write_stream):
+        await mcp_server.run(read_stream, write_stream, mcp_server.create_initialization_options())
+
+@app.post("/messages")
+async def handle_messages(request: Request):
+    """Обработка входящих сообщений."""
+    return await sse.handle_post_message(request.scope, request.receive, request._send)
 
 # Middleware для проверки токена
 @app.middleware("http")
 async def check_auth(request: Request, call_next):
-    # ChatGPT может присылать токен в Authorization заголовке
     auth_header = request.headers.get("Authorization")
-    if auth_header != f"Bearer {TOKEN}" and request.url.path not in ["/docs", "/openapi.json"]:
+    if auth_header != f"Bearer {TOKEN}" and request.url.path not in ["/docs", "/openapi.json", "/sse", "/messages"]:
         return JSONResponse(status_code=401, content={"detail": "Unauthorized"})
     response = await call_next(request)
     return response
-
-# Монтирование MCP путей
-app.mount("/", mcp_app)
 
 if __name__ == "__main__":
     import uvicorn
