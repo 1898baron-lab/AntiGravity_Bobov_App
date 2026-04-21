@@ -1,0 +1,133 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Mastodont Engineering Knowledge Base",
+    "description": "Access the local Obsidian Engineering vault. Search for GOST standards, TZ documents, welding specs, and engineering decisions for the Rosatom / TSEPTI context.",
+    "version": "2.0.0"
+  },
+  "servers": [
+    {
+      "url": "__TUNNEL_URL__",
+      "description": "Mastodont MCP Bridge (ngrok tunnel)"
+    }
+  ],
+  "paths": {
+    "/tools/search": {
+      "get": {
+        "operationId": "search_knowledge",
+        "summary": "Search the Obsidian Engineering knowledge base",
+        "description": "Performs a ranked search across all Markdown documents in the Engineering vault. Returns titles, relevance scores, and 300-char snippets. Use this to find relevant GOSTs, TZ files, welding specs, or audit decisions.",
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": "Search query in Russian or English (e.g. 'стапель 1200x800', 'S235 GOST', 'welding tolerance')",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of matching documents with scores and snippets",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "results": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id":      { "type": "string", "description": "Document path (use for fetch_document)" },
+                          "title":   { "type": "string" },
+                          "score":   { "type": "integer" },
+                          "snippet": { "type": "string" }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [{ "BearerAuth": [] }]
+      }
+    },
+    "/tools/fetch": {
+      "get": {
+        "operationId": "fetch_document",
+        "summary": "Fetch the full content of a document from the knowledge base",
+        "description": "Returns the complete Markdown text of a single document. Use the 'id' field from search results. Documents are up to 10,000 characters.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "description": "Document ID (relative path), obtained from search_knowledge results.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Full document content",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id":    { "type": "string" },
+                    "title": { "type": "string" },
+                    "text":  { "type": "string", "description": "Full Markdown content" }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Document not found"
+          }
+        },
+        "security": [{ "BearerAuth": [] }]
+      }
+    },
+    "/health": {
+      "get": {
+        "operationId": "health_check",
+        "summary": "Check bridge status",
+        "description": "Returns server health, number of indexed documents, and knowledge base path.",
+        "responses": {
+          "200": {
+            "description": "Health status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status":       { "type": "string" },
+                    "docs_count":   { "type": "integer" },
+                    "knowledge_root": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Bearer token set in CHATGPT_MCP_TOKEN in .env.mcp"
+      }
+    }
+  }
+}
