@@ -1,13 +1,13 @@
 """
-Mastodont AI Watcher v1.1 — Direct Mode
+Mastodont AI Watcher v1.2 — Full-Auto Mode
 ========================================
 Слушает изменения в TO_CHATGPT.md.
-Напрямую использует KnowledgeStore (без HTTP-запросов).
+Автоматически вызывает AI через Claude Connector.
 
 При изменении файла:
   1. Сканирует Obsidian Engineering/ и находит релевантные документы.
-  2. Формирует обогащённый контекст в FROM_CHATGPT.md.
-  3. FROM_CHATGPT.md = готовый файл для вставки в ChatGPT или API-запрос.
+  2. Формирует контекст и отправляет запрос в AI.
+  3. Записывает результат в FROM_CHATGPT.md.
 
 Запуск:
   .venv/Scripts/python.exe scripts/ai_watcher.py
@@ -16,6 +16,9 @@ Mastodont AI Watcher v1.1 — Direct Mode
 import sys
 import time
 import logging
+import json
+import httpx
+import asyncio
 from pathlib import Path
 
 # Настройка логирования
@@ -33,6 +36,8 @@ sys.path.insert(0, str(BASE / "scripts"))
 TO_FILE   = BASE / "obsidian_brain/_AI_EXCHANGE/TO_CHATGPT.md"
 FROM_FILE = BASE / "obsidian_brain/_AI_EXCHANGE/FROM_CHATGPT.md"
 ENG_DIR   = BASE / "obsidian_brain/Engineering"
+MCP_URL   = "http://localhost:8000"          # MCP Bridge
+AI_URL    = "http://localhost:8765"          # Claude Connector (API)
 POLL_INTERVAL = 3  # секунды
 
 
@@ -91,56 +96,61 @@ def extract_mode_and_keywords(text: str) -> tuple:
     return meta, keywords
 
 
-def build_output(text: str, docs: list, meta: dict) -> str:
-    mode    = meta.get("MODE", "GENERAL")
-    project = meta.get("PROJECT", "Unknown")
-    task    = meta.get("TASK_TYPE", "Unknown")
+async def call_ai_service(prompt: str, context: str) -> str:
+    """Отправляет запрос в Claude Connector."""
+    logger.info("🚀 Отправка запроса в AI Service (Claude Connector)...")
+    full_prompt = f"System Context (Local Knowledge Base):\n{context}\n\nUser Question:\n{prompt}"
+    
+    try:
+        async with httpx.AsyncClient(timeout=300.0) as client:
+            resp = await client.post(
+                f"{AI_URL}/v1/messages",
+                json={
+                    "messages": [{"role": "user", "content": full_prompt}],
+                    "model": "claude-3-sonnet-20240229"
+                }
+            )
+            if resp.status_code == 200:
+                data = resp.json()
+                return data["content"][0]["text"]
+            else:
+                return f"❌ Ошибка AI Service: {resp.status_code}\n{resp.text}"
+    except Exception as e:
+        return f"❌ Ошибка подключения к AI Service (localhost:8765): {e}"
 
-    ctx = ""
-    if docs:
-        ctx = "## 📚 Релевантные документы из базы знаний\n\n"
-        for d in docs:
-            ctx += f"### `{d['title']}` _(score: {d['score']})_\n"
-            ctx += f"{d['snippet']}...\n\n"
-    else:
-        ctx = "> ⚠️ Документы по ключевым словам не найдены. Проверьте базу знаний.\n\n"
 
-    preview = "\n".join(text.strip().splitlines()[:20])  # первые 20 строк запроса
-
+def build_final_output(project: str, mode: str, prompt: str, docs: list, ai_response: str) -> str:
+    """Формирует финальный Markdown-файл с ответом."""
+    ctx_refs = "\n".join([f"- [{d['title']}](file:///{ENG_DIR}/{d['id']})" for d in docs])
+    
     return f"""# 📥 Ответ — {project} [{mode}]
 
-*Обновлено Mastodont Watcher: {time.strftime('%Y-%m-%d %H:%M:%S')}*
-*TASK_TYPE: {task}*
+*Заполнено автоматически Mastodont Watcher в {time.strftime('%H:%M:%S')}*
 
 ---
 
-## 📋 Запрос (превью)
-
-```
-{preview}
-```
+## 📋 Запрос
+{prompt}
 
 ---
 
-{ctx}---
-
-## ✍️ Ответ ChatGPT
-
-<!-- Вставьте сюда ответ от ChatGPT. Watcher не тронет файл, пока TO_CHATGPT.md не изменится. -->
-
+## 📚 Контекст (База знаний)
+{ctx_refs}
 
 ---
 
-**Тезисы:**
-- ...
-- ...
-- ...
+## ✍️ Ответ AI
+{ai_response}
+
+---
+
+**Статус**: Готово. TO_CHATGPT.md готов к новому запросу.
 """
 
 
-def run():
+async def main_loop():
     logger.info("=" * 50)
-    logger.info("🟢 Mastodont AI Watcher v1.1 запущен (Direct Mode)")
+    logger.info("🟢 Mastodont AI Watcher v1.2 запущен (Full-Auto Mode)")
     logger.info(f"   TO:    {TO_FILE}")
     logger.info(f"   FROM:  {FROM_FILE}")
     logger.info(f"   База:  {ENG_DIR}")
@@ -157,18 +167,9 @@ def run():
 
                 if text.strip() and current_hash != last_hash:
                     logger.info("🔔 Изменение обнаружено в TO_CHATGPT.md")
-
+                    
                     meta, keywords = extract_mode_and_keywords(text)
-                    logger.info(f"   MODE={meta.get('MODE')} | PROJECT={meta.get('PROJECT')} | TASK={meta.get('TASK_TYPE')}")
-                    logger.info(f"🔍 Поиск: '{keywords}'")
-
                     docs = kb.search(keywords)
-                    logger.info(f"📚 Найдено: {len(docs)} документов")
-                    for d in docs:
-                        logger.info(f"   └─ [{d['score']:>3}] {d['title']}")
-
-                    output = build_output(text, docs, meta)
-                    FROM_FILE.write_text(output, encoding="utf-8")
 
                     logger.info("✅ FROM_CHATGPT.md обновлен.")
                     last_hash = current_hash
