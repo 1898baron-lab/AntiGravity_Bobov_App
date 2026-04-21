@@ -210,46 +210,45 @@ async def health():
         "knowledge_root": str(KNOWLEDGE_PATH)
     }
 
+# ─────────────────────────────────────────────
+# SSE Handlers (Low-level for stability)
+# ─────────────────────────────────────────────
+
 @app.get("/sse")
 async def handle_sse(request: Request):
-    """Подключение по SSE (для MCP клиентов)."""
-    logger.info("New SSE connection established")
-    async with sse.connect_sse(request.scope, request.receive, request._send) as (read_stream, write_stream):
-        await mcp_server.run(read_stream, write_stream, mcp_server.create_initialization_options())
+    """Подключение по SSE. Мы используем прямое управление стримом."""
+    logger.info("New SSE GET connection attempt")
+    
+    async def sse_stream():
+        async with sse.connect_sse(request.scope, request.receive, request._send) as (read_stream, write_stream):
+            logger.info("SSE stream established, running MCP server...")
+            await mcp_server.run(read_stream, write_stream, mcp_server.create_initialization_options())
+            logger.info("MCP server run finished")
+
+    # В FastAPI/Starlette для SSE обычно используют StreamingResponse, 
+    # но библиотека MCP сама управляет отправкой через request._send.
+    # Чтобы FastAPI не закрывал соединение раньше времени, мы просто вызываем sse_stream.
+    await sse_stream()
+    return Response(status_code=200) # Это выполнится только ПОСЛЕ закрытия стрима
 
 @app.post("/sse")
 @app.post("/messages")
 async def handle_mcp_messages(request: Request):
-    """Универсальный обработчик для ChatGPT. 
-    Мы обходим стандартные проверки библиотеки и гарантируем JSON-ответ."""
+    """Универсальный обработчик сообщений для ChatGPT."""
     try:
-        # Пытаемся получить тело запроса (JSON-RPC)
-        body = await request.json()
-        logger.info(f"Received MCP message: {body.get('method')}")
-        
-        # Нам нужно прокинуть это сообщение в сервер.
-        # Поскольку у нас SSE транспорт уже запущен, мы можем использовать его внутренний метод,
-        # но чтобы избежать ошибок с session_id, мы сделаем 'инъекцию' прямо здесь.
-        
         query_params = dict(request.query_params)
         if "session_id" not in query_params:
             active_sessions = list(sse._read_stream_writers.keys())
             if active_sessions:
                 session_id = active_sessions[-1]
-                # Модифицируем scope для внутренней библиотеки
+                logger.info(f"Injecting session_id: {session_id}")
                 request.scope['query_string'] = f"session_id={session_id}".encode()
 
-        # Вызываем оригинальный метод, но перехватываем результат
         await sse.handle_post_message(request.scope, request.receive, request._send)
-        
-        # Гарантируем, что ответ - это JSON (OpenAI это требует)
-        return JSONResponse(
-            content={"status": "accepted"}, 
-            headers={"Content-Type": "application/json; charset=utf-8"}
-        )
+        return Response(status_code=202) # MCP POST обычно возвращает 202
     except Exception as e:
-        logger.error(f"Error handling MCP message: {e}")
-        return JSONResponse(content={"error": str(e)}, status_code=200) # Возвращаем 200, чтобы не пугать OpenAI
+        logger.error(f"Error in handle_mcp_messages: {e}")
+        return JSONResponse(content={"error": str(e)}, status_code=200)
 
 # ─────────────────────────────────────────────
 # Auth: ОТКЛЮЧЕНО ДЛЯ НАСТРОЙКИ
