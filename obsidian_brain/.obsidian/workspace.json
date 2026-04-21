@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Engineering/Projects/Project_Frame_1200x800.md",
+                "file": "Engineering/Design_Office/Tooling/Calculations/Tooling_Calculation_Template.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project_Frame_1200x800"
+              "title": "Tooling_Calculation_Template"
             }
           }
         ]
@@ -186,16 +186,17 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
-    "Engineering/Projects/Project_Catalog.md",
+    "Engineering/Design_Office/Tooling/Calculations/Tooling_Calculation_10_129.md",
+    "Engineering/Design_Office/Tooling/Calculations/Locating_Schema_ASCII.md",
+    "Engineering/Design_Office/Tooling/Calculations/Frame_Tooling_Calculation.md",
+    "Engineering/Design_Office/Tooling/Calculations/Frame_Fixture_Design_ASCII.md",
+    "Engineering/Knowledge_Base/Incident_Analysis_Akkuyu.md",
     "Engineering/Projects/Project_Frame_1200x800.md",
+    "Engineering/Projects/Project_Catalog.md",
     "Engineering/Session_Logs/2026-04-21_Engineering_Audit.md",
     "Engineering/Session_Logs",
-    "Engineering/Design_Office/Tooling/Calculations/Frame_Fixture_Design_ASCII.md",
-    "Engineering/Design_Office/Tooling/Calculations/Frame_Tooling_Calculation.md",
-    "Engineering/Design_Office/Tooling/Calculations/Locating_Schema_ASCII.md",
     "Engineering/Standards/Internship_Knowledge_Check.md",
     "Engineering/Design_Office/Valve_DN170/Specification.md",
-    "Engineering/Design_Office/Tooling/Calculations/Tooling_Calculation_10_129.md",
     "Engineering/Design_Office/Tooling/Calculations/Tooling_Calculation_Template.md",
     "Education/Professional_Growth_Matrix.md",
     "_Skills/Engineering_Review_Skill.md",
@@ -219,7 +220,6 @@
     "_Skills/Legal_Attack_Skill.md",
     "Engineering/Standards",
     "Legal/claim_fz68_compensation_v1.md",
-    "Engineering/Knowledge_Base/PTO_Standard_Guidelines.md",
     "Engineering/Design_Office",
     "Engineering/Knowledge_Base"
   ]
