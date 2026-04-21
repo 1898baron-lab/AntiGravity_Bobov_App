@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "obsidian": {
+      "command": "npx",
+      "args": ["-y", "obsidian-mcp"],
+      "env": {
+        "OBSIDIAN_API_KEY": "PLACEHOLDER_REPLACE_WITH_REAL_KEY",
+        "OBSIDIAN_API_URL": "http://127.0.0.1:27123",
+        "OBSIDIAN_VERIFY_SSL": "false"
+      }
+    }
+  }
+}
