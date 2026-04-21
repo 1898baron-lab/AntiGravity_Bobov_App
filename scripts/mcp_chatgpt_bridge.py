@@ -102,22 +102,31 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
 # Создание FastAPI приложения
 app = FastAPI(title="Mastodont ChatGPT Bridge")
 
+@app.get("/health")
+async def health():
+    """Проверка состояния сервера."""
+    return {"status": "ok", "server": "Mastodont MCP Bridge", "version": "1.0.0"}
+
 @app.get("/sse")
 async def handle_sse(request: Request):
     """Подключение по SSE."""
+    logger.info("New SSE connection established")
     async with sse.connect_sse(request.scope, request.receive, request._send) as (read_stream, write_stream):
         await mcp_server.run(read_stream, write_stream, mcp_server.create_initialization_options())
 
 @app.post("/messages")
 async def handle_messages(request: Request):
     """Обработка входящих сообщений."""
+    logger.info("Processing post message from client")
     return await sse.handle_post_message(request.scope, request.receive, request._send)
 
 # Middleware для проверки токена
 @app.middleware("http")
 async def check_auth(request: Request, call_next):
+    # ChatGPT может присылать токен в Authorization заголовке
     auth_header = request.headers.get("Authorization")
-    if auth_header != f"Bearer {TOKEN}" and request.url.path not in ["/docs", "/openapi.json", "/sse", "/messages"]:
+    if auth_header != f"Bearer {TOKEN}" and request.url.path not in ["/docs", "/openapi.json", "/sse", "/messages", "/health"]:
+        logger.warning(f"Unauthorized access attempt to {request.url.path}")
         return JSONResponse(status_code=401, content={"detail": "Unauthorized"})
     response = await call_next(request)
     return response
@@ -125,5 +134,5 @@ async def check_auth(request: Request, call_next):
 if __name__ == "__main__":
     import uvicorn
     port = int(os.getenv("MCP_SERVER_PORT", 8000))
-    logger.info(f"Starting Mastodont MCP Bridge on port {port}")
+    logger.info(f"🚀 Starting Mastodont MCP Bridge on port {port}")
     uvicorn.run(app, host="0.0.0.0", port=port)
