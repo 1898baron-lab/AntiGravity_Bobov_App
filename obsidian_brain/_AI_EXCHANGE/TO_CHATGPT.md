@@ -1,3 +1,9 @@
+## MODE: ENGINEERING
+## PROJECT: Stapel_1200x800
+## TASK_TYPE: analysis
+
+---
+
 # 🧠 Запрос к ИИ-наставнику (ChatGPT)
 
 > [!IMPORTANT]
