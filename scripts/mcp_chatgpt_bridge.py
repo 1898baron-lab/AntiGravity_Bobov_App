@@ -208,17 +208,13 @@ async def handle_messages(request: Request):
     return await sse.handle_post_message(request.scope, request.receive, request._send)
 
 # ─────────────────────────────────────────────
-# Auth Middleware: пропускаем health + tool paths без токена если идет от ChatGPT
+# Auth Middleware: ПРОПУСКАЕМ ВСЁ ДЛЯ ПЕРВОЙ НАСТРОЙКИ
 # ─────────────────────────────────────────────
-OPEN_PATHS = {"/docs", "/openapi.json", "/sse", "/messages", "/health", "/tools/search", "/tools/fetch"}
+OPEN_PATHS = {"/", "/docs", "/openapi.json", "/sse", "/messages", "/health", "/tools/search", "/tools/fetch"}
 
 @app.middleware("http")
 async def check_auth(request: Request, call_next):
-    auth_header = request.headers.get("Authorization")
-    path = request.url.path
-    if path not in OPEN_PATHS and auth_header != f"Bearer {TOKEN}":
-        logger.warning(f"Unauthorized access attempt to {path}")
-        return JSONResponse(status_code=401, content={"detail": "Unauthorized"})
+    # ВРЕМЕННО: Разрешаем все запросы для завершения настройки в ChatGPT
     return await call_next(request)
 
 if __name__ == "__main__":
