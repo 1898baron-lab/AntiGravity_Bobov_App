@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_Skills/Engineering_Review_Skill.md",
+                "file": "Education/Professional_Growth_Matrix.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Engineering_Review_Skill"
+              "title": "Professional_Growth_Matrix"
             }
           }
         ]
@@ -186,6 +186,7 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
+    "_Skills/Engineering_Review_Skill.md",
     "_AI_EXCHANGE/FROM_CHATGPT.md",
     "_AI_EXCHANGE/TO_CHATGPT.md",
     "Engineering/Projects/Project_Catalog.md",
@@ -214,7 +215,6 @@
     "Home.md",
     "Engineering/Design_Office/Valve_DN170/Passport_Valve_170_Draft.md",
     "Engineering/Design_Office/Valve_DN170/Weight_and_Cost_Analysis.md",
-    "Engineering/Design_Office/Tooling/Calculations/Frame_Tooling_Calculation.md",
     "Engineering/Session_Logs",
     "Engineering/Design_Office/Valve_DN170",
     "Без названия.canvas",
