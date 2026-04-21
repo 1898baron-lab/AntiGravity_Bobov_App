@@ -47,8 +47,9 @@ def analyze_pdf(pdf_path, output_dir=None):
         pix.save(img_path)
         print(f"Saved: {img_path} ({pix.width}x{pix.height})")
 
+    page_count = len(doc)
     doc.close()
-    print(f"\nDone. {len(doc)} pages exported to {output_dir}")
+    print(f"\nDone. {page_count} pages exported to {output_dir}")
 
 
 if __name__ == "__main__":
