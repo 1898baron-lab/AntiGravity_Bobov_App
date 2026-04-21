@@ -162,7 +162,7 @@ app = FastAPI(
 )
 
 # ─────────────────────────────────────────────
-# CORS & Security Headers (CSP) for OpenAI
+# CORS for OpenAI
 # ─────────────────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
@@ -172,15 +172,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-class SecurityHeadersMiddleware(BaseHTTPMiddleware):
-    async def dispatch(self, request, call_next):
-        response = await call_next(request)
-        # OpenAI требует frame-ancestors для безопасности виджетов
-        response.headers["Content-Security-Policy"] = "frame-ancestors https://chatgpt.com"
-        response.headers["X-Frame-Options"] = "ALLOW-FROM https://chatgpt.com"
-        return response
-
-app.add_middleware(SecurityHeadersMiddleware)
+# (Мы убрали SecurityHeadersMiddleware, так как он мешал SSE-потоку)
 
 # ─────────────────────────────────────────────
 # REST Tool endpoints for ChatGPT Custom Action
