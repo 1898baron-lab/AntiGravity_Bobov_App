@@ -1,7 +1,7 @@
 import os
 import json
 import logging
-from typing import List, Optional
+from typing import List, Optional, Dict
 from pathlib import Path
 from dotenv import load_dotenv
 from fastapi import FastAPI, Header, HTTPException, Request
@@ -11,13 +11,81 @@ from mcp.server.sse import SseServerTransport
 from mcp.types import Tool, TextContent
 
 # Настройка логирования
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger("mcp_chatgpt_bridge")
 
 # Загрузка переменных окружения
 load_dotenv(".env.mcp")
-TOKEN = os.getenv("CHATGPT_MCP_TOKEN", "mastodont_secret_2026")
-KNOWLEDGE_PATH = Path(os.getenv("KNOWLEDGE_PATH", "c:/ANTIGRAVITY/1/knowledge/")).resolve()
+
+TOKEN = os.getenv("CHATGPT_MCP_TOKEN")
+if not TOKEN:
+    logger.error("CRITICAL: CHATGPT_MCP_TOKEN not set in .env.mcp")
+    raise RuntimeError("CHATGPT_MCP_TOKEN is mandatory")
+
+KNOWLEDGE_PATH = Path(os.getenv("KNOWLEDGE_PATH", "c:/ANTIGRAVITY/1/obsidian_brain/Engineering/")).resolve()
+MAX_CHARS = 10000
+
+class KnowledgeStore:
+    """Класс для управления кешированием и поиском по базе знаний."""
+    def __init__(self, path: Path):
+        self.path = path
+        self.cache: Dict[str, str] = {}
+        self.load_cache()
+
+    def load_cache(self):
+        """Предзагрузка всех документов в память."""
+        logger.info(f"Indexing knowledge base at: {self.path}")
+        if not self.path.exists():
+            logger.warning(f"Path {self.path} does not exist!")
+            return
+
+        for file in self.path.rglob("*.md"):
+            try:
+                rel_path = str(file.relative_to(self.path))
+                content = file.read_text(encoding="utf-8")
+                self.cache[rel_path] = content
+                logger.debug(f"Indexed: {rel_path}")
+            except Exception as e:
+                logger.error(f"Error indexing {file}: {e}")
+        logger.info(f"Indexing complete. {len(self.cache)} documents loaded.")
+
+    def search(self, query: str) -> List[Dict]:
+        """Поиск с ранжированием по количеству вхождений (TF)."""
+        if not query.strip():
+            return []
+
+        query = query.lower()
+        results = []
+
+        for doc_id, content in self.cache.items():
+            content_lower = content.lower()
+            if query in content_lower or query in doc_id.lower():
+                # Простая метрика релевантности: частота запроса + бонус за название
+                score = content_lower.count(query)
+                if query in doc_id.lower():
+                    score += 10
+                
+                summary = content[:300].replace("\n", " ") + "..."
+                results.append({
+                    "id": doc_id,
+                    "title": Path(doc_id).name,
+                    "score": score,
+                    "snippet": summary
+                })
+
+        # Сортировка по убыванию score
+        return sorted(results, key=lambda x: x["score"], reverse=True)
+
+    def get_content(self, doc_id: str) -> Optional[str]:
+        """Получение контента с лимитом размера."""
+        content = self.cache.get(doc_id)
+        if content and len(content) > MAX_CHARS:
+            logger.warning(f"Document {doc_id} truncated (Original: {len(content)} chars)")
+            return content[:MAX_CHARS] + "\n\n... [ДОКУМЕНТ УСЕЧЕН ДЛЯ ЭКОНОМИИ ТОКЕНОВ] ..."
+        return content
+
+# Инициализация хранилища
+store = KnowledgeStore(KNOWLEDGE_PATH)
 
 # Инициализация MCP сервера
 mcp_server = Server("mastodont-knowledge")
@@ -55,57 +123,46 @@ async def list_tools() -> List[Tool]:
 async def call_tool(name: str, arguments: dict) -> List[TextContent]:
     """Вызов инструментов."""
     if name == "search_knowledge":
-        query = arguments.get("query", "").lower()
-        results = []
-        for file in KNOWLEDGE_PATH.rglob("*.md"):
-            try:
-                content = file.read_text(encoding="utf-8")
-                if query in content.lower() or query in file.name.lower():
-                    summary = content[:200].replace("\n", " ") + "..."
-                    results.append({
-                        "id": str(file.relative_to(KNOWLEDGE_PATH)),
-                        "title": file.name,
-                        "url": f"https://local-resource/{file.name}",
-                        "snippet": summary
-                    })
-            except Exception as e:
-                logger.error(f"Error reading {file}: {e}")
+        query = arguments.get("query", "")
+        if not query.strip():
+            return [TextContent(type="text", text="Ошибка: Пустой поисковый запрос.")]
         
-        response_data = {"results": results[:10]}
+        logger.info(f"Tool call search_knowledge: query='{query}'")
+        found = store.search(query)
+        
+        response_data = {"results": found[:10]}
         return [TextContent(type="text", text=json.dumps(response_data, ensure_ascii=False))]
 
     elif name == "fetch_document":
         doc_id = arguments.get("id", "")
-        file_path = (KNOWLEDGE_PATH / doc_id).resolve()
+        logger.info(f"Tool call fetch_document: id='{doc_id}'")
         
-        if not str(file_path).startswith(str(KNOWLEDGE_PATH)):
-            raise ValueError("Access Denied")
+        content = store.get_content(doc_id)
+        if not content:
+            return [TextContent(type="text", text="Ошибка: Документ не найден в кеше.")]
             
-        if not file_path.exists():
-            return [TextContent(type="text", text="Ошибка: Документ не найден.")]
-            
-        try:
-            content = file_path.read_text(encoding="utf-8")
-            fetch_data = {
-                "id": doc_id,
-                "title": file_path.name,
-                "text": content,
-                "url": f"https://local-resource/{doc_id}"
-            }
-            return [TextContent(type="text", text=json.dumps(fetch_data, ensure_ascii=False))]
-        except Exception as e:
-            return [TextContent(type="text", text=f"Ошибка чтения: {str(e)}")]
+        fetch_data = {
+            "id": doc_id,
+            "title": Path(doc_id).name,
+            "text": content
+        }
+        return [TextContent(type="text", text=json.dumps(fetch_data, ensure_ascii=False))]
 
     else:
         raise ValueError(f"Unknown tool: {name}")
 
 # Создание FastAPI приложения
-app = FastAPI(title="Mastodont ChatGPT Bridge")
+app = FastAPI(title="Mastodont ChatGPT Bridge", version="1.1.0")
 
 @app.get("/health")
 async def health():
     """Проверка состояния сервера."""
-    return {"status": "ok", "server": "Mastodont MCP Bridge", "version": "1.0.0"}
+    return {
+        "status": "ok", 
+        "server": "Mastodont MCP Bridge", 
+        "docs_count": len(store.cache),
+        "knowledge_root": str(KNOWLEDGE_PATH)
+    }
 
 @app.get("/sse")
 async def handle_sse(request: Request):
@@ -134,5 +191,5 @@ async def check_auth(request: Request, call_next):
 if __name__ == "__main__":
     import uvicorn
     port = int(os.getenv("MCP_SERVER_PORT", 8000))
-    logger.info(f"🚀 Starting Mastodont MCP Bridge on port {port}")
+    logger.info(f"🚀 Starting Mastodont Refined MCP Bridge on port {port}")
     uvicorn.run(app, host="0.0.0.0", port=port)
