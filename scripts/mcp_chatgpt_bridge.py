@@ -223,7 +223,7 @@ async def handle_sse_post(request: Request):
     OpenAI не присылает session_id, поэтому мы инжектим его вручную."""
     if "session_id" not in request.query_params:
         # Пытаемся найти активную сессию
-        active_sessions = list(sse._sessions.keys())
+        active_sessions = list(sse._read_stream_writers.keys())
         if active_sessions:
             session_id = active_sessions[-1]
             logger.info(f"OpenAI POST /sse missing session_id. Injecting last active: {session_id}")
