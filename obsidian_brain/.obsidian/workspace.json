@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "MASTADONT_DASHBOARD.md",
+                "file": "Engineering/Design_Office/Valve_DN170/CAD_Modeling_Checklist.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MASTADONT_DASHBOARD"
+              "title": "CAD_Modeling_Checklist"
             }
           }
         ]
@@ -186,12 +186,12 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
+    "MASTADONT_DASHBOARD.md",
     "Engineering/Design_Office/Valve_DN170/CAD_Modeling_Checklist.md",
     "Engineering/Design_Office/Valve_DN170/Assembly_Structure_10_129.md",
     "Engineering/Session_Logs/Mentor_Report_2026-04-21.md",
     "Engineering/Session_Logs/stop_sync.ps1",
     "Engineering/Design_Office/Tooling/Calculations/Tooling_Calculation_10_129.md",
-    "MASTADONT_DASHBOARD.md",
     "CLAUDE.md",
     "Home.md",
     "Engineering/Design_Office/Valve_DN170/PMI_Valve_170_Draft.md",
