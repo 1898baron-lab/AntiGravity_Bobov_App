@@ -72,7 +72,7 @@ class LocalKnowledge:
                     "id": doc_id,
                     "title": Path(doc_id).name,
                     "score": score,
-                    "snippet": content[:400].replace("\n", " ")
+                    "snippet": content[:5000] # Увеличили для полноты контекста
                 })
         return sorted(results, key=lambda x: x["score"], reverse=True)[:top_n]
 
