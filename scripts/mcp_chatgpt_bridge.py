@@ -4,7 +4,7 @@ import logging
 from typing import List, Optional, Dict
 from pathlib import Path
 from dotenv import load_dotenv
-from fastapi import FastAPI, Header, HTTPException, Request
+from fastapi import FastAPI, Header, HTTPException, Request, Response
 from fastapi.responses import JSONResponse
 from mcp.server import Server
 from mcp.server.sse import SseServerTransport
@@ -227,9 +227,8 @@ async def handle_sse(request: Request):
 
     # В FastAPI/Starlette для SSE обычно используют StreamingResponse, 
     # но библиотека MCP сама управляет отправкой через request._send.
-    # Чтобы FastAPI не закрывал соединение раньше времени, мы просто вызываем sse_stream.
     await sse_stream()
-    return Response(status_code=200) # Это выполнится только ПОСЛЕ закрытия стрима
+    # Мы НИЧЕГО не возвращаем, чтобы не ломать поток данных
 
 @app.post("/sse")
 @app.post("/messages")
@@ -245,7 +244,6 @@ async def handle_mcp_messages(request: Request):
                 request.scope['query_string'] = f"session_id={session_id}".encode()
 
         await sse.handle_post_message(request.scope, request.receive, request._send)
-        return Response(status_code=202) # MCP POST обычно возвращает 202
     except Exception as e:
         logger.error(f"Error in handle_mcp_messages: {e}")
         return JSONResponse(content={"error": str(e)}, status_code=200)
