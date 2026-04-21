@@ -1,9 +1,3 @@
----
-tags: [dashboard, master, antigravity, internship]
-created: 2026-04-21
-version: 2.5
----
-
 # 🤖 MASTODONT AI Factory: Dashboard
 
 ## 📂 Модули системы
@@ -12,17 +6,18 @@ version: 2.5
     - [[Evidence_Map_12M]] — Карта доказательств.
 2.  **🏗 Engineering Brain (Проекты КО)**
     - [[TS_K01_UEHK_2024]] — Базовое ТЗ (Проект К-01).
-    - [[Project_Zeus_Action_Plan]] — План проекта ЗЕВС.
-    - [[Project_Frame_1200x800]] — Рама 1200х800 (WPS/Оснастка).
-    - [[Specification]] — Клапан Ду 170 (КД и Расчеты).
-    - [[Project_Catalog]] — 3D-модели (К-09, МКК П2).
+    - [[Technical_Directive_01]] — Директива Ду 170 (**25 кг - DONE**).
+    - [[Specification]] — Спецификация (**PCD 240/235 - DONE**).
+    - [[PMI_Valve_170_Draft]] — Программа испытаний.
+    - [[Passport_Valve_170_Draft]] — Паспорт.
+    - [[Weight_and_Cost_Analysis]] — Расчет масс (24.9 кг).
 3.  **🎓 Internship Track (Карьера)**
-    - [[Professional_Growth_Matrix]] — План 15.03.05 (Этап 1: В процессе).
-    - [[OST_95_Series_Summary]] — Нормативная база.
-    - [[Tooling_Calculation_Template]] — Инструментарий КБ Оснастки.
+    - [[1_ntd_tracker]] — Трекер НТД (**Этап 1: ЗАВЕРШЕН**).
+    - [[2_kompas_zeus_tracker]] — Этап 2 (3D-моделирование).
+    - [[Tooling_Calculation_10_129]] — Расчет оснастки (ПК-5).
 
 ## 🏁 Текущая цель
-**Завершение Этапа №1 Стажировки и переход к проектированию в Компас-3D.**
+**Переход к Этапу №4: Сборка и 3D-моделирование в КОМПАС-3D.**
 
 ---
-*Синхронизировано: 2026-04-21 11:35 | Antigravity AI*
+*Синхронизировано: 2026-04-21 13:00 | Antigravity AI. Stage 3 COMPLETE.*
