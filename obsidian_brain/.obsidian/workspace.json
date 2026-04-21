@@ -11,17 +11,14 @@
             "id": "114164b8bb64cc48",
             "type": "leaf",
             "state": {
-              "type": "canvas",
+              "type": "markdown",
               "state": {
-                "file": "Без названия.canvas",
-                "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
-                }
+                "file": "Engineering/Design_Office/TS_K01_UEHK_2024.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-layout-dashboard",
-              "title": "Без названия"
+              "icon": "lucide-file",
+              "title": "TS_K01_UEHK_2024"
             }
           }
         ]
@@ -189,13 +186,14 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
+    "Engineering/Design_Office/Project_Zeus_Action_Plan.md",
+    "Engineering/Design_Office/Tooling/Calculations/Tooling_Calculation_Template.md",
+    "_Skills/Engineering_Review_Skill.md",
     "CLAUDE.md",
     "Без названия.canvas",
-    "_Skills/Engineering_Review_Skill.md",
     "MASTADONT_DASHBOARD.md",
     "_Inbox/2026-04-21.md",
     "Engineering/Projects/Project_Frame_1200x800.md",
-    "Engineering/Design_Office/Tooling/Calculations/Tooling_Calculation_Template.md",
     "Engineering/Design_Office/Tooling/Calculations",
     "Engineering/Design_Office/Tooling",
     "Education/Professional_Growth_Matrix.md",

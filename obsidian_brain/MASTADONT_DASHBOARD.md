@@ -12,6 +12,8 @@ version: 2.5
     - [[Evidence_Map_12M]] — Карта доказательств.
 2.  **🏗 Engineering Brain (Проекты КО)**
     - [[TS_K01_UEHK_2024]] — Базовое ТЗ (Проект К-01).
+    - [[Project_Zeus_Action_Plan]] — План проекта ЗЕВС.
+    - [[Project_Frame_1200x800]] — Рама 1200х800 (WPS/Оснастка).
     - [[Project_Catalog]] — 3D-модели (К-09, МКК П2).
 3.  **🎓 Internship Track (Карьера)**
     - [[Professional_Growth_Matrix]] — План 15.03.05 (Этап 1: В процессе).
