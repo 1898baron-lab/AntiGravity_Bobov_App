@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Engineering/Projects/Project_Catalog.md",
+                "file": "Engineering/Projects/Project_Frame_1200x800.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project_Catalog"
+              "title": "Project_Frame_1200x800"
             }
           }
         ]
@@ -186,6 +186,8 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
+    "Engineering/Design_Office/Tooling/Calculations/Frame_Tooling_Calculation.md",
+    "Engineering/Projects/Project_Catalog.md",
     "Engineering/Design_Office/Tooling/Calculations/Locating_Schema_ASCII.md",
     "Engineering/Standards/Internship_Knowledge_Check.md",
     "Engineering/Design_Office/Valve_DN170/Specification.md",
@@ -209,7 +211,6 @@
     "Engineering/Design_Office/Tooling/Calculations",
     "Engineering/Design_Office/Tooling",
     "Education",
-    "Engineering/Projects/Project_Catalog.md",
     "Engineering/Projects",
     "_Inbox/Integration_Success.md",
     "_Skills/Legal_Attack_Skill.md",
@@ -219,7 +220,6 @@
     "Engineering/Design_Office",
     "Engineering/Knowledge_Base/Incident_Analysis_Akkuyu.md",
     "Legal/report_for_father.md",
-    "Legal/Strategic_Directive_v1.md",
     "Engineering/Knowledge_Base"
   ]
 }
