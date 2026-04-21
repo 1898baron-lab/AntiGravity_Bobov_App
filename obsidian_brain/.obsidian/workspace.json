@@ -11,10 +11,14 @@
             "id": "114164b8bb64cc48",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Граф"
+              "type": "markdown",
+              "state": {
+                "file": "Engineering/Design_Office/Project_Zeus_Action_Plan.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Project_Zeus_Action_Plan"
             }
           }
         ]
