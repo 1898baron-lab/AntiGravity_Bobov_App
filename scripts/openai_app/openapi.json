@@ -7,8 +7,8 @@
   },
   "servers": [
     {
-      "url": "__TUNNEL_URL__",
-      "description": "Mastodont MCP Bridge (ngrok tunnel)"
+      "url": "https://good-owls-hear.loca.lt",
+      "description": "Mastodont MCP Bridge (localtunnel)"
     }
   ],
   "paths": {
