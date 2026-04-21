@@ -184,8 +184,9 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "114164b8bb64cc48",
+  "active": "dbb5de802eaea249",
   "lastOpenFiles": [
+    "Engineering/Decisions/D001_Stapel_Audit.md",
     "Engineering/Machine_Building_Tech.md",
     "Engineering/AI_Interaction_Directive.md",
     "Engineering/Standards/OST_95_Series_Summary.md",
@@ -214,7 +215,6 @@
     "Engineering/Design_Office/Valve_DN170/Weight_and_Cost_Analysis.md",
     "Engineering/Design_Office/Tooling/Calculations/Frame_Tooling_Calculation.md",
     "Engineering/Design_Office/Tooling/Calculations/Locating_Schema_ASCII.md",
-    "Engineering/Design_Office/Valve_DN170/Technical_Directive_01.md",
     "Engineering/Session_Logs",
     "Engineering/Design_Office/Valve_DN170",
     "Без названия.canvas",
