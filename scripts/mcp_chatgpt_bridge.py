@@ -9,6 +9,9 @@ from fastapi.responses import JSONResponse
 from mcp.server import Server
 from mcp.server.sse import SseServerTransport
 from mcp.types import Tool, TextContent
+from fastapi.middleware.cors import CORSMiddleware
+from starlette.middleware.base import BaseHTTPMiddleware
+
 
 # Настройка логирования
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -151,12 +154,33 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
     else:
         raise ValueError(f"Unknown tool: {name}")
 
-# Создание FastAPI приложения
+# Инициализация FastAPI приложения
 app = FastAPI(
     title="Mastodont Engineering Knowledge Base",
-    version="2.0.0",
-    description="Access the Obsidian Engineering vault. Provides search and read tools for ChatGPT Custom Actions."
+    version="2.1.0",
+    description="Access the Obsidian Engineering vault. OpenAI Apps SDK / MCP compliant."
 )
+
+# ─────────────────────────────────────────────
+# CORS & Security Headers (CSP) for OpenAI
+# ─────────────────────────────────────────────
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://chatgpt.com", "https://openai.com"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+class SecurityHeadersMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request, call_next):
+        response = await call_next(request)
+        # OpenAI требует frame-ancestors для безопасности виджетов
+        response.headers["Content-Security-Policy"] = "frame-ancestors https://chatgpt.com"
+        response.headers["X-Frame-Options"] = "ALLOW-FROM https://chatgpt.com"
+        return response
+
+app.add_middleware(SecurityHeadersMiddleware)
 
 # ─────────────────────────────────────────────
 # REST Tool endpoints for ChatGPT Custom Action
