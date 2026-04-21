@@ -37,8 +37,9 @@ def analyze_pdf(pdf_path, output_dir=None):
         # Extract text
         text = page.get_text("text")
         if text.strip():
+            safe_text = text[:2000].encode("ascii", errors="replace").decode("ascii")
             print(f"\n--- Page {page_num + 1} TEXT ---")
-            print(text[:2000])  # First 2000 chars
+            print(safe_text)
 
         # Render page to PNG (300 DPI for engineering drawings)
         mat = fitz.Matrix(300 / 72, 300 / 72)
