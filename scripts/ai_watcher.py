@@ -170,15 +170,36 @@ async def main_loop():
                     
                     meta, keywords = extract_mode_and_keywords(text)
                     docs = kb.search(keywords)
-
-                    logger.info("✅ FROM_CHATGPT.md обновлен.")
+                    
+                    # Собираем контекст для ИИ
+                    context_block = "\n\n".join([f"DOC: {d['title']}\n{d['snippet']}" for d in docs])
+                    
+                    # Отправляем в ИИ
+                    ai_response = await call_ai_service(text, context_block)
+                    
+                    # Сохраняем результат
+                    final_md = build_final_output(
+                        meta.get("PROJECT", "General"),
+                        meta.get("MODE", "Engineering"),
+                        text,
+                        docs,
+                        ai_response
+                    )
+                    
+                    FROM_FILE.write_text(final_md, encoding="utf-8")
+                    logger.info("✅ FROM_CHATGPT.md обновлен ответом от AI.")
                     last_hash = current_hash
 
         except Exception as e:
-            logger.error(f"Ошибка: {e}")
+            logger.error(f"Ошибка в цикле: {e}")
 
-        time.sleep(POLL_INTERVAL)
+        await asyncio.sleep(POLL_INTERVAL)
 
 
 if __name__ == "__main__":
-    run()
+    try:
+        asyncio.run(main_loop())
+    except KeyboardInterrupt:
+        logger.info("👋 Завершение работы Watcher.")
+    except Exception as e:
+        logger.error(f"Критическая ошибка: {e}")
