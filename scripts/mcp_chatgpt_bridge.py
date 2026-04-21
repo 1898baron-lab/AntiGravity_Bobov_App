@@ -208,14 +208,9 @@ async def handle_messages(request: Request):
     return await sse.handle_post_message(request.scope, request.receive, request._send)
 
 # ─────────────────────────────────────────────
-# Auth Middleware: ПРОПУСКАЕМ ВСЁ ДЛЯ ПЕРВОЙ НАСТРОЙКИ
+# Auth: ОТКЛЮЧЕНО ДЛЯ НАСТРОЙКИ
 # ─────────────────────────────────────────────
-OPEN_PATHS = {"/", "/docs", "/openapi.json", "/sse", "/messages", "/health", "/tools/search", "/tools/fetch"}
-
-@app.middleware("http")
-async def check_auth(request: Request, call_next):
-    # ВРЕМЕННО: Разрешаем все запросы для завершения настройки в ChatGPT
-    return await call_next(request)
+# (Мы временно убрали Middleware, так как он мешал SSE-потоку)
 
 if __name__ == "__main__":
     import uvicorn
