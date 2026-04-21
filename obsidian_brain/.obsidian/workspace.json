@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Engineering/Design_Office/TS_K01_UEHK_2024.md",
+                "file": "_Inbox/Integration_Success.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "TS_K01_UEHK_2024"
+              "title": "Integration_Success"
             }
           }
         ]
@@ -186,8 +186,9 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
-    "Engineering/Knowledge_Base/PTO_Standard_Guidelines.md",
+    "_Skills/Legal_Attack_Skill.md",
     "Engineering/Design_Office/TS_K01_UEHK_2024.md",
+    "Engineering/Knowledge_Base/PTO_Standard_Guidelines.md",
     "Engineering/Design_Office",
     "Engineering/Knowledge_Base/Incident_Analysis_Akkuyu.md",
     "Legal/claim_fz68_compensation_v1.md",
