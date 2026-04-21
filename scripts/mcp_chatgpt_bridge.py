@@ -225,10 +225,14 @@ async def handle_sse(request: Request):
     async with sse.connect_sse(request.scope, request.receive, request._send) as (read_stream, write_stream):
         await mcp_server.run(read_stream, write_stream, mcp_server.create_initialization_options())
 
+@app.post("/sse")
+async def handle_sse_post(request: Request):
+    """Поддержка POST запросов на /sse (иногда используется клиентами)."""
+    return await sse.handle_post_message(request.scope, request.receive, request._send)
+
 @app.post("/messages")
 async def handle_messages(request: Request):
-    """Обработка входящих MCP сообщений."""
-    logger.info("Processing post message from client")
+    """Стандартная обработка входящих MCP сообщений."""
     return await sse.handle_post_message(request.scope, request.receive, request._send)
 
 # ─────────────────────────────────────────────
