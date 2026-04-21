@@ -1,0 +1,12 @@
+{
+  "vaultName": "MASTODONT Brain",
+  "baseFontSize": 16,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "_Inbox",
+  "attachmentFolderPath": "_Attachments",
+  "showLineNumber": true,
+  "spellcheck": true,
+  "defaultViewMode": "source",
+  "livePreview": true
+}
