@@ -10,6 +10,7 @@
 |------------|--------|----------------|
 | **Claude Connector** | 🟢 ACTIVE | `http://localhost:8765` |
 | **NotebookLM MCP** | 🟢 READY | [Control Panel](https://notebooklm.google.com) |
+| **Obsidian Brain** | 🟡 SETUP | `C:\ANTIGRAVITY\1\obsidian_brain` |
 | **Telegram Bot** | 🟡 STANDBY | `pdf_funnel_output/telegram_bot.py` |
 | **Git Sync** | 🟢 SYNCED | [GitHub Repo](https://github.com/1898baron-lab/AntiGravity_Bobov_App) |
 
