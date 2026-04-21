@@ -152,44 +152,77 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
         raise ValueError(f"Unknown tool: {name}")
 
 # Создание FastAPI приложения
-app = FastAPI(title="Mastodont ChatGPT Bridge", version="1.1.0")
+app = FastAPI(
+    title="Mastodont Engineering Knowledge Base",
+    version="2.0.0",
+    description="Access the Obsidian Engineering vault. Provides search and read tools for ChatGPT Custom Actions."
+)
 
+# ─────────────────────────────────────────────
+# REST Tool endpoints for ChatGPT Custom Action
+# ─────────────────────────────────────────────
+@app.get("/tools/search")
+async def rest_search(query: str = ""):
+    """ChatGPT Custom Action: поиск по базе знаний."""
+    if not query.strip():
+        raise HTTPException(status_code=400, detail="Query parameter is required")
+    logger.info(f"[ChatGPT Action] search_knowledge: '{query}'")
+    found = store.search(query)
+    return {"results": found[:10]}
+
+@app.get("/tools/fetch")
+async def rest_fetch(id: str = ""):
+    """ChatGPT Custom Action: получение полного документа."""
+    if not id.strip():
+        raise HTTPException(status_code=400, detail="id parameter is required")
+    logger.info(f"[ChatGPT Action] fetch_document: '{id}'")
+    content = store.get_content(id)
+    if not content:
+        raise HTTPException(status_code=404, detail=f"Document '{id}' not found")
+    return {"id": id, "title": Path(id).name, "text": content}
+
+# ─────────────────────
+# Standard endpoints
+# ─────────────────────
 @app.get("/health")
 async def health():
     """Проверка состояния сервера."""
     return {
-        "status": "ok", 
-        "server": "Mastodont MCP Bridge", 
+        "status": "ok",
+        "server": "Mastodont MCP Bridge v2.0",
         "docs_count": len(store.cache),
         "knowledge_root": str(KNOWLEDGE_PATH)
     }
 
 @app.get("/sse")
 async def handle_sse(request: Request):
-    """Подключение по SSE."""
+    """Подключение по SSE (для MCP клиентов)."""
     logger.info("New SSE connection established")
     async with sse.connect_sse(request.scope, request.receive, request._send) as (read_stream, write_stream):
         await mcp_server.run(read_stream, write_stream, mcp_server.create_initialization_options())
 
 @app.post("/messages")
 async def handle_messages(request: Request):
-    """Обработка входящих сообщений."""
+    """Обработка входящих MCP сообщений."""
     logger.info("Processing post message from client")
     return await sse.handle_post_message(request.scope, request.receive, request._send)
 
-# Middleware для проверки токена
+# ─────────────────────────────────────────────
+# Auth Middleware: пропускаем health + tool paths без токена если идет от ChatGPT
+# ─────────────────────────────────────────────
+OPEN_PATHS = {"/docs", "/openapi.json", "/sse", "/messages", "/health", "/tools/search", "/tools/fetch"}
+
 @app.middleware("http")
 async def check_auth(request: Request, call_next):
-    # ChatGPT может присылать токен в Authorization заголовке
     auth_header = request.headers.get("Authorization")
-    if auth_header != f"Bearer {TOKEN}" and request.url.path not in ["/docs", "/openapi.json", "/sse", "/messages", "/health"]:
-        logger.warning(f"Unauthorized access attempt to {request.url.path}")
+    path = request.url.path
+    if path not in OPEN_PATHS and auth_header != f"Bearer {TOKEN}":
+        logger.warning(f"Unauthorized access attempt to {path}")
         return JSONResponse(status_code=401, content={"detail": "Unauthorized"})
-    response = await call_next(request)
-    return response
+    return await call_next(request)
 
 if __name__ == "__main__":
     import uvicorn
     port = int(os.getenv("MCP_SERVER_PORT", 8000))
-    logger.info(f"🚀 Starting Mastodont Refined MCP Bridge on port {port}")
+    logger.info(f"🚀 Starting Mastodont MCP Bridge v2.0 on port {port}")
     uvicorn.run(app, host="0.0.0.0", port=port)
