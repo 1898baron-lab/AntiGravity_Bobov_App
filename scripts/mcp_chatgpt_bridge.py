@@ -222,19 +222,19 @@ async def handle_sse_post(request: Request):
     """Поддержка POST запросов на /sse. 
     OpenAI не присылает session_id, поэтому мы инжектим его вручную."""
     if "session_id" not in request.query_params:
-        # Пытаемся найти активную сессию
         active_sessions = list(sse._read_stream_writers.keys())
         if active_sessions:
             session_id = active_sessions[-1]
             logger.info(f"OpenAI POST /sse missing session_id. Injecting last active: {session_id}")
-            # Хак: модифицируем scope запроса, чтобы Starlette увидел query_param
             new_query_string = request.scope['query_string'].decode()
             separator = "&" if new_query_string else ""
             request.scope['query_string'] = f"{new_query_string}{separator}session_id={session_id}".encode()
         else:
             logger.warning("OpenAI POST /sse missing session_id and NO active sessions found!")
     
-    return await sse.handle_post_message(request.scope, request.receive, request._send)
+    # Принудительно возвращаем пустой JSON и 200 OK, как хочет OpenAI
+    await sse.handle_post_message(request.scope, request.receive, request._send)
+    return JSONResponse(content={}, status_code=200)
 
 @app.post("/messages")
 async def handle_messages(request: Request):
