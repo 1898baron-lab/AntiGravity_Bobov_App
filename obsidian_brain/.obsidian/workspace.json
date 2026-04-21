@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "_AI_EXCHANGE/FROM_CHATGPT.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -186,6 +186,8 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
+    "_AI_EXCHANGE/TO_CHATGPT.md",
+    "_AI_EXCHANGE/FROM_CHATGPT.md",
     "Engineering/Projects/Project_Catalog.md",
     "Engineering/Pilot_Stapel_1200x800_TZ.md",
     "Engineering/Decisions/D001_Stapel_Audit.md",
@@ -194,8 +196,6 @@
     "Engineering/Standards/OST_95_Series_Summary.md",
     "Engineering/Standards/Internship_Knowledge_Check.md",
     "CLAUDE.md",
-    "_AI_EXCHANGE/FROM_CHATGPT.md",
-    "_AI_EXCHANGE/TO_CHATGPT.md",
     "Engineering/Design_Office/Valve_DN170/Specification.md",
     "Engineering/Design_Office/TS_K01_UEHK_2024.md",
     "MASTADONT_DASHBOARD.md",
