@@ -20,6 +20,7 @@ import asyncio
 import os
 import aiohttp
 import json
+import logging
 from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import CommandStart
 from aiogram.utils.keyboard import InlineKeyboardBuilder
@@ -28,11 +29,19 @@ from aiogram.types import FSInputFile, InlineKeyboardButton
 from aiogram.client.default import DefaultBotProperties
 from dotenv import load_dotenv
 
+# Настройка логирования
+logging.basicConfig(level=logging.INFO, format='%(asctime)s [BOT] %(levelname)s - %(message)s')
+logger = logging.getLogger("telegram_bot")
+
 # ── Конфигурация ──────────────────────────────────────────────────────────────
 # Явный поиск .env в корне проекта
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 load_dotenv(os.path.join(BASE_DIR, ".env"))
 BOT_TOKEN = os.getenv("BOT_TOKEN")
+
+if not BOT_TOKEN:
+    print("[ERROR] BOT_TOKEN not found in .env file")
+    sys.exit(1)
 
 # ── Тексты ────────────────────────────────────────────────────────────────────
 MSG_START = (
@@ -44,8 +53,26 @@ MSG_START = (
     "🆕 <b>Сброс</b>: команда /new начнёт новый чат."
 )
 
-# Хранилище сессий (в памяти для простоты, можно заменить на JSON)
-USER_SESSIONS = {}
+# Хранилище сессий (в файле для persistence)
+SESSIONS_FILE = os.path.join(BASE_DIR, "user_sessions.json")
+
+def load_sessions():
+    if os.path.exists(SESSIONS_FILE):
+        try:
+            with open(SESSIONS_FILE, 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except Exception as e:
+            logger.warning(f"Failed to load sessions: {e}")
+    return {}
+
+def save_sessions(sessions):
+    try:
+        with open(SESSIONS_FILE, 'w', encoding='utf-8') as f:
+            json.dump(sessions, f, indent=2)
+    except Exception as e:
+        logger.error(f"Failed to save sessions: {e}")
+
+USER_SESSIONS = load_sessions()
 
 # ── Инициализация ─────────────────────────────────────────────────────────────
 bot = Bot(token=BOT_TOKEN, default=DefaultBotProperties(parse_mode="HTML"))
@@ -63,6 +90,7 @@ async def handle_new_chat(message: types.Message):
     user_id = message.from_user.id
     if user_id in USER_SESSIONS:
         del USER_SESSIONS[user_id]
+        save_sessions(USER_SESSIONS)
     await message.answer("✅ Контекст сброшен! Начинаю новый диалог.")
 
 @dp.message(F.document)
@@ -84,11 +112,27 @@ async def handle_document(message: types.Message):
         # Путь к корню проекта (на уровень выше от скрипта бота)
         project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
         
+        # Проверяем, является ли это git репозиторием
+        if not os.path.exists(os.path.join(project_root, ".git")):
+            await message.answer(
+                f"✅ Документ <b>{file_name}</b> сохранён локально.\n"
+                f"⚠️ Git не инициализирован в проекте."
+            )
+            return
+        
         # Выполнение цепочки команд Git через subprocess
-        subprocess.run(["git", "add", destination], cwd=project_root, check=True)
+        result_add = subprocess.run(["git", "add", destination], cwd=project_root, capture_output=True, text=True)
+        if result_add.returncode != 0:
+            raise Exception(f"git add failed: {result_add.stderr}")
+        
         commit_msg = f"docs: добавлен файл {file_name} через SuperBot (Telegram)"
-        subprocess.run(["git", "commit", "-m", commit_msg], cwd=project_root, check=True)
-        subprocess.run(["git", "push"], cwd=project_root, check=True)
+        result_commit = subprocess.run(["git", "commit", "-m", commit_msg], cwd=project_root, capture_output=True, text=True)
+        if result_commit.returncode != 0:
+            raise Exception(f"git commit failed: {result_commit.stderr}")
+        
+        result_push = subprocess.run(["git", "push"], cwd=project_root, capture_output=True, text=True)
+        if result_push.returncode != 0:
+            raise Exception(f"git push failed: {result_push.stderr}")
         
         # Формирование ссылки на файл в GitHub
         repo_file_url = f"https://github.com/1898baron-lab/AntiGravity_Bobov_App/blob/main/legal/{file_name}"
@@ -135,9 +179,8 @@ async def handle_text_query(message: types.Message):
     
     # 1. Загружаем юридический контекст (Скилл)
     skill_path = os.path.join(BASE_DIR, ".agents", "skills", "legal_expert_bobov", "SKILL.md")
-    # 2. Загружаем свежий бриф (Артефакт)
-    # Используем абсолютный путь для Windows
-    brief_path = r"C:\Users\Sasha  Baron\.gemini\antigravity\brain\8f3b4cf8-6d07-4a34-8882-82e5ba8c2d21\legal_attack_brief.md"
+    # 2. Загружаем свежий бриф (Артефакт) — кросс-платформенный путь
+    brief_path = os.path.join(BASE_DIR, "obsidian_brain", "_AI_EXCHANGE", "legal_attack_brief.md")
     
     context_data = ""
     try:
@@ -172,6 +215,7 @@ async def handle_text_query(message: types.Message):
     # Сохраняем URL чата для следующего раза (Memory)
     if new_chat_url:
         USER_SESSIONS[user_id] = new_chat_url
+        save_sessions(USER_SESSIONS)
     
     # Формируем ответ
     if response_text.startswith(("❌", "Ошибка:")):
