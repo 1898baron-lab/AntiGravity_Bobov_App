@@ -1,0 +1,43 @@
+name: AI Exchange Sync
+
+on:
+  push:
+    paths:
+      - 'obsidian_brain/_AI_EXCHANGE/TO_CHATGPT.md'
+      - '_TASKS/**'
+      - '_FLAGS/**'
+  pull_request:
+  schedule:
+    - cron: '*/15 * * * *'  # Every 15 minutes
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      
+      - name: Process AI Exchange
+        run: |
+          python scripts/ai_watcher.py &
+          sleep 5
+          pkill -f ai_watcher.py || true
+      
+      - name: Commit changes
+        run: |
+          git config --local user.email "copilot@antigravity.ai"
+          git config --local user.name "GitHub Copilot"
+          git add obsidian_brain/_AI_EXCHANGE/ _TASKS/ _FLAGS/ || true
+          git diff --quiet && git diff --staged --quiet || git commit -m "🤖 AI Exchange sync - $(date +%Y-%m-%d\ %H:%M:%S)"
+          git push || echo "No changes to push"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

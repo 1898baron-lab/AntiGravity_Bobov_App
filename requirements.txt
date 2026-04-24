@@ -2,3 +2,8 @@ python-dotenv
 aiogram
 reportlab
 pytest
+httpx>=0.24.0
+pydantic>=2.0
+pyyaml>=6.0
+watchdog>=3.0
+aiofiles>=23.0
