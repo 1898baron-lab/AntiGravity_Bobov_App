@@ -76,6 +76,14 @@ export OLLAMA_URL="http://localhost:11434"
 python scripts/ollama_connector.py --port 11435 --ollama-url "http://localhost:11434"
 ```
 
+### Пример для интеграции с .env
+
+```bash
+export AI_URL="http://localhost:11435"
+export AI_ENDPOINT="/api/generate"
+export AI_MODEL="gemma-4-e2b-it"
+```
+
 ## 6. Как встроить в вашу систему
 
 1. Запустите `ollama serve`.

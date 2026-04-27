@@ -29,18 +29,23 @@
 
 ## ⚡ Быстрый запуск
 
-```powershell
+```bash
 # Запуск Claude Connector
-& "C:\ANTIGRAVITY\1\.venv\Scripts\python.exe" scripts/claude_connector/claude_connector.py
+python scripts/claude_connector/claude_connector.py
 
 # Запуск Gemma + Ollama теста
-& "C:\ANTIGRAVITY\1\.venv\Scripts\python.exe" scripts/gemma_ollama.py status
+python scripts/gemma_ollama.py status
 
 # Запуск локального Ollama-прокси
-& "C:\ANTIGRAVITY\1\.venv\Scripts\python.exe" scripts/ollama_connector.py --port 11435
+python scripts/ollama_connector.py --port 11435
+
+# Настройка для AI proxy
+export AI_URL="http://localhost:11435"
+export AI_ENDPOINT="/api/generate"
+export AI_MODEL="gemma-4-e2b-it"
 
 # Запуск Telegram-бота
-& "C:\ANTIGRAVITY\1\.venv\Scripts\python.exe" pdf_funnel_output/telegram_bot.py
+python pdf_funnel_output/telegram_bot.py
 ```
 
 ---
