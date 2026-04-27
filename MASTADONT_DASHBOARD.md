@@ -36,6 +36,9 @@
 # Запуск Gemma + Ollama теста
 & "C:\ANTIGRAVITY\1\.venv\Scripts\python.exe" scripts/gemma_ollama.py status
 
+# Запуск локального Ollama-прокси
+& "C:\ANTIGRAVITY\1\.venv\Scripts\python.exe" scripts/ollama_connector.py --port 11435
+
 # Запуск Telegram-бота
 & "C:\ANTIGRAVITY\1\.venv\Scripts\python.exe" pdf_funnel_output/telegram_bot.py
 ```
