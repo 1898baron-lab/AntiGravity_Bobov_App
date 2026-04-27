@@ -84,7 +84,7 @@ class OllamaProxyHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == "/health":
             try:
-                status, headers, body = forward_request("/api/models", method="GET")
+                status, headers, body = forward_request("/v1/models", method="GET")
                 if status == 200:
                     self._send_json(200, {
                         "status": "ok",

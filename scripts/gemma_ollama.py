@@ -50,11 +50,11 @@ def request_json(path: str, method: str = "GET", data=None):
 
 def status() -> dict:
     try:
-        result = request_json("/api/models")
+        result = request_json("/v1/models")
         return {
             "status": "ok",
             "base_url": BASE_URL,
-            "models_count": len(result) if isinstance(result, list) else None,
+            "models_count": len(result["data"]) if isinstance(result, dict) and "data" in result else None,
             "raw": result,
         }
     except Exception as exc:
@@ -62,10 +62,10 @@ def status() -> dict:
 
 
 def list_models() -> list:
-    result = request_json("/api/models")
-    if isinstance(result, list):
-        return result
-    raise RuntimeError(f"Unexpected /api/models response: {result}")
+    result = request_json("/v1/models")
+    if isinstance(result, dict) and "data" in result:
+        return result["data"]
+    raise RuntimeError(f"Unexpected /v1/models response: {result}")
 
 
 def generate(model: str, prompt: str, max_tokens: int = 1024, temperature: float = 0.0):
