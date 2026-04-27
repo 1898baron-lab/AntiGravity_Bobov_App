@@ -9,6 +9,7 @@
 | Инструмент | Статус | Адрес / Ресурс |
 |------------|--------|----------------|
 | **Claude Connector** | 🟢 ACTIVE | `http://localhost:8765` |
+| **Gemma + Ollama** | 🔧 READY | `http://localhost:11434` |
 | **NotebookLM MCP** | 🟢 READY | [Control Panel](https://notebooklm.google.com) |
 | **Obsidian Brain** | 🟢 ACTIVE | `C:\ANTIGRAVITY\1\obsidian_brain` |
 | **ChatGPT Bridge** | 🟢 ONLINE | [Refined RAG Server](file:///c:/ANTIGRAVITY/1/scripts/mcp_chatgpt_bridge.py) |
@@ -31,6 +32,9 @@
 ```powershell
 # Запуск Claude Connector
 & "C:\ANTIGRAVITY\1\.venv\Scripts\python.exe" scripts/claude_connector/claude_connector.py
+
+# Запуск Gemma + Ollama теста
+& "C:\ANTIGRAVITY\1\.venv\Scripts\python.exe" scripts/gemma_ollama.py status
 
 # Запуск Telegram-бота
 & "C:\ANTIGRAVITY\1\.venv\Scripts\python.exe" pdf_funnel_output/telegram_bot.py
