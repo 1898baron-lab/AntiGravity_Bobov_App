@@ -32,22 +32,38 @@ async def get_page() -> Page:
     if _page is None or _page.is_closed():
         pw = await async_playwright().start()
         try:
-            _browser = await pw.chromium.launch(
-                headless=False,
-                executable_path=YANDEX_PATH,
-                args=["--disable-blink-features=AutomationControlled", "--no-sandbox"],
-                ignore_default_args=["--enable-automation"]
-            )
-            if os.path.exists(SESSION_FILE):
-                context = await _browser.new_context(storage_state=SESSION_FILE)
-            else:
-                context = await _browser.new_context()
-        except Exception:
-            _browser = await pw.chromium.launch(headless=False, executable_path=YANDEX_PATH)
-            context = await _browser.new_context()
-        _page = await context.new_page()
-        await Stealth().apply_stealth_async(_page)
-        await _page.goto(CHATGPT_URL)
+            # Пытаемся подключиться к уже запущенному Яндексу через CDP
+            print("[DEBUG] Attempting to connect via CDP (port 9222)...")
+            _browser = await pw.chromium.connect_over_cdp("http://localhost:9222")
+            context = _browser.contexts[0]
+            # Ищем вкладку с ChatGPT или создаем новую
+            for p in context.pages:
+                if "chatgpt.com" in p.url:
+                    _page = p
+                    print(f"[DEBUG] Found existing ChatGPT tab: {p.url}")
+                    break
+            if not _page:
+                _page = await context.new_page()
+                await _page.goto(CHATGPT_URL)
+        except Exception as e:
+            print(f"[DEBUG] CDP connection failed: {e}. Falling back to standalone launch.")
+            try:
+                _browser = await pw.chromium.launch(
+                    headless=False,
+                    executable_path=YANDEX_PATH,
+                    args=["--disable-blink-features=AutomationControlled", "--no-sandbox"],
+                    ignore_default_args=["--enable-automation"]
+                )
+                if os.path.exists(SESSION_FILE):
+                    context = await _browser.new_context(storage_state=SESSION_FILE)
+                else:
+                    context = await _browser.new_context()
+                _page = await context.new_page()
+                await Stealth().apply_stealth_async(_page)
+                await _page.goto(CHATGPT_URL)
+            except Exception as e2:
+                print(f"[DEBUG] Standalone launch failed: {e2}")
+                return None
     return _page
 
 async def send_message(prompt: str) -> str:

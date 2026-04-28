@@ -1,0 +1,11 @@
+
+2026-04-28 04:41:25.195 [0] InitSessionLog done
+2026-04-28 04:41:25.195 [0] ReadLastSessionCommands
+2026-04-28 04:41:25.196 [0]   LegacySessionState
+2026-04-28 04:41:25.196 [1]   Init
+2026-04-28 04:41:25.196 [0]   Init done
+2026-04-28 04:41:25.196 [0]   ReadCommandsFromFile
+2026-04-28 04:41:25.196 [0]   Session file not found
+2026-04-28 04:41:25.196 [-4]   ! Read error
+2026-04-28 04:41:25.196 [1]   ReadCommandsFromFile done: -1 (0/no mraker)
+2026-04-28 04:41:25.197 [0] ReadLastSessionCommands done

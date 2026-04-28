@@ -1,0 +1,6 @@
+2026/04/28-09:41:25.167 a0c0 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb is locked for recovering successfully
+2026/04/28-09:41:25.171 a0c0 Creating DB C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb since it was missing.
+2026/04/28-09:41:25.178 a0c0 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb/MANIFEST-000001
+2026/04/28-09:43:41.087 201c Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb, waiting for background work finished
+2026/04/28-09:43:41.087 201c Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb, background work finished
+2026/04/28-09:43:41.088 201c File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb unlocked successfully
