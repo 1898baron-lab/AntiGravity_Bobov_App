@@ -76,8 +76,25 @@ class AgentCore:
         self.plan_file.write_text(content, encoding="utf-8")
 
     async def _execute(self, plan: dict) -> dict:
-        # Здесь будет вызов инструментов (Google Search, Python Scripts)
-        return {"raw_data": "Engineering analysis data..."}
+        import httpx
+        logger.info("Executing task via ChatGPT Connector...")
+        
+        # Берем саму задачу из входного файла (для теста)
+        task_text = self._read_task()
+        
+        try:
+            async with httpx.AsyncClient(timeout=60.0) as client:
+                response = await client.post(
+                    "http://localhost:8001/v1/messages",
+                    json={"prompt": task_text}
+                )
+                if response.status_code == 200:
+                    answer = response.json().get("response", "")
+                    return {"raw_data": answer}
+                else:
+                    return {"raw_data": f"Error: Connector returned status {response.status_code}"}
+        except Exception as e:
+            return {"raw_data": f"Error connecting to ChatGPT Bridge: {e}"}
 
     async def _verify(self, results: dict) -> dict:
         # Слой верификации: проверка ссылок и уверенности
