@@ -14,6 +14,7 @@
 | **Obsidian Brain** | 🟢 ACTIVE | `C:\ANTIGRAVITY\1\obsidian_brain` |
 | **ChatGPT Bridge** | 🟢 ONLINE | [Refined RAG Server](file:///c:/ANTIGRAVITY/1/scripts/mcp_chatgpt_bridge.py) |
 | **Git Sync** | 🟢 SYNCED | [GitHub Repo](https://github.com/1898baron-lab/AntiGravity_Bobov_App) |
+| **Internship DB** | 🟢 ACTIVE | [Internship Dashboard](file:///C:/Users/Sasha  Baron/.gemini/antigravity/brain/2ccb1232-8075-4c17-bcc3-8bdc7c1b44fa/internship_training_dashboard.md) |
 
 ---
 
