@@ -83,18 +83,19 @@ class AgentCore:
         task_text = self._read_task()
         
         try:
-            async with httpx.AsyncClient(timeout=60.0) as client:
+            async with httpx.AsyncClient(timeout=90.0) as client:
                 response = await client.post(
-                    "http://localhost:8001/v1/messages",
+                    "http://127.0.0.1:8001/v1/messages",
                     json={"prompt": task_text}
                 )
                 if response.status_code == 200:
                     answer = response.json().get("response", "")
                     return {"raw_data": answer}
                 else:
-                    return {"raw_data": f"Error: Connector returned status {response.status_code}"}
+                    return {"raw_data": f"Error: Connector returned status {response.status_code}. Details: {response.text}"}
         except Exception as e:
-            return {"raw_data": f"Error connecting to ChatGPT Bridge: {e}"}
+            logger.error(f"Connection error: {e}")
+            return {"raw_data": f"Error connecting to ChatGPT Bridge at 127.0.0.1:8001: {str(e)}"}
 
     async def _verify(self, results: dict) -> dict:
         # Слой верификации: проверка ссылок и уверенности
