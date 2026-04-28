@@ -21,7 +21,7 @@ async def read_arch_chat():
 
             print("Searching for ARCH_ HR chat link...")
             # Пытаемся найти ссылку по тексту
-            chat_link = await page.get_by_text("ARCH_ HR", exact=False)
+            chat_link = page.get_by_text("ARCH_ HR", exact=False)
             if await chat_link.count() > 0:
                 print("Clicking ARCH_ HR chat...")
                 await chat_link.first.click()
