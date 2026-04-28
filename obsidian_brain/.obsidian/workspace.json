@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Knowledge_Base/user_profile.md",
+                "file": "Engineering/AI_Interaction_Directive.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "user_profile"
+              "title": "AI_Interaction_Directive"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Knowledge_Base/user_profile.md",
+                "file": "Engineering/AI_Interaction_Directive.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для user_profile"
+              "title": "Обратные ссылки для AI_Interaction_Directive"
             }
           },
           {
@@ -171,10 +171,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Knowledge_Base/user_profile.md"
+                "file": "Engineering/AI_Interaction_Directive.md"
               },
               "icon": "lucide-info",
-              "title": "Свойства файла для user_profile"
+              "title": "Свойства файла для AI_Interaction_Directive"
             }
           }
         ],
@@ -198,11 +198,13 @@
   },
   "active": "f59b61b77d07a425",
   "lastOpenFiles": [
+    "Engineering/Standards/OST_95_Series_Summary.md",
+    "Engineering/Standards/Internship_Knowledge_Check.md",
+    "Knowledge_Base/user_profile.md",
     "Tasks/audit_20260428_100624.md",
     "Tasks/audit_20260428_100430.md",
     "Tasks/audit_20260428_100202.md",
     "_Skills/Engineering_Review_Skill.md",
-    "Knowledge_Base/user_profile.md",
     "Engineering/Design_Office/Valve_DN170/Assembly_Structure_10_129.md",
     "Engineering/Design_Office/TS_K01_UEHK_2024.md",
     "Engineering/Design_Office/Project_Zeus_Action_Plan.md",
@@ -223,8 +225,6 @@
     "Archive/Claude/Full_History/Сравнение_UGREEN_C_681_и_C_639.md",
     "Archive/Claude/Full_History/HTML-лендинг_мясного_бутика.md",
     "Archive/Claude/Full_History/Шаблон_таблички_на_4_человека.md",
-    "Archive/Claude/Full_History/Обновление_памяти.md",
-    "Archive/Claude/Full_History/Memory_update_review.md",
     "Archive/Claude/Full_History",
     "Archive/ChatGPT/Full_History",
     "Archive/ChatGPT/Улучшатель__Райт",
