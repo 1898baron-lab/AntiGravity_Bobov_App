@@ -17,9 +17,11 @@ import sys
 import time
 import logging
 import json
+import os
 import httpx
 import asyncio
 from pathlib import Path
+from dotenv import load_dotenv
 
 # Настройка логирования
 logging.basicConfig(
@@ -27,6 +29,9 @@ logging.basicConfig(
     format='%(asctime)s [WATCHER] %(levelname)s - %(message)s'
 )
 logger = logging.getLogger("ai_watcher")
+
+# Загрузка переменных окружения из .env, если он есть
+load_dotenv()
 
 # Добавляем scripts/ в пути для импорта KnowledgeStore
 BASE = Path(__file__).parent.parent.resolve()
@@ -36,9 +41,13 @@ sys.path.insert(0, str(BASE / "scripts"))
 TO_FILE   = BASE / "obsidian_brain/_AI_EXCHANGE/TO_CHATGPT.md"
 FROM_FILE = BASE / "obsidian_brain/_AI_EXCHANGE/FROM_CHATGPT.md"
 ENG_DIR   = BASE / "obsidian_brain/Engineering"
-MCP_URL   = "http://localhost:8000"          # MCP Bridge
-AI_URL    = "http://localhost:8765"          # Claude Connector (API)
-POLL_INTERVAL = 3  # секунды
+MCP_URL   = os.getenv("MCP_URL", "http://localhost:8000")
+AI_URL    = os.getenv("AI_URL", "http://localhost:8765")
+AI_ENDPOINT = os.getenv("AI_ENDPOINT", "/v1/messages")
+AI_MODEL  = os.getenv("AI_MODEL", "claude-3-sonnet-20240229")
+AI_MAX_TOKENS = int(os.getenv("AI_MAX_TOKENS", "1024"))
+AI_TEMPERATURE = float(os.getenv("AI_TEMPERATURE", "0.0"))
+POLL_INTERVAL = int(os.getenv("POLL_INTERVAL", "3"))  # секунды
 
 
 class LocalKnowledge:
@@ -97,26 +106,60 @@ def extract_mode_and_keywords(text: str) -> tuple:
 
 
 async def call_ai_service(prompt: str, context: str) -> str:
-    """Отправляет запрос в Claude Connector."""
-    logger.info("🚀 Отправка запроса в AI Service (Claude Connector)...")
+    """Отправляет запрос в AI Service (Claude Connector или Ollama)."""
+    logger.info(f"🚀 Отправка запроса в AI Service: {AI_URL}{AI_ENDPOINT}...")
     full_prompt = f"System Context (Local Knowledge Base):\n{context}\n\nUser Question:\n{prompt}"
-    
+
+    payload = None
+    if AI_ENDPOINT.startswith("/api/generate"):
+        payload = {
+            "model": AI_MODEL,
+            "prompt": full_prompt,
+            "max_tokens": AI_MAX_TOKENS,
+            "temperature": AI_TEMPERATURE,
+            "stream": False,
+        }
+    elif AI_ENDPOINT.startswith("/v1/chat") or AI_ENDPOINT.startswith("/v1/messages"):
+        payload = {
+            "model": AI_MODEL,
+            "messages": [{"role": "user", "content": full_prompt}],
+        }
+    else:
+        payload = {
+            "model": AI_MODEL,
+            "prompt": full_prompt,
+        }
+
     try:
         async with httpx.AsyncClient(timeout=300.0) as client:
             resp = await client.post(
-                f"{AI_URL}/v1/messages",
-                json={
-                    "messages": [{"role": "user", "content": full_prompt}],
-                    "model": "claude-3-sonnet-20240229"
-                }
+                f"{AI_URL.rstrip('/')}{AI_ENDPOINT}",
+                json=payload
             )
-            if resp.status_code == 200:
-                data = resp.json()
-                return data["content"][0]["text"]
-            else:
+            if resp.status_code != 200:
                 return f"❌ Ошибка AI Service: {resp.status_code}\n{resp.text}"
+
+            data = resp.json()
+            # Anthropic-style response
+            if isinstance(data, dict):
+                if "content" in data and isinstance(data["content"], list):
+                    first = data["content"][0]
+                    if isinstance(first, dict) and "text" in first:
+                        return first["text"]
+                if "choices" in data and isinstance(data["choices"], list):
+                    choice = data["choices"][0]
+                    if isinstance(choice, dict):
+                        if "message" in choice and isinstance(choice["message"], dict):
+                            return choice["message"].get("content", "")
+                        if "delta" in choice and isinstance(choice["delta"], dict):
+                            return choice["delta"].get("content", "")
+                        if "text" in choice:
+                            return choice["text"]
+                if "response" in data and isinstance(data["response"], str):
+                    return data["response"]
+            return json.dumps(data, ensure_ascii=False, indent=2)
     except Exception as e:
-        return f"❌ Ошибка подключения к AI Service (localhost:8765): {e}"
+        return f"❌ Ошибка подключения к AI Service ({AI_URL}): {e}"
 
 
 def build_final_output(project: str, mode: str, prompt: str, docs: list, ai_response: str) -> str:

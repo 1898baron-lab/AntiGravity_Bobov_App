@@ -152,28 +152,58 @@ async def handle_document(message: types.Message):
         )
 
 # ── ИИ-Интеграция ─────────────────────────────────────────────────────────────
-CLAUDE_URL = "http://localhost:8765/v1/messages"
+AI_URL = os.getenv("AI_URL", "http://localhost:8765")
+AI_ENDPOINT = os.getenv("AI_ENDPOINT", "/v1/messages")
+AI_MODEL = os.getenv("AI_MODEL", "claude-3-5-sonnet-20241022")
+AI_MAX_TOKENS = int(os.getenv("AI_MAX_TOKENS", "1024"))
+AI_TEMPERATURE = float(os.getenv("AI_TEMPERATURE", "0.0"))
 
-async def ask_claude(prompt: str, chat_url: str | None = None):
-    """Вызов локального Claude Connector через MCP с поддержкой URL чата."""
-    payload = {
-        "model": "claude-3-5-sonnet-20241022",
-        "max_tokens": 1024,
-        "messages": [{"role": "user", "content": prompt}],
-        "metadata": {"chat_url": chat_url}
-    }
+async def ask_ai(prompt: str, chat_url: str | None = None):
+    """Вызов AI через настраиваемый локальный endpoint."""
+    if AI_ENDPOINT.startswith("/api/generate"):
+        payload = {
+            "model": AI_MODEL,
+            "prompt": prompt,
+            "max_tokens": AI_MAX_TOKENS,
+            "temperature": AI_TEMPERATURE,
+            "stream": False,
+        }
+    elif AI_ENDPOINT.startswith("/v1/chat") or AI_ENDPOINT.startswith("/v1/messages"):
+        payload = {
+            "model": AI_MODEL,
+            "messages": [{"role": "user", "content": prompt}],
+        }
+        if chat_url and AI_ENDPOINT.startswith("/v1/messages"):
+            payload["metadata"] = {"chat_url": chat_url}
+    else:
+        payload = {"model": AI_MODEL, "prompt": prompt}
+
     try:
         async with aiohttp.ClientSession() as session:
-            async with session.post(CLAUDE_URL, json=payload, timeout=90) as response:
+            async with session.post(f"{AI_URL.rstrip('/')}{AI_ENDPOINT}", json=payload, timeout=90) as response:
                 if response.status == 200:
                     data = await response.json()
-                    # Возвращаем текст и новый URL чата
-                    return data["content"][0]["text"], data.get("id")
+
+                    if isinstance(data, dict):
+                        if "content" in data and isinstance(data["content"], list):
+                            first = data["content"][0]
+                            if isinstance(first, dict) and "text" in first:
+                                return first["text"], data.get("id")
+                        if "choices" in data and isinstance(data["choices"], list):
+                            choice = data["choices"][0]
+                            if isinstance(choice, dict):
+                                if "message" in choice and isinstance(choice["message"], dict):
+                                    return choice["message"].get("content", ""), data.get("id")
+                                if "text" in choice:
+                                    return choice["text"], data.get("id")
+                        if "response" in data and isinstance(data["response"], str):
+                            return data["response"], data.get("id")
+                    return str(data), data.get("id")
                 else:
                     err_text = await response.text()
-                    return f"❌ Ошибка Claude (Status: {response.status}): {err_text}", None
+                    return f"❌ Ошибка AI (Status: {response.status}): {err_text}", None
     except Exception as e:
-        return f"❌ Ошибка подключения к Claude Connector: {str(e)}", None
+        return f"❌ Ошибка подключения к AI Service: {str(e)}", None
 
 @dp.message(F.text & ~F.text.startswith('/'))
 async def handle_text_query(message: types.Message):
@@ -214,7 +244,7 @@ async def handle_text_query(message: types.Message):
     await bot.send_chat_action(chat_id=message.chat.id, action="typing")
     
     # Вызов ИИ
-    response_text, new_chat_url = await ask_claude(full_prompt, chat_url=current_chat_url)
+    response_text, new_chat_url = await ask_ai(full_prompt, chat_url=current_chat_url)
     
     # Сохраняем URL чата для следующего раза (Memory)
     if new_chat_url:
