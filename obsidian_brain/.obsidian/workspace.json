@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "_AI_EXCHANGE/FROM_CHATGPT.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -198,6 +198,9 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
+    "_AI_EXCHANGE/TO_CHATGPT.md",
+    "_AI_EXCHANGE/FROM_CHATGPT.md",
+    "Tasks/audit_20260428_100624.md",
     "Tasks/audit_20260428_100430.md",
     "Tasks/audit_20260428_100202.md",
     "Tasks",
@@ -212,9 +215,7 @@
     "CLAUDE.md",
     "Home.md",
     "vpn_troubleshooting.md",
-    "_AI_EXCHANGE/TO_CHATGPT.md",
     "Engineering/Decisions/D001_Stapel_Audit.md",
-    "_AI_EXCHANGE/FROM_CHATGPT.md",
     "Education/Professional_Growth_Matrix.md",
     "MASTADONT_DASHBOARD.md",
     "_Skills/Engineering_Review_Skill.md",
@@ -224,7 +225,6 @@
     "Engineering/AI_Interaction_Directive.md",
     "Engineering/Standards/OST_95_Series_Summary.md",
     "Engineering/Standards/Internship_Knowledge_Check.md",
-    "Engineering/Design_Office/Valve_DN170/Specification.md",
     "Engineering/Decisions",
     "_AI_EXCHANGE",
     "Engineering/Session_Logs/stop_sync.ps1",
