@@ -50,3 +50,5 @@ scripts/claude_connector/claude_session.json
 # Claude Connector session
 claude_session.json
 scripts/claude_connector/claude_session.json
+
+installers/

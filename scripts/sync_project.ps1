@@ -3,8 +3,10 @@
 # Version: 1.0 (Git Edition)
 # Path: scripts/sync_project.ps1
 
-$git = "C:\ANTIGRAVITY\1\PortableGit\bin\git.exe"
-$projectDir = "C:\ANTIGRAVITY\1\AI_Project_Backup"
+# Используем глобальный git, так как он установлен в системе
+$git = "git"
+# Автоматически определяем директорию проекта (на уровень выше от папки scripts)
+$projectDir = Split-Path -Parent $PSScriptRoot
 
 Clear-Host
 Write-Host "--- AntiGravity: GitHub Exclusive Sync ---" -ForegroundColor Cyan
