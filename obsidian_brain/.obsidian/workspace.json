@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Engineering/Design_Office/Project_Zeus_Action_Plan.md",
+                "file": "Engineering/Design_Office/Valve_DN170/Assembly_Structure_10_129.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project_Zeus_Action_Plan"
+              "title": "Assembly_Structure_10_129"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#kompas3d",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Закладки"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -95,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "Engineering/Design_Office/Valve_DN170/Assembly_Structure_10_129.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для CLAUDE"
+              "title": "Обратные ссылки для Assembly_Structure_10_129"
             }
           },
           {
@@ -165,13 +164,25 @@
               "icon": "lucide-list",
               "title": "Структура CLAUDE"
             }
+          },
+          {
+            "id": "16ebaa65462d0120",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "Engineering/Design_Office/Valve_DN170/Assembly_Structure_10_129.md"
+              },
+              "icon": "lucide-info",
+              "title": "Свойства файла для Assembly_Structure_10_129"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -187,8 +198,17 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
-    "Engineering/Decisions/D001_Stapel_Audit.md",
+    "Engineering/Design_Office/Valve_DN170/CAD_Modeling_Checklist.md",
+    "Engineering/Design_Office/TS_K01_UEHK_2024.md",
+    "Engineering/Design_Office/Project_Zeus_Action_Plan.md",
+    "Engineering/Knowledge_Base/PTO_Standard_Guidelines.md",
+    "Knowledge_Base/user_profile.md",
+    "Engineering/Design_Office/Valve_DN170/Assembly_Structure_10_129.md",
+    "CLAUDE.md",
+    "Home.md",
+    "vpn_troubleshooting.md",
     "_AI_EXCHANGE/TO_CHATGPT.md",
+    "Engineering/Decisions/D001_Stapel_Audit.md",
     "_AI_EXCHANGE/FROM_CHATGPT.md",
     "Education/Professional_Growth_Matrix.md",
     "MASTADONT_DASHBOARD.md",
@@ -199,23 +219,14 @@
     "Engineering/AI_Interaction_Directive.md",
     "Engineering/Standards/OST_95_Series_Summary.md",
     "Engineering/Standards/Internship_Knowledge_Check.md",
-    "CLAUDE.md",
     "Engineering/Design_Office/Valve_DN170/Specification.md",
-    "Engineering/Design_Office/TS_K01_UEHK_2024.md",
     "Engineering/Decisions",
     "_AI_EXCHANGE",
     "Engineering/Design_Office/Tooling/Calculations/Tooling_Calculation_10_129.md",
-    "Engineering/Design_Office/Valve_DN170/CAD_Modeling_Checklist.md",
-    "Engineering/Design_Office/Valve_DN170/Assembly_Structure_10_129.md",
-    "Engineering/Design_Office/Project_Zeus_Action_Plan.md",
     "Engineering/Design_Office/Valve_DN170/PMI_Valve_170_Draft.md",
     "Engineering/Design_Office/Tooling/Calculations/Tooling_Calculation_Template.md",
     "Engineering/Design_Office/Tooling/Calculations/Frame_Fixture_Design_ASCII.md",
-    "Engineering/Session_Logs/Mentor_Report_2026-04-21.md",
     "Engineering/Session_Logs/stop_sync.ps1",
-    "Home.md",
-    "Engineering/Design_Office/Valve_DN170/Passport_Valve_170_Draft.md",
-    "Engineering/Design_Office/Valve_DN170/Weight_and_Cost_Analysis.md",
     "Engineering/Session_Logs",
     "Engineering/Design_Office/Valve_DN170",
     "Без названия.canvas",
