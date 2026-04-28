@@ -11,10 +11,14 @@
             "id": "114164b8bb64cc48",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Граф"
+              "type": "markdown",
+              "state": {
+                "file": "_AI_EXCHANGE/AI_CONSULTATION_RESULT.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "AI_CONSULTATION_RESULT"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_AI_EXCHANGE/AI_CONSULTATION_RESULT.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки"
+              "title": "Обратные ссылки для AI_CONSULTATION_RESULT"
             }
           },
           {
@@ -165,9 +170,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "_AI_EXCHANGE/AI_CONSULTATION_RESULT.md"
+              },
               "icon": "lucide-info",
-              "title": "Свойства файла"
+              "title": "Свойства файла для AI_CONSULTATION_RESULT"
             }
           }
         ],
@@ -191,6 +198,7 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
+    "_AI_EXCHANGE/AGENT_PLAN.md",
     "Archive/Gemini/Full_History/Untitled_Gemini_Chat.md",
     "Archive/Gemini/Full_History",
     "MASTADONT_DASHBOARD.md",
@@ -217,7 +225,6 @@
     "Archive/ChatGPT/Engineering_GPT_Raw.md",
     "Archive/Claude/Full_History/Импорт_контекста_между_ИИ-помощниками.md",
     "Archive/Claude/Full_History/Структура_файлов_репозитория_AntiGravity.md",
-    "Archive/Claude/Full_History/Стоимость_изготовления_установки_ЗЕВС.md",
     "Archive/Claude/Full_History",
     "Archive/ChatGPT/Full_History",
     "Archive/ChatGPT/Улучшатель__Райт",
