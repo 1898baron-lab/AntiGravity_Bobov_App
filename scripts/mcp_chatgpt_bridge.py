@@ -162,14 +162,25 @@ app = FastAPI(
 )
 
 # ─────────────────────────────────────────────
+# Глобальный логгер запросов (для отладки туннеля)
+# ─────────────────────────────────────────────
+@app.middleware("http")
+async def log_requests(request: Request, call_next):
+    logger.info(f"Incoming: {request.method} {request.url.path}")
+    response = await call_next(request)
+    logger.info(f"Outgoing: {request.method} {request.url.path} -> {response.status_code}")
+    return response
+
+# ─────────────────────────────────────────────
 # CORS for OpenAI
 # ─────────────────────────────────────────────
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://chatgpt.com", "https://openai.com"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"]
 )
 
 # (Мы убрали SecurityHeadersMiddleware, так как он мешал SSE-потоку)
