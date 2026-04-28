@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Archive/Claude/Gemini_conversation_link.md",
+                "file": "MASTADONT_DASHBOARD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gemini_conversation_link"
+              "title": "MASTADONT_DASHBOARD"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Archive/Claude/Gemini_conversation_link.md",
+                "file": "MASTADONT_DASHBOARD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для Gemini_conversation_link"
+              "title": "Обратные ссылки для MASTADONT_DASHBOARD"
             }
           },
           {
@@ -171,10 +171,10 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Archive/Claude/Gemini_conversation_link.md"
+                "file": "MASTADONT_DASHBOARD.md"
               },
               "icon": "lucide-info",
-              "title": "Свойства файла для Gemini_conversation_link"
+              "title": "Свойства файла для MASTADONT_DASHBOARD"
             }
           }
         ],
@@ -196,8 +196,20 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "dbb5de802eaea249",
+  "active": "114164b8bb64cc48",
   "lastOpenFiles": [
+    "Archive/Claude/Full_History/Building_a_custom_skill.md",
+    "vpn_troubleshooting.md",
+    "Home.md",
+    "Archive/Claude/Full_History/Улучшение_портрета_с_эффектом_бьюти-фотографии.md",
+    "Archive/Claude/Gemini_conversation_link.md",
+    "Archive/Claude/Full_History/Сравнение_UGREEN_C_681_и_C_639.md",
+    "Archive/Claude/Full_History/HTML-лендинг_мясного_бутика.md",
+    "Archive/Claude/Full_History/Шаблон_таблички_на_4_человека.md",
+    "Archive/Claude/Full_History/Обновление_памяти.md",
+    "Archive/Claude/Full_History/Memory_update_review.md",
+    "Archive/Claude/Full_History/Greeting.md",
+    "Archive/Claude/Full_History/Медовик_по_техническим_условиям.md",
     "Archive/Claude/Full_History/Визуализация_курилки.md",
     "Archive/Claude/Full_History/Работа_с_презентацией_на_Google_Drive.md",
     "Archive/Claude/Full_History/Компоновочная_схема_аппарата_на_тензовесах.md",
@@ -212,18 +224,6 @@
     "Archive/Claude/Full_History/Notebook_LM_project_access.md",
     "Archive/Claude/Full_History/Файлы_репозитория_AntiGravity_Bobov_App.md",
     "Archive/Claude/Full_History/Клапан_запорный_Ду_170_эскизы.md",
-    "Archive/Claude/Full_History/Пояснение_числа_пи.md",
-    "Archive/Claude/Full_History/Резьба_на_цилиндре_в_Компас_3D.md",
-    "Archive/ChatGPT/Full_History/Приветствие_и_обсуждение.md",
-    "Archive/Claude/Full_History/Поиск_упоминаний_ущерба_124_млн_руб.md",
-    "Archive/Claude/Full_History/Untitled.md",
-    "Archive/Claude/Full_History/Проблемы_с_жиминаем.md",
-    "Archive/Claude/Full_History/Gemini_conversation_link.md",
-    "Archive/ChatGPT/Full_History/Агенты_Кремля_разбор.md",
-    "Archive/Claude/Full_History/Дотянись_до_репы.md",
-    "Archive/ChatGPT/Full_History/3D_Industrial_Equipment_Render.md",
-    "Archive/ChatGPT/Full_History/3D_брелок_из_фото.md",
-    "Archive/Claude/Full_History/Export_stored_memories_and_personal_context.md",
     "Archive/Claude/Full_History",
     "Archive/ChatGPT/Full_History",
     "Archive/ChatGPT/Улучшатель__Райт",
