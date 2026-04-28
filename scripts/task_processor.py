@@ -124,6 +124,18 @@ class TaskProcessor:
                 logger.info("🧪 Running tests...")
                 # TODO: Подключить test logic
                 flag.unlink()
+            
+            elif flag.name == ".reboot":
+                logger.warning("🚀 REMOTE REBOOT TRIGGERED!")
+                import os
+                os.system("shutdown /r /t 10 /c \"MASTADONT: Remote reboot in 10 seconds...\"")
+                flag.unlink()
+
+            elif flag.name == ".shutdown":
+                logger.warning("🛑 REMOTE SHUTDOWN TRIGGERED!")
+                import os
+                os.system("shutdown /s /t 10 /c \"MASTADONT: Remote shutdown in 10 seconds...\"")
+                flag.unlink()
     
     def run(self):
         """Главный цикл обработки."""
