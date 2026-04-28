@@ -4,11 +4,10 @@
       "command": "npx",
       "args": ["-y", "obsidian-mcp-server"],
       "env": {
-        "OBSIDIAN_API_KEY": "3e22e3fcc38f4e3235964af9be5b14c20022da3258cbac1abfbb0c4bb1f53ebc",
+        "OBSIDIAN_API_KEY": "11623c8ff242d7ae538c23bf00d2f69184181ad2c360f7130f2bec7c3fe58496",
         "OBSIDIAN_BASE_URL": "http://127.0.0.1:27123",
         "OBSIDIAN_VERIFY_SSL": "false"
       }
     }
   }
 }
-
