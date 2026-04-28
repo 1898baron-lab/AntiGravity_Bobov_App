@@ -5,6 +5,7 @@ Uses Playwright to interact with chatgpt.com via Yandex Browser.
 """
 
 import asyncio
+import os
 import json
 import time
 import uvicorn
@@ -30,16 +31,20 @@ async def get_page() -> Page:
     global _browser, _page
     if _page is None or _page.is_closed():
         pw = await async_playwright().start()
-        _browser = await pw.chromium.launch(
-            headless=False,
-            executable_path=YANDEX_PATH,
-            args=[
-                "--disable-blink-features=AutomationControlled",
-                "--no-sandbox"
-            ],
-            ignore_default_args=["--enable-automation"]
-        )
-        context = await _browser.new_context() # Try without session first or prompt for manual login
+        try:
+            _browser = await pw.chromium.launch(
+                headless=False,
+                executable_path=YANDEX_PATH,
+                args=["--disable-blink-features=AutomationControlled", "--no-sandbox"],
+                ignore_default_args=["--enable-automation"]
+            )
+            if os.path.exists(SESSION_FILE):
+                context = await _browser.new_context(storage_state=SESSION_FILE)
+            else:
+                context = await _browser.new_context()
+        except Exception:
+            _browser = await pw.chromium.launch(headless=False, executable_path=YANDEX_PATH)
+            context = await _browser.new_context()
         _page = await context.new_page()
         await Stealth().apply_stealth_async(_page)
         await _page.goto(CHATGPT_URL)
