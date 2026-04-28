@@ -12,6 +12,7 @@ import json
 import logging
 from pathlib import Path
 from datetime import datetime
+from scripts.verifier import MastodontVerifier
 
 # Настройка логирования
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [CORE] %(levelname)s - %(message)s')
@@ -23,6 +24,7 @@ class AgentCore:
         self.inbox = self.root / "obsidian_brain/_AI_EXCHANGE/TO_CHATGPT.md"
         self.outbox = self.root / "obsidian_brain/_AI_EXCHANGE/FROM_CHATGPT.md"
         self.plan_file = self.root / "obsidian_brain/_AI_EXCHANGE/AGENT_PLAN.md"
+        self.verifier = MastodontVerifier()
         
     async def process_cycle(self):
         """Полный цикл обработки задачи."""
@@ -43,8 +45,8 @@ class AgentCore:
         logger.info("Execution complete.")
 
         # 4. VERIFICATION: Проверка фактов и НТД
-        verified_data = self._verify(results)
-        logger.info("Verification complete (Layer 1).")
+        verified_data = await self._verify(results)
+        logger.info("Verification complete.")
 
         # 5. RECORDING: Запись в Obsidian с трассировкой
         self._record_final_response(verified_data)
@@ -77,17 +79,43 @@ class AgentCore:
         # Здесь будет вызов инструментов (Google Search, Python Scripts)
         return {"raw_data": "Engineering analysis data..."}
 
-    def _verify(self, results: dict) -> dict:
+    async def _verify(self, results: dict) -> dict:
         # Слой верификации: проверка ссылок и уверенности
+        raw_text = results.get("raw_data", "")
+        report = await self.verifier.verify(raw_text)
         return {
             "data": results,
-            "confidence": "High",
-            "sources": ["ГОСТ 30893.1-2002", "ГОСТ 1050-2013"]
+            "report": report
         }
 
-    def _record_final_response(self, data: dict):
-        # Формирование итогового отчета (как я сделал выше вручную)
-        pass
+    def _record_final_response(self, verified_data: dict):
+        report = verified_data["report"]
+        result_text = verified_data["data"].get("raw_data", "No data")
+        
+        status_tag = "#verified" if report['status'] == "verified" else "#unverified"
+        content = f"""# 📑 Engineering Audit Report
+---
+date: {datetime.now().strftime('%Y-%m-%d %H:%M')}
+confidence: {report['confidence']}%
+status: {status_tag}
+---
+
+## 🛠 Analysis Results
+{result_text}
+
+## 🛡 Verification Audit Findings
+"""
+        for finding in report['findings']:
+            content += f"- {finding}\n"
+            
+        # Записываем в папку Tasks в Obsidian
+        filename = f"audit_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
+        output_path = self.root / "obsidian_brain/Tasks" / filename
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        output_path.write_text(content, encoding="utf-8")
+        
+        # Также обновляем FROM_CHATGPT.md для обратной связи
+        self.outbox.write_text(content, encoding="utf-8")
 
 if __name__ == "__main__":
     # В будущем: запуск через asyncio.run(core.process_cycle())

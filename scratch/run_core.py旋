@@ -1,0 +1,12 @@
+import asyncio
+from scripts.agent_core import AgentCore
+
+async def run_test():
+    core = AgentCore(workspace_root=".")
+    # Имитируем реальную работу (в будущем тут будет вызов ChatGPT/Claude)
+    print("[*] Starting Agent Core Test...")
+    await core.process_cycle()
+    print("[*] Done!")
+
+if __name__ == "__main__":
+    asyncio.run(run_test())

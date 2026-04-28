@@ -198,6 +198,9 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
+    "Tasks/audit_20260428_100202.md",
+    "Tasks",
+    "_AI_EXCHANGE/AGENT_PLAN.md",
     "_AI_EXCHANGE/AI_CONSULTATION_RESULT.md",
     "Engineering/Design_Office/Valve_DN170/Assembly_Structure_10_129.md",
     "Engineering/Design_Office/Valve_DN170/CAD_Modeling_Checklist.md",
@@ -224,8 +227,6 @@
     "Engineering/Decisions",
     "_AI_EXCHANGE",
     "Engineering/Design_Office/Tooling/Calculations/Tooling_Calculation_10_129.md",
-    "Engineering/Design_Office/Valve_DN170/PMI_Valve_170_Draft.md",
-    "Engineering/Design_Office/Tooling/Calculations/Tooling_Calculation_Template.md",
     "Engineering/Session_Logs/stop_sync.ps1",
     "Engineering/Session_Logs",
     "Engineering/Design_Office/Valve_DN170",
@@ -233,7 +234,6 @@
     "Engineering/Design_Office/Tooling/Calculations",
     "Engineering/Design_Office/Tooling",
     "Education",
-    "Engineering/Projects",
-    "Engineering/Standards"
+    "Engineering/Projects"
   ]
 }
