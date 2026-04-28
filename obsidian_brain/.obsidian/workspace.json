@@ -11,10 +11,14 @@
             "id": "114164b8bb64cc48",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Граф"
+              "type": "markdown",
+              "state": {
+                "file": "Archive/ChatGPT/Full_History/Приветствие_и_обсуждение.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Приветствие_и_обсуждение"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Archive/ChatGPT/Full_History/Приветствие_и_обсуждение.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки"
+              "title": "Обратные ссылки для Приветствие_и_обсуждение"
             }
           },
           {
@@ -165,9 +170,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "Archive/ChatGPT/Full_History/Приветствие_и_обсуждение.md"
+              },
               "icon": "lucide-info",
-              "title": "Свойства файла"
+              "title": "Свойства файла для Приветствие_и_обсуждение"
             }
           }
         ],
@@ -189,34 +196,35 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "16ebaa65462d0120",
+  "active": "114164b8bb64cc48",
   "lastOpenFiles": [
+    "Archive/Claude/Full_History/Untitled.md",
+    "Archive/Claude/Full_History/Проблемы_с_жиминаем.md",
+    "Archive/Claude/Full_History/Gemini_conversation_link.md",
+    "Archive/ChatGPT/Full_History/Агенты_Кремля_разбор.md",
+    "Archive/Claude/Full_History/Дотянись_до_репы.md",
+    "Archive/ChatGPT/Full_History/3D_Industrial_Equipment_Render.md",
+    "Archive/ChatGPT/Full_History/3D_брелок_из_фото.md",
+    "Archive/Claude/Full_History/Export_stored_memories_and_personal_context.md",
+    "Archive/ChatGPT/EAGLE_Project/_INDEX.md",
+    "Archive/Claude/Full_History/Выбор_графической_станции.md",
+    "Archive/Claude/Full_History/Помощь_с_чертежами.md",
+    "Archive/Claude/Full_History/Юридическое_представительство_Бобова_Олега.md",
+    "Archive/Claude/Full_History",
+    "Archive/ChatGPT/Design_Draft/_INDEX.md",
+    "Archive/ChatGPT/Full_History/Учебник_логики_Челпанова.md",
+    "Archive/ChatGPT/Full_History/Список_записей_памяти.md",
+    "Archive/ChatGPT/Full_History/Тяжёлый_труд_и_богатство.md",
+    "Archive/ChatGPT/Full_History/Сопромат.md",
+    "Archive/ChatGPT/Full_History/Визуализация_интерьера.md",
+    "Archive/ChatGPT/Full_History/Причины_разрушения_зубов.md",
+    "Archive/ChatGPT/Full_History/Расход_смолы_на_фанеру.md",
     "Archive/ChatGPT/Full_History/Улучшение_раскроя_MARCH_Yacht.md",
     "Archive/ChatGPT/Full_History/Доказательства_плоской_Земли.md",
-    "Archive/ChatGPT/Full_History/3D_брелок_из_фото.md",
     "Archive/ChatGPT/Full_History/Описание_видео_с_YouTube.md",
     "Archive/ChatGPT/Full_History/Эволюция_бизнес-процессов.md",
     "Archive/ChatGPT/Full_History/React_project_layout.md",
     "Archive/ChatGPT/Full_History/Рынок_труда_и_навыки.md",
-    "Archive/ChatGPT/Full_History/Процесс_открытия_Ikigai.md",
-    "Archive/ChatGPT/Full_History/Вакуумный_стенд_расчет.md",
-    "Archive/ChatGPT/Full_History/Модификация_кода_графика.md",
-    "Archive/ChatGPT/Full_History/Инженерный_эскиз_хомута.md",
-    "Archive/ChatGPT/Full_History/Отчёт_запрос.md",
-    "Archive/ChatGPT/Full_History/Ментальная_карта_цели.md",
-    "Archive/ChatGPT/Full_History/Цели_и_причины_СВО.md",
-    "Archive/ChatGPT/Full_History/Разряженность_операционной_системы.md",
-    "Archive/ChatGPT/Full_History/Проектирование_с_покрытиями.md",
-    "Archive/ChatGPT/Full_History/Определение_десятилетия_по_фото.md",
-    "Archive/ChatGPT/Full_History/Наивный_детский_рисунок.md",
-    "Archive/ChatGPT/Full_History/Character_Design_Brief.md",
-    "Archive/ChatGPT/Full_History/Футуристический_портрет_описание.md",
-    "Archive/ChatGPT/Full_History/Помощь_с_компьютером.md",
-    "Archive/ChatGPT/Full_History/Рабочее_пространство_настроено.md",
-    "Archive/ChatGPT/Full_History/Ветка__Промт_для_изображения.md",
-    "Archive/ChatGPT/Full_History/Промт_для_изображения.md",
-    "Archive/ChatGPT/Full_History/Сравнение_промтов.md",
-    "Archive/ChatGPT/Full_History/Агенты_Кремля_разбор.md",
     "Archive/ChatGPT/Full_History",
     "Archive/ChatGPT/Улучшатель__Райт",
     "Archive/ChatGPT/Технология_машиностроения",
@@ -226,7 +234,6 @@
     "Archive/ChatGPT/Анализ_ПОС",
     "Archive/ChatGPT/PC__Software_Upgrade",
     "Archive/ChatGPT/Gemini_Prompt_Creation",
-    "Archive/ChatGPT/EAGLE_Project",
     "Без названия.canvas"
   ]
 }
