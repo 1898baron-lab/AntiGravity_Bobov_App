@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_AI_EXCHANGE/FROM_CHATGPT.md",
+                "file": "_AI_EXCHANGE/TO_CHATGPT.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FROM_CHATGPT"
+              "title": "TO_CHATGPT"
             }
           }
         ]
@@ -186,8 +186,8 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
-    "_AI_EXCHANGE/TO_CHATGPT.md",
     "_AI_EXCHANGE/FROM_CHATGPT.md",
+    "_AI_EXCHANGE/TO_CHATGPT.md",
     "Education/Professional_Growth_Matrix.md",
     "MASTADONT_DASHBOARD.md",
     "_Skills/Engineering_Review_Skill.md",
