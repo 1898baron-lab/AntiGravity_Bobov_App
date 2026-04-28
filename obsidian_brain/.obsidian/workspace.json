@@ -11,14 +11,10 @@
             "id": "114164b8bb64cc48",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Archive/ChatGPT/Анализ_ПОС/_INDEX.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "_INDEX"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Граф"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Archive/ChatGPT/Анализ_ПОС/_INDEX.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для _INDEX"
+              "title": "Обратные ссылки"
             }
           },
           {
@@ -170,11 +165,9 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {
-                "file": "Archive/ChatGPT/Анализ_ПОС/_INDEX.md"
-              },
+              "state": {},
               "icon": "lucide-info",
-              "title": "Свойства файла для _INDEX"
+              "title": "Свойства файла"
             }
           }
         ],
@@ -196,8 +189,12 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "dbb5de802eaea249",
+  "active": "114164b8bb64cc48",
   "lastOpenFiles": [
+    "Archive/ChatGPT/Full_History/ТЗ_для_инженеров_ГПХ.md",
+    "Archive/ChatGPT/Full_History/Language_mix_response.md",
+    "Archive/ChatGPT/Анализ_ПОС/_INDEX.md",
+    "Archive/ChatGPT/Full_History/Приглашение_на_AtomSkills.md",
     "Archive/ChatGPT/Full_History/Универсальный_ассистент_20.md",
     "Archive/ChatGPT/Full_History/Memory_Export_Request.md",
     "Archive/ChatGPT/Full_History/Clarifying_User_Intent.md",
@@ -220,10 +217,6 @@
     "Archive/ChatGPT/Full_History/Приветствие_беседы.md",
     "Archive/ChatGPT/Full_History/Распознавание_речи_с_Whisper.md",
     "Archive/ChatGPT/Full_History/Ночная_фэшн-съемка.md",
-    "Archive/ChatGPT/Full_History/Фэшн-портрет_в_студии.md",
-    "Archive/ChatGPT/Full_History/Анализ_репозиториев_GitHub.md",
-    "Archive/ChatGPT/Full_History/Gemma_4_E2B-it_обзор.md",
-    "Archive/ChatGPT/Full_History/Приветствие_и_вдохновение.md",
     "Archive/ChatGPT/Full_History",
     "Archive/ChatGPT/Улучшатель__Райт",
     "Archive/ChatGPT/Технология_машиностроения",
