@@ -11,10 +11,14 @@
             "id": "114164b8bb64cc48",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Граф"
+              "type": "markdown",
+              "state": {
+                "file": "Archive/Claude/Gemini_conversation_link.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Gemini_conversation_link"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Archive/Claude/Gemini_conversation_link.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки"
+              "title": "Обратные ссылки для Gemini_conversation_link"
             }
           },
           {
@@ -165,9 +170,11 @@
             "type": "leaf",
             "state": {
               "type": "file-properties",
-              "state": {},
+              "state": {
+                "file": "Archive/Claude/Gemini_conversation_link.md"
+              },
               "icon": "lucide-info",
-              "title": "Свойства файла"
+              "title": "Свойства файла для Gemini_conversation_link"
             }
           }
         ],
@@ -189,8 +196,15 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "114164b8bb64cc48",
+  "active": "dbb5de802eaea249",
   "lastOpenFiles": [
+    "Archive/Claude/Full_History/Быстроразъёмное_соединение_с_рычажным_механизмом.md",
+    "Archive/Claude/Full_History/Сообщение_о_поиске_спутника_жизни.md",
+    "Archive/ChatGPT/Engineering_GPT_Raw.md",
+    "Archive/Claude/Full_History/Импорт_контекста_между_ИИ-помощниками.md",
+    "Archive/Claude/Full_History/Структура_файлов_репозитория_AntiGravity.md",
+    "Archive/Claude/Full_History/Стоимость_изготовления_установки_ЗЕВС.md",
+    "Archive/Claude/Full_History/Notebook_LM_project_access.md",
     "Archive/Claude/Full_History/Файлы_репозитория_AntiGravity_Bobov_App.md",
     "Archive/Claude/Full_History/Клапан_запорный_Ду_170_эскизы.md",
     "Archive/Claude/Full_History/Пояснение_числа_пи.md",
@@ -211,13 +225,6 @@
     "Archive/Claude/Full_History/Юридическое_представительство_Бобова_Олега.md",
     "Archive/Claude/Full_History",
     "Archive/ChatGPT/Design_Draft/_INDEX.md",
-    "Archive/ChatGPT/Full_History/Учебник_логики_Челпанова.md",
-    "Archive/ChatGPT/Full_History/Список_записей_памяти.md",
-    "Archive/ChatGPT/Full_History/Тяжёлый_труд_и_богатство.md",
-    "Archive/ChatGPT/Full_History/Сопромат.md",
-    "Archive/ChatGPT/Full_History/Визуализация_интерьера.md",
-    "Archive/ChatGPT/Full_History/Причины_разрушения_зубов.md",
-    "Archive/ChatGPT/Full_History/Расход_смолы_на_фанеру.md",
     "Archive/ChatGPT/Full_History",
     "Archive/ChatGPT/Улучшатель__Райт",
     "Archive/ChatGPT/Технология_машиностроения",
