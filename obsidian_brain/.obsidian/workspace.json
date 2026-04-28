@@ -198,6 +198,8 @@
   },
   "active": "114164b8bb64cc48",
   "lastOpenFiles": [
+    "Context/Engineering_GPT_History.md",
+    "Context",
     "_AI_EXCHANGE/TO_CHATGPT.md",
     "_AI_EXCHANGE/FROM_CHATGPT.md",
     "_AI_EXCHANGE/AGENT_PLAN.md",
@@ -224,7 +226,6 @@
     "Engineering/Machine_Building_Tech.md",
     "Engineering/AI_Interaction_Directive.md",
     "Engineering/Standards/OST_95_Series_Summary.md",
-    "Engineering/Standards/Internship_Knowledge_Check.md",
     "Engineering/Decisions",
     "_AI_EXCHANGE",
     "Engineering/Session_Logs/stop_sync.ps1",
@@ -233,7 +234,6 @@
     "Без названия.canvas",
     "Engineering/Design_Office/Tooling/Calculations",
     "Engineering/Design_Office/Tooling",
-    "Education",
-    "Engineering/Projects"
+    "Education"
   ]
 }
