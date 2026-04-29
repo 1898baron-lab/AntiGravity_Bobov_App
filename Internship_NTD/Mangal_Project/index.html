@@ -97,7 +97,7 @@
         <header>
             <div class="subtitle">Engineering Project</div>
             <h1>МАНГАЛ-ПЕЧЬ ПОД КАЗАН</h1>
-            <p>Комплект монтажных документов v1.1 (Final Release)</p>
+            <p>Комплект монтажных документов v1.1 (Modular Release)</p>
         </header>
 
         <div class="hero-grid">
@@ -106,38 +106,52 @@
                 <div class="image-container">
                     <img src="mangal_kazan_render_v2_1777431627333.png" alt="Corrected 3D Render">
                 </div>
-                <p style="margin-top: 15px; color: var(--text-dim); font-size: 0.9rem;">*Визуализация соответствует технической документации и деталировке.</p>
+                <p style="margin-top: 15px; color: var(--text-dim); font-size: 0.9rem;">*Визуализация соответствует технической документации и деталировке модулей.</p>
             </div>
             <div class="card">
-                <h3>Общий вид (Изометрия)</h3>
+                <h3>Уточненный Общий Вид (Изометрия)</h3>
                 <div class="image-container">
-                    <img src="mangal_isometric_drawing_1777431585910.png" alt="Isometric View">
+                    <img src="mangal_isometric_v2_1777432096389.png" alt="Isometric View">
                 </div>
             </div>
         </div>
 
         <div class="tabs-container">
             <div class="tabs">
-                <div class="tab active" onclick="showTab('spec')">Спецификация</div>
+                <div class="tab active" onclick="showTab('spec')">Спецификация модулей</div>
                 <div class="tab" onclick="showTab('drawings')">Все чертежи</div>
-                <div class="tab" onclick="showTab('detailing')">Деталировка узлов</div>
+                <div class="tab" onclick="showTab('detailing')">Деталировка модулей</div>
             </div>
 
             <div id="spec" class="tab-content active">
                 <div class="card">
-                    <h3>Ведомость материалов</h3>
+                    <h3>Модуль 1: Основной мангал (800 мм)</h3>
                     <table>
                         <thead>
                             <tr><th>№</th><th>Наименование</th><th>Типоразмер</th><th>Кол-во</th><th>Масса, кг</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>1</td><td>Стенка боковая (длинная)</td><td>Лист δ=3, 1100×150</td><td>2 шт</td><td>7.77</td></tr>
-                            <tr><td>2</td><td>Стенка торцевая</td><td>Лист δ=3, 300×150</td><td>2 шт</td><td>2.12</td></tr>
-                            <tr><td>3</td><td>Перегородка внутренняя</td><td>Лист δ=3, 300×150</td><td>1 шт</td><td>1.06</td></tr>
-                            <tr><td>4</td><td>Дно корпуса</td><td>Лист δ=4, 1100×300</td><td>1 шт</td><td>10.36</td></tr>
-                            <tr><td>5</td><td>Плита под казан</td><td>Лист δ=4, 310×310</td><td>1 шт</td><td>3.01</td></tr>
-                            <tr><td>6</td><td>Нога (Труба 25х25)</td><td>L=420</td><td>4 шт</td><td>2.56</td></tr>
-                            <tr class="summary-row"><td colspan="4">ИТОГО МАССА ИЗДЕЛИЯ</td><td>~27.6 кг</td></tr>
+                            <tr><td>1.1</td><td>Стенка боковая</td><td>Лист δ=3, 800×150</td><td>2 шт</td><td>5.65</td></tr>
+                            <tr><td>1.2</td><td>Стенка торцевая</td><td>Лист δ=3, 300×150</td><td>2 шт</td><td>2.12</td></tr>
+                            <tr><td>1.3</td><td>Дно мангала</td><td>Лист δ=4, 800×300</td><td>1 шт</td><td>7.53</td></tr>
+                            <tr><td>1.4</td><td>Нога (Труба 25х25)</td><td>L=420</td><td>4 шт</td><td>2.56</td></tr>
+                            <tr class="summary-row"><td colspan="4">ИТОГО МАССА МОДУЛЯ 1</td><td>~18.3 кг</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>Модуль 2: Приставная печь (300 мм)</h3>
+                    <table>
+                        <thead>
+                            <tr><th>№</th><th>Наименование</th><th>Типоразмер</th><th>Кол-во</th><th>Масса, кг</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>2.1</td><td>Стенка боковая (доп)</td><td>Лист δ=3, 300×150</td><td>2 шт</td><td>2.12</td></tr>
+                            <tr><td>2.2</td><td>Стенка глухая (торц)</td><td>Лист δ=3, 300×150</td><td>1 шт</td><td>1.06</td></tr>
+                            <tr><td>2.3</td><td>Дно печи</td><td>Лист δ=4, 300×300</td><td>1 шт</td><td>2.83</td></tr>
+                            <tr><td>2.4</td><td>Плита под казан</td><td>Лист δ=4, 310×310</td><td>1 шт</td><td>3.01</td></tr>
+                            <tr class="summary-row"><td colspan="4">ИТОГО МАССА МОДУЛЯ 2</td><td>~9.0 кг</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -146,30 +160,31 @@
             <div id="drawings" class="tab-content">
                 <div class="drawing-grid">
                     <div class="card">
-                        <h3>Главный вид и разрезы</h3>
+                        <h3>Главный вид и разрезы сборки</h3>
                         <div class="image-container"><img src="mangal_drawing_fixed.png" alt="Main Drawing"></div>
                     </div>
                     <div class="card">
-                        <h3>Изометрическая проекция</h3>
-                        <div class="image-container"><img src="mangal_isometric_drawing_1777431585910.png" alt="Isometric"></div>
+                        <h3>Изометрическая проекция (уточненная)</h3>
+                        <div class="image-container"><img src="mangal_isometric_v2_1777432096389.png" alt="Isometric"></div>
                     </div>
                 </div>
             </div>
 
             <div id="detailing" class="tab-content">
                 <div class="card">
-                    <h3>Деталировка заготовок</h3>
+                    <h3>Деталировка заготовок (Обобщенная)</h3>
                     <div class="image-container"><img src="mangal_parts_detailing_1777430127578.png" alt="Detailing"></div>
                     <div style="margin-top: 25px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
                         <div>
-                            <h4>Плита под казан (Поз. 5)</h4>
-                            <p>Заготовка 310х310 мм. Центральное отверстие ∅280 мм. Съемная конструкция.</p>
+                            <h4>Модуль 1: Мангал</h4>
+                            <p>Боковые стенки 800х150 с прорезями (10 шт). Перфорированное дно 800х300. Отдельно стоящий блок на 4 опорах.</p>
                         </div>
                         <div>
-                            <h4>Секция печи</h4>
-                            <p>Отгороженная зона 300х300 мм. Внутренняя перегородка вварена герметично.</p>
+                            <h4>Модуль 2: Печь</h4>
+                            <p>Закрытый блок 300х300. Съемная плита с отверстием ∅280 мм. Пристыковывается к модулю 1.</p>
                         </div>
                     </div>
+                    <p style="margin-top: 20px; font-style: italic; color: var(--text-dim);">*Примечание: Раздельные детальные чертежи модулей временно не могут быть сгенерированы из-за ограничений квот системы (429 Error). Показана обобщенная деталировка.</p>
                 </div>
             </div>
         </div>
