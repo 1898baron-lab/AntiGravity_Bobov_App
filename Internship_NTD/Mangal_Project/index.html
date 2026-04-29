@@ -121,6 +121,7 @@
                 <div class="tab active" onclick="showTab('spec')">Спецификация модулей</div>
                 <div class="tab" onclick="showTab('drawings')">Все чертежи</div>
                 <div class="tab" onclick="showTab('detailing')">Деталировка модулей</div>
+                <div class="tab" style="background: rgba(99, 102, 241, 0.2); border-color: var(--primary);" onclick="showTab('wright_analysis')"><i class="fas fa-microchip"></i> Анализ Wright</div>
             </div>
 
             <div id="spec" class="tab-content active">
@@ -185,6 +186,32 @@
                         </div>
                     </div>
                     <p style="margin-top: 20px; font-style: italic; color: var(--text-dim);">*Примечание: Раздельные детальные чертежи модулей временно не могут быть сгенерированы из-за ограничений квот системы (429 Error). Показана обобщенная деталировка.</p>
+                </div>
+            </div>
+            <div id="wright_analysis" class="tab-content">
+                <div class="card">
+                    <h2><i class="fas fa-microchip"></i> Инженерный анализ узла сопряжения (Roma Wright Methodology)</h2>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+                        <div>
+                            <h4>Спецификация соединения</h4>
+                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-dim);">
+                                <li><strong>Тип соединения:</strong> Разборное, болтовое с направляющим замком.</li>
+                                <li><strong>Назначение:</strong> Жесткое соединение модулей (М800 + М300) с сохранением геометрии и термокомпенсации.</li>
+                                <li><strong>Стыковочная планка:</strong> Материал Ст3сп (S235), толщина 3–4 мм.</li>
+                                <li><strong>Отверстия:</strong> Ø9 мм под болты М8, равномерный шаг.</li>
+                                <li><strong>Крепеж:</strong> Болты М8х25 (ГОСТ 7798-70), 4 шт.</li>
+                                <li><strong>Тепловой зазор:</strong> 2.0 мм (компенсация).</li>
+                                <li><strong>Сварка фланцев:</strong> Прерывистый шов (L=20, шаг 50) для минимизации деформаций.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Схема контроля по ГОСТ</h4>
+                            <p style="color: var(--text-dim);">Сборка узла производится согласно стандартам Росатома для ответственных конструкций (адаптировано для металлоизделий бытового назначения):</p>
+                            <div style="background: rgba(16, 185, 129, 0.1); padding: 15px; border-radius: 8px; margin-top: 10px; border: 1px solid var(--accent);">
+                                <strong>Контроль швов:</strong> ВИК 100% (ГОСТ 3242-79). Трещины, поры, подрезы не допускаются. Катет K=3 проверяется шаблоном УШС-3.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
