@@ -65,3 +65,276 @@
 2026-04-28 04:43:41.068 [1] RemoveKeepAlive: keep_alives=0
 2026-04-28 04:43:41.068 [0] Deleting profile: no keep-alives
 2026-04-28 04:43:41.069 [0] UnregisterProfile background mode
+2026-04-29 04:44:54.254 [0] InitSessionLog done
+2026-04-29 04:44:54.254 [1] New session 26.3.5.782 (spaces: 1)
+2026-04-29 04:44:54.254 [1] SetRestoreAfterCrash
+2026-04-29 04:44:54.254 [0] ClearPendingCommands
+2026-04-29 04:44:54.254 [0] RegisterProfile background mode
+2026-04-29 04:44:54.264 [1] OpenTabsInBrowser
+2026-04-29 04:44:54.265 [1] AddKeepAlive: keep_alives=2
+2026-04-29 04:44:54.267 [0] ReadLastSessionCommands
+2026-04-29 04:44:54.267 [6]   SessionState (1)
+2026-04-29 04:44:54.267 [0]     13421824890139845: 120
+2026-04-29 04:44:54.267 [1]   Init
+2026-04-29 04:44:54.273 [0]   Init done
+2026-04-29 04:44:54.273 [0]   ReadCommandsFromFile
+2026-04-29 04:44:54.273 [0]   ReadCommandsFromFile done: 120 (102)
+2026-04-29 04:44:54.273 [0] ReadLastSessionCommands done
+2026-04-29 04:44:54.312 [0] WindowOpened
+2026-04-29 04:44:54.312 [1] OnSpaceAdded: 2030582510
+2026-04-29 04:44:54.312 [1] OnActiveSpaceChanged
+2026-04-29 04:44:54.317 [1] OnTabInsertedAt: tabs=1, pinned=0, space=2030582510
+2026-04-29 04:44:54.321 [0] ActiveTabChanged
+2026-04-29 04:44:54.394 [1] AddKeepAlive: keep_alives=2
+2026-04-29 04:44:54.394 [0] Request last session windows
+2026-04-29 04:44:54.394 [0] ReadLastSessionCommands
+2026-04-29 04:44:54.394 [0]   ReadCommandsFromFile
+2026-04-29 04:44:54.394 [0]   ReadCommandsFromFile done: 120 (102)
+2026-04-29 04:44:54.394 [0] ReadLastSessionCommands done
+2026-04-29 04:44:54.394 [1] GetLastSession asynchronously
+2026-04-29 04:44:54.395 [1] Launch
+2026-04-29 04:44:54.456 [0] OnGotSession: windows=1, tabs=2, pinned=0, ignored=0, ignored_pinned=0, spaces=1
+2026-04-29 04:44:54.456 [0] IsReadyToProcessSessionWindows
+2026-04-29 04:44:54.486 [0] IsReadyToProcessSessionWindows
+2026-04-29 04:44:54.504 [0] OnGotSession(apps): windows=0, tabs=0, pinned=0, ignored=0, ignored_pinned=0, spaces=0
+2026-04-29 04:44:54.504 [1] IsReadyToProcessSessionWindows
+2026-04-29 04:44:54.504 [1] RestoreSpaces
+2026-04-29 04:44:54.508 [1] OnTabInsertedAt: tabs=2, pinned=0, space=2030582510
+2026-04-29 04:44:54.511 [1] OnTabInsertedAt: tabs=3, pinned=0, space=2030582510
+2026-04-29 04:44:54.511 [0] Sync shared tabs in spaces
+2026-04-29 04:44:54.512 [0] SetRestoreAfterCrash
+2026-04-29 04:44:54.512 [0] Session restored
+2026-04-29 04:44:54.512 [0] ScheduleResetCommands
+2026-04-29 04:44:54.512 [0] ClearPendingCommands
+2026-04-29 04:44:54.512 [3] BuildCommandsForBrowser
+2026-04-29 04:44:54.512 [0] OnWindowsAndTabsRestored
+2026-04-29 04:44:54.512 [0] ! LostTabs=59; LostPinnedTabs=25
+2026-04-29 04:44:54.550 [1] RemoveKeepAlive: keep_alives=1
+2026-04-29 04:44:57.782 [1] ActiveTabChanged
+2026-04-29 04:44:58.810 [66] AppendCommandsWithReset
+2026-04-29 04:44:58.810 [0] TruncateOrOpenFile
+2026-04-29 04:44:58.810 [0] OpenAndWriteHeader
+2026-04-29 04:44:58.811 [0] OpenAndWriteHeader done
+2026-04-29 04:44:58.811 [0] TruncateOrOpenFile done
+2026-04-29 04:44:58.818 [18] AddKeepAlive: keep_alives=2
+2026-04-29 04:44:58.818 [18] RemoveKeepAlive: keep_alives=1
+2026-04-29 04:44:58.898 [6] AddKeepAlive: keep_alives=2
+2026-04-29 04:44:58.941 [6] RemoveKeepAlive: keep_alives=1
+2026-04-29 04:45:10.271 [1] AppendCommands
+2026-04-29 04:45:20.367 [4] AppendCommands
+2026-04-29 04:45:31.311 [1] AppendCommands
+2026-04-29 04:45:31.559 [0] ScheduleResetCommands
+2026-04-29 04:45:31.559 [1] ClearPendingCommands
+2026-04-29 04:45:31.559 [3] BuildCommandsForBrowser
+2026-04-29 04:45:33.938 [50] AppendCommandsWithReset
+2026-04-29 04:45:33.938 [0] TruncateOrOpenFile
+2026-04-29 04:45:33.938 [0] OpenAndWriteHeader
+2026-04-29 04:45:33.938 [0] OpenAndWriteHeader done
+2026-04-29 04:45:33.938 [0] TruncateOrOpenFile done
+2026-04-29 04:45:37.668 [1] AppendCommands
+2026-04-29 04:45:49.005 [2] AppendCommands
+2026-04-29 04:46:00.968 [1] AppendCommands
+2026-04-29 04:46:05.820 [1] AppendCommands
+2026-04-29 04:46:07.771 [0] Flush done
+2026-04-29 04:47:19.224 [1] AppendCommands
+2026-04-29 04:47:26.515 [1] AppendCommands
+2026-04-29 04:48:16.732 [0] Flush done
+2026-04-29 04:49:41.706 [5] AppendCommands
+2026-04-29 04:49:44.744 [1] AppendCommands
+2026-04-29 04:49:52.038 [1] AppendCommands
+2026-04-29 04:50:24.024 [1] AppendCommands
+2026-04-29 04:50:30.602 [0] ScheduleResetCommands
+2026-04-29 04:50:30.602 [0] ClearPendingCommands
+2026-04-29 04:50:30.602 [3] BuildCommandsForBrowser
+2026-04-29 04:50:33.103 [52] AppendCommandsWithReset
+2026-04-29 04:50:33.103 [0] TruncateOrOpenFile
+2026-04-29 04:50:33.103 [0] OpenAndWriteHeader
+2026-04-29 04:50:33.103 [0] OpenAndWriteHeader done
+2026-04-29 04:50:33.103 [0] TruncateOrOpenFile done
+2026-04-29 04:50:37.721 [2] AppendCommands
+2026-04-29 04:50:39.218 [0] Flush done
+2026-04-29 04:51:23.137 [1] AppendCommands
+2026-04-29 04:51:25.822 [1] AppendCommands
+2026-04-29 04:52:20.641 [0] Flush done
+2026-04-29 04:52:31.874 [2] AppendCommands
+2026-04-29 04:53:29.374 [0] Flush done
+2026-04-29 04:54:22.444 [4] AppendCommands
+2026-04-29 04:54:36.281 [7] AppendCommands
+2026-04-29 04:54:37.980 [0] ScheduleResetCommands
+2026-04-29 04:54:37.980 [1] ClearPendingCommands
+2026-04-29 04:54:37.980 [3] BuildCommandsForBrowser
+2026-04-29 04:54:40.480 [55] AppendCommandsWithReset
+2026-04-29 04:54:40.480 [0] TruncateOrOpenFile
+2026-04-29 04:54:40.480 [0] OpenAndWriteHeader
+2026-04-29 04:54:40.480 [0] OpenAndWriteHeader done
+2026-04-29 04:54:40.480 [0] TruncateOrOpenFile done
+2026-04-29 04:54:48.663 [8] AppendCommands
+2026-04-29 04:54:52.948 [0] ScheduleResetCommands
+2026-04-29 04:54:52.948 [1] ClearPendingCommands
+2026-04-29 04:54:52.948 [3] BuildCommandsForBrowser
+2026-04-29 04:54:54.627 [52] AppendCommandsWithReset
+2026-04-29 04:54:54.628 [0] TruncateOrOpenFile
+2026-04-29 04:54:54.628 [0] OpenAndWriteHeader
+2026-04-29 04:54:54.628 [0] OpenAndWriteHeader done
+2026-04-29 04:54:54.628 [0] TruncateOrOpenFile done
+2026-04-29 04:54:58.331 [3] AppendCommands
+2026-04-29 04:55:07.131 [1] AppendCommands
+2026-04-29 04:55:17.806 [1] OnTabClosing: tabs=2, pinned=0, space=0
+2026-04-29 04:55:17.806 [0] OnTabDetached
+2026-04-29 04:55:17.813 [1] ActiveTabChanged
+2026-04-29 04:55:18.414 [0] ActiveTabChanged
+2026-04-29 04:55:19.946 [18] AppendCommands
+2026-04-29 04:55:19.954 [0] Flush done
+2026-04-29 04:55:24.706 [5] AppendCommands
+2026-04-29 04:55:27.211 [1] AppendCommands
+2026-04-29 04:55:29.769 [1] AppendCommands
+2026-04-29 04:55:39.081 [4] AppendCommands
+2026-04-29 04:55:42.935 [1] ActiveTabChanged
+2026-04-29 04:55:45.435 [2] AppendCommands
+2026-04-29 04:55:45.465 [1] OnTabClosing: tabs=1, pinned=0, space=0
+2026-04-29 04:55:45.465 [0] OnTabDetached
+2026-04-29 04:55:45.475 [0] ActiveTabChanged
+2026-04-29 04:55:47.966 [9] AppendCommands
+2026-04-29 04:55:53.854 [1] AppendCommands
+2026-04-29 04:56:12.186 [1] AppendCommands
+2026-04-29 04:56:14.869 [4] AppendCommands
+2026-04-29 04:56:21.731 [3] AppendCommands
+2026-04-29 04:56:22.203 [0] Flush done
+2026-04-29 04:56:25.928 [1] AppendCommands
+2026-04-29 04:56:41.499 [2] AppendCommands
+2026-04-29 04:56:44.713 [2] AppendCommands
+2026-04-29 04:56:48.818 [0] ScheduleResetCommands
+2026-04-29 04:56:48.818 [0] ClearPendingCommands
+2026-04-29 04:56:48.818 [1] BuildCommandsForBrowser
+2026-04-29 04:56:51.319 [39] AppendCommandsWithReset
+2026-04-29 04:56:51.319 [0] TruncateOrOpenFile
+2026-04-29 04:56:51.319 [0] OpenAndWriteHeader
+2026-04-29 04:56:51.319 [0] OpenAndWriteHeader done
+2026-04-29 04:56:51.319 [0] TruncateOrOpenFile done
+2026-04-29 04:56:54.149 [2] AppendCommands
+2026-04-29 04:57:01.220 [13] AddKeepAlive: keep_alives=2
+2026-04-29 04:57:02.350 [13] RemoveKeepAlive: keep_alives=1
+2026-04-29 04:57:02.455 [1] OnTabInsertedAt: tabs=2, pinned=0, space=2030582510
+2026-04-29 04:57:02.464 [1] ActiveTabChanged
+2026-04-29 04:57:04.955 [18] AppendCommands
+2026-04-29 04:57:11.316 [6] AppendCommands
+2026-04-29 04:57:15.454 [3] AppendCommands
+2026-04-29 04:57:23.426 [0] Flush done
+2026-04-29 04:57:29.880 [0] OpenURLFromTab
+2026-04-29 04:57:29.897 [1] OnTabInsertedAt: tabs=3, pinned=0, space=2030582510
+2026-04-29 04:57:29.905 [2] ActiveTabChanged
+2026-04-29 04:57:32.397 [20] AppendCommands
+2026-04-29 04:57:33.058 [1] OnTabInsertedAt: tabs=4, pinned=0, space=2030582510
+2026-04-29 04:57:33.068 [3] ActiveTabChanged
+2026-04-29 04:57:34.295 [2] ActiveTabChanged
+2026-04-29 04:57:35.559 [14] AppendCommands
+2026-04-29 04:57:38.725 [1] AppendCommands
+2026-04-29 04:57:42.256 [2] AppendCommands
+2026-04-29 04:57:43.829 [1] ActiveTabChanged
+2026-04-29 04:57:46.330 [2] AppendCommands
+2026-04-29 04:57:50.710 [3] ActiveTabChanged
+2026-04-29 04:57:51.065 [4] AppendCommands
+2026-04-29 04:57:51.572 [2] ActiveTabChanged
+2026-04-29 04:57:54.072 [3] AppendCommands
+2026-04-29 04:57:56.948 [2] AppendCommands
+2026-04-29 04:58:00.752 [3] ActiveTabChanged
+2026-04-29 04:58:02.168 [1] OnTabClosing: tabs=3, pinned=0, space=0
+2026-04-29 04:58:02.168 [0] OnTabDetached
+2026-04-29 04:58:02.170 [2] ActiveTabChanged
+2026-04-29 04:58:03.258 [23] AppendCommands
+2026-04-29 04:58:15.439 [0] ActiveTabChanged
+2026-04-29 04:58:17.207 [13] AddKeepAlive: keep_alives=2
+2026-04-29 04:58:17.939 [2] AppendCommands
+2026-04-29 04:58:18.854 [13] RemoveKeepAlive: keep_alives=1
+2026-04-29 04:58:19.500 [1] ActiveTabChanged
+2026-04-29 04:58:21.693 [2] ActiveTabChanged
+2026-04-29 04:58:22.000 [4] AppendCommands
+2026-04-29 04:58:29.906 [0] Flush done
+2026-04-29 04:58:32.682 [1] AppendCommands
+2026-04-29 04:59:30.190 [0] Flush done
+2026-04-29 04:59:39.319 [1] OnTabClosing: tabs=2, pinned=0, space=0
+2026-04-29 04:59:39.319 [0] OnTabDetached
+2026-04-29 04:59:39.330 [1] ActiveTabChanged
+2026-04-29 04:59:41.702 [16] AppendCommands
+2026-04-29 04:59:50.953 [1] WindowClosing: tabs=2, pinned=0, spaces=1, shutdown_type=0
+2026-04-29 04:59:50.994 [1] WindowClosing: tabs=0, pinned=0, spaces=1, shutdown_type=0
+2026-04-29 04:59:51.020 [16] AddKeepAlive: keep_alives=2
+2026-04-29 04:59:51.027 [0] WindowClosed
+2026-04-29 04:59:51.046 [16] RemoveKeepAlive: keep_alives=1
+2026-04-29 04:59:51.056 [1] RemoveKeepAlive: keep_alives=0
+2026-04-29 04:59:51.056 [0] Deleting profile: no keep-alives
+2026-04-29 04:59:51.060 [0] UnregisterProfile background mode
+2026-04-29 04:59:51.064 [7] AppendCommands
+2026-04-29 04:59:51.065 [0] CommandStorageBackend done
+2026-04-29 05:02:07.699 [0] InitSessionLog done
+2026-04-29 05:02:07.699 [1] New session 26.3.5.782 (spaces: 1)
+2026-04-29 05:02:07.699 [1] SetRestoreAfterCrash
+2026-04-29 05:02:07.699 [0] ScheduleResetCommands
+2026-04-29 05:02:07.699 [0] ClearPendingCommands
+2026-04-29 05:02:07.701 [0] RegisterProfile background mode
+2026-04-29 05:02:07.709 [1] OpenTabsInBrowser
+2026-04-29 05:02:07.711 [1] AddKeepAlive: keep_alives=2
+2026-04-29 05:02:07.711 [0] ReadLastSessionCommands
+2026-04-29 05:02:07.711 [7]   SessionState (3)
+2026-04-29 05:02:07.711 [0]     13421912211319332: 96
+2026-04-29 05:02:07.711 [0]     13421912094628125: 148
+2026-04-29 05:02:07.711 [0]     13421824890139845: 120
+2026-04-29 05:02:07.711 [1]   Init
+2026-04-29 05:02:07.711 [0]   Init done
+2026-04-29 05:02:07.711 [0]   ReadCommandsFromFile
+2026-04-29 05:02:07.711 [0]   ReadCommandsFromFile done: 96 (169)
+2026-04-29 05:02:07.711 [0] ReadLastSessionCommands done
+2026-04-29 05:02:07.748 [0] WindowOpened
+2026-04-29 05:02:07.748 [1] OnSpaceAdded: 2030582591
+2026-04-29 05:02:07.748 [1] OnActiveSpaceChanged
+2026-04-29 05:02:07.752 [1] OnTabInsertedAt: tabs=1, pinned=0, space=2030582591
+2026-04-29 05:02:07.758 [0] ActiveTabChanged
+2026-04-29 05:02:07.765 [0] ! SkipEntry
+2026-04-29 05:02:07.816 [1] AddKeepAlive: keep_alives=2
+2026-04-29 05:02:07.816 [0] Request last session windows
+2026-04-29 05:02:07.816 [0] ReadLastSessionCommands
+2026-04-29 05:02:07.816 [0]   ReadCommandsFromFile
+2026-04-29 05:02:07.816 [0]   ReadCommandsFromFile done: 96 (169)
+2026-04-29 05:02:07.816 [0] ReadLastSessionCommands done
+2026-04-29 05:02:07.816 [1] GetLastSession asynchronously
+2026-04-29 05:02:07.817 [1] Launch
+2026-04-29 05:02:07.863 [0] OnGotSession: windows=1, tabs=2, pinned=0, ignored=0, ignored_pinned=0, spaces=1
+2026-04-29 05:02:07.863 [0] IsReadyToProcessSessionWindows
+2026-04-29 05:02:07.886 [0] IsReadyToProcessSessionWindows
+2026-04-29 05:02:07.920 [0] OnGotSession(apps): windows=0, tabs=0, pinned=0, ignored=0, ignored_pinned=0, spaces=0
+2026-04-29 05:02:07.920 [1] IsReadyToProcessSessionWindows
+2026-04-29 05:02:07.920 [1] RestoreSpaces
+2026-04-29 05:02:07.923 [1] OnTabInsertedAt: tabs=2, pinned=0, space=2030582591
+2026-04-29 05:02:07.927 [1] OnTabInsertedAt: tabs=3, pinned=0, space=2030582591
+2026-04-29 05:02:07.927 [0] Sync shared tabs in spaces
+2026-04-29 05:02:07.927 [0] SetRestoreAfterCrash
+2026-04-29 05:02:07.927 [0] Session restored
+2026-04-29 05:02:07.927 [0] OnWindowsAndTabsRestored
+2026-04-29 05:02:07.935 [1] RemoveKeepAlive: keep_alives=1
+2026-04-29 05:02:11.723 [138] AppendCommandsWithReset
+2026-04-29 05:02:11.723 [0] TruncateOrOpenFile
+2026-04-29 05:02:11.723 [0] OpenAndWriteHeader
+2026-04-29 05:02:11.724 [0] OpenAndWriteHeader done
+2026-04-29 05:02:11.724 [0] TruncateOrOpenFile done
+2026-04-29 05:02:11.731 [18] AddKeepAlive: keep_alives=2
+2026-04-29 05:02:11.731 [18] RemoveKeepAlive: keep_alives=1
+2026-04-29 05:02:26.378 [8] AppendCommands
+2026-04-29 05:02:32.637 [1] AppendCommands
+2026-04-29 05:02:42.807 [6] AppendCommands
+2026-04-29 05:02:43.733 [1] ActiveTabChanged
+2026-04-29 05:02:44.917 [1] OnTabClosing: tabs=2, pinned=0, space=0
+2026-04-29 05:02:44.917 [0] OnTabDetached
+2026-04-29 05:02:44.926 [1] ActiveTabChanged
+2026-04-29 05:02:45.381 [0] ActiveTabChanged
+2026-04-29 05:02:46.228 [1] OnTabClosing: tabs=1, pinned=0, space=0
+2026-04-29 05:02:46.228 [0] OnTabDetached
+2026-04-29 05:02:46.236 [0] ActiveTabChanged
+2026-04-29 05:02:46.258 [27] AppendCommands
+2026-04-29 05:02:54.323 [4] AppendCommands
+2026-04-29 05:02:55.737 [1] OnTabInsertedAt: tabs=2, pinned=0, space=2030582591
+2026-04-29 05:02:55.750 [1] ActiveTabChanged
+2026-04-29 05:02:56.188 [1] OnTabClosing: tabs=1, pinned=0, space=0
+2026-04-29 05:02:56.188 [0] OnTabDetached
+2026-04-29 05:02:56.190 [0] ActiveTabChanged
+2026-04-29 05:02:56.357 [39] AppendCommands
+2026-04-29 05:02:56.357 [0] CommandStorageBackend done

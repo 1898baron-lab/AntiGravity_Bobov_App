@@ -1,0 +1,6 @@
+2026/04/29-09:51:24.537 9930 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database is locked for recovering successfully
+2026/04/29-09:51:24.537 9930 Creating DB C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database since it was missing.
+2026/04/29-09:51:24.546 9930 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database/MANIFEST-000001
+2026/04/29-09:59:51.056 9930 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database, waiting for background work finished
+2026/04/29-09:59:51.057 9930 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database, background work finished
+2026/04/29-09:59:51.057 9930 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database unlocked successfully

@@ -1,6 +1,7 @@
-2026/04/28-09:41:25.302 a0c0 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Session Storage is locked for recovering successfully
-2026/04/28-09:41:25.302 a0c0 Creating DB C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Session Storage since it was missing.
-2026/04/28-09:41:25.308 a0c0 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Session Storage/MANIFEST-000001
-2026/04/28-09:43:41.087 a0c0 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Session Storage, waiting for background work finished
-2026/04/28-09:43:41.087 a0c0 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Session Storage, background work finished
-2026/04/28-09:43:41.087 a0c0 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Session Storage unlocked successfully
+2026/04/29-10:02:07.931 bb30 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Session Storage is locked for recovering successfully
+2026/04/29-10:02:07.933 bb30 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Session Storage/MANIFEST-000001
+2026/04/29-10:02:07.934 bb30 Recovering log #3
+2026/04/29-10:02:07.935 bb30 Reusing old log C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Session Storage/000003.log 
+2026/04/29-10:02:56.439 bb30 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Session Storage, waiting for background work finished
+2026/04/29-10:02:56.439 bb30 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Session Storage, background work finished
+2026/04/29-10:02:56.439 bb30 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Session Storage unlocked successfully

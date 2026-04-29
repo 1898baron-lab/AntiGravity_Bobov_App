@@ -1,3 +1,7 @@
-2026/04/28-09:41:25.150 4d40 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Site Characteristics Database is locked for recovering successfully
-2026/04/28-09:41:25.151 4d40 Creating DB C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Site Characteristics Database since it was missing.
-2026/04/28-09:41:25.160 4d40 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Site Characteristics Database/MANIFEST-000001
+2026/04/29-10:02:07.697 9f80 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Site Characteristics Database is locked for recovering successfully
+2026/04/29-10:02:07.697 9f80 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Site Characteristics Database/MANIFEST-000001
+2026/04/29-10:02:07.697 9f80 Recovering log #3
+2026/04/29-10:02:07.698 9f80 Reusing old log C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Site Characteristics Database/000003.log 
+2026/04/29-10:02:56.437 9f80 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Site Characteristics Database, waiting for background work finished
+2026/04/29-10:02:56.437 9f80 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Site Characteristics Database, background work finished
+2026/04/29-10:02:56.437 9f80 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Site Characteristics Database unlocked successfully

@@ -1,0 +1,7 @@
+2026/04/29-09:44:54.240 7d88 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Sync Data\LevelDB is locked for recovering successfully
+2026/04/29-09:44:54.247 7d88 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Sync Data\LevelDB/MANIFEST-000001
+2026/04/29-09:44:54.253 7d88 Recovering log #3
+2026/04/29-09:44:54.253 7d88 Reusing old log C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Sync Data\LevelDB/000003.log 
+2026/04/29-09:59:51.069 878c Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Sync Data\LevelDB, waiting for background work finished
+2026/04/29-09:59:51.070 878c Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Sync Data\LevelDB, background work finished
+2026/04/29-09:59:51.070 878c File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Sync Data\LevelDB unlocked successfully

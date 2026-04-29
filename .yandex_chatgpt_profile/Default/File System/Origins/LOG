@@ -1,3 +1,4 @@
-2026/04/28-09:41:50.481 16d8 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\File System\Origins is locked for recovering successfully
-2026/04/28-09:41:50.481 16d8 Creating DB C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\File System\Origins since it was missing.
-2026/04/28-09:41:50.484 16d8 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\File System\Origins/MANIFEST-000001
+2026/04/29-10:02:08.002 4db8 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\File System\Origins is locked for recovering successfully
+2026/04/29-10:02:08.002 4db8 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\File System\Origins/MANIFEST-000001
+2026/04/29-10:02:08.003 4db8 Recovering log #3
+2026/04/29-10:02:08.003 4db8 Reusing old log C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\File System\Origins/000003.log 
