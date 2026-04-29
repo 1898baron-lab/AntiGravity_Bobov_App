@@ -12,6 +12,26 @@ SEARCH_DIRS = [
 ]
 MAX_CONTEXT_WORDS = 800 # Ограничение для gemma4:26b-lite (num_ctx=2048)
 MODEL_NAME = "gemma4:26b-lite"
+HISTORY_FILE = r"C:\ANTIGRAVITY\1\obsidian_brain\chat_history.md"
+
+def get_chat_history():
+    if not os.path.exists(HISTORY_FILE):
+        return ""
+    try:
+        with open(HISTORY_FILE, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+            # Берем последние 20 строк истории (чтобы не переполнить контекст)
+            return "".join(lines[-20:])
+    except Exception:
+        return ""
+
+def save_chat_history(query, response):
+    try:
+        os.makedirs(os.path.dirname(HISTORY_FILE), exist_ok=True)
+        with open(HISTORY_FILE, 'a', encoding='utf-8') as f:
+            f.write(f"USER: {query}\nAI: {response}\n\n")
+    except Exception as e:
+        print(f"[Ошибка] Не удалось сохранить историю: {e}")
 
 def get_all_md_files(directories):
     files = []
@@ -79,10 +99,14 @@ def find_relevant_context(query):
 def ask_ollama_with_context(query, context):
     url = "http://localhost:11434/api/generate"
     
+    history = get_chat_history()
+    history_block = f"ИСТОРИЯ ПРЕДЫДУЩИХ СООБЩЕНИЙ:\n{history}\n\n" if history else ""
+
     system_prompt = (
         "Ты - интеллектуальный агент системы AntiGravity. "
-        "Твоя задача - отвечать на вопросы пользователя, строго опираясь на предоставленные ниже документы из базы знаний (RAG).\n"
+        "Твоя задача - отвечать на вопросы пользователя, строго опираясь на предоставленные ниже документы из базы знаний (RAG) и историю диалога.\n"
         "Если ответа нет в документах, так и скажи. Не придумывай факты.\n\n"
+        f"{history_block}"
         f"ДОКУМЕНТЫ:\n{context}\n\n"
         f"ВОПРОС ПОЛЬЗОВАТЕЛЯ:\n{query}"
     )
@@ -102,6 +126,7 @@ def ask_ollama_with_context(query, context):
         headers={'Content-Type': 'application/json; charset=utf-8'}
     )
     
+    full_response = ""
     print(f"\n[Ollama] Отправка запроса к {MODEL_NAME}...\n")
     try:
         with urllib.request.urlopen(req) as response:
@@ -110,10 +135,16 @@ def ask_ollama_with_context(query, context):
                     decoded_line = line.decode('utf-8')
                     try:
                         json_resp = json.loads(decoded_line)
-                        print(json_resp.get("response", ""), end="", flush=True)
+                        chunk = json_resp.get("response", "")
+                        print(chunk, end="", flush=True)
+                        full_response += chunk
                     except json.JSONDecodeError:
                         pass
             print("\n")
+        
+        # Сохраняем историю
+        save_chat_history(query, full_response)
+        
     except Exception as e:
         print(f"\n[Ошибка] Не удалось связаться с Ollama: {e}")
 
