@@ -7,7 +7,10 @@ def ask_ollama(prompt, model="gemma4:26b"):
     data = {
         "model": model,
         "prompt": prompt,
-        "stream": False
+        "stream": False,
+        "options": {
+            "num_ctx": 2048
+        }
     }
     
     # Ensure UTF-8 encoding for Russian text
