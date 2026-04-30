@@ -1,0 +1,18 @@
+{
+  "data_sources": [
+    "knowledge_base",
+    "docs_library",
+    "legal",
+    "Internship_NTD"
+  ],
+  "exclude_dirs": [
+    ".git",
+    ".docs",
+    "venv",
+    ".venv",
+    "__pycache__",
+    "node_modules"
+  ],
+  "history_file": "knowledge_base/chat_history.md",
+  "max_context_words": 800
+}
