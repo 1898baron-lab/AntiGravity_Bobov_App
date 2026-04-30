@@ -8,8 +8,9 @@ import re
 SEARCH_DIRS = [
     r"C:\ANTIGRAVITY\1\obsidian_brain",
     r"C:\ANTIGRAVITY\1\legal",
-    r"C:\ANTIGRAVITY\1\Internship_NTD"
+    r"C:\ANTIGRAVITY\1\Internship_NTD",
 ]
+IGNORE_DIRS = {".git", ".docs", "venv", ".venv", "__pycache__", "node_modules"}
 MAX_CONTEXT_WORDS = 800 # Ограничение для gemma4:26b-lite (num_ctx=2048)
 MODEL_NAME = "gemma4:26b-lite"
 HISTORY_FILE = r"C:\ANTIGRAVITY\1\obsidian_brain\chat_history.md"
@@ -38,7 +39,10 @@ def get_all_md_files(directories):
     for d in directories:
         if not os.path.exists(d):
             continue
-        for root, _, filenames in os.walk(d):
+        for root, dirs, filenames in os.walk(d):
+            dirs[:] = [sub for sub in dirs if sub not in IGNORE_DIRS]
+            if any(part in IGNORE_DIRS for part in root.split(os.sep)):
+                continue
             for filename in filenames:
                 if filename.endswith(".md"):
                     files.append(os.path.join(root, filename))
