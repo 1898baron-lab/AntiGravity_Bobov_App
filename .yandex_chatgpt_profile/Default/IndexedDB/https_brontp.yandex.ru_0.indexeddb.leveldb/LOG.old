@@ -1,0 +1,7 @@
+2026/04/29-09:44:54.809 e138 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\IndexedDB\https_brontp.yandex.ru_0.indexeddb.leveldb is locked for recovering successfully
+2026/04/29-09:44:54.814 e138 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\IndexedDB\https_brontp.yandex.ru_0.indexeddb.leveldb/MANIFEST-000001
+2026/04/29-09:44:54.819 e138 Recovering log #3
+2026/04/29-09:44:54.819 e138 Reusing old log C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\IndexedDB\https_brontp.yandex.ru_0.indexeddb.leveldb/000003.log 
+2026/04/29-09:59:51.071 e138 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\IndexedDB\https_brontp.yandex.ru_0.indexeddb.leveldb, waiting for background work finished
+2026/04/29-09:59:51.071 e138 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\IndexedDB\https_brontp.yandex.ru_0.indexeddb.leveldb, background work finished
+2026/04/29-09:59:51.071 e138 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\IndexedDB\https_brontp.yandex.ru_0.indexeddb.leveldb unlocked successfully

@@ -1,3 +1,7 @@
-2026/04/28-09:41:25.442 b894 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Extension State is locked for recovering successfully
-2026/04/28-09:41:25.442 b894 Creating DB C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Extension State since it was missing.
-2026/04/28-09:41:25.446 b894 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Extension State/MANIFEST-000001
+2026/04/29-10:02:07.970 eb78 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Extension State is locked for recovering successfully
+2026/04/29-10:02:07.971 eb78 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Extension State/MANIFEST-000001
+2026/04/29-10:02:07.971 eb78 Recovering log #3
+2026/04/29-10:02:07.971 eb78 Reusing old log C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Extension State/000003.log 
+2026/04/29-10:02:56.436 13f8 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Extension State, waiting for background work finished
+2026/04/29-10:02:56.437 13f8 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Extension State, background work finished
+2026/04/29-10:02:56.437 13f8 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Extension State unlocked successfully

@@ -1,0 +1,6 @@
+2026/04/29-09:57:30.972 a5f0 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\File System\002\t\Paths is locked for recovering successfully
+2026/04/29-09:57:30.972 a5f0 Creating DB C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\File System\002\t\Paths since it was missing.
+2026/04/29-09:57:30.976 a5f0 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\File System\002\t\Paths/MANIFEST-000001
+2026/04/29-09:59:51.079 a5f0 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\File System\002\t\Paths, waiting for background work finished
+2026/04/29-09:59:51.079 a5f0 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\File System\002\t\Paths, background work finished
+2026/04/29-09:59:51.080 a5f0 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\File System\002\t\Paths unlocked successfully

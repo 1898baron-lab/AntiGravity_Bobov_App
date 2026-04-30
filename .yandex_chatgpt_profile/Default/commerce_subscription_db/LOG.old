@@ -1,0 +1,4 @@
+2026/04/29-09:44:54.252 aea8 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\commerce_subscription_db is locked for recovering successfully
+2026/04/29-09:44:54.252 aea8 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\commerce_subscription_db, waiting for background work finished
+2026/04/29-09:44:54.252 aea8 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\commerce_subscription_db, background work finished
+2026/04/29-09:44:54.253 aea8 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\commerce_subscription_db unlocked successfully

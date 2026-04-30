@@ -66,8 +66,11 @@ async def get_page() -> Page:
                 return None
     return _page
 
-async def send_message(prompt: str) -> str:
+async def send_message(prompt: str, chat_url: str | None = None) -> tuple[str, str]:
     page = await get_page()
+    if chat_url and page.url != chat_url:
+        await page.goto(chat_url)
+        await asyncio.sleep(2)
     try:
         input_box = await page.wait_for_selector(INPUT_SELECTOR, timeout=15000)
         await input_box.click()
@@ -76,13 +79,13 @@ async def send_message(prompt: str) -> str:
         await page.keyboard.press("Enter")
         
         # Wait for response
-        await asyncio.sleep(5)
+        await asyncio.sleep(10)
         responses = await page.query_selector_all(RESPONSE_SELECTOR)
         if responses:
-            return (await responses[-1].inner_text()).strip()
-        return "Ошибка: ответ не найден."
+            return (await responses[-1].inner_text()).strip(), page.url
+        return "Ошибка: ответ не найден.", page.url
     except Exception as e:
-        return f"Ошибка: {str(e)}"
+        return f"Ошибка: {str(e)}", page.url
 
 app = FastAPI(title="ChatGPT Connector")
 
@@ -90,8 +93,10 @@ app = FastAPI(title="ChatGPT Connector")
 async def messages(request: Request):
     body = await request.json()
     prompt = body.get("messages", [{}])[-1].get("content", "")
-    response_text = await send_message(prompt)
+    chat_url = body.get("chat_url")
+    response_text, final_url = await send_message(prompt, chat_url=chat_url)
     return JSONResponse({
+        "id": final_url,
         "content": [{"type": "text", "text": response_text}]
     })
 

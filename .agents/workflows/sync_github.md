@@ -28,12 +28,17 @@ git add -A
 git commit -m "sync: автоматическая синхронизация $(Get-Date -Format 'yyyy-MM-dd HH:mm')"
 ```
 
-5. Отправить на GitHub:
+5. Подтянуть изменения с других ПК (чтобы избежать конфликтов):
+```powershell
+git pull --rebase origin main
+```
+
+6. Отправить на GitHub:
 ```powershell
 git push origin main
 ```
 
-6. Если пуш отклонён — использовать принудительную отправку:
+7. Если пуш отклонён — использовать принудительную отправку:
 ```powershell
 git push origin main --force-with-lease
 ```
