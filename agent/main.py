@@ -7,6 +7,10 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from agent.config import CHAT_HISTORY_FILE, DEFAULT_MODEL, MAX_CONTEXT_WORDS, MAX_HISTORY_MESSAGES, OLLAMA_URL
 from agent.utils.retrieval import (build_context, format_prompt, get_recent_history,
                                   save_history)
