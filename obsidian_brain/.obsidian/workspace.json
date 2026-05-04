@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "0e7d1caff6dfbb4c",
+        "id": "fbb8fe6bccd0df96",
         "type": "tabs",
         "children": [
           {
-            "id": "f59b61b77d07a425",
+            "id": "8b62a8583e16795c",
             "type": "leaf",
             "state": {
-              "type": "graph",
+              "type": "empty",
               "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Граф"
+              "icon": "lucide-file",
+              "title": "Новая вкладка"
             }
           }
         ]
@@ -190,7 +190,7 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "36d539b6d1aa1ade",
+  "active": "8b62a8583e16795c",
   "lastOpenFiles": [
     "Engineering/Knowledge_Base/PTO_Standard_Guidelines.md",
     "Engineering/Design_Office/Project_Zeus_Action_Plan.md",
