@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "INDEX.md",
+                "file": "1_PROJECTS/ZEUS/mentors_guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "INDEX"
+              "title": "mentors_guide"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "INDEX.md",
+                "file": "1_PROJECTS/ZEUS/mentors_guide.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для INDEX"
+              "title": "Обратные ссылки для mentors_guide"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "INDEX.md",
+                "file": "1_PROJECTS/ZEUS/mentors_guide.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из INDEX"
+              "title": "Исходящие ссылки из mentors_guide"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "INDEX.md",
+                "file": "1_PROJECTS/ZEUS/mentors_guide.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура INDEX"
+              "title": "Структура mentors_guide"
             }
           }
         ]
@@ -185,10 +185,10 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
-    "1_PROJECTS/BOBOV/deep_scanner.py",
-    "1_PROJECTS/BOBOV/fact_extractor.py",
     "1_PROJECTS/ZEUS/ZEUS_LOG.md",
     "INDEX.md",
+    "1_PROJECTS/BOBOV/deep_scanner.py",
+    "1_PROJECTS/BOBOV/fact_extractor.py",
     "1_PROJECTS/LEGAL/BOBOV_CASE.md",
     "1_PROJECTS/LEGAL",
     "1_PROJECTS/BOBOV/LEGAL_ATTACK_DRAFT_125.md",
@@ -219,7 +219,6 @@
     "1_PROJECTS/BOBOV/Клапан_запорный_Ду_170_Эскизы_31_03_26.pdf",
     "1_PROJECTS/BOBOV/1000019882.jpg",
     "1_PROJECTS/BOBOV/evidence/Дело Бобова_ Хроника крушения клуба маломерных суд.svg",
-    "1_PROJECTS/BOBOV/evidence/Scan0003.tif",
     "1_PROJECTS/BOBOV/evidence/IMG_0137.JPG",
     "1_PROJECTS/BOBOV/evidence/IMG_0136.JPG",
     "1_PROJECTS/BOBOV/evidence/IMG_0135.JPG",
