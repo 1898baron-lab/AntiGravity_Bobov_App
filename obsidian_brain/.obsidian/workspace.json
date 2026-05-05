@@ -11,10 +11,10 @@
             "id": "6271eb43af41376f",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "icon": "lucide-git-fork",
+              "title": "Граф"
             }
           }
         ]
@@ -177,5 +177,7 @@
     }
   },
   "active": "6271eb43af41376f",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "1_PROJECTS/ZEUS/ZEUS_LOG.md"
+  ]
 }
