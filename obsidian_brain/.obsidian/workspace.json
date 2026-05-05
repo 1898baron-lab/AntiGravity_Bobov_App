@@ -11,12 +11,14 @@
             "id": "6271eb43af41376f",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Archives/ChatGPT_Project_Knowledge/project_view.png"
+                "file": "CAREER_PATH_BOBOV.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "project_view"
+              "icon": "lucide-file",
+              "title": "CAREER_PATH_BOBOV"
             }
           }
         ]
@@ -92,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Archives/ChatGPT_Project_Knowledge/project_view.png",
+                "file": "CAREER_PATH_BOBOV.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для project_view"
+              "title": "Обратные ссылки для CAREER_PATH_BOBOV"
             }
           },
           {
@@ -111,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Archives/ChatGPT_Project_Knowledge/project_view.png",
+                "file": "CAREER_PATH_BOBOV.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из project_view"
+              "title": "Исходящие ссылки из CAREER_PATH_BOBOV"
             }
           },
           {
@@ -154,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Archives/ChatGPT_Project_Knowledge/project_view.png",
+                "file": "CAREER_PATH_BOBOV.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура project_view"
+              "title": "Структура CAREER_PATH_BOBOV"
             }
           }
         ]
@@ -181,12 +183,16 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "b84c1c8fa5391108",
+  "active": "6271eb43af41376f",
   "lastOpenFiles": [
-    "CAREER_PATH_BOBOV.md",
-    "Archives/ChatGPT_Project_Knowledge/Chats/K_.md",
+    "1_PROJECTS/MASTODONT/Project_MASTODONT_Overview.md",
+    "1_PROJECTS/MASTODONT",
+    "DASHBOARD.md",
     "INDEX.md",
     "KNOWLEDGE_INDEX.md",
+    "Archives/ChatGPT_Project_Knowledge/project_view.png",
+    "CAREER_PATH_BOBOV.md",
+    "Archives/ChatGPT_Project_Knowledge/Chats/K_.md",
     "Archives/ChatGPT_Projects/K_",
     "Archives/ChatGPT_Projects/Clarifying User Intent",
     "Archives/ChatGPT_Projects/ChatGPT Prompt Creation",
@@ -198,9 +204,6 @@
     "Archives/ChatGPT_Projects/EAGLE Project",
     "Archives/ChatGPT_Projects/Здоровье",
     "1_PROJECTS/LEGAL/Legal_Attack_Plan.md",
-    "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L",
-    "DASHBOARD.md",
-    "Archives/ChatGPT_Project_Knowledge/project_view.png",
     "Archives/ChatGPT_Total_Dump/Memory Export Request.md",
     "Archives/ChatGPT_Total_Dump/Clarifying User Intent.md",
     "Archives/ChatGPT_Total_Dump/ИИ для инженера-конструктора.md",
@@ -219,7 +222,6 @@
     "Archives/ChatGPT_Total_Dump/Что за ссылка_.md",
     "Archives/ChatGPT_Total_Dump/Приветствие беседы.md",
     "Archives/ChatGPT_Total_Dump/Распознавание речи с Whisper.md",
-    "1_PROJECTS/ZEUS/EXTERNAL_FILES_INDEX.md",
     "1_PROJECTS/BOBOV/1000019882.jpg",
     "1_PROJECTS/BOBOV/evidence/Дело Бобова_ Хроника крушения клуба маломерных суд.svg",
     "1_PROJECTS/BOBOV/evidence/IMG_0137.JPG",
