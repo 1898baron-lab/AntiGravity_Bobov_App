@@ -1,23 +1,18 @@
 {
-    "skills":  [
-                   {
-                       "description":  "Search for engineering documents and notes in Obsidian vault",
-                       "name":  "search_obsidian",
-                       "display_name":  "Search Obsidian"
-                   },
-                   {
-                       "description":  "Read full content of an Obsidian note",
-                       "name":  "fetch_obsidian_doc",
-                       "display_name":  "Read Obsidian Document"
-                   },
-                   {
-                       "description":  "Run complex reasoning tasks through local Ollama model",
-                       "name":  "ask_ollama",
-                       "display_name":  "Ask DeepSeek (Local)"
-                   }
-               ],
     "name":  "obsidian-ollama-hub",
+    "capabilities":  {
+                         "tools":  [
+                                       "System.Collections.Hashtable"
+                                   ]
+                     },
     "schema_version":  "v1",
+    "tools":  [
+                  {
+                      "description":  "Search for engineering documents and notes in Obsidian vault",
+                      "name":  "search_obsidian",
+                      "parameters":  "System.Collections.Hashtable"
+                  }
+              ],
     "description":  "Access your Obsidian vault and Ollama AI local tools via SSE.",
     "mcp_servers":  [
                         {
