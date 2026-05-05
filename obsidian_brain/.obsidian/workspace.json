@@ -11,14 +11,12 @@
             "id": "6271eb43af41376f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/00_Оглавление_ВЕЛИК 2025 _ Ronin Elite L.md",
-                "mode": "source",
-                "source": false
+                "file": "Archives/ChatGPT_Project_Knowledge/project_view.png"
               },
-              "icon": "lucide-file",
-              "title": "00_Оглавление_ВЕЛИК 2025 _ Ronin Elite L"
+              "icon": "lucide-image",
+              "title": "project_view"
             }
           }
         ]
@@ -94,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/00_Оглавление_ВЕЛИК 2025 _ Ronin Elite L.md",
+                "file": "Archives/ChatGPT_Project_Knowledge/project_view.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +102,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для 00_Оглавление_ВЕЛИК 2025 _ Ronin Elite L"
+              "title": "Обратные ссылки для project_view"
             }
           },
           {
@@ -113,12 +111,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/00_Оглавление_ВЕЛИК 2025 _ Ronin Elite L.md",
+                "file": "Archives/ChatGPT_Project_Knowledge/project_view.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из 00_Оглавление_ВЕЛИК 2025 _ Ronin Elite L"
+              "title": "Исходящие ссылки из project_view"
             }
           },
           {
@@ -156,13 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/00_Оглавление_ВЕЛИК 2025 _ Ronin Elite L.md",
+                "file": "Archives/ChatGPT_Project_Knowledge/project_view.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура 00_Оглавление_ВЕЛИК 2025 _ Ronin Elite L"
+              "title": "Структура project_view"
             }
           }
         ]
@@ -185,6 +183,7 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
+    "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/00_Оглавление_ВЕЛИК 2025 _ Ronin Elite L.md",
     "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/Сравнение велосипедов Aspect.md",
     "Archives/ChatGPT_Projects/Здоровье/Электронный больничный процесс.md",
     "Archives/ChatGPT_Projects/Здоровье/00_Оглавление_Здоровье.md",
@@ -192,7 +191,6 @@
     "Archives/ChatGPT_Projects/Технология машиностроения/K_.md",
     "Archives/ChatGPT_Projects/PC _ Software Upgrade/Ноутбук для нейросетей.md",
     "Archives/ChatGPT_Total_Dump/00_Оглавление_Total_Dump.md",
-    "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/00_Оглавление_ВЕЛИК 2025 _ Ronin Elite L.md",
     "Archives/ChatGPT_Projects/PC _ Software Upgrade/00_Оглавление_PC _ Software Upgrade.md",
     "Archives/ChatGPT_Projects/EAGLE Project/00_Оглавление_EAGLE Project.md",
     "3_META/meta/ANTIGRAVITY_CONNECTION.md",
