@@ -185,6 +185,7 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
+    "1_PROJECTS/BOBOV/parse_chatgpt.py",
     "1_PROJECTS/BOBOV/BOBOV_LEGAL_DOSSIER_2026.pdf",
     "1_PROJECTS/BOBOV/generate_dossier.py",
     "1_PROJECTS/ZEUS/kompas_material_fix.py",
@@ -200,7 +201,6 @@
     "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
     "1_PROJECTS/ZEUS/MAIN_TZ.pdf",
     "3_META/api_specs/docs/ai_knowledge/mastodont_skills.md",
-    "3_META/api_specs/docs/ai_knowledge/Инструкция_по_интеграции_Claude_и_Notebook_LM.pdf",
     "1_PROJECTS/MANGAL/MANGAL_LOG.md",
     "3_META/api_specs/docs/mastadont_persona.md",
     "3_META/PROJECT_STATE.md",
