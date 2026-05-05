@@ -185,19 +185,20 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
+    "migrate_history.py",
+    "Knowledge_Base/Scripts_Archive",
+    "Knowledge_Base",
+    "1_PROJECTS/ZEUS/Design_History",
+    "1_PROJECTS/BOBOV/Case_History",
+    "Archives/Chat_History",
+    "Archives",
     "1_PROJECTS/BOBOV/CHATGPT_HISTORY_AUDIT.md",
     "1_PROJECTS/BOBOV/deep_chatgpt_audit.py",
     "1_PROJECTS/BOBOV/chatgpt_insights.txt",
     "1_PROJECTS/BOBOV/parse_chatgpt.py",
     "1_PROJECTS/BOBOV/BOBOV_LEGAL_DOSSIER_2026.pdf",
-    "1_PROJECTS/BOBOV/generate_dossier.py",
-    "1_PROJECTS/ZEUS/kompas_material_fix.py",
     "2_KNOWLEDGE/NOTEBOOKLM_SYCH/KNOWLEDGE_MAP_SUMMARIES.md",
-    "1_PROJECTS/MANGAL/dxf/leg.dxf",
-    "1_PROJECTS/MANGAL/dxf/side_short.dxf",
-    "1_PROJECTS/MANGAL/dxf/side_long.dxf",
     "INDEX.md",
-    "1_PROJECTS/MANGAL/dxf/bottom.dxf",
     "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
     "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
     "3_META/api_specs/docs/ai_knowledge/mastodont_skills.md",
@@ -229,7 +230,6 @@
     "1_PROJECTS/BOBOV/evidence/DSC09236.JPG",
     "1_PROJECTS/BOBOV/evidence/DSC09232.JPG",
     "1_PROJECTS/BOBOV/evidence/DSC09100.JPG",
-    "1_PROJECTS/BOBOV/Юридический ассистент - Взыскание - 2026-04-01.md",
-    "1_PROJECTS/BOBOV/ultimatum_notary_final.md"
+    "1_PROJECTS/BOBOV/Юридический ассистент - Взыскание - 2026-04-01.md"
   ]
 }
