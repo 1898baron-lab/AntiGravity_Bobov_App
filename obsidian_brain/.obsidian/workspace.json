@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3_META/PROJECT_STATE.md",
+                "file": "1_PROJECTS/ZEUS/ZEUS_LOG.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PROJECT_STATE"
+              "title": "ZEUS_LOG"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3_META/PROJECT_STATE.md",
+                "file": "1_PROJECTS/ZEUS/ZEUS_LOG.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для PROJECT_STATE"
+              "title": "Обратные ссылки для ZEUS_LOG"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3_META/PROJECT_STATE.md",
+                "file": "1_PROJECTS/ZEUS/ZEUS_LOG.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из PROJECT_STATE"
+              "title": "Исходящие ссылки из ZEUS_LOG"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3_META/PROJECT_STATE.md",
+                "file": "1_PROJECTS/ZEUS/ZEUS_LOG.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура PROJECT_STATE"
+              "title": "Структура ZEUS_LOG"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
+    "3_META/PROJECT_STATE.md",
     "1_PROJECTS/ZEUS/ZEUS_LOG.md"
   ]
 }
