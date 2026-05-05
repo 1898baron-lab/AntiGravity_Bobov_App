@@ -18,12 +18,11 @@
                ],
     "name":  "obsidian-ollama-hub",
     "schema_version":  "v1",
-    "description":  "Access your Obsidian vault and Ollama AI local tools.",
+    "description":  "Access your Obsidian vault and Ollama AI local tools via SSE.",
     "mcp_servers":  [
                         {
-                            "args":  "c:\\ANTIGRAVITY\\1\\scripts\\mcp_obsidian_ollama.py",
-                            "command":  "c:\\ANTIGRAVITY\\1\\.venv\\Scripts\\python.exe",
-                            "name":  "obsidian-ollama"
+                            "name":  "obsidian-ollama",
+                            "url":  "http://127.0.0.1:8765/sse"
                         }
                     ],
     "display_name":  "Obsidian \u0026 Ollama Hub"
