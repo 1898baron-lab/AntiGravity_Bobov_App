@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_PROJECTS/MANGAL/MANGAL_LOG.md",
+                "file": "INDEX.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "MANGAL_LOG"
+              "title": "INDEX"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1_PROJECTS/MANGAL/MANGAL_LOG.md",
+                "file": "INDEX.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для MANGAL_LOG"
+              "title": "Обратные ссылки для INDEX"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1_PROJECTS/MANGAL/MANGAL_LOG.md",
+                "file": "INDEX.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из MANGAL_LOG"
+              "title": "Исходящие ссылки из INDEX"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1_PROJECTS/MANGAL/MANGAL_LOG.md",
+                "file": "INDEX.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура MANGAL_LOG"
+              "title": "Структура INDEX"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
+    "1_PROJECTS/MANGAL/MANGAL_LOG.md",
     "INDEX.md",
     "3_META/api_specs/docs/mastadont_persona.md",
     "3_META/api_specs/docs/ai_knowledge/mastodont_skills.md",
@@ -205,7 +206,6 @@
     "1_PROJECTS/MANGAL/MANGAL_DETAILS.md",
     "1_PROJECTS/MANGAL/TECH_SPEC_MANGAL.md",
     "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
-    "1_PROJECTS/MANGAL/MANGAL_LOG.md",
     "1_PROJECTS/MANGAL",
     "3_META/api_specs/docs/gemma_ollama_integration.md",
     "1_PROJECTS/ZEUS/EXTERNAL_FILES_INDEX.md",
