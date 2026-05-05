@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3_META/api_specs/docs/gemma_ollama_integration.md",
+                "file": "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "gemma_ollama_integration"
+              "title": "ESKD_BASIC_GUIDE"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3_META/api_specs/docs/gemma_ollama_integration.md",
+                "file": "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для gemma_ollama_integration"
+              "title": "Обратные ссылки для ESKD_BASIC_GUIDE"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3_META/api_specs/docs/gemma_ollama_integration.md",
+                "file": "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из gemma_ollama_integration"
+              "title": "Исходящие ссылки из ESKD_BASIC_GUIDE"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3_META/api_specs/docs/gemma_ollama_integration.md",
+                "file": "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура gemma_ollama_integration"
+              "title": "Структура ESKD_BASIC_GUIDE"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
+    "3_META/api_specs/docs/gemma_ollama_integration.md",
     "INDEX.md",
     "1_PROJECTS/ZEUS/EXTERNAL_FILES_INDEX.md",
     "2_KNOWLEDGE/NOTEBOOKLM_SYCH",
@@ -195,7 +196,6 @@
     "3_META/AUTOMATION_SYSTEM.md",
     "1_PROJECTS/BOBOV/bobov_attack_dashboard.md",
     "3_META/api_specs/docs/aiBoomb_NotebookLM_Source.md",
-    "3_META/api_specs/docs/gemma_ollama_integration.md",
     "3_META/api_specs/docs/mastadont_persona.md",
     "3_META/api_specs/docs/ai_knowledge/mastodont_skills.md",
     "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
