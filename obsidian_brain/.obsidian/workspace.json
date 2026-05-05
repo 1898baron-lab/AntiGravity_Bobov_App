@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "INDEX.md",
+                "file": "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "INDEX"
+              "title": "ESKD_BASIC_GUIDE"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "INDEX.md",
+                "file": "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для INDEX"
+              "title": "Обратные ссылки для ESKD_BASIC_GUIDE"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "INDEX.md",
+                "file": "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из INDEX"
+              "title": "Исходящие ссылки из ESKD_BASIC_GUIDE"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "INDEX.md",
+                "file": "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура INDEX"
+              "title": "Структура ESKD_BASIC_GUIDE"
             }
           }
         ]
@@ -185,8 +185,9 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
-    "3_META/AUTOMATION_SYSTEM.md",
     "INDEX.md",
+    "1_PROJECTS/BOBOV/evidence_synthesis_12m.md",
+    "3_META/AUTOMATION_SYSTEM.md",
     "1_PROJECTS/ZEUS/mentors_guide.md",
     "1_PROJECTS/ZEUS/EXTERNAL_FILES_INDEX.md",
     "1_PROJECTS/BOBOV/bobov_attack_dashboard.md",
@@ -221,7 +222,6 @@
     "1_PROJECTS/BOBOV/ultimatum_notary_final.md",
     "1_PROJECTS/BOBOV/report_for_father.md",
     "1_PROJECTS/BOBOV/notary_request_letter.md",
-    "1_PROJECTS/BOBOV/evidence_synthesis_12m.md",
     "1_PROJECTS/BOBOV/court_precedents_report.md",
     "1_PROJECTS/BOBOV/court_practice_analysis.md",
     "1_PROJECTS/BOBOV/complaint_prosecutor_v2_158.md",
