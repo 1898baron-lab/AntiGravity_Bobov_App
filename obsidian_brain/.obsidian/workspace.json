@@ -11,10 +11,14 @@
             "id": "d44461ac63ed11c8",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Граф"
+              "type": "markdown",
+              "state": {
+                "file": "1_PROJECTS/Summaries/Clarifying User Intent_Summary.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Clarifying User Intent_Summary"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "1_PROJECTS/Summaries/Clarifying User Intent_Summary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки"
+              "title": "Обратные ссылки для Clarifying User Intent_Summary"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "1_PROJECTS/Summaries/Clarifying User Intent_Summary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки"
+              "title": "Исходящие ссылки из Clarifying User Intent_Summary"
             }
           },
           {
@@ -150,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "1_PROJECTS/Summaries/Clarifying User Intent_Summary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура"
+              "title": "Структура Clarifying User Intent_Summary"
             }
           }
         ]
@@ -176,7 +183,7 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "b84c1c8fa5391108",
+  "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
     "3_META/api_specs/docs/aiBoomb_NotebookLM_Source.md",
     "1_PROJECTS/Summaries/Gemini Prompt Creation_Summary.md",
