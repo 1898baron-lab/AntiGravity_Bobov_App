@@ -75,6 +75,10 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
             return [TextContent(type="text", text=res.get("response", ""))]
     return []
 
+@app.get("/health")
+async def health():
+    return {"status": "ok", "port": 8766}
+
 @app.get("/sse")
 async def sse_endpoint(request: Request):
     async with sse.connect_scope(request.scope, request.receive, request._send):

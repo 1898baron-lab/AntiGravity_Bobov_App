@@ -30,7 +30,7 @@ from playwright_stealth import Stealth
 # ──────────────────────────────────────────────
 PORT = 8765
 SESSION_FILE = r"C:\ANTIGRAVITY\1\claude_session.json"   # сохранённая сессия браузера
-HEADLESS = False                        # Включаем видимый режим для отладки
+HEADLESS = True                        # Включаем видимый режим для отладки
 CLAUDE_URL = "https://claude.ai/new"
 
 # CSS-селекторы (улучшенные и расширенные)
