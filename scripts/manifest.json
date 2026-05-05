@@ -1,8 +1,10 @@
 {
-    "id":  "obsidian-ollama-hub",
-    "name":  "Obsidian Ollama Hub",
-    "description":  "Engineering Intelligence Bridge",
-    "entrypoint":  "mcp_obsidian_ollama.py",
-    "runtime":  "python",
-    "version":  "1.0.0"
+    "version":  "1.0.0",
+    "name":  "obsidian-ollama-hub",
+    "description":  "Obsidian and Ollama Engineering Bridge",
+    "command":  "python",
+    "type":  "python",
+    "args":  [
+                 "c:\\ANTIGRAVITY\\1\\scripts\\mcp_obsidian_ollama.py"
+             ]
 }
