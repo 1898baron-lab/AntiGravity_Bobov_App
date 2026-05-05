@@ -185,6 +185,11 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
+    "Knowledge_Base/AI_Infrastructure_History.md",
+    "Knowledge_Base/AutoCAD_Troubleshooting_Log.md",
+    "1_PROJECTS/MANGAL/Mangal_Design_History.md",
+    "1_PROJECTS/ZEUS/Design_History/Zeus_Core_Evolution.md",
+    "1_PROJECTS/BOBOV/Case_History/Legal_Attack_2025.md",
     "migrate_history.py",
     "Knowledge_Base/Scripts_Archive",
     "Knowledge_Base",
@@ -196,7 +201,6 @@
     "1_PROJECTS/BOBOV/deep_chatgpt_audit.py",
     "1_PROJECTS/BOBOV/chatgpt_insights.txt",
     "1_PROJECTS/BOBOV/parse_chatgpt.py",
-    "1_PROJECTS/BOBOV/BOBOV_LEGAL_DOSSIER_2026.pdf",
     "2_KNOWLEDGE/NOTEBOOKLM_SYCH/KNOWLEDGE_MAP_SUMMARIES.md",
     "INDEX.md",
     "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
@@ -217,9 +221,6 @@
     "1_PROJECTS/ZEUS/EXTERNAL_FILES_INDEX.md",
     "1_PROJECTS/ZEUS/QUESTIONS_FOR_MENTOR.md",
     "1_PROJECTS/BOBOV/evidence_synthesis_12m.md",
-    "3_META/AUTOMATION_SYSTEM.md",
-    "1_PROJECTS/BOBOV/bobov_attack_dashboard.md",
-    "3_META/api_specs/docs/aiBoomb_NotebookLM_Source.md",
     "1_PROJECTS/BOBOV/1000019882.jpg",
     "1_PROJECTS/BOBOV/evidence/Дело Бобова_ Хроника крушения клуба маломерных суд.svg",
     "1_PROJECTS/BOBOV/evidence/IMG_0137.JPG",
@@ -229,7 +230,6 @@
     "1_PROJECTS/BOBOV/evidence/DSC09238.JPG",
     "1_PROJECTS/BOBOV/evidence/DSC09236.JPG",
     "1_PROJECTS/BOBOV/evidence/DSC09232.JPG",
-    "1_PROJECTS/BOBOV/evidence/DSC09100.JPG",
-    "1_PROJECTS/BOBOV/Юридический ассистент - Взыскание - 2026-04-01.md"
+    "1_PROJECTS/BOBOV/evidence/DSC09100.JPG"
   ]
 }
