@@ -185,6 +185,7 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
+    "1_PROJECTS/BOBOV/generate_dossier.py",
     "1_PROJECTS/ZEUS/kompas_material_fix.py",
     "2_KNOWLEDGE/NOTEBOOKLM_SYCH/KNOWLEDGE_MAP_SUMMARIES.md",
     "1_PROJECTS/MANGAL/dxf/leg.dxf",
@@ -205,7 +206,6 @@
     "1_PROJECTS/ZEUS/mentors_guide.md",
     "1_PROJECTS/ZEUS/ZEUS_LOG.md",
     "1_PROJECTS/BOBOV/deep_scanner.py",
-    "1_PROJECTS/BOBOV/fact_extractor.py",
     "1_PROJECTS/LEGAL/BOBOV_CASE.md",
     "1_PROJECTS/BOBOV/LEGAL_ATTACK_DRAFT_125.md",
     "1_PROJECTS/MANGAL/MANGAL_CUTTING_LIST.md",
