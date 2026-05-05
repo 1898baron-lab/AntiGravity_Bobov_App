@@ -1,10 +1,13 @@
-2026/04/29-09:44:54.267 e5a4 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb is locked for recovering successfully
-2026/04/29-09:44:54.274 e5a4 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb/MANIFEST-000001
-2026/04/29-09:44:54.279 e5a4 Recovering log #3
-2026/04/29-09:44:54.280 e5a4 Reusing old log C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb/000003.log 
-2026/04/29-09:57:35.962 8664 Level-0 table #5: started
-2026/04/29-09:57:35.973 8664 Level-0 table #5: 77311 bytes OK
-2026/04/29-09:57:35.974 8664 Delete type=0 #3
-2026/04/29-09:59:51.070 8664 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb, waiting for background work finished
-2026/04/29-09:59:51.071 8664 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb, background work finished
-2026/04/29-09:59:51.071 8664 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb unlocked successfully
+2026/04/29-10:02:07.717 bb30 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb is locked for recovering successfully
+2026/04/29-10:02:07.722 bb30 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb/MANIFEST-000001
+2026/04/29-10:02:07.723 bb30 Recovering log #4
+2026/04/29-10:02:07.724 bb30 Reusing old log C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb/000004.log 
+2026/04/29-10:02:44.955 dba4 Level-0 table #8: started
+2026/04/29-10:02:44.958 dba4 Level-0 table #8: 76857 bytes OK
+2026/04/29-10:02:44.960 dba4 Delete type=0 #4
+2026/04/29-10:02:46.256 bb30 Level-0 table #10: started
+2026/04/29-10:02:46.273 bb30 Level-0 table #10: 1801179 bytes OK
+2026/04/29-10:02:46.276 bb30 Delete type=0 #7
+2026/04/29-10:02:56.440 bb30 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb, waiting for background work finished
+2026/04/29-10:02:56.440 bb30 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb, background work finished
+2026/04/29-10:02:56.441 bb30 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Local Storage\leveldb unlocked successfully

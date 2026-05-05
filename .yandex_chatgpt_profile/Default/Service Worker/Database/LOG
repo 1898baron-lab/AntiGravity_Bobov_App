@@ -1,7 +1,3 @@
-2026/04/29-10:02:07.693 13f8 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database is locked for recovering successfully
-2026/04/29-10:02:07.693 13f8 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database/MANIFEST-000001
-2026/04/29-10:02:07.693 13f8 Recovering log #3
-2026/04/29-10:02:07.694 13f8 Reusing old log C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database/000003.log 
-2026/04/29-10:02:56.428 eb78 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database, waiting for background work finished
-2026/04/29-10:02:56.428 eb78 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database, background work finished
-2026/04/29-10:02:56.429 eb78 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database unlocked successfully
+2026/05/05-16:29:42.047 9ff4 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database/MANIFEST-000001
+2026/05/05-16:29:42.047 9ff4 Recovering log #3
+2026/05/05-16:29:42.048 9ff4 Reusing old log C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\Service Worker\Database/000003.log 

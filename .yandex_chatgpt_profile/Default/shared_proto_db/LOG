@@ -1,7 +1,3 @@
-2026/04/29-10:02:07.842 54f0 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\shared_proto_db is locked for recovering successfully
-2026/04/29-10:02:07.842 54f0 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\shared_proto_db/MANIFEST-000001
-2026/04/29-10:02:07.842 54f0 Recovering log #3
-2026/04/29-10:02:07.843 54f0 Reusing old log C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\shared_proto_db/000003.log 
-2026/04/29-10:02:56.442 54f0 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\shared_proto_db, waiting for background work finished
-2026/04/29-10:02:56.442 54f0 Deletion DBImpl for C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\shared_proto_db, background work finished
-2026/04/29-10:02:56.443 54f0 File C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\shared_proto_db unlocked successfully
+2026/05/05-16:29:42.152 75d8 Reusing MANIFEST C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\shared_proto_db/MANIFEST-000001
+2026/05/05-16:29:42.153 75d8 Recovering log #3
+2026/05/05-16:29:42.153 75d8 Reusing old log C:\ANTIGRAVITY\1\.yandex_chatgpt_profile\Default\shared_proto_db/000003.log 
