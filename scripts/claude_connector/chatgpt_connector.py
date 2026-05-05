@@ -16,23 +16,14 @@ from playwright_stealth import Stealth
 
 PORT = 8001
 SESSION_FILE = r"C:\ANTIGRAVITY\1\chatgpt_session.json"
-YANDEX_PATH = r"C:\Users\Sasha  Baron\AppData\Local\Yandex\YandexBrowser\Application\browser.exe"
-CHATGPT_URL = "https://chatgpt.com/"
-
-# Selectors for ChatGPT
-INPUT_SELECTOR = '#prompt-textarea'
-RESPONSE_SELECTOR = '[data-message-author-role="assistant"]'
-SEND_BUTTON_SELECTOR = '[data-testid="send-button"]'
-
-_browser: Browser | None = None
-_page: Page | None = None
+YANDEX_PROFILE = r"C:\ANTIGRAVITY\1\ .yandex_chatgpt_profile"
 
 async def get_page() -> Page:
     global _browser, _page
     if _page is None or _page.is_closed():
         pw = await async_playwright().start()
         try:
-            # Пытаемся подключиться к уже запущенному Яндексу через CDP
+            # 1. Пытаемся подключиться к уже запущенному Яндексу через CDP
             print("[DEBUG] Attempting to connect via CDP (port 9222)...")
             _browser = await pw.chromium.connect_over_cdp("http://localhost:9222")
             context = _browser.contexts[0]
@@ -46,20 +37,21 @@ async def get_page() -> Page:
                 _page = await context.new_page()
                 await _page.goto(CHATGPT_URL)
         except Exception as e:
-            print(f"[DEBUG] CDP connection failed: {e}. Falling back to standalone launch.")
+            print(f"[DEBUG] CDP connection failed: {e}. Falling back to standalone launch with profile.")
             try:
-                _browser = await pw.chromium.launch(
+                # 2. Если CDP не запущен, запускаем браузер с твоим профилем
+                _browser = await pw.chromium.launch_persistent_context(
+                    user_data_dir=YANDEX_PROFILE,
                     headless=False,
                     executable_path=YANDEX_PATH,
-                    args=["--disable-blink-features=AutomationControlled", "--no-sandbox"],
+                    args=[
+                        "--disable-blink-features=AutomationControlled",
+                        "--no-sandbox",
+                        "--remote-debugging-port=9222" # Чтобы мы потом могли переподключиться
+                    ],
                     ignore_default_args=["--enable-automation"]
                 )
-                if os.path.exists(SESSION_FILE):
-                    context = await _browser.new_context(storage_state=SESSION_FILE)
-                else:
-                    context = await _browser.new_context()
-                _page = await context.new_page()
-                await Stealth().apply_stealth_async(_page)
+                _page = _browser.pages[0]
                 await _page.goto(CHATGPT_URL)
             except Exception as e2:
                 print(f"[DEBUG] Standalone launch failed: {e2}")
