@@ -1,11 +1,8 @@
 {
-    "version":  "1.0.0",
-    "name":  "Obsidian_Ollama_Hub",
-    "description":  "Integrated Obsidian and Ollama Engineering Hub",
-    "command":  "c:\\ANTIGRAVITY\\1\\.venv\\Scripts\\python.exe",
-    "type":  "python",
-    "args":  [
-                 "c:\\ANTIGRAVITY\\1\\scripts\\mcp_obsidian_ollama.py"
-             ],
-    "author":  "Mastodont"
+    "id":  "obsidian-ollama-hub",
+    "name":  "Obsidian Ollama Hub",
+    "description":  "Engineering Intelligence Bridge",
+    "entrypoint":  "mcp_obsidian_ollama.py",
+    "runtime":  "python",
+    "version":  "1.0.0"
 }
