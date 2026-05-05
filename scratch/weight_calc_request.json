@@ -1,0 +1,5 @@
+﻿{
+    "prompt":  "Calculate the weight reduction for a valve body (DN170). \nCurrent: Steel (density 7.85 g/cm3), weight 65 kg.\nTarget: Aluminum Alloy AMg6 (density 2.65 g/cm3).\nTask:\n1. Estimate the volume of the current steel body.\n2. Calculate the weight of the same volume made of AMg6.\n3. Suggest a wall thickness optimization (factor of 1.2x increase for safety if needed) to meet the 25 kg limit.\nFormat: JSON.",
+    "model":  "gemma4:26b",
+    "stream":  false
+}

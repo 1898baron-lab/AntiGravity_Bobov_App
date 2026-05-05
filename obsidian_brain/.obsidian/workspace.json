@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
+                "file": "INDEX.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "consolidated_ai_skills"
+              "title": "INDEX"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
+                "file": "INDEX.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для consolidated_ai_skills"
+              "title": "Обратные ссылки для INDEX"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
+                "file": "INDEX.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из consolidated_ai_skills"
+              "title": "Исходящие ссылки из INDEX"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
+                "file": "INDEX.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура consolidated_ai_skills"
+              "title": "Структура INDEX"
             }
           }
         ]
@@ -185,11 +185,19 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
+    "2_KNOWLEDGE/NOTEBOOKLM_SYCH/KNOWLEDGE_MAP_SUMMARIES.md",
+    "1_PROJECTS/MANGAL/dxf/leg.dxf",
+    "1_PROJECTS/MANGAL/dxf/side_short.dxf",
+    "1_PROJECTS/MANGAL/dxf/side_long.dxf",
+    "INDEX.md",
+    "1_PROJECTS/MANGAL/dxf/bottom.dxf",
+    "1_PROJECTS/MANGAL/dxf",
+    "1_PROJECTS/MANGAL/generate_mangal_dxf.py",
+    "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
+    "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
     "1_PROJECTS/ZEUS/MAIN_TZ.pdf",
     "3_META/api_specs/docs/ai_knowledge/mastodont_skills.md",
-    "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
     "3_META/api_specs/docs/ai_knowledge/Инструкция_по_интеграции_Claude_и_Notebook_LM.pdf",
-    "INDEX.md",
     "1_PROJECTS/MANGAL/MANGAL_LOG.md",
     "3_META/api_specs/docs/mastadont_persona.md",
     "3_META/PROJECT_STATE.md",
@@ -198,27 +206,18 @@
     "1_PROJECTS/BOBOV/deep_scanner.py",
     "1_PROJECTS/BOBOV/fact_extractor.py",
     "1_PROJECTS/LEGAL/BOBOV_CASE.md",
-    "1_PROJECTS/LEGAL",
     "1_PROJECTS/BOBOV/LEGAL_ATTACK_DRAFT_125.md",
     "1_PROJECTS/MANGAL/MANGAL_CUTTING_LIST.md",
-    "1_PROJECTS/ZEUS/AUTOCADE_FIX_SCRIPT.bat",
     "1_PROJECTS/ZEUS/AUTOCADE_FIX.md",
-    "2_KNOWLEDGE/NOTEBOOKLM_SYCH/KNOWLEDGE_MAP_SUMMARIES.md",
     "1_PROJECTS/MANGAL/MANGAL_DETAILS.md",
     "1_PROJECTS/MANGAL/TECH_SPEC_MANGAL.md",
-    "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
-    "1_PROJECTS/MANGAL",
     "3_META/api_specs/docs/gemma_ollama_integration.md",
     "1_PROJECTS/ZEUS/EXTERNAL_FILES_INDEX.md",
-    "2_KNOWLEDGE/NOTEBOOKLM_SYCH",
     "1_PROJECTS/ZEUS/QUESTIONS_FOR_MENTOR.md",
     "1_PROJECTS/BOBOV/evidence_synthesis_12m.md",
     "3_META/AUTOMATION_SYSTEM.md",
     "1_PROJECTS/BOBOV/bobov_attack_dashboard.md",
     "3_META/api_specs/docs/aiBoomb_NotebookLM_Source.md",
-    "1_PROJECTS/BOBOV/Сроки давности и дальнейшие действия.pdf",
-    "1_PROJECTS/BOBOV/Разбор ст. 131 ГПК и отказа в возбуждении дела.pdf",
-    "1_PROJECTS/BOBOV/Клапан_запорный_Ду_170_Эскизы_31_03_26.pdf",
     "1_PROJECTS/BOBOV/1000019882.jpg",
     "1_PROJECTS/BOBOV/evidence/Дело Бобова_ Хроника крушения клуба маломерных суд.svg",
     "1_PROJECTS/BOBOV/evidence/IMG_0137.JPG",
