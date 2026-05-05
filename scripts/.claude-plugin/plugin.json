@@ -1,6 +1,22 @@
 {
-    "icon_url":  "https://raw.githubusercontent.com/1898baron-lab/AntiGravity_Bobov_App/main/media/icon.png",
-    "name":  "ObsidianOllamaHub",
+    "skills":  [
+                   {
+                       "description":  "Search for engineering documents and notes in Obsidian vault",
+                       "name":  "search_obsidian",
+                       "display_name":  "Search Obsidian"
+                   },
+                   {
+                       "description":  "Read full content of an Obsidian note",
+                       "name":  "fetch_obsidian_doc",
+                       "display_name":  "Read Obsidian Document"
+                   },
+                   {
+                       "description":  "Run complex reasoning tasks through local Ollama model",
+                       "name":  "ask_ollama",
+                       "display_name":  "Ask DeepSeek (Local)"
+                   }
+               ],
+    "name":  "obsidian-ollama-hub",
     "schema_version":  "v1",
     "description":  "Access your Obsidian vault and Ollama AI local tools.",
     "mcp_servers":  [
