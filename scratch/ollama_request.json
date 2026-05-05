@@ -1,0 +1,5 @@
+{
+  "model": "gemma4:latest",
+  "prompt": "Analyze the MASTODONT project: AI-integrated premium grills. Suggest one futuristic feature for the 2026 model.",
+  "stream": false
+}
