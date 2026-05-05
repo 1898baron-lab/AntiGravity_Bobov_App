@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Archives/ChatGPT_Projects/PC _ Software Upgrade/Ноутбук для нейросетей.md",
+                "file": "Archives/ChatGPT_Projects/Технология машиностроения/00_Оглавление_Технология машиностроения.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ноутбук для нейросетей"
+              "title": "00_Оглавление_Технология машиностроения"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Archives/ChatGPT_Projects/PC _ Software Upgrade/Ноутбук для нейросетей.md",
+                "file": "Archives/ChatGPT_Projects/Технология машиностроения/00_Оглавление_Технология машиностроения.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для Ноутбук для нейросетей"
+              "title": "Обратные ссылки для 00_Оглавление_Технология машиностроения"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Archives/ChatGPT_Projects/PC _ Software Upgrade/Ноутбук для нейросетей.md",
+                "file": "Archives/ChatGPT_Projects/Технология машиностроения/00_Оглавление_Технология машиностроения.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из Ноутбук для нейросетей"
+              "title": "Исходящие ссылки из 00_Оглавление_Технология машиностроения"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Archives/ChatGPT_Projects/PC _ Software Upgrade/Ноутбук для нейросетей.md",
+                "file": "Archives/ChatGPT_Projects/Технология машиностроения/00_Оглавление_Технология машиностроения.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура Ноутбук для нейросетей"
+              "title": "Структура 00_Оглавление_Технология машиностроения"
             }
           }
         ]
@@ -185,8 +185,14 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
-    "3_META/meta/ANTIGRAVITY_CONNECTION.md",
     "Archives/ChatGPT_Projects/PC _ Software Upgrade/Ноутбук для нейросетей.md",
+    "Archives/ChatGPT_Total_Dump/00_Оглавление_Total_Dump.md",
+    "Archives/ChatGPT_Projects/Технология машиностроения/00_Оглавление_Технология машиностроения.md",
+    "Archives/ChatGPT_Projects/Здоровье/00_Оглавление_Здоровье.md",
+    "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/00_Оглавление_ВЕЛИК 2025 _ Ronin Elite L.md",
+    "Archives/ChatGPT_Projects/PC _ Software Upgrade/00_Оглавление_PC _ Software Upgrade.md",
+    "Archives/ChatGPT_Projects/EAGLE Project/00_Оглавление_EAGLE Project.md",
+    "3_META/meta/ANTIGRAVITY_CONNECTION.md",
     "Archives/ChatGPT_Projects/Технология машиностроения/K_.md",
     "Archives/ChatGPT_Projects/Здоровье/Электронный больничный процесс.md",
     "Archives/ChatGPT_Projects/EAGLE Project/Greeting exchange.md",
@@ -216,12 +222,6 @@
     "Archives/ChatGPT_Total_Dump/ИИ для инженера-конструктора.md",
     "Archives/ChatGPT_Total_Dump/Описание колеса велосипеда.md",
     "Archives/ChatGPT_Total_Dump/Приветствие и ответ.md",
-    "Archives/ChatGPT_Total_Dump/Приветствие и разговор.md",
-    "Archives/ChatGPT_Total_Dump/Сообщение для друзей.md",
-    "Archives/ChatGPT_Total_Dump/ТЭО на понтон.md",
-    "Archives/ChatGPT_Total_Dump/Перевод эскизов клапана.md",
-    "Archives/ChatGPT_Total_Dump/Поздравление Димасу по пацански.md",
-    "Archives/ChatGPT_Total_Dump/Пасха и традиции.md",
     "1_PROJECTS/BOBOV/1000019882.jpg",
     "1_PROJECTS/BOBOV/evidence/Дело Бобова_ Хроника крушения клуба маломерных суд.svg",
     "1_PROJECTS/BOBOV/evidence/IMG_0137.JPG",
