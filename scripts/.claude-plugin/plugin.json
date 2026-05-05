@@ -1,0 +1,14 @@
+{
+    "icon_url":  "https://raw.githubusercontent.com/1898baron-lab/AntiGravity_Bobov_App/main/media/icon.png",
+    "name":  "ObsidianOllamaHub",
+    "schema_version":  "v1",
+    "description":  "Access your Obsidian vault and Ollama AI local tools.",
+    "mcp_servers":  [
+                        {
+                            "args":  "c:\\ANTIGRAVITY\\1\\scripts\\mcp_obsidian_ollama.py",
+                            "command":  "c:\\ANTIGRAVITY\\1\\.venv\\Scripts\\python.exe",
+                            "name":  "obsidian-ollama"
+                        }
+                    ],
+    "display_name":  "Obsidian \u0026 Ollama Hub"
+}
