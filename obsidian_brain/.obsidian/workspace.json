@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_PROJECTS/Summaries/Перевод эскизов клапана_Summary.md",
+                "file": "1_PROJECTS/Summaries/Приветствие и ответ_Summary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Перевод эскизов клапана_Summary"
+              "title": "Приветствие и ответ_Summary"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1_PROJECTS/Summaries/Перевод эскизов клапана_Summary.md",
+                "file": "1_PROJECTS/Summaries/Приветствие и ответ_Summary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для Перевод эскизов клапана_Summary"
+              "title": "Обратные ссылки для Приветствие и ответ_Summary"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1_PROJECTS/Summaries/Перевод эскизов клапана_Summary.md",
+                "file": "1_PROJECTS/Summaries/Приветствие и ответ_Summary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из Перевод эскизов клапана_Summary"
+              "title": "Исходящие ссылки из Приветствие и ответ_Summary"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1_PROJECTS/Summaries/Перевод эскизов клапана_Summary.md",
+                "file": "1_PROJECTS/Summaries/Приветствие и ответ_Summary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура Перевод эскизов клапана_Summary"
+              "title": "Структура Приветствие и ответ_Summary"
             }
           }
         ]
@@ -185,16 +185,17 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
-    "1_PROJECTS/Summaries/Распознавание речи с Whisper_Summary.md",
-    "1_PROJECTS/Summaries/Приветствие и вдохновение_Summary.md",
+    "1_PROJECTS/Summaries/Сообщение для друзей_Summary.md",
+    "1_PROJECTS/Summaries/Приветствие и разговор_Summary.md",
     "1_PROJECTS/Summaries/Процент увеличения_Summary.md",
+    "1_PROJECTS/Summaries/Распознавание речи с Whisper_Summary.md",
+    "1_PROJECTS/Summaries/Перевод эскизов клапана_Summary.md",
+    "1_PROJECTS/Summaries/Приветствие и вдохновение_Summary.md",
     "1_PROJECTS/Summaries/Голосовой режим_Summary.md",
     "1_PROJECTS/Summaries/Анализ репозиториев GitHub_Summary.md",
-    "1_PROJECTS/Summaries/Приветствие и разговор_Summary.md",
     "1_PROJECTS/Summaries/Приветствие и ответ_Summary.md",
     "1_PROJECTS/Summaries/Приветствие беседы_Summary.md",
     "1_PROJECTS/Summaries/Поздравление Димасу по пацански_Summary.md",
-    "1_PROJECTS/Summaries/Перевод эскизов клапана_Summary.md",
     "Archives/ChatGPT_Total_Dump/Процент увеличения.md",
     "1_PROJECTS/Summaries/Пасха и традиции_Summary.md",
     "Archives/ChatGPT_Total_Dump/00_Оглавление_Total_Dump.md",
@@ -210,7 +211,6 @@
     "1_PROJECTS/MANGAL/Mangal_Design_History.md",
     "1_PROJECTS/MANGAL/MANGAL_CUTTING_LIST.md",
     "1_PROJECTS/MASTODONT/Project_MASTODONT_Overview.md",
-    "Archives/ChatGPT_Total_Dump/Gemma 4 E2B-it обзор.md",
     "Archives/ChatGPT_Project_Knowledge/project_view.png",
     "1_PROJECTS/Summaries",
     "Без названия",
