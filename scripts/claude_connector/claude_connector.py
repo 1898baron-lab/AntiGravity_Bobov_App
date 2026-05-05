@@ -198,7 +198,7 @@ async def save_session():
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # прогрев браузера при старте
-    await get_page()
+    # await get_page()
     yield
     if _browser:
         await _browser.close()
