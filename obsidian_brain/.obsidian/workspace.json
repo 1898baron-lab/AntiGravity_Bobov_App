@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_PROJECTS/Summaries/Gemini Prompt Creation_Summary.md",
+                "file": "1_PROJECTS/Summaries/Gemma 4 E2B-it обзор_Summary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gemini Prompt Creation_Summary"
+              "title": "Gemma 4 E2B-it обзор_Summary"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1_PROJECTS/Summaries/Gemini Prompt Creation_Summary.md",
+                "file": "1_PROJECTS/Summaries/Gemma 4 E2B-it обзор_Summary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для Gemini Prompt Creation_Summary"
+              "title": "Обратные ссылки для Gemma 4 E2B-it обзор_Summary"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1_PROJECTS/Summaries/Gemini Prompt Creation_Summary.md",
+                "file": "1_PROJECTS/Summaries/Gemma 4 E2B-it обзор_Summary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из Gemini Prompt Creation_Summary"
+              "title": "Исходящие ссылки из Gemma 4 E2B-it обзор_Summary"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1_PROJECTS/Summaries/Gemini Prompt Creation_Summary.md",
+                "file": "1_PROJECTS/Summaries/Gemma 4 E2B-it обзор_Summary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура Gemini Prompt Creation_Summary"
+              "title": "Структура Gemma 4 E2B-it обзор_Summary"
             }
           }
         ]
@@ -185,9 +185,10 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
+    "1_PROJECTS/Summaries/Gemini Prompt Creation_Summary.md",
+    "1_PROJECTS/Summaries/Gemma 4 E2B-it обзор_Summary.md",
     "1_PROJECTS/Summaries/Clarifying User Intent_Summary.md",
     "1_PROJECTS/Summaries/ChatGPT Prompt Creation_Summary.md",
-    "1_PROJECTS/Summaries/Gemini Prompt Creation_Summary.md",
     "1_PROJECTS/Summaries/ТЭО на понтон_Summary.md",
     "DASHBOARD.md",
     "CAREER_PATH_BOBOV.md",
@@ -221,7 +222,6 @@
     "Archives/ChatGPT_Projects/Технология машиностроения",
     "1_PROJECTS/ZEUS/Project_ZEUS_Overview.md",
     "1_PROJECTS/LEGAL/Legal_Attack_Plan.md",
-    "Archives/ChatGPT_Total_Dump/Memory Export Request.md",
     "1_PROJECTS/BOBOV/1000019882.jpg",
     "1_PROJECTS/BOBOV/evidence/Дело Бобова_ Хроника крушения клуба маломерных суд.svg",
     "1_PROJECTS/BOBOV/evidence/IMG_0137.JPG",
