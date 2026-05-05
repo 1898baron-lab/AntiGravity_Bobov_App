@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_PROJECTS/Summaries/Голосовой режим_Summary.md",
+                "file": "1_PROJECTS/Summaries/Приветствие и вдохновение_Summary.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Голосовой режим_Summary"
+              "title": "Приветствие и вдохновение_Summary"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "1_PROJECTS/Summaries/Голосовой режим_Summary.md",
+                "file": "1_PROJECTS/Summaries/Приветствие и вдохновение_Summary.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для Голосовой режим_Summary"
+              "title": "Обратные ссылки для Приветствие и вдохновение_Summary"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "1_PROJECTS/Summaries/Голосовой режим_Summary.md",
+                "file": "1_PROJECTS/Summaries/Приветствие и вдохновение_Summary.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из Голосовой режим_Summary"
+              "title": "Исходящие ссылки из Приветствие и вдохновение_Summary"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "1_PROJECTS/Summaries/Голосовой режим_Summary.md",
+                "file": "1_PROJECTS/Summaries/Приветствие и вдохновение_Summary.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура Голосовой режим_Summary"
+              "title": "Структура Приветствие и вдохновение_Summary"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "1_PROJECTS/Summaries/Голосовой режим_Summary.md",
     "1_PROJECTS/Summaries/Анализ репозиториев GitHub_Summary.md",
     "1_PROJECTS/Summaries/Приветствие и разговор_Summary.md",
     "1_PROJECTS/Summaries/Приветствие и ответ_Summary.md",
@@ -204,7 +205,6 @@
     "1_PROJECTS/Summaries/Gemma 4 E2B-it обзор_Summary.md",
     "1_PROJECTS/Summaries/Gemini Prompt Creation_Summary.md",
     "1_PROJECTS/MANGAL/MANGAL_DETAILS.md",
-    "1_PROJECTS/Summaries/Голосовой режим_Summary.md",
     "1_PROJECTS/MANGAL/Mangal_Design_History.md",
     "1_PROJECTS/MANGAL/MANGAL_CUTTING_LIST.md",
     "1_PROJECTS/MASTODONT/Project_MASTODONT_Overview.md",
