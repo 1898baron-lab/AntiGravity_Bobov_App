@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "INDEX.md",
+                "file": "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "INDEX"
+              "title": "consolidated_ai_skills"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "INDEX.md",
+                "file": "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для INDEX"
+              "title": "Обратные ссылки для consolidated_ai_skills"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "INDEX.md",
+                "file": "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из INDEX"
+              "title": "Исходящие ссылки из consolidated_ai_skills"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "INDEX.md",
+                "file": "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура INDEX"
+              "title": "Структура consolidated_ai_skills"
             }
           }
         ]
@@ -185,12 +185,12 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
-    "1_PROJECTS/MANGAL/MANGAL_LOG.md",
-    "INDEX.md",
-    "3_META/api_specs/docs/mastadont_persona.md",
     "3_META/api_specs/docs/ai_knowledge/mastodont_skills.md",
     "3_META/api_specs/docs/ai_knowledge/consolidated_ai_skills.md",
     "3_META/api_specs/docs/ai_knowledge/Инструкция_по_интеграции_Claude_и_Notebook_LM.pdf",
+    "INDEX.md",
+    "1_PROJECTS/MANGAL/MANGAL_LOG.md",
+    "3_META/api_specs/docs/mastadont_persona.md",
     "3_META/PROJECT_STATE.md",
     "1_PROJECTS/ZEUS/mentors_guide.md",
     "1_PROJECTS/ZEUS/ZEUS_LOG.md",
