@@ -16,7 +16,7 @@ logger = logging.getLogger("mcp_obsidian_ollama")
 # Загрузка переменных окружения
 load_dotenv(".env.mcp")
 
-KNOWLEDGE_PATH = Path(os.getenv("KNOWLEDGE_PATH", "c:/ANTIGRAVITY/1/obsidian_brain/Engineering/")).resolve()
+KNOWLEDGE_PATH = Path(os.getenv("KNOWLEDGE_PATH", "c:/ANTIGRAVITY/1/obsidian_brain/")).resolve()
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/api/generate")
 MAX_CHARS = 10000
 
@@ -35,6 +35,10 @@ class KnowledgeStore:
 
         for file in self.path.rglob("*.md"):
             try:
+                # Игнорируем скрытые папки (.obsidian) и служебные (_AI_EXCHANGE)
+                if any(part.startswith(".") or part.startswith("_") for part in file.parts):
+                    continue
+                
                 rel_path = str(file.relative_to(self.path))
                 content = file.read_text(encoding="utf-8")
                 self.cache[rel_path] = content
