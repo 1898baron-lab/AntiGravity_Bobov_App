@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#manychat",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,8 +70,7 @@
               "title": "Закладки"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -179,6 +178,8 @@
   },
   "active": "6271eb43af41376f",
   "lastOpenFiles": [
+    "1_PROJECTS/BOBOV/bobov_attack_dashboard.md",
+    "INDEX.md",
     "3_META/api_specs/docs/aiBoomb_NotebookLM_Source.md",
     "3_META/api_specs/docs/gemma_ollama_integration.md",
     "3_META/api_specs/docs/mastadont_persona.md",
@@ -216,7 +217,6 @@
     "1_PROJECTS/BOBOV/complaint_prosecutor_v2_158.md",
     "1_PROJECTS/BOBOV/complaint_125_upk_v1.md",
     "1_PROJECTS/BOBOV/claim_fz68_compensation_v1.md",
-    "1_PROJECTS/BOBOV/bobov_attack_dashboard.md",
     "3_META/meta/PROJECT_INDEX.md",
     "3_META/meta/PROJECT_STATE.md",
     "3_META/meta/MASTADONT_DASHBOARD.md",
