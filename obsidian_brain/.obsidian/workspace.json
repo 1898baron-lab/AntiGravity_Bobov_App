@@ -11,10 +11,10 @@
             "id": "8b62a8583e16795c",
             "type": "leaf",
             "state": {
-              "type": "empty",
+              "type": "graph",
               "state": {},
-              "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "icon": "lucide-git-fork",
+              "title": "Граф"
             }
           }
         ]
@@ -192,6 +192,7 @@
   },
   "active": "8b62a8583e16795c",
   "lastOpenFiles": [
+    "Tasks/audit_20260428_100202.md",
     "Engineering/Knowledge_Base/PTO_Standard_Guidelines.md",
     "Engineering/Design_Office/Project_Zeus_Action_Plan.md",
     "_AI_EXCHANGE/TO_CHATGPT.md",
@@ -200,7 +201,6 @@
     "_AI_EXCHANGE/AGENT_PLAN.md",
     "Tasks/audit_20260428_100624.md",
     "Tasks/audit_20260428_100430.md",
-    "Tasks/audit_20260428_100202.md",
     "Engineering/AI_Interaction_Directive.md",
     "Engineering/Standards/OST_95_Series_Summary.md",
     "Engineering/Standards/Internship_Knowledge_Check.md",
