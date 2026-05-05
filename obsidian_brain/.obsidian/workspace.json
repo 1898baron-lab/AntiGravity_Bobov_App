@@ -183,8 +183,10 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "6271eb43af41376f",
+  "active": "b84c1c8fa5391108",
   "lastOpenFiles": [
+    "1_PROJECTS/MANGAL/MANGAL_LOG.md",
+    "1_PROJECTS/MANGAL",
     "3_META/api_specs/docs/gemma_ollama_integration.md",
     "INDEX.md",
     "1_PROJECTS/ZEUS/EXTERNAL_FILES_INDEX.md",
@@ -219,7 +221,6 @@
     "1_PROJECTS/BOBOV/evidence/DSC09100.JPG",
     "1_PROJECTS/BOBOV/evidence",
     "1_PROJECTS/BOBOV/Юридический ассистент - Взыскание - 2026-04-01.md",
-    "1_PROJECTS/BOBOV/Юридический ассистент - Взыскание - 2026-03-26.pdf",
     "1_PROJECTS/BOBOV/ultimatum_notary_final.md",
     "1_PROJECTS/BOBOV/report_for_father.md",
     "1_PROJECTS/BOBOV/notary_request_letter.md",
