@@ -1,17 +1,11 @@
 {
     "version":  "1.0.0",
     "name":  "Obsidian_Ollama_Hub",
-    "capabilities":  [
-                         "search",
-                         "fetch",
-                         "ollama"
-                     ],
-    "description":  "Integrated Obsidian Engineering vault and Local Ollama Intelligence",
-    "entrypoint":  {
-                       "args":  [
-                                    "c:\\ANTIGRAVITY\\1\\scripts\\mcp_obsidian_ollama.py"
-                                ],
-                       "command":  "c:\\ANTIGRAVITY\\1\\.venv\\Scripts\\python.exe"
-                   },
+    "description":  "Integrated Obsidian and Ollama Engineering Hub",
+    "command":  "c:\\ANTIGRAVITY\\1\\.venv\\Scripts\\python.exe",
+    "type":  "python",
+    "args":  [
+                 "c:\\ANTIGRAVITY\\1\\scripts\\mcp_obsidian_ollama.py"
+             ],
     "author":  "Mastodont"
 }
