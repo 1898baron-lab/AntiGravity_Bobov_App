@@ -11,12 +11,14 @@
             "id": "6271eb43af41376f",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Archives/ChatGPT_Project_Knowledge/project_view.png"
+                "file": "DASHBOARD.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "project_view"
+              "icon": "lucide-file",
+              "title": "DASHBOARD"
             }
           }
         ]
@@ -92,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Archives/ChatGPT_Project_Knowledge/project_view.png",
+                "file": "DASHBOARD.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для project_view"
+              "title": "Обратные ссылки для DASHBOARD"
             }
           },
           {
@@ -111,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Archives/ChatGPT_Project_Knowledge/project_view.png",
+                "file": "DASHBOARD.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из project_view"
+              "title": "Исходящие ссылки из DASHBOARD"
             }
           },
           {
@@ -154,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Archives/ChatGPT_Project_Knowledge/project_view.png",
+                "file": "DASHBOARD.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура project_view"
+              "title": "Структура DASHBOARD"
             }
           }
         ]
@@ -181,8 +183,11 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "b84c1c8fa5391108",
+  "active": "6271eb43af41376f",
   "lastOpenFiles": [
+    "CAREER_PATH_BOBOV.md",
+    "KNOWLEDGE_INDEX.md",
+    "Archives/ChatGPT_Project_Knowledge/project_view.png",
     "1_PROJECTS/Summaries",
     "Без названия",
     "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/00_Оглавление_ВЕЛИК 2025 _ Ronin Elite L.md",
@@ -197,14 +202,11 @@
     "Archives/ChatGPT_Projects/EAGLE Project/00_Оглавление_EAGLE Project.md",
     "3_META/meta/ANTIGRAVITY_CONNECTION.md",
     "Archives/ChatGPT_Projects/EAGLE Project/Greeting exchange.md",
-    "CAREER_PATH_BOBOV.md",
     "1_PROJECTS/LEGAL/125_UPK_Complaint_Draft.md",
     "1_PROJECTS/MASTODONT/Project_MASTODONT_Overview.md",
     "1_PROJECTS/MASTODONT",
     "DASHBOARD.md",
     "INDEX.md",
-    "KNOWLEDGE_INDEX.md",
-    "Archives/ChatGPT_Project_Knowledge/project_view.png",
     "Archives/ChatGPT_Project_Knowledge/Chats/K_.md",
     "Archives/ChatGPT_Projects/K_",
     "Archives/ChatGPT_Projects/Clarifying User Intent",
@@ -214,7 +216,6 @@
     "Archives/ChatGPT_Projects/PC _ Software Upgrade",
     "Archives/ChatGPT_Projects/Технология машиностроения",
     "1_PROJECTS/ZEUS/Project_ZEUS_Overview.md",
-    "Archives/ChatGPT_Projects/EAGLE Project",
     "1_PROJECTS/LEGAL/Legal_Attack_Plan.md",
     "Archives/ChatGPT_Total_Dump/Memory Export Request.md",
     "Archives/ChatGPT_Total_Dump/Clarifying User Intent.md",
