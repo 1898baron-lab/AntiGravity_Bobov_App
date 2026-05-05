@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Курилка 3D — v5</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#b8bec6; overflow:hidden; font-family:'Courier New',monospace; }
+  canvas { display:block; }
+  #hud { position:absolute; top:0; left:0; right:0; bottom:0; pointer-events:none; }
+  #brand { position:absolute; top:20px; left:24px; }
+  #brand h1 { font-size:14px; letter-spacing:4px; color:#2a3a48; }
+  #brand p  { font-size:9px; color:#6a7a88; margin-top:3px; letter-spacing:1px; }
+  #specs {
+    position:absolute; top:20px; right:24px;
+    background:rgba(255,255,255,0.55);
+    border:1px solid #a0aab4;
+    border-radius:4px; padding:12px 16px;
+    color:#3a4a58; font-size:10px; line-height:2;
+    backdrop-filter:blur(6px);
+  }
+  #specs b { color:#1a2a38; }
+  #specs .lbl { font-size:8px; color:#8a9aaa; letter-spacing:2px; display:block; margin-bottom:2px; }
+  #btns {
+    position:absolute; bottom:20px; right:24px;
+    display:flex; gap:6px; pointer-events:all;
+  }
+  .btn {
+    background:rgba(255,255,255,0.7); border:1px solid #9aaab8;
+    color:#2a3a48; padding:8px 14px; border-radius:3px;
+    font-size:9px; cursor:pointer; letter-spacing:2px;
+    font-family:'Courier New',monospace; transition:.15s;
+  }
+  .btn:hover { background:rgba(255,255,255,0.95); border-color:#3a6a8a; }
+  #hint { position:absolute; bottom:20px; left:24px; color:#7a8a98; font-size:9px; line-height:2; }
+</style>
+</head>
+<body>
+<div id="hud">
+  <div id="brand">
+    <h1>КУРИЛКА УЛИЧНАЯ</h1>
+    <p>MARCH Yacht's · 2 сваи · Швеллер 10П · МП-20</p>
+  </div>
+  <div id="specs">
+    <span class="lbl">ПАРАМЕТРЫ</span>
+    <b>Ширина:</b> 1600 мм<br>
+    <b>Глубина:</b> 2000 мм<br>
+    <b>h нижн.:</b> 800 мм — поликарбонат<br>
+    <b>h верхн.:</b> 1700 мм — открыто<br>
+    <b>Сваи:</b> Ø108, 2 шт. (сзади)<br>
+    <b>Перед:</b> швеллер на поребрике<br>
+    <b>Проход:</b> спереди открыт
+  </div>
+  <div id="btns">
+    <button class="btn" onclick="view('iso')">ISO</button>
+    <button class="btn" onclick="view('front')">ФАСАД</button>
+    <button class="btn" onclick="view('side')">БОК</button>
+    <button class="btn" onclick="view('rear')">ВИД СЗАДИ</button>
+    <button class="btn" onclick="view('top')">ПЛАН</button>
+    <button class="btn" onclick="view('base')">ОСНОВАНИЕ</button>
+  </div>
+  <div id="hint">ЛКМ — вращение &nbsp;|&nbsp; ПКМ — пан &nbsp;|&nbsp; Колёсо — zoom</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+// ── RENDERER ─────────────────────────────────────────────────
+const renderer = new THREE.WebGLRenderer({antialias:true});
+renderer.setSize(innerWidth,innerHeight);
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 1.05;
+document.body.prepend(renderer.domElement);
+
+// ── SCENE ────────────────────────────────────────────────────
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xc2c8d0);
+scene.fog = new THREE.Fog(0xc2c8d0, 20, 50);
+
+// ── CAMERA ───────────────────────────────────────────────────
+const cam = new THREE.PerspectiveCamera(38, innerWidth/innerHeight, 0.01, 200);
+
+// ── LIGHTS ───────────────────────────────────────────────────
+scene.add(new THREE.HemisphereLight(0xdce8f4, 0x8898a8, 0.75));
+const sun = new THREE.DirectionalLight(0xfff8f0, 1.1);
+sun.position.set(5,14,3);
+sun.castShadow = true;
+sun.shadow.mapSize.set(2048,2048);
+Object.assign(sun.shadow.camera,{left:-10,right:10,top:10,bottom:-10,far:50});
+sun.shadow.bias = -0.001;
+scene.add(sun);
+const fill2 = new THREE.DirectionalLight(0xa8c0d8,0.35);
+fill2.position.set(-5,6,-4);
+scene.add(fill2);
+
+// ── MATERIALS ────────────────────────────────────────────────
+const M = {
+  steel:  new THREE.MeshStandardMaterial({color:0x484e56, metalness:0.75, roughness:0.38}),
+  steelM: new THREE.MeshStandardMaterial({color:0x565e68, metalness:0.65, roughness:0.45}),
+  pile:   new THREE.MeshStandardMaterial({color:0x3e464e, metalness:0.82, roughness:0.32}),
+  chann:  new THREE.MeshStandardMaterial({color:0x505860, metalness:0.72, roughness:0.38}),
+  // Поликарбонат — светло-голубоватый полупрозрачный
+  poly:   new THREE.MeshStandardMaterial({
+            color:0xb8d0e4, metalness:0.05, roughness:0.15,
+            transparent:true, opacity:0.55, side:THREE.DoubleSide,
+            envMapIntensity:0.8
+          }),
+  polyF:  new THREE.MeshStandardMaterial({
+            color:0xb8d0e4, metalness:0.05, roughness:0.15,
+            transparent:true, opacity:0.35, side:THREE.DoubleSide
+          }),
+  // Рёбра поликарбонатного листа (линии)
+  polyRib:new THREE.MeshStandardMaterial({color:0x88a8c0, metalness:0.2, roughness:0.5, transparent:true, opacity:0.8}),
+  roofP:  new THREE.MeshStandardMaterial({
+            color:0xc0d0dc, metalness:0.08, roughness:0.2,
+            transparent:true, opacity:0.78, side:THREE.DoubleSide
+          }),
+  roofRib:new THREE.MeshStandardMaterial({color:0x484e56, metalness:0.65, roughness:0.42}),
+  concrete:new THREE.MeshStandardMaterial({color:0x8a9298, metalness:0.0, roughness:0.92}),
+  asphalt: new THREE.MeshStandardMaterial({color:0x363a40, metalness:0.0, roughness:0.98}),
+  curb:    new THREE.MeshStandardMaterial({color:0x9aa0a8, metalness:0.0, roughness:0.88}),
+  ground:  new THREE.MeshStandardMaterial({color:0x48503e, metalness:0.0, roughness:1.0}),
+  wood:    new THREE.MeshStandardMaterial({color:0x604828, metalness:0.0, roughness:0.92}),
+  build:   new THREE.MeshStandardMaterial({color:0x686e76, metalness:0.05, roughness:0.85}),
+};
+
+// ── HELPERS ──────────────────────────────────────────────────
+function add(geo,mat,x=0,y=0,z=0,rx=0,ry=0,rz=0){
+  const m=new THREE.Mesh(geo,mat);
+  m.position.set(x,y,z); m.rotation.set(rx,ry,rz);
+  m.castShadow=m.receiveShadow=true; scene.add(m); return m;
+}
+const box=(w,h,d,mat,x,y,z,rx,ry,rz)=>add(new THREE.BoxGeometry(w,h,d),mat,x,y,z,rx,ry,rz);
+const cyl=(rt,rb,h,s,mat,x,y,z)=>add(new THREE.CylinderGeometry(rt,rb,h,s),mat,x,y,z);
+
+// ── РАЗМЕРЫ ───────────────────────────────────────────────────
+const SW   = 1.60;   // ширина
+const SD   = 2.00;   // глубина (НОВАЯ: 2000мм)
+const hLo  = 0.80;   // нижняя секция (поликарбонат)
+const hHi  = 1.70;   // верхняя секция (ОТКРЫТАЯ)
+const hT   = hLo+hHi; // 2.5м
+const colW = 0.060;  // сечение стойки
+const bT   = 0.050;  // толщина пояса
+
+// Ориентация Z:
+// z = -SD/2 → передняя стенка (фасад, ПРОХОД)
+// z = +SD/2 → задняя стенка (поликарбонат + 2 сваи)
+
+const Y0  = 0;           // уровень верха платформы
+const Ymid= Y0 + hLo;    // граница секций
+const Ytop= Y0 + hT;     // верх
+
+// ── ОКРУЖЕНИЕ ─────────────────────────────────────────────────
+
+// Земля (тротуар за курилкой)
+const gndP = add(new THREE.PlaneGeometry(22,16), M.ground, 0,-0.01,4, -Math.PI/2);
+gndP.receiveShadow=true;
+
+// Асфальт (впереди)
+const aspP = add(new THREE.PlaneGeometry(22,14), M.asphalt, 0,-0.01,-7, -Math.PI/2);
+aspP.receiveShadow=true;
+
+// Дорожная разметка
+const smMat=new THREE.MeshStandardMaterial({color:0x505048,roughness:1});
+for(let i=-3;i<=3;i++) box(0.12,0.005,3.0,smMat, i*2.0,-0.005,-7);
+
+// Здание за дорогой
+const bH=5.5;
+box(10,bH,0.55, M.build, 0,bH/2-0.5, -11);
+const wM=new THREE.MeshStandardMaterial({color:0x6888a0,metalness:0.1,roughness:0.2,emissive:0x08121a});
+for(let i=-3;i<=3;i+=1.4){
+  box(0.7,1.0,0.07,wM,i,bH/2+0.2,-10.78);
+  box(0.7,1.0,0.07,wM,i,bH/2-1.6,-10.78);
+}
+// Подпись
+const bldMat=new THREE.MeshStandardMaterial({color:0x5a6268,roughness:1});
+box(10,0.12,0.12,bldMat, 0,bH-0.3,-10.78);
+
+// Поребрик — передняя опора
+// z = -SD/2 - curbW/2
+const curbH=0.20, curbW=0.25;
+const curbZpos = -SD/2 - curbW/2;
+box(SW+2.0, curbH, curbW, M.curb, 0, Y0-curbH/2, curbZpos);
+// Поребрик тянется дальше по бокам
+box(4.0, curbH, curbW, M.curb, SW/2+2.0+0.05, Y0-curbH/2, curbZpos);
+box(4.0, curbH, curbW, M.curb, -SW/2-2.0-0.05, Y0-curbH/2, curbZpos);
+
+// ── СВАИ × 2 (только сзади, по z = +SD/2) ────────────────────
+const sR=0.054, sDepth=1.5, sAbove=0.28;
+const sH=sDepth+sAbove;
+const sY=Y0-sAbove-sDepth/2;
+
+[-SW/2, SW/2].forEach(px=>{
+  // Тело сваи
+  cyl(sR,sR,sH,16,M.pile, px,sY,SD/2);
+  // Лопасти
+  for(let i=0;i<3;i++){
+    const ly=Y0-sAbove-0.3-i*0.28;
+    add(new THREE.CylinderGeometry(sR*2.8,sR*2.8,0.013,14), M.pile, px,ly,SD/2);
+  }
+  // Острый конец
+  cyl(0,sR,0.12,8,M.pile, px,Y0-sDepth-sAbove-0.06,SD/2);
+});
+
+// ── ШВЕЛЛЕРЫ ПОПЕРЕЧНЫЕ (вдоль Z, 2 шт) ─────────────────────
+// Каждый: сзади (свая, z=+SD/2) → спереди (поребрик, z=-SD/2)
+// Опираются: сзади на свае, спереди на поребрике
+const chH=0.10, chF=0.05, chTk=0.007;
+const chLen=SD+0.25; // немного вылет на поребрик
+const chZcenter = (SD/2 - (-SD/2-curbW)) / 2 - (SD/2 - curbZpos)/2;
+// проще: центр швеллера по Z
+const chZc = (SD/2 + (-SD/2))/2; // = 0
+const chY = Y0-chH/2;
+
+[-SW/2, SW/2].forEach(px=>{
+  // Стенка
+  box(chTk*2, chH, chLen, M.chann, px, chY, chZc);
+  // Верхняя полка
+  box(chF, chTk*2, chLen, M.chann, px, chY+chH/2, chZc);
+  // Нижняя полка
+  box(chF, chTk*2, chLen, M.chann, px, chY-chH/2, chZc);
+});
+
+// ── ШВЕЛЛЕРЫ ПРОДОЛЬНЫЕ (вдоль X, поверх поперечных) ─────────
+const chY2=Y0-chH/2+chH;
+const chLenL=SW+0.10;
+[-SD/2+0.15, SD/2-0.15].forEach(cz=>{
+  box(chLenL, chTk*2, chF, M.chann, 0, chY2+chH/2, cz);
+  box(chLenL, chH, chTk*2, M.chann, 0, chY2, cz);
+  box(chLenL, chTk*2, chF, M.chann, 0, chY2-chH/2, cz);
+});
+
+// ── БЕТОННАЯ ПЛАТФОРМА ────────────────────────────────────────
+const platH=0.18;
+box(SW+0.18,platH,SD+0.18, M.concrete, 0,Y0-platH/2,0);
+// Фаска (чуть светлее)
+box(SW+0.22,0.014,SD+0.22, M.curb, 0,Y0-platH,0);
+
+// ── СТОЙКИ РАМЫ (4 угла) ──────────────────────────────────────
+[-SW/2,SW/2].forEach(px=>[-SD/2,SD/2].forEach(pz=>{
+  box(colW,hT,colW, M.steel, px,Y0+hT/2,pz);
+}));
+
+// ── ГОРИЗОНТАЛЬНЫЕ ПОЯСА ──────────────────────────────────────
+// Нижний
+[-SD/2,SD/2].forEach(pz=>box(SW,bT,bT, M.steelM, 0,Y0+bT/2,pz));
+[-SW/2,SW/2].forEach(px=>box(bT,bT,SD, M.steelM, px,Y0+bT/2,0));
+// Промежуточный (h=800)
+[-SD/2,SD/2].forEach(pz=>box(SW,bT,bT, M.steelM, 0,Ymid+bT/2,pz));
+[-SW/2,SW/2].forEach(px=>box(bT,bT,SD, M.steelM, px,Ymid+bT/2,0));
+// Верхний
+[-SD/2,SD/2].forEach(pz=>box(SW,bT,bT, M.steelM, 0,Ytop+bT/2,pz));
+[-SW/2,SW/2].forEach(px=>box(bT,bT,SD, M.steelM, px,Ytop+bT/2,0));
+
+// ── НИЖНЯЯ СЕКЦИЯ: ПОЛИКАРБОНАТ ───────────────────────────────
+// Панели 800мм: задняя + боковые
+// НЕТ передней панели (там ПРОХОД)
+const pnH = hLo-bT;
+const pnT = 0.010;
+
+// Задняя панель (сплошная)
+box(SW-colW*2, pnH, pnT, M.poly, 0, Y0+bT+pnH/2, SD/2-pnT/2-colW);
+// Рёбра (вертикальные, имитация сотового поликарбоната)
+for(let i=0;i<=8;i++){
+  const x=-SW/2+colW+(SW-colW*2)/8*i;
+  box(0.008,pnH,pnT*2, M.polyRib, x, Y0+bT+pnH/2, SD/2-pnT/2-colW);
+}
+
+// Левая боковая панель
+box(pnT, pnH, SD-colW*2, M.poly, -SW/2+pnT/2+colW, Y0+bT+pnH/2, 0);
+for(let i=0;i<=6;i++){
+  const z=-SD/2+colW+(SD-colW*2)/6*i;
+  box(pnT*2,pnH,0.008, M.polyRib, -SW/2+pnT/2+colW, Y0+bT+pnH/2, z);
+}
+
+// Правая боковая панель
+box(pnT, pnH, SD-colW*2, M.poly, SW/2-pnT/2-colW, Y0+bT+pnH/2, 0);
+for(let i=0;i<=6;i++){
+  const z=-SD/2+colW+(SD-colW*2)/6*i;
+  box(pnT*2,pnH,0.008, M.polyRib, SW/2-pnT/2-colW, Y0+bT+pnH/2, z);
+}
+
+// Проход спереди — полностью открыт, перегородок нет
+
+// ── ВЕРХНЯЯ СЕКЦИЯ: ПОЛНОСТЬЮ ОТКРЫТАЯ ───────────────────────
+// Только стойки и пояса — никаких решёток и тяжей
+
+// ── КРОВЛЯ АРОЧНАЯ ────────────────────────────────────────────
+const ovhX=0.40, ovhZ=0.30;
+const rW=SW+ovhX*2, rD=SD+ovhZ+0.15;
+const arcH=0.25;
+const rseg=32;
+const rGeo=new THREE.PlaneGeometry(rW,rD,rseg,8);
+rGeo.rotateX(-Math.PI/2);
+const rp=rGeo.attributes.position;
+for(let i=0;i<rp.count;i++){
+  const xn=rp.getX(i)/(rW/2);
+  rp.setY(i,rp.getY(i)+arcH*(1-xn*xn));
+}
+rGeo.computeVertexNormals();
+const roof=new THREE.Mesh(rGeo,M.roofP);
+roof.position.set(0,Ytop+bT,ovhZ*0.35);
+roof.castShadow=roof.receiveShadow=true;
+scene.add(roof);
+
+// Рёбра кровли
+const nRibs=14;
+for(let i=0;i<nRibs;i++){
+  const x=-rW/2+rW/(nRibs-1)*i;
+  const xn=x/(rW/2);
+  const ry=Ytop+bT+arcH*(1-xn*xn);
+  box(0.020,0.022,rD, M.roofRib, x,ry,ovhZ*0.35);
+}
+// Торцевые арки
+for(const zo of [-rD/2+0.03, rD/2-0.03]){
+  const pts=[];
+  for(let i=0;i<=28;i++){
+    const t=i/28,xp=-rW/2+rW*t,xn=xp/(rW/2);
+    pts.push(new THREE.Vector3(xp,arcH*(1-xn*xn),0));
+  }
+  const tube=new THREE.Mesh(
+    new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),28,0.016,6,false),
+    M.roofRib
+  );
+  tube.position.set(0,Ytop+bT,ovhZ*0.35+zo);
+  tube.castShadow=true; scene.add(tube);
+}
+// Передний свес (торцевая планка)
+box(rW,0.016,0.016, M.roofRib, 0,Ytop+bT+arcH*0.05,-rD/2+ovhZ*0.35);
+// Водосток
+box(0.022,0.55,0.022, M.pile, -rW/2+0.04,Ytop+bT-0.28,-rD/2+ovhZ*0.35+0.02);
+box(0.022,0.55,0.022, M.pile,  rW/2-0.04,Ytop+bT-0.28,-rD/2+ovhZ*0.35+0.02);
+
+// ── СКАМЕЙКИ (2 шт — по боковым стенкам) ─────────────────────
+const sY2 = Y0 + 0.45;
+const seatLen = SD - colW*2 - 0.10;  // вдоль глубины
+const seatDep = 0.34;                 // ширина сиденья
+
+function sideBench(sx, side) {
+  // side: -1 = левая, +1 = правая
+  const xSeat = sx + side * (seatDep/2 + colW);
+  const xBack = sx + side * colW + side * 0.02;
+  // Сиденье
+  box(seatDep, 0.040, seatLen, M.wood, xSeat, sY2, 0);
+  // Спинка (у стенки)
+  box(0.035, 0.28, seatLen, M.wood, sx + side*colW + side*0.02, sY2+0.17, 0);
+  // Ножки (4 шт вдоль глубины)
+  [-SD/2+0.16, -SD/2+0.55, SD/2-0.55, SD/2-0.16].forEach(pz => {
+    box(0.040, sY2-Y0, 0.040, M.steel, xSeat - side*0.06, Y0+(sY2-Y0)/2, pz);
+    box(0.040, sY2-Y0, 0.040, M.steel, xSeat + side*0.08, Y0+(sY2-Y0)/2, pz);
+  });
+  // Подлокотники
+  [-SD/2+0.14, -SD/2+0.54, SD/2-0.54, SD/2-0.14].forEach(pz => {
+    box(seatDep+0.04, 0.036, 0.048, M.steel, xSeat, sY2+0.22, pz);
+  });
+}
+
+sideBench(-SW/2, +1);  // левая скамья
+sideBench( SW/2, -1);  // правая скамья
+
+// ── ПЕПЕЛЬНИЦЫ ────────────────────────────────────────────────
+function ashtray(x,z){
+  cyl(0.015,0.015,0.92,8,M.steel, x,Y0+0.46,z);
+  cyl(0.055,0.040,0.22,12,M.steelM, x,Y0+0.92+0.11,z);
+  cyl(0.046,0.046,0.010,10,M.steel, x,Y0+0.92,z);
+}
+ashtray(-SW/2+0.12, SD/2-0.15);
+ashtray( SW/2-0.12, SD/2-0.15);
+
+// ── ВЕНТИЛЯЦИЯ ────────────────────────────────────────────────
+cyl(0.055,0.055,0.50,12,M.pile, SW/4,Ytop+bT+0.25,-SD/4);
+cyl(0.10,0.065,0.10,10,M.pile, SW/4,Ytop+bT+0.55,-SD/4);
+
+// ── НЕБО ──────────────────────────────────────────────────────
+scene.add(new THREE.Mesh(
+  new THREE.SphereGeometry(90,16,8),
+  new THREE.MeshBasicMaterial({color:0xbcc8d4,side:THREE.BackSide})
+));
+
+// ── CAMERA CONTROL ────────────────────────────────────────────
+let st={theta:0.62, phi:1.05, r:8.0, tx:0, ty:1.2, tz:0.2};
+function updateCam(){
+  const sp=Math.sin(st.phi),cp=Math.cos(st.phi);
+  cam.position.set(
+    st.tx+st.r*sp*Math.sin(st.theta),
+    st.ty+st.r*cp,
+    st.tz+st.r*sp*Math.cos(st.theta)
+  );
+  cam.lookAt(st.tx,st.ty,st.tz);
+}
+
+const VIEWS={
+  iso:  {theta:0.62,  phi:1.05, r:8.0, tx:0, ty:1.2, tz:0.2},
+  front:{theta:Math.PI, phi:Math.PI/2, r:6.5, tx:0, ty:1.2, tz:0},
+  side: {theta:Math.PI/2, phi:Math.PI/2, r:6.0, tx:0, ty:1.2, tz:0},
+  rear: {theta:0, phi:Math.PI/2, r:6.5, tx:0, ty:1.2, tz:0},
+  top:  {theta:0, phi:0.08, r:7.0, tx:0, ty:1.2, tz:0},
+  base: {theta:0.5, phi:1.65, r:4.5, tx:0, ty:-0.3, tz:0},
+};
+
+function view(n){
+  const v=VIEWS[n],s={...st};
+  const t0=performance.now(),dur=750;
+  (function tick(now){
+    const t=Math.min((now-t0)/dur,1),e=t<.5?2*t*t:-1+(4-2*t)*t;
+    ['theta','phi','r','tx','ty','tz'].forEach(k=>st[k]=s[k]+(v[k]-s[k])*e);
+    updateCam();
+    if(t<1)requestAnimationFrame(tick);
+  })(t0);
+}
+
+let drag={on:false,right:false,ox:0,oy:0};
+renderer.domElement.addEventListener('mousedown',e=>{
+  drag.on=true;drag.right=e.button===2;drag.ox=e.clientX;drag.oy=e.clientY;
+});
+renderer.domElement.addEventListener('contextmenu',e=>e.preventDefault());
+window.addEventListener('mouseup',()=>drag.on=false);
+window.addEventListener('mousemove',e=>{
+  if(!drag.on)return;
+  const dx=(e.clientX-drag.ox)*0.005,dy=(e.clientY-drag.oy)*0.005;
+  if(drag.right){
+    const r=new THREE.Vector3().crossVectors(
+      cam.getWorldDirection(new THREE.Vector3()),new THREE.Vector3(0,1,0)
+    ).normalize();
+    st.tx-=r.x*dx*st.r*0.4;st.tz-=r.z*dx*st.r*0.4;st.ty+=dy*st.r*0.4;
+  } else {
+    st.theta-=dx;st.phi=Math.max(0.04,Math.min(Math.PI-0.04,st.phi+dy));
+  }
+  drag.ox=e.clientX;drag.oy=e.clientY;updateCam();
+});
+renderer.domElement.addEventListener('wheel',e=>{
+  st.r=Math.max(1.5,Math.min(28,st.r+e.deltaY*0.005));updateCam();
+},{passive:true});
+window.addEventListener('resize',()=>{
+  cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();
+  renderer.setSize(innerWidth,innerHeight);
+});
+
+updateCam();
+(function loop(){requestAnimationFrame(loop);renderer.render(scene,cam);})();
+</script>
+</body>
+</html>

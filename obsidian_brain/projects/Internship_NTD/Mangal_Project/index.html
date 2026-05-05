@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КМД: Мангал-печь под казан | AntiGravity Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text: #f8fafc;
+            --text-dim: #94a3b8;
+            --accent: #10b981;
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+
+        header { text-align: center; margin-bottom: 60px; animation: fadeInDown 1s ease-out; }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: -0.05em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff 0%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle { font-size: 1.2rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.2em; }
+
+        .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; margin-bottom: 50px; }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover { transform: translateY(-5px); border-color: rgba(99, 102, 241, 0.4); }
+
+        .image-container { width: 100%; border-radius: 16px; overflow: hidden; border: 1px solid var(--glass-border); background: #fff; }
+        .image-container img { width: 100%; height: auto; display: block; transition: transform 0.5s ease; }
+        .image-container:hover img { transform: scale(1.02); }
+
+        .spec-list { list-style: none; }
+        .spec-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .spec-label { color: var(--text-dim); }
+        .spec-value { font-weight: 600; color: var(--accent); }
+
+        .tabs-container { margin-top: 40px; }
+        .tabs { display: flex; gap: 15px; margin-bottom: 30px; overflow-x: auto; padding-bottom: 10px; }
+        .tab { padding: 12px 24px; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--glass-border); border-radius: 12px; cursor: pointer; white-space: nowrap; transition: all 0.3s ease; }
+        .tab.active { background: var(--primary); border-color: var(--primary); box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4); }
+
+        .tab-content { display: none; animation: fadeIn 0.5s ease; }
+        .tab-content.active { display: block; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: rgba(0, 0, 0, 0.2); border-radius: 12px; overflow: hidden; }
+        th { background: rgba(99, 102, 241, 0.2); text-align: left; padding: 15px; font-size: 0.9rem; color: var(--text-dim); text-transform: uppercase; }
+        td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-size: 1rem; }
+        .summary-row { background: rgba(16, 185, 129, 0.1); font-weight: 800; color: var(--accent); }
+
+        .drawing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        @media (max-width: 1000px) { .drawing-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="subtitle">Engineering Project</div>
+            <h1>МАНГАЛ-ПЕЧЬ ПОД КАЗАН</h1>
+            <p>Комплект монтажных документов v1.1 (Modular Release)</p>
+        </header>
+
+        <div class="hero-grid">
+            <div class="card">
+                <h3>Визуализация (V2)</h3>
+                <div class="image-container">
+                    <img src="mangal_kazan_render_v2_1777431627333.png" alt="Corrected 3D Render">
+                </div>
+                <p style="margin-top: 15px; color: var(--text-dim); font-size: 0.9rem;">*Визуализация соответствует технической документации и деталировке модулей.</p>
+            </div>
+            <div class="card">
+                <h3>Уточненный Общий Вид (Изометрия)</h3>
+                <div class="image-container">
+                    <img src="mangal_isometric_v2_1777432096389.png" alt="Isometric View">
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs-container">
+            <div class="tabs">
+                <div class="tab active" onclick="showTab('spec')">Спецификация модулей</div>
+                <div class="tab" onclick="showTab('drawings')">Все чертежи</div>
+                <div class="tab" onclick="showTab('detailing')">Деталировка модулей</div>
+                <div class="tab" style="background: rgba(99, 102, 241, 0.2); border-color: var(--primary);" onclick="showTab('wright_analysis')"><i class="fas fa-microchip"></i> Анализ Wright</div>
+            </div>
+
+            <div id="spec" class="tab-content active">
+                <div class="card">
+                    <h3>Модуль 1: Основной мангал (800 мм)</h3>
+                    <table>
+                        <thead>
+                            <tr><th>№</th><th>Наименование</th><th>Типоразмер</th><th>Кол-во</th><th>Масса, кг</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1.1</td><td>Стенка боковая</td><td>Лист δ=3, 800×150</td><td>2 шт</td><td>5.65</td></tr>
+                            <tr><td>1.2</td><td>Стенка торцевая</td><td>Лист δ=3, 300×150</td><td>2 шт</td><td>2.12</td></tr>
+                            <tr><td>1.3</td><td>Дно мангала</td><td>Лист δ=4, 800×300</td><td>1 шт</td><td>7.53</td></tr>
+                            <tr><td>1.4</td><td>Нога (Труба 25х25)</td><td>L=420</td><td>4 шт</td><td>2.56</td></tr>
+                            <tr class="summary-row"><td colspan="4">ИТОГО МАССА МОДУЛЯ 1</td><td>~18.3 кг</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h3>Модуль 2: Приставная печь (300 мм)</h3>
+                    <table>
+                        <thead>
+                            <tr><th>№</th><th>Наименование</th><th>Типоразмер</th><th>Кол-во</th><th>Масса, кг</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>2.1</td><td>Стенка боковая (доп)</td><td>Лист δ=3, 300×150</td><td>2 шт</td><td>2.12</td></tr>
+                            <tr><td>2.2</td><td>Стенка глухая (торц)</td><td>Лист δ=3, 300×150</td><td>1 шт</td><td>1.06</td></tr>
+                            <tr><td>2.3</td><td>Дно печи</td><td>Лист δ=4, 300×300</td><td>1 шт</td><td>2.83</td></tr>
+                            <tr><td>2.4</td><td>Плита под казан</td><td>Лист δ=4, 310×310</td><td>1 шт</td><td>3.01</td></tr>
+                            <tr class="summary-row"><td colspan="4">ИТОГО МАССА МОДУЛЯ 2</td><td>~9.0 кг</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="drawings" class="tab-content">
+                <div class="drawing-grid">
+                    <div class="card">
+                        <h3>Главный вид и разрезы сборки</h3>
+                        <div class="image-container"><img src="mangal_drawing_fixed.png" alt="Main Drawing"></div>
+                    </div>
+                    <div class="card">
+                        <h3>Изометрическая проекция (уточненная)</h3>
+                        <div class="image-container"><img src="mangal_isometric_v2_1777432096389.png" alt="Isometric"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="detailing" class="tab-content">
+                <div class="card">
+                    <h3>Деталировка заготовок (Модульная)</h3>
+                    <div class="image-container" style="background: rgba(0,0,0,0.2); padding: 20px; border-radius: 12px; border: 1px dashed var(--primary); text-align: center;">
+                        <i class="fas fa-drafting-compass" style="font-size: 3rem; color: var(--primary); margin-bottom: 15px;"></i>
+                        <h4 style="color: var(--text-dim);">Технические эскизы модулей подготовлены к производству</h4>
+                    </div>
+                    <div style="margin-top: 25px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+                        <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; border-left: 4px solid #6366f1;">
+                            <h4 style="color: #fff; margin-bottom: 10px;">Модуль 1: Мангал</h4>
+                            <ul style="list-style: none; padding: 0; color: var(--text-dim);">
+                                <li style="margin-bottom: 5px;">• Боковые стенки 800х150 с прорезями (10 шт).</li>
+                                <li style="margin-bottom: 5px;">• Перфорированное дно 800х300.</li>
+                                <li style="margin-bottom: 5px;">• Отдельно стоящий блок на 4 опорах.</li>
+                            </ul>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 12px; border-left: 4px solid #10b981;">
+                            <h4 style="color: #fff; margin-bottom: 10px;">Модуль 2: Печь</h4>
+                            <ul style="list-style: none; padding: 0; color: var(--text-dim);">
+                                <li style="margin-bottom: 5px;">• Закрытый блок 300х300.</li>
+                                <li style="margin-bottom: 5px;">• Съемная плита с отверстием ∅280 мм.</li>
+                                <li style="margin-bottom: 5px;">• Пристыковывается к фланцу модуля 1.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="wright_analysis" class="tab-content">
+                <div class="card">
+                    <h2><i class="fas fa-microchip"></i> Инженерный анализ узла сопряжения (Roma Wright Methodology)</h2>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+                        <div>
+                            <h4>Спецификация соединения</h4>
+                            <ul style="list-style-type: disc; padding-left: 20px; color: var(--text-dim);">
+                                <li><strong>Тип соединения:</strong> Разборное, болтовое с направляющим замком.</li>
+                                <li><strong>Назначение:</strong> Жесткое соединение модулей (М800 + М300) с сохранением геометрии и термокомпенсации.</li>
+                                <li><strong>Стыковочная планка:</strong> Материал Ст3сп (S235), толщина 3–4 мм.</li>
+                                <li><strong>Отверстия:</strong> Ø9 мм под болты М8, равномерный шаг.</li>
+                                <li><strong>Крепеж:</strong> Болты М8х25 (ГОСТ 7798-70), 4 шт.</li>
+                                <li><strong>Тепловой зазор:</strong> 2.0 мм (компенсация).</li>
+                                <li><strong>Сварка фланцев:</strong> Прерывистый шов (L=20, шаг 50) для минимизации деформаций.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Схема контроля по ГОСТ</h4>
+                            <p style="color: var(--text-dim);">Сборка узла производится согласно стандартам Росатома для ответственных конструкций (адаптировано для металлоизделий бытового назначения):</p>
+                            <div style="background: rgba(16, 185, 129, 0.1); padding: 15px; border-radius: 8px; margin-top: 10px; border: 1px solid var(--accent);">
+                                <strong>Контроль швов:</strong> ВИК 100% (ГОСТ 3242-79). Трещины, поры, подрезы не допускаются. Катет K=3 проверяется шаблоном УШС-3.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            &copy; 2026 AntiGravity Engineering. Профессиональный КМД для NTD Internship.
+        </footer>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
