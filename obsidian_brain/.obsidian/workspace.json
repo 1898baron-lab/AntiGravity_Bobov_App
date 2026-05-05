@@ -70,8 +70,7 @@
               "title": "Закладки"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -177,7 +176,7 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "d44461ac63ed11c8",
+  "active": "b84c1c8fa5391108",
   "lastOpenFiles": [
     "3_META/api_specs/docs/aiBoomb_NotebookLM_Source.md",
     "1_PROJECTS/Summaries/Gemini Prompt Creation_Summary.md",
