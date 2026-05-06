@@ -4,24 +4,25 @@
 
 ## 🗂️ НАВИГАЦИЯ
 
-### [[1_PROJECTS/Summaries/|1. ПРОЕКТЫ]]
+### [[1_PROJECTS/PROJECTS_INDEX|1. ПРОЕКТЫ]]
 *Архив активных и завершенных разработок. Здесь лежат AI-выжимки из твоих чатов.*
 
 ### [[2_KNOWLEDGE/KNOWLEDGE_INDEX|2. ЗНАНИЯ]]
 *Инженерные стандарты, ТЗ, юридические тактики и история развития инфраструктуры.*
 
-### [[3_META/|3. META]]
+### [[3_META/META_INDEX|3. META]]
 *Системные настройки, шаблоны и конфигурации агентов.*
 
-### [[4_ARCHIVE/|4. АРХИВ]]
+### [[4_ARCHIVE/ARCHIVE_INDEX|4. АРХИВ]]
 *Сырые дампы данных, старые переписки и бэкапы.*
 
 ---
 
 ## 🚩 БЫСТРЫЙ СТАРТ
 - 🚀 **[[DASHBOARD|ОТКРЫТЬ ДАШБОРД]]** — Твой главный экран.
-- 📐 **[[2_KNOWLEDGE/Engineering/TZ/main_tz.pdf|ТЕКУЩЕЕ ТЗ]]** — Проект ZEUS (Клапан).
-- ⚖️ **[[CAREER_PATH_BOBOV|ДЕЛО БОБОВА]]** — Юридический статус.
+- 💎 **[[2_KNOWLEDGE/SYNTHESIS/MASTODONT_INFRASTRUCTURE|MASTODONT MASTER]]** — Инфраструктура.
+- 📐 **[[2_KNOWLEDGE/SYNTHESIS/ZEUS_MASTER_DOSSIER|ZEUS MASTER]]** — Проект Клапана.
+- ⚖️ **[[2_KNOWLEDGE/SYNTHESIS/BOBOV_LEGAL_ATTACK|BOBOV MASTER]]** — Юр. атака.
 
 ---
 *Created by AntiGravity AI Agent (v2.1)*
