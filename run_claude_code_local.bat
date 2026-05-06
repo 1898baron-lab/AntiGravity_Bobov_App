@@ -17,7 +17,7 @@ if %errorlevel% neq 0 (
 
 :: Запускаем LiteLLM в фоновом режиме на порту 4000
 echo Запускаем LiteLLM на порту 4000...
-start "LiteLLM Proxy" cmd /c "C:\ANTIGRAVITY\1\.venv\Scripts\litellm.exe --model ollama_chat/gemma4:26b-lite --port 4000"
+start "LiteLLM Proxy" cmd /c "C:\ANTIGRAVITY\1\.venv\Scripts\litellm.exe --model openai/gemma4:26b-lite --api_base http://127.0.0.1:1234/v1 --port 4000"
 
 :: Ждем пару секунд, чтобы сервер успел подняться
 timeout /t 3 /nobreak >nul
