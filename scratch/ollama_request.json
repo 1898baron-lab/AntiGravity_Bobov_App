@@ -1,5 +1,0 @@
-{
-  "model": "gemma4:latest",
-  "prompt": "Engineering prompt: Analyze the thermal properties of a 600x300x200mm grill made of 4mm hot-rolled steel. 1. Evaluate the risk of warping (buckling) at 500C. 2. Suggest optimal perforation pattern for even charcoal burning. 3. Propose a reinforced leg attachment method to prevent wobbling after 100 heat cycles.",
-  "stream": false
-}
