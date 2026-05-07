@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/Вилка RockShox Recon RL.md",
+                "file": "3_META/meta/MASTADONT_DASHBOARD.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Вилка RockShox Recon RL"
+              "title": "MASTADONT_DASHBOARD"
             }
           }
         ]
@@ -183,8 +183,16 @@
       "bases:Создать новую базу": false
     }
   },
-  "active": "b84c1c8fa5391108",
+  "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "3_META/meta/AUTOMATION_SYSTEM.md",
+    "3_META/meta/MASTADONT_DASHBOARD.md",
+    "3_META/meta/ANTIGRAVITY_CONNECTION.md",
+    "3_META/README.md",
+    "3_META/PROJECT_STATE.md",
+    "3_META/META_INDEX.md",
+    "3_META/AUTOMATION_SYSTEM.md",
+    "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/Вилка RockShox Recon RL.md",
     "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/ВЕЛОСИПЕДЫ.md",
     "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/00_INDEX_ВЕЛИК 2025 _ Ronin Elite L.md",
     "Archives/ChatGPT_Projects/Анализ РД/00_INDEX_Анализ РД.md",
@@ -206,14 +214,6 @@
     "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/Все способы разбогатеть на ИИ в 2026 (За 12 минут).md",
     "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/Вайб-кодинг принёс мне 1 000 000 ₽. Вот ВСЯ механика в Claude.md",
     "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/Stitch — Как Я Делаю Сайты за 10 Минут (Claude Code).md",
-    "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/NotebookLM стал в 10 раз лучше (AntiGravity).md",
-    "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/NotebookLM Получил НОВУЮ Суперсилу (AntiGravity).md",
-    "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/Google AntiGravity Как использовать ИИ лучше 99% людей (Гайд).md",
-    "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/Gemini 3.1 Pro + AntiGravity УНИЧТОЖАЮТ веб-дизайнеров.md",
-    "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/Claude Code СТАЛ НЕУДЕРЖИМ (Skills 2.0).md",
-    "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/Claude Code + Nano Banana 2 = БЕЗУМНЫЕ Сайты за $10,000.md",
-    "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/ChatGPT РАСКРЫЛ БУДУЩЕЕ. Всё, что нужно знать (Срочно).md",
-    "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/AntiGravity + Stitch создают БЕЗУМНЫЕ сайты (Новый навык).md",
     "1_PROJECTS/KOMPAS_LEARNING",
     "Archives/ChatGPT_Projects/ВЕЛИК_2025_-_Ronin_Elite_L",
     "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers",
