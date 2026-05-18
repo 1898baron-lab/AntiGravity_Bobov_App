@@ -11,12 +11,14 @@
             "id": "d44461ac63ed11c8",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "1_PROJECTS/Clippings/3 правила работы с ИИ.pdf"
+                "file": "1_PROJECTS/Summaries/Приветствие и ответ_Summary.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "3 правила работы с ИИ"
+              "icon": "lucide-file",
+              "title": "Приветствие и ответ_Summary"
             }
           }
         ]
@@ -183,6 +185,9 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "1_PROJECTS/Summaries/Анализ репозиториев GitHub_Summary.md",
+    "1_PROJECTS/KOMPAS_LEARNING/📚 Трекер обучения КОМПАС-3D.md",
+    "1_PROJECTS/Clippings/3 правила работы с ИИ.pdf",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/Chats/K_.md",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
     "4_ARCHIVE/ChatGPT_Total_Dump/Приветствие беседы.md",
@@ -208,9 +213,7 @@
     "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/Вайб-кодинг принёс мне 1 000 000 ₽. Вот ВСЯ механика в Claude.md",
     "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/5 БЕЗУМНЫХ способов использовать Claude Cowork (Создай что угодно).md",
     "2_KNOWLEDGE/NOTEBOOKLM_SYCH/KNOWLEDGE_MAP_SUMMARIES.md",
-    "2_KNOWLEDGE/WIKI/AI/ollama_news_test.md",
     "2_KNOWLEDGE/WIKI/Data/prompt-improver.skill",
-    "2_KNOWLEDGE/WIKI/Data/prompt-improver.md",
     "2_KNOWLEDGE/WIKI/Data",
     "2_KNOWLEDGE/WIKI/AI/Чек-лист_расширений_для_NotebookLM.pdf",
     "2_KNOWLEDGE/WIKI/Programming/Топ-3 правила CLAUDE.md для идеального вайбкодинга.pdf",
@@ -219,7 +222,6 @@
     "2_KNOWLEDGE/WIKI/AI/От_идеи_до_готового_видео_в_NotebookLM_за_10_минут.pdf",
     "2_KNOWLEDGE/WIKI/AI/лендинг в claude design .pdf",
     "2_KNOWLEDGE/WIKI/AI/Как_использовать_расширения_NotebookLM.pdf",
-    "2_KNOWLEDGE/WIKI/AI/Как_выбрать_подходящую_нейросеть_для_длинных_задач.pdf",
     "Archives/ChatGPT_Project_Knowledge/project_view.png",
     "1_PROJECTS/BOBOV/1000019882.jpg",
     "1_PROJECTS/BOBOV/evidence/Дело Бобова_ Хроника крушения клуба маломерных суд.svg",
