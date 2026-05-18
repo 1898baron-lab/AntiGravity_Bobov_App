@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_KNOWLEDGE/WIKI/AI/Claude Code за 43 минуты. Чеклист.md",
+                "file": "2_KNOWLEDGE/WIKI/AI/ollama_news_test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Claude Code за 43 минуты. Чеклист"
+              "title": "ollama_news_test"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "2_KNOWLEDGE/WIKI/AI/Claude Code за 43 минуты. Чеклист.md",
     "2_KNOWLEDGE/WIKI/AI/5 google gems.pdf",
     "2_KNOWLEDGE/WIKI/AI/5 google gems.md",
     "INDEX.md",
@@ -197,7 +198,6 @@
     "2_KNOWLEDGE/WIKI/AI/Claude-Design-обзор.pdf",
     "2_KNOWLEDGE/WIKI/AI/Claude-Design-обзор.md",
     "2_KNOWLEDGE/WIKI/AI/Claude Code за 43 минуты. Чеклист.pdf",
-    "2_KNOWLEDGE/WIKI/AI/Claude Code за 43 минуты. Чеклист.md",
     "2_KNOWLEDGE/WIKI/Health/gem_3_health_assistant.md",
     "2_KNOWLEDGE/WIKI/Health",
     "2_KNOWLEDGE/WIKI/AI/gem_2_prompt_engineer.md",
