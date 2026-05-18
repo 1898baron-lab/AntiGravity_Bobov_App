@@ -4,10 +4,12 @@ import time
 import logging
 from datetime import datetime
 
-# Настройка логов
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s', filename='auto_sync.log')
-
 PROJECT_PATH = "C:/ANTIGRAVITY/1"
+
+# Настройка логов
+LOGS_DIR = os.path.join(PROJECT_PATH, "logs")
+os.makedirs(LOGS_DIR, exist_ok=True)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s', filename=os.path.join(LOGS_DIR, 'auto_sync.log'))
 SYNC_INTERVAL = 30  # Интервал проверки в секундах
 
 def run_git_sync():
