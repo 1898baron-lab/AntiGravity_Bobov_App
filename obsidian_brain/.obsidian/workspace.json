@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Archives/ChatGPT_Projects/Технология_машиностроения/Список_литературы_ГОСТы.md",
+                "file": "4_ARCHIVE/ChatGPT_Projects/Анализ РД/00_INDEX_Анализ РД.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Список_литературы_ГОСТы"
+              "title": "00_INDEX_Анализ РД"
             }
           }
         ]
@@ -185,11 +185,17 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "DASHBOARD.md",
+    "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/Вилка RockShox Recon RL.md",
+    "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/ВЕЛОСИПЕДЫ.md",
+    "Archives/ChatGPT_Projects/ВЕЛИК 2025 _ Ronin Elite L/00_INDEX_ВЕЛИК 2025 _ Ronin Elite L.md",
+    "Archives/ChatGPT_Projects/Анализ РД/00_INDEX_Анализ РД.md",
+    "Archives/ChatGPT_Projects/Анализ ПОС/00_INDEX_Анализ ПОС.md",
+    "Archives/ChatGPT_Projects/Технология_машиностроения/Хомут_быстросъёмный.md",
+    "Archives/ChatGPT_Projects/Технология_машиностроения/Список_литературы_ГОСТы.md",
     "Archives/ChatGPT_Projects/Технология_машиностроения/Изучение_файлов.md",
     "2_KNOWLEDGE/KNOWLEDGE_INDEX.md",
-    "Archives/ChatGPT_Projects/Технология_машиностроения/Хомут_быстросъёмный.md",
     "INDEX.md",
-    "DASHBOARD.md",
     "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
     "2_KNOWLEDGE/WIKI/AI/Claude_Money_Prompts_Methodology.md",
     "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/Вайб-кодинг принёс мне 1 000 000 ₽. Вот ВСЯ механика в Claude.md",
@@ -215,12 +221,6 @@
     "2_KNOWLEDGE/WIKI/AI/Как_выбрать_подходящую_нейросеть_для_длинных_задач.pdf",
     "2_KNOWLEDGE/WIKI/AI/Как_выбрать_подходящую_нейросеть_для_длинных_задач.md",
     "2_KNOWLEDGE/WIKI/Business/Как_Google_навсегда_изменил_документы_таблицы_презентации_диск_и.md",
-    "2_KNOWLEDGE/WIKI/AI/Obsidian + Claude Code- база знаний за 0 рублей.md",
-    "2_KNOWLEDGE/WIKI/AI/NotebookLM + Antigravity- пошаговый чеклист использования.md",
-    "2_KNOWLEDGE/WIKI/AI/Claude Skills- твоя система достижения результата.md",
-    "2_KNOWLEDGE/WIKI/AI/Claude Design бесплатно .md",
-    "2_KNOWLEDGE/WIKI/Productivity/Claude + Notion- универсальная связка агентов.md",
-    "2_KNOWLEDGE/WIKI/Programming/4 правила Claude Code .md",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
     "Archives/ChatGPT_Project_Knowledge/project_view.png",
     "1_PROJECTS/BOBOV/1000019882.jpg",
