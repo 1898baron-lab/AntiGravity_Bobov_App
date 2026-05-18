@@ -253,12 +253,12 @@ async def call_tool(name: str, arguments: dict) -> list[TextContent]:
 @app.get("/sse")
 @app.get("/")
 async def sse_endpoint(request: Request):
-    async with sse.connect_scope(request.scope, request.receive, request._send):
-        await mcp_server.run(sse.read_stream(), sse.write_stream(), mcp_server.create_initialization_options())
+    async with sse.connect_sse(request.scope, request.receive, request._send) as (read_stream, write_stream):
+        await mcp_server.run(read_stream, write_stream, mcp_server.create_initialization_options())
 
 @app.post("/messages")
 async def messages_endpoint(request: Request):
-    await sse.handle_post_request(request.scope, request.receive, request._send)
+    await sse.handle_post_message(request.scope, request.receive, request._send)
 
 
 @app.post("/v1/messages")
