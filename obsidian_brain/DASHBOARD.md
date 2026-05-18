@@ -1,57 +1,63 @@
 # 🌌 ANTI-GRAVITY DASHBOARD
-> **"Инженерная точность. Юридическая агрессия."**
+> **«Инженерная точность. Юридическая агрессия.»**
+
+---
+
+## 🎓 АКТИВНОЕ ОБУЧЕНИЕ И САПР (КОМПАС-3D v24)
+> [!IMPORTANT] **Главное направление работы:**
+> *   **Курс по Редуктору:** [[1_PROJECTS/KOMPAS_LEARNING/📚 Трекер обучения КОМПАС-3D|📚 Интерактивный трекер курса (Червячный редуктор)]]
+> *   **Текущая тема:** `Тема 1. Компоновка сборки редуктора (Методология Top-Down)` — **[🔄 В ПРОЦЕССЕ]**
+> *   **Проект стажировки (ЦПТИ):** [[1_PROJECTS/KOMPAS_LEARNING/📋 План работы по клапану DN170|📋 План работы по клапану DN170 (Росатом)]]
 
 ---
 
 ## 💎 СИНТЕЗ ЗНАНИЙ (MASTER NOTES)
 > [!ABSTRACT] **Единые точки входа по ключевым темам:**
-> - [[2_KNOWLEDGE/SYNTHESIS/MASTODONT_INFRASTRUCTURE|🐘 MASTODONT (Вся экосистема)]]
-> - [[2_KNOWLEDGE/SYNTHESIS/ZEUS_MASTER_DOSSIER|📐 ZEUS (Клапан DN170)]]
-> - [[2_KNOWLEDGE/SYNTHESIS/BOBOV_LEGAL_ATTACK|⚖️ ДЕЛО БОБОВА (Юр. атака)]]
+> - [[2_KNOWLEDGE/SYNTHESIS/ZEUS_MASTER_DOSSIER|📐 ZEUS (Клапан DN170 & Росатом)]]
+> - [[2_KNOWLEDGE/SYNTHESIS/BOBOV_LEGAL_ATTACK|⚖️ ДЕЛО БОБОВА (Юридическая оборона)]]
+> - [[2_KNOWLEDGE/SYNTHESIS/MASTODONT_INFRASTRUCTURE|🐘 MASTODONT (Архитектура & Бот)]]
 
 ---
 
 ## 🏗️ КЛЮЧЕВЫЕ НАПРАВЛЕНИЯ
 
-> [!PROJECTS] ### 📂 [[1_PROJECTS/PROJECTS_INDEX|1. ПРОЕКТЫ]]
-> **Текущий статус:** Идет генерация отчетов.
-> - [[1_PROJECTS/Summaries/Project_00USV_Summary|Проверка ППР и РД]]
-> - [[1_PROJECTS/PROJECTS_INDEX|Открыть список всех проектов...]]
+> [!KNOWLEDGE] ### 🎓 [[1_PROJECTS/KOMPAS_LEARNING/📚 Трекер обучения КОМПАС-3D|1. УЧЕБНЫЙ ЦЕНТР]]
+> - [[1_PROJECTS/KOMPAS_LEARNING/📚 Трекер обучения КОМПАС-3D|📚 Трекер обучения КОМПАС-3D]]
+> - [[1_PROJECTS/KOMPAS_LEARNING/📋 План работы по клапану DN170|📋 Сквозной план разработки DN170]]
+> - [[2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE|📐 Шпаргалка ЕСКД / ГОСТ 2.ХХХ]]
 
-> [!KNOWLEDGE] ### 🧠 [[2_KNOWLEDGE/KNOWLEDGE_INDEX|2. БАЗА ЗНАНИЙ]]
-> - [[2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE|📐 Нормативы ЕСКД / ГОСТ]]
-> **Библиотека системного инженера:**
-> - [[2_KNOWLEDGE/Engineering/TZ/ZEUS_Main_TZ|📄 Основное ТЗ Проекта "ZEUS"]]
-> - [[2_KNOWLEDGE/Engineering/Specs/Valve_DN170_BOM|📊 Состав изделия (DN170 BOM)]]
-> - [[2_KNOWLEDGE/Engineering/TZ/main_tz.pdf|📎 Оригинал ТЗ (.PDF)]]
+> [!PROJECTS] ### 📂 [[1_PROJECTS/PROJECTS_INDEX|2. АКТИВНЫЕ ПРОЕКТЫ]]
+> - [[1_PROJECTS/ZEUS/Zeus_Valve_DN170/CAD_Modeling_Checklist|🛠️ Чек-лист моделирования Valve 10.129]]
+> - [[1_PROJECTS/ZEUS/Zeus_Valve_DN170/Weight_and_Cost_Analysis|📊 Расчет массы: цель ≤ 22.15 кг (АМг6)]]
+> - [[2_KNOWLEDGE/Engineering/TZ/ZEUS_Main_TZ|📄 Техническое задание проекта ZEUS]]
 
-> [!LEGAL] ### ⚖️ ЮРИДИЧЕСКАЯ АТАКА (БОБОВ)
-> **Статус:** Сбор доказательной базы.
+> [!LEGAL] ### ⚖️ 3. ЮРИДИЧЕСКАЯ ОБОРОНА (БОБОВ)
+> **Статус:** Анализ материалов дела.
 > - [[2_KNOWLEDGE/Legal_Tactics/CAREER_PATH_BOBOV|📄 ДЕЛО БОБОВА (Карта дела)]]
-> - [[2_KNOWLEDGE/Legal_Tactics/CAREER_PATH_BOBOV|📄 Стратегия по ст. 125 УПК РФ (в разработке)]]
+> - [[1_PROJECTS/BOBOV/Case_History/Legal_Attack_2025|📄 Стратегия по ст. 125 УПК РФ]]
+
+---
+
+## 📝 ТЕКУЩИЙ СПРИНТ (БЛИЖАЙШИЕ ЗАДАЧИ)
+- [ ] **Тема 1 (Редуктор):** Изучить методику построения компоновочного эскиза и создания ЛСК в сборке редуктора.
+- [ ] **Тема 1 (Редуктор):** Потренироваться в параметризации эскиза через таблицу переменных КОМПАС-3D.
+- [ ] **Клапан DN170:** Выполнить верификацию МЦХ (масс-центровочных характеристик) в 3D-модели корпуса из сплава АМг6 (целевая толщина стенки 5.0 мм).
+- [ ] **ЕСКД:** Проверить правильность оформления технических требований к сварке фланцев АМг6 в аргоновой среде.
 
 ---
 
 ## 🤖 AI FACTORY: ЦЕНТР УПРАВЛЕНИЯ
-
 > [!INFO] **Статус Автоматизации**
-> - **ChatGPT Sync:** [ONLINE] (Профиль: `.yandex_chatgpt_profile`)
-> - **Summarizer:** [RUNNING] (Обработка 35 проектов)
+> - **NotebookLM MCP:** [ONLINE] (Синхронизирован с курсом по редуктору v24)
+> - **Claude Connector:** [ACTIVE]
 > - **Ollama Model:** `gemma4:latest` (RTX 50-series optimized)
 
 ### 🛠️ Команды запуска (из терминала):
 | Задача | Команда |
 | :--- | :--- |
-| **Синхронизация ChatGPT** | `.\run_project_sync.bat` |
-| **Суммаризация проектов** | `python .\scripts\ai_project_summarizer.py` |
-| **Запуск Claude Connector** | `python .\scripts\claude_connector.py` |
+| **Синхронизация с NotebookLM** | `notebooklm-mcp-auth` (Обновление токенов) |
+| **Проверка статуса Git** | `git status` |
+| **Коммит изменений** | `git add . ; git commit -m "update"` |
 
 ---
-
-## 📝 БЛИЖАЙШИЕ ЗАДАЧИ
-- [ ] Дождаться завершения суммаризации всех 35 проектов.
-- [ ] Проверить ТЗ на клапан DN170 на соответствие лимиту **22.15 кг**.
-- [ ] Подготовить пакет документов для "Юридической атаки".
-
----
-**Система AntiGravity v2.0** | [[INDEX|ВЕРНУТЬСЯ К ИНДЕКСУ]]
+**Система AntiGravity v2.2** | [[INDEX|🗺️ ВЕРНУТЬСЯ К ИНДЕКСУ]]
