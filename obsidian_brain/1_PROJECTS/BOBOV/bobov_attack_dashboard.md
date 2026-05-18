@@ -16,11 +16,11 @@
 
 | Документ | Статус | Описание |
 | :--- | :--- | :--- |
-| [📕 **ПОЛНОЕ ДОСЬЕ (PDF v3)**](file:///C:/ANTIGRAVITY/1/legal/Bobov_Legal_Attack_Complete_2026_v3.pdf) | **DEFINITIVE** | Исправлены ошибки верстки, стили и внутренние ссылки. |
-| [📝 Жалоба ст. 125 УПК РФ](file:///C:/ANTIGRAVITY/1/legal/complaint_125_upk_v1.md) | **READY** | Агрессивный прокурорский иск против 13 лет бездействия. |
-| [📊 Синтез Доказательств 12.4M](file:///C:/ANTIGRAVITY/1/legal/evidence_synthesis_12m.md) | **READY** | Детальный расчет ущерба для ст. 158.4 УК РФ. |
-| [💸 Иск ФЗ-68 (Компенсация)](file:///C:/ANTIGRAVITY/1/legal/claim_fz68_compensation_v1.md) | **READY** | Требование выплат за системный саботаж полиции. |
-| [📜 Отчет для Олега Ивановича](file:///C:/ANTIGRAVITY/1/legal/report_for_father.md) | **SYNOPSIS** | Краткое резюме стратегии "Мусор vs Имущество". |
+| [📕 **ПОЛНОЕ ДОСЬЕ (PDF v3)**](file:///C:/ANTIGRAVITY/1/obsidian_brain/1_PROJECTS/BOBOV/Bobov_Legal_Attack_Complete_2026_v3.pdf) | **DEFINITIVE** | Исправлены ошибки верстки, стили и внутренние ссылки. |
+| [[complaint_125_upk_v1|📝 Жалоба ст. 125 УПК РФ]] | **READY** | Агрессивный прокурорский иск против 13 лет бездействия. |
+| [[evidence_synthesis_12m|📊 Синтез Доказательств 12.4M]] | **READY** | Детальный расчет ущерба для ст. 158.4 УК РФ. |
+| [[claim_fz68_compensation_v1|💸 Иск ФЗ-68 (Компенсация)]] | **READY** | Требование выплат за системный саботаж полиции. |
+| [[report_for_father|📜 Отчет для Олега Ивановича]] | **SYNOPSIS** | Краткое резюме стратегии "Мусор vs Имущество". |
 
 ---
 
