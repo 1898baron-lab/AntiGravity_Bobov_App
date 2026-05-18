@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_PROJECTS/ZEUS/EXTERNAL_FILES_INDEX.md",
+                "file": "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "EXTERNAL_FILES_INDEX"
+              "title": "ESKD_BASIC_GUIDE"
             }
           }
         ]
@@ -185,6 +185,8 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "1_PROJECTS/ZEUS/ZEUS_LOG.md",
+    "1_PROJECTS/ZEUS/EXTERNAL_FILES_INDEX.md",
     "1_PROJECTS/ZEUS/AUTOCADE_FIX.md",
     "1_PROJECTS/ZEUS/Zeus_Valve_DN170/Passport_Valve_170_Draft.md",
     "1_PROJECTS/ZEUS/Zeus_Valve_DN170/PMI_Valve_170_Draft.md",
@@ -198,7 +200,6 @@
     "1_PROJECTS/ZEUS/mentors_guide.md",
     "1_PROJECTS/ZEUS/MASTODONT_2026_STRATEGY.md",
     "1_PROJECTS/ZEUS/MAIN_TZ.pdf",
-    "1_PROJECTS/ZEUS/EXTERNAL_FILES_INDEX.md",
     "1_PROJECTS/Summaries/Project_Технология машиностроения_Summary.md",
     "1_PROJECTS/Summaries/Project_Технология_машиностроения_Summary.md",
     "1_PROJECTS/Summaries/Project_FREELANCER_Summary.md",
@@ -216,7 +217,6 @@
     "2_KNOWLEDGE/Archived_Notes_Backup/_Inbox",
     "2_KNOWLEDGE/Archived_Notes_Backup/_AI_EXCHANGE/TO_CHATGPT.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/_AI_EXCHANGE/FROM_CHATGPT.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/_AI_EXCHANGE/AI_CONSULTATION_RESULT.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/_AI_EXCHANGE",
     "2_KNOWLEDGE/Archived_Notes_Backup/Tasks",
     "2_KNOWLEDGE/Archived_Notes_Backup/Projects",
