@@ -1,0 +1,19 @@
+{
+  "name": "lmstudio-obsidian-plugin",
+  "version": "1.0.0",
+  "description": "LM Studio Plugin for querying the local Obsidian brain",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "lms dev src/index.ts",
+    "push": "lms push"
+  },
+  "dependencies": {
+    "@lmstudio/sdk": "^1.5.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}

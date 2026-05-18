@@ -1,0 +1,233 @@
+{
+  "main": {
+    "id": "0da85e0fd5476ec4",
+    "type": "split",
+    "children": [
+      {
+        "id": "fbb8fe6bccd0df96",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8b62a8583e16795c",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Граф"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5ce9fa2289ea40c6",
+    "type": "split",
+    "children": [
+      {
+        "id": "9147c30a64a743b5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "dbb5de802eaea249",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Файловый менеджер"
+            }
+          },
+          {
+            "id": "2dd28c41cb54145f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#engineering",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Поиск"
+            }
+          },
+          {
+            "id": "f042ce7f552ed643",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Закладки"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "91b4820c518476cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "4189515db6369329",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "193d65143daafe3e",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "CLAUDE.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Исходящие ссылки из CLAUDE"
+            }
+          },
+          {
+            "id": "0ed9c3f5ccd3c2d0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Теги"
+            }
+          },
+          {
+            "id": "0c14c04b42328297",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Все свойства"
+            }
+          },
+          {
+            "id": "1228ed0ad04ced39",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Структура"
+            }
+          },
+          {
+            "id": "16ebaa65462d0120",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "_AI_EXCHANGE/TO_CHATGPT.md"
+              },
+              "icon": "lucide-info",
+              "title": "Свойства файла для TO_CHATGPT"
+            }
+          },
+          {
+            "id": "36d539b6d1aa1ade",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              },
+              "icon": "links-coming-in",
+              "title": "Обратные ссылки"
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "canvas:Создать новый холст": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false,
+      "markdown-importer:Импорт Markdown-файлов": false,
+      "bases:Создать новую базу": false
+    }
+  },
+  "active": "8b62a8583e16795c",
+  "lastOpenFiles": [
+    "Tasks/audit_20260428_100202.md",
+    "Engineering/Knowledge_Base/PTO_Standard_Guidelines.md",
+    "Engineering/Design_Office/Project_Zeus_Action_Plan.md",
+    "_AI_EXCHANGE/TO_CHATGPT.md",
+    "_AI_EXCHANGE/FROM_CHATGPT.md",
+    "_AI_EXCHANGE/AI_CONSULTATION_RESULT.md",
+    "_AI_EXCHANGE/AGENT_PLAN.md",
+    "Tasks/audit_20260428_100624.md",
+    "Tasks/audit_20260428_100430.md",
+    "Engineering/AI_Interaction_Directive.md",
+    "Engineering/Standards/OST_95_Series_Summary.md",
+    "Engineering/Standards/Internship_Knowledge_Check.md",
+    "Knowledge_Base/user_profile.md",
+    "_Skills/Engineering_Review_Skill.md",
+    "Engineering/Design_Office/Valve_DN170/Assembly_Structure_10_129.md",
+    "Engineering/Design_Office/TS_K01_UEHK_2024.md",
+    "MASTADONT_DASHBOARD.md",
+    "Education/KOMPAS_3D_Valve_Tutorial.md",
+    "Engineering/Session_Logs/2026-04-28_Summary.md",
+    "Education/Internship_Reinforcement_Plan.md",
+    "Archive/Gemini/Full_History/Untitled_Gemini_Chat.md",
+    "Archive/Gemini/Full_History",
+    "Archive/Claude/Full_History/Функции_моего_телефона.md",
+    "Archive/Claude/Full_History/Building_a_custom_skill.md",
+    "vpn_troubleshooting.md",
+    "Home.md",
+    "Archive/Claude/Full_History/Улучшение_портрета_с_эффектом_бьюти-фотографии.md",
+    "Archive/Claude/Full_History",
+    "Archive/ChatGPT/Full_History",
+    "Archive/ChatGPT/Улучшатель__Райт",
+    "Archive/ChatGPT/Технология_машиностроения",
+    "Archive/ChatGPT/Здоровье",
+    "Archive/ChatGPT/ВЕЛИК_2025__Ronin_Elite_L",
+    "Archive/ChatGPT/Анализ_РД",
+    "Archive/ChatGPT/Анализ_ПОС",
+    "Archive/ChatGPT/PC__Software_Upgrade",
+    "Без названия.canvas"
+  ]
+}

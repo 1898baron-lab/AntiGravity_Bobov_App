@@ -1,0 +1,75 @@
+# Copyright (c) 1993-2009 Microsoft Corp.
+#
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.
+#
+# This file contains the mappings of IP addresses to host names. Each
+# entry should be kept on an individual line. The IP address should
+# be placed in the first column followed by the corresponding host name.
+# The IP address and the host name should be separated by at least one
+# space.
+#
+# Additionally, comments (such as these) may be inserted on individual
+# lines or following the machine name denoted by a '#' symbol.
+#
+# For example:
+#
+#      102.54.94.97     rhino.acme.com          # source server
+#       38.25.63.10     x.acme.com              # x client host
+
+# localhost name resolution is handled within DNS itself.
+#	127.0.0.1       localhost
+#	::1             localhost
+127.0.0.1 api.mcneel.com
+0.0.0.1 api.mcneel.com
+0.0.0.1 api.mcneel.com/license/invalidate
+0.0.0.0 genuine-software.autodesk.com 
+0.0.0.0 genuine-software1.autodesk.com 
+0.0.0.0 genuine-software2.autodesk.com 
+0.0.0.0 api.genuine-software.autodesk.com 
+0.0.0.0 api.ase-cdn-stg.autodesk.com 
+
+0.0.0.0 apps.corel.com
+0.0.0.0 mc.corel.com
+0.0.0.0 origin-mc.corel.com
+0.0.0.0 iws.corel.com
+0.0.0.0 ipm.corel.com# Graphisoft Anti-license checks by Up7
+127.0.0.1	wit-ams-cloudservice.cloudapp.net
+127.0.0.1	bimx-api.graphisoft.com
+127.0.0.1	graphisoftid-subtest.graphisoft.com
+127.0.0.1	graphisoftid-test.graphisoft.com
+127.0.0.1	graphisoftid.graphisoft.com
+127.0.0.1	ruleservice-api-subscr-test.graphisoft.com
+127.0.0.1	ruleservice-api-test.graphisoft.com
+127.0.0.1	ruleservice-api.graphisoft.com
+127.0.0.1	licensemanager-subtest.graphisoft.com
+127.0.0.1	licensemanager.graphisoft.com
+127.0.0.1	licensemanager-test.graphisoft.com
+127.0.0.1	license-manager-api.azurewebsites.net
+127.0.0.1	license.graphisoft.com
+127.0.0.1	license-test.graphisoft.com
+127.0.0.1	waws-prod-am2-069.vip.azurewebsites.windows.net
+127.0.0.1	waws-prod-am2-069.cloudapp.net
+127.0.0.1	e5486.g.akamaiedge.net
+127.0.0.1	e8218.dscb1.akamaiedge.net
+127.0.0.1	par10s22-in-f232.1e100.net
+127.0.0.1	par10s28-in-f8.1e100.net
+127.0.0.1	par10s34-in-f8.1e100.net
+127.0.0.1	gs-com.cloudapp.net
+127.0.0.1	usagelogger.graphisoft.com
+127.0.0.1	poneytelecom.eu
+127.0.0.1	swupdate.graphisoft.com
+127.0.0.1	redirect.graphisoft.com
+127.0.0.1	mx-inet03.maxon.net
+127.0.0.1	mx-inet05.maxon.net
+127.0.0.1	mx-inet08.maxon.net
+127.0.0.1	surveys.graphisoft.com
+127.0.0.1	par10s41-in-f3.1e100.net
+127.0.0.1	e28142.dscg.akamaiedge.net
+127.0.0.1	download.maxon.net
+127.0.0.1	dudbeo7xzkg6c.cloudfront.net
+127.0.0.1	e28142.d.akamaiedge.net
+127.0.0.1	server-52-84-177-187.cdg50.r.cloudfront.net
+127.0.0.1	a23-72-248-212.deploy.static.akamaitechnologies.com
+## Adobe Creative Cloud WAM - Start ##
+166.117.29.222 detect-ccd.creativecloud.adobe.com
+## Adobe Creative Cloud WAM - End ##

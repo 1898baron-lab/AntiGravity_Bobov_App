@@ -1,0 +1,326 @@
+Промпт №1 - Найди 2 пути к первой $1000</h3>
+          <p class="step-desc">Claude задаст 9 уточняющих вопросов в 3 очереди и выдаст 2 услуги под твои реальные навыки. Отвечай честно - в этом и весь смысл финальной строки промпта.</p>
+        </div>
+      </div>
+
+      <div class="prompt">
+        <div class="prompt-head">
+          <span class="prompt-label">💬 
+
+===
+
+Промпт №1 - 2 пути за 30 дней</span>
+          <button class="copy-btn" data-copy="prompt-1">Скопировать</button>
+        </div>
+        <div class="prompt-text" id="prompt-1">Дай мне 2 способа зарабатывать мои первые 1000 баксов за 30 дней. Оба способа должны требовать навыков, которые у меня уже есть, не требовать аудитории, продаваться в течение 48 часов. Задай мне уточняющие вопросы, пока не будешь уверен на 95% в своих рекомендациях.</div>
+      </div>
+
+      <div class="config"><b>Замена под цель:</b> $1000 можешь поставить $10K или любую свою цифру. Но новичкам - именно $1000, чтобы пробить нулевую отметку.</div>
+      <div class="hint"><b>Если рекомендации не нравятся:</b> толкай Claude обратной связью - «не люблю Telegram», «нет соцсетей», «хочу через email». Дорабатывайте вместе пока не выберете 1 путь.</div>
+    </article>
+
+    <!-- ШАГ 03 -->
+    <article class="step">
+      <div class="step-head">
+        <div class="step-num">03</div>
+        <div class="step-title-wrap">
+          <h3 class="step-title">
+
+===
+
+Промпт №2 - Найди ролевую модель</h3>
+          <p class="step-desc">Возьми выбранную услугу из Шага 2 и попроси Claude найти реального практика в этой нише. 1 источник вместо 10 курсов разных гуру.</p>
+        </div>
+      </div>
+
+      <div class="prompt">
+        <div class="prompt-head">
+          <span class="prompt-label">💬 
+
+===
+
+Промпт №2 - Ролевая модель</span>
+          <button class="copy-btn" data-copy="prompt-2">Скопировать</button>
+        </div>
+        <div class="prompt-text" id="prompt-2">Кто один самый успешный человек, у которого мне стоит учиться, чтобы это сделать?</div>
+      </div>
+
+      <div class="warn"><b>Правило одного источника:</b> не скачивай 10 курсов разных гуру. 1 источник + 2 книги = 5-7 часов изучения. Этого достаточно. Учись чтобы делать, а не учись чтобы откладывать.</div>
+    </article>
+
+    <!-- ШАГ 04 -->
+    <article class="step">
+      <div class="step-head">
+        <div class="step-num">04</div>
+        <div class="step-title-wrap">
+          <h3 class="step-title">
+
+===
+
+Промпт №3 - Собери 20-дневный план</h3>
+          <p class="step-desc">Без последней фразы Claude по дефолту даст 90-дневный план с продажами в самом конце. Мы это переворачиваем - продажи начинаются с дня 1.</p>
+        </div>
+      </div>
+
+      <div class="prompt">
+        <div class="prompt-head">
+          <span class="prompt-label">💬 
+
+===
+
+Промпт №3 - План на 20 дней</span>
+          <button class="copy-btn" data-copy="prompt-3">Скопировать</button>
+        </div>
+        <div class="prompt-text" id="prompt-3">Притворись [имя ролевой модели из Шага 3]. Создай 20-дневный план с бюджетом до 1000 долларов, который доводит меня до первого платящего клиента максимально быстро. Привлечение клиентов должно начинаться уже в день один.</div>
+      </div>
+
+      <div class="hint"><b>Почему 20 дней, а не 90:</b> 99% бросают именно потому что не получили первого клиента. Когда получишь первую $1000 - увидишь путь к $10К → к $100К.</div>
+    </article>
+
+    <!-- ШАГ 05 -->
+    <article class="step">
+      <div class="step-head">
+        <div class="step-num">05</div>
+        <div class="step-title-wrap">
+          <h3 class="step-title">
+
+===
+
+Промпт №4 (БОНУС) - Резалка плана</h3>
+          <p class="step-desc">Главный промпт против прокрастинации. Claude задаст 3 вопроса о реальных препятствиях, потом сократит план вдвое и оставит только то что напрямую ведёт к деньгам.</p>
+        </div>
+      </div>
+
+      <div class="prompt">
+        <div class="prompt-head">
+          <span class="prompt-label">💬 
+
+===
+
+Промпт №4 - Резалка плана</span>
+          <button class="copy-btn" data-copy="prompt-4">Скопировать</button>
+        </div>
+        <div class="prompt-text" id="prompt-4">Задай мне 3 вопроса, чтобы понять, что меня остановит на этой неделе. Потом сократи план вдвое и оставь только то, что напрямую ведёт к деньгам.</div>
+      </div>
+
+      <div class="config"><b>Что обычно вылетает после реза:</b> мини-сайт, книги, закрытые чаты, полировка портфолио.</div>
+      <div class="ok"><b>Что остаётся:</b> 10 сообщений в день с готовым демо → первая сделка к дню 4-5 → кейс на день 7 → допродажа на день 8.</div>
+    </article>
+  </section>
+</div>
+
+<!-- BONUS SECTION -->
+<section class="bonus-section" id="bonus">
+  <div class="wrap">
+    <div class="bonus-header">
+      <div class="bonus-tag">🎁 Бонус · Пример под копирайтинг</div>
+      <h2 class="bonus-title">Если зашёл путь копирайтинга</h2>
+      <p class="bonus-sub">Если в Шаге 2 Claude вывел тебя на копирайтинг или ты сразу решил идти по этой нише - вот всё что я показал в видео под этот путь. Можешь забрать 1 в 1.</p>
+    </div>
+
+    <div class="bonus-grid">
+
+      <article class="bonus-card">
+        <div class="bonus-card-label">📍 Ролевая модель из видео</div>
+        <h3>Дмитрий Кот</h3>
+        <p>Действующий копирайтер, директор копирайтингового агентства из Питера. <b>Не инфоцыган</b> - реальный практик. Тот кто живёт с того что продаёт услуги копирайтинга, пишет тексты клиентам. Ровно то что ты сейчас начинаешь.</p>
+        <p style="color:var(--text-mute);font-size:14px;margin-top:14px;">Подставь его имя в 
+
+===
+
+Промпт №3 вместо плейсхолдера.</p>
+      </article>
+
+      <article class="bonus-card">
+        <div class="bonus-card-label">📋 Шаблон холодного сообщения</div>
+        <h3>Не «хочу с вами поработать», а сразу демо</h3>
+
+        <div class="prompt" style="margin-top:18px;">
+          <div class="prompt-head">
+            <span class="prompt-label">💬 Шаблон сообщения</span>
+            <button class="copy-btn" data-copy="cold-msg">Скопировать</button>
+          </div>
+          <div class="prompt-text" id="cold-msg">Алексей, увидел анонс курса по искусственному интеллекту. Набросал черновик первого прогревочного поста для вашего канала. Посмотрите. Если зайдёт - полный пакет на запуск, 9 постов, делаю за 4 дня за 350 долларов. Если нет - оставляйте себе бесплатно.</div>
+        </div>
+
+        <div class="hint"><b>Главное:</b> не «хочу с вами поработать», а сразу демо в первом сообщении. Это разрывает шаблон холодных рассылок.</div>
+      </article>
+
+      <article class="bonus-card">
+        <div class="bonus-card-label">📊 4 фазы 20-дневного плана</div>
+        <h3>Воронка → сделка → кейс → допродажа</h3>
+
+        <div class="phases">
+          <div class="phase">
+            <div class="phase-num">01</div>
+            <div class="phase-days">Дни 1-4 · Запуск воронки</div>
+            <div class="phase-title">Холодный старт</div>
+            <ul>
+              <li>День 1: офер в одно предложение</li>
+              <li>Список 50 экспертов</li>
+              <li>10 холодных сообщений вечером</li>
+              <li>Дни 2-4: по 15 сообщений в день</li>
+              <li>Мини-сайт + аналитика откликов</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <div class="phase-num">02</div>
+            <div class="phase-days">Дни 5-10 · Первая сделка</div>
+            <div class="phase-title">Закрытие клиента</div>
+            <ul>
+              <li>15 сообщений в день</li>
+              <li>Работа с ответившими</li>
+              <li>К дню 7: первая сделка</li>
+              <li>Или минимум 3 человека «думают»</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <div class="phase-num">03</div>
+            <div class="phase-days">Дни 11-15 · Кейс и рост цены</div>
+            <div class="phase-title">Усиление позиции</div>
+            <ul>
+              <li>Берёшь отзывы с первого клиента</li>
+              <li>Цифры результатов в публичный кейс</li>
+              <li>Поднимаешь цену $350 → $500</li>
+            </ul>
+          </div>
+          <div class="phase">
+            <div class="phase-num">04</div>
+            <div class="phase-days">Дни 16-20 · Добиваем до $1000</div>
+            <div class="phase-title">Допродажа = ключ</div>
+            <ul>
+              <li>Допродать существующему легче, чем найти нового</li>
+              <li>Допродажи закрываются в 70% случаев</li>
+              <li>Второй проект к первому клиенту</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="bonus-card">
+        <div class="bonus-card-label">💰 Бюджет на старт</div>
+        <h3>$150-300 на 20 дней</h3>
+        <table class="budget">
+          <tr><td>Книги</td><td>$10</td></tr>
+          <tr><td>Тильда (мини-сайт)</td><td>$20</td></tr>
+          <tr><td>Закрытые чаты экспертов</td><td>$100-200</td></tr>
+          <tr><td>Email-валидаторы</td><td>$50</td></tr>
+          <tr><td>Резерв на непредвиденное</td><td>$100</td></tr>
+          <tr><td>ИТОГО</td><td>$150-300</td></tr>
+        </table>
+      </article>
+
+      <article class="bonus-card">
+        <div class="bonus-card-label">🎯 Главный инсайт по объёму</div>
+        <h3>Объём = математика</h3>
+        <p style="font-size:17px;line-height:1.55;"><b style="color:var(--accent1);">200 сообщений</b> → 20 ответов → 20 сигналов о рынке. Ты понимаешь как люди воспринимают твою услугу, ценность, цену.</p>
+        <p style="font-size:17px;line-height:1.55;"><b style="color:var(--accent-warn);">20 сообщений</b> → 2 ответа → ничего не понял о рынке.</p>
+        <p style="color:var(--text-mute);font-size:14px;margin-top:14px;">Главный навык - делать неочевидную скучную работу 300 раз подряд. Это про отправку сообщений каждый день.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <section id="links">
+    <div class="section-label">🔗 Все ссылки в одном месте</div>
+    <h2 class="section-title">Что использовать</h2>
+    <div class="links-grid">
+      <a href="https://claude.ai" target="_blank" rel="noopener" class="link-card">
+        <div class="link-card-icon">C</div>
+        <div class="link-card-name">Claude</div>
+        <div class="link-card-url">claude.ai</div>
+        <div style="color:var(--text-mute);font-size:13px;margin-top:8px;">Основной инструмент - все 4 промпта запускаются здесь</div>
+      </a>
+    </div>
+  </section>
+
+  <a href="https://t.me/IntensivMastaBot" target="_blank" rel="noopener" class="cta" style="text-decoration:none;">
+    <h2 class="cta-title">Первые <span class="grad">$1200</span> на&nbsp;ИИ -<br>бесплатный интенсив</h2>
+
+    <div class="cta-grid">
+      <div>
+        <div class="cta-block-label">Внутри</div>
+        <ul class="cta-list checks">
+          <li>Реальный демо AntiGravity вживую</li>
+          <li>Софт, который за 5 минут находит компании без сайтов с готовыми контактами</li>
+          <li>Кейсы учеников: $1650 за 3 проекта без команды</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="cta-block-label">Два бонуса в конце</div>
+        <ul class="cta-list bonuses">
+          <li>50 скучных и самых прибыльных ниш без конкуренции</li>
+          <li>Чек-лист: первые $500 за 7 дней</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta-bottom">
+      <div class="cta-free"><b>Бесплатно.</b> Навсегда.</div>
+      <span class="cta-btn">Забрать интенсив</span>
+    </div>
+  </a>
+
+</div>
+
+<footer>
+  <div class="foot-brand">МАСТОДОНТ</div>
+  <div class="foot-tag">AI и нейросети - просто, по делу</div>
+  <a class="foot-yt" href="https://www.youtube.com/watch?v=Pcw3e4lrBvw" target="_blank" rel="noopener" style="text-decoration:none;display:inline-block;">🎬 СМОТРЕТЬ НА YOUTUBE</a>
+</footer>
+
+<script>
+  // COPY PROMPT BUTTONS
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const id = btn.dataset.copy;
+      const target = document.getElementById(id);
+      if (!target) return;
+      try {
+        await navigator.clipboard.writeText(target.innerText.trim());
+        const original = btn.textContent;
+        btn.textContent = '✓ Скопировано!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+          btn.textContent = original;
+          btn.classList.remove('copied');
+        }, 2000);
+      } catch (e) {
+        btn.textContent = 'Ошибка';
+      }
+    });
+  });
+
+  // COPY YOUTUBE SEARCH
+  function copyYoutube(btn) {
+    const text = 'ИИ МАСТОДОНТ Я попросил Claude заработать мне как можно БОЛЬШЕ денег';
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = '✓ СКОПИРОВАНО';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'КОПИРОВАТЬ';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+
+  // COPY YT TITLE FROM FOOTER
+  function copyYtTitle(btn) {
+    const text = 'Я попросил Claude заработать мне как можно БОЛЬШЕ денег';
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = '✓ НАЗВАНИЕ СКОПИРОВАНО';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = '🎬 НАЙТИ НА YOUTUBE';
+        btn.classList.remove('copied');
+      }, 2200);
+    });
+  }
+</script>
+
+</body>
+</html>
