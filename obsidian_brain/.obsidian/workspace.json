@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DASHBOARD.md",
+                "file": "1_PROJECTS/MANGAL/MANGAL_CUTTING_LIST.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DASHBOARD"
+              "title": "MANGAL_CUTTING_LIST"
             }
           }
         ]
@@ -185,18 +185,20 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "1_PROJECTS/Clippings/Как научить ИИ не врать.pdf",
+    "1_PROJECTS/Clippings/3 правила работы с ИИ.pdf",
+    "1_PROJECTS/KOMPAS_LEARNING/📋 План работы по клапану DN170.md",
+    "DASHBOARD.md",
     "INDEX.md",
     "1_PROJECTS/KOMPAS_LEARNING/📚 Трекер обучения КОМПАС-3D.md",
     "3_META/AUDIT_2026-05-18.md",
     "2_KNOWLEDGE/NOTEBOOKLM_SYCH/KNOWLEDGE_MAP_SUMMARIES.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/_Skills/Legal_Attack_Skill.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/_Skills/Engineering_Review_Skill.md",
-    "DASHBOARD.md",
     "Archives/ChatGPT_Projects/Технология_машиностроения/Изучение_файлов.md",
     "Archives/ChatGPT_Projects/ВЕЛИК_2025_-_Ronin_Elite_L/Project_Overview.md",
     "2_KNOWLEDGE/KNOWLEDGE_INDEX.md",
     "Archives/ChatGPT_Projects/ВЕЛИК_2025_-_Ronin_Elite_L",
-    "1_PROJECTS/KOMPAS_LEARNING/📋 План работы по клапану DN170.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Projects/Project_Catalog.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Standards/OST_95_Series_Summary.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Standards/Internship_Knowledge_Check.md",
@@ -214,13 +216,11 @@
     "2_KNOWLEDGE/STUDY_GUIDE.md",
     "2_KNOWLEDGE/GOST_Welding_Comparison.md",
     "1_PROJECTS/MANGAL/Mangal_Flange_Calc.md",
-    "1_PROJECTS/ZAKRJEP/ZAKRJEP_2026_Pilot.md",
     "2_KNOWLEDGE/WIKI/WebDevelopment/Сайт_c_Claude_Code.pdf",
     "2_KNOWLEDGE/WIKI/Productivity/Claude + Notion- универсальная связка агентов.pdf",
     "2_KNOWLEDGE/WIKI/Engineering/Топ-3 правила CLAUDE.md для идеального вайбкодинга.pdf",
     "2_KNOWLEDGE/WIKI/Business/Как_Google_навсегда_изменил_документы_таблицы_презентации_диск_и.pdf",
     "2_KNOWLEDGE/WIKI/AI/Claude-Design-обзор.pdf",
-    "2_KNOWLEDGE/WIKI/AI/Чек-лист_расширений_для_NotebookLM.pdf",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
     "Archives/ChatGPT_Project_Knowledge/project_view.png",
     "1_PROJECTS/BOBOV/1000019882.jpg",
