@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
-                "mode": "source",
+                "file": "DASHBOARD.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ESKD_BASIC_GUIDE"
+              "title": "DASHBOARD"
             }
           }
         ]
@@ -185,11 +185,12 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "INDEX.md",
+    "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
     "2_KNOWLEDGE/WIKI/AI/Claude_Money_Prompts_Methodology.md",
     "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/Вайб-кодинг принёс мне 1 000 000 ₽. Вот ВСЯ механика в Claude.md",
     "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/5 БЕЗУМНЫХ способов использовать Claude Cowork (Создай что угодно).md",
     "2_KNOWLEDGE/NOTEBOOKLM_SYCH/KNOWLEDGE_MAP_SUMMARIES.md",
-    "INDEX.md",
     "DASHBOARD.md",
     "2_KNOWLEDGE/WIKI/AI/ollama_news_test.md",
     "2_KNOWLEDGE/WIKI/Data/prompt-improver.skill",
@@ -220,7 +221,6 @@
     "2_KNOWLEDGE/WIKI/AI/3 расширения для работы с NotebookLM.md",
     "2_KNOWLEDGE/WIKI/AI/12 навыков Claude- полная карта.md",
     "1_PROJECTS/Clippings/gem_3_health_assistant.md",
-    "1_PROJECTS/Clippings/gem_2_prompt_engineer.md",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
     "Archives/ChatGPT_Project_Knowledge/project_view.png",
     "1_PROJECTS/BOBOV/1000019882.jpg",
