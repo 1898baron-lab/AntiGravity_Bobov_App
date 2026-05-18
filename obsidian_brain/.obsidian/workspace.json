@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "1_PROJECTS/Summaries/Project_Технология машиностроения_Summary.md",
+                "file": "1_PROJECTS/ZEUS/EXTERNAL_FILES_INDEX.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Project_Технология машиностроения_Summary"
+              "title": "EXTERNAL_FILES_INDEX"
             }
           }
         ]
@@ -185,6 +185,10 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "1_PROJECTS/ZEUS/AUTOCADE_FIX.md",
+    "1_PROJECTS/Summaries/Project_Технология машиностроения_Summary.md",
+    "1_PROJECTS/Summaries/Project_Технология_машиностроения_Summary.md",
+    "1_PROJECTS/Summaries/Project_FREELANCER_Summary.md",
     "1_PROJECTS/Summaries/JtjfYS9hfWw_Summary.md",
     "1_PROJECTS/Summaries/Сообщение для друзей_Summary.md",
     "1_PROJECTS/Summaries/ТЭО на понтон_Summary.md",
@@ -215,10 +219,6 @@
     "2_KNOWLEDGE/Archived_Notes_Backup/Tasks",
     "2_KNOWLEDGE/Archived_Notes_Backup/Projects",
     "2_KNOWLEDGE/Archived_Notes_Backup/Legal/report_for_father.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/Legal/Strategic_Directive_v1.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/Legal/evidence_synthesis_12m.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/Legal/complaint_to_prosecutor_v1.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/Legal/Evidence_Map_12M.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/Legal",
     "2_KNOWLEDGE/Archived_Notes_Backup/Knowledge_Base",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
