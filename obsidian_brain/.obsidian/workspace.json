@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4_ARCHIVE/ChatGPT_Total_Dump/Приветствие беседы.md",
-                "mode": "preview",
+                "file": "4_ARCHIVE/ChatGPT_Project_Knowledge/Chats/K_.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Приветствие беседы"
+              "title": "K_"
             }
           }
         ]
@@ -185,6 +185,8 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
+    "4_ARCHIVE/ChatGPT_Total_Dump/Приветствие беседы.md",
     "4_ARCHIVE/ChatGPT_Total_Dump/Приветствие и ответ.md",
     "4_ARCHIVE/ChatGPT_Total_Dump/ИИ для инженера-конструктора.md",
     "4_ARCHIVE/ChatGPT_Total_Dump/Голосовой режим.md",
@@ -212,16 +214,13 @@
     "2_KNOWLEDGE/WIKI/Data/prompt-improver.md",
     "2_KNOWLEDGE/WIKI/Data",
     "2_KNOWLEDGE/WIKI/AI/Чек-лист_расширений_для_NotebookLM.pdf",
-    "2_KNOWLEDGE/WIKI/AI/Чек-лист_расширений_для_NotebookLM.md",
     "2_KNOWLEDGE/WIKI/Programming/Топ-3 правила CLAUDE.md для идеального вайбкодинга.pdf",
-    "2_KNOWLEDGE/WIKI/Programming/Топ-3 правила CLAUDE.md для идеального вайбкодинга.md",
     "2_KNOWLEDGE/WIKI/WebDevelopment/Сайт_c_Claude_Code.pdf",
     "2_KNOWLEDGE/WIKI/WebDevelopment",
     "2_KNOWLEDGE/WIKI/AI/От_идеи_до_готового_видео_в_NotebookLM_за_10_минут.pdf",
     "2_KNOWLEDGE/WIKI/AI/лендинг в claude design .pdf",
     "2_KNOWLEDGE/WIKI/AI/Как_использовать_расширения_NotebookLM.pdf",
     "2_KNOWLEDGE/WIKI/AI/Как_выбрать_подходящую_нейросеть_для_длинных_задач.pdf",
-    "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
     "Archives/ChatGPT_Project_Knowledge/project_view.png",
     "1_PROJECTS/BOBOV/1000019882.jpg",
     "1_PROJECTS/BOBOV/evidence/Дело Бобова_ Хроника крушения клуба маломерных суд.svg",
