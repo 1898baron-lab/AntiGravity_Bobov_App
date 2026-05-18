@@ -1,3 +1,0 @@
-Created notebook: 154fe4ca-6367-44d7-a1f5-ac3cdcce7544 - AI Business Schemes
-No notebook specified. Use 'notebooklm use <id>' to set context or provide 
-notebook_id.
