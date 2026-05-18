@@ -24,6 +24,9 @@ from fastapi import FastAPI, Request, Response
 from fastapi.responses import JSONResponse, StreamingResponse, FileResponse
 from playwright.async_api import async_playwright, Browser, Page
 from playwright_stealth import Stealth
+from mcp.server import Server
+from mcp.server.sse import SseServerTransport
+from mcp.types import Tool, TextContent
 
 # ──────────────────────────────────────────────
 # Конфиг
@@ -204,6 +207,58 @@ async def lifespan(app: FastAPI):
         await _browser.close()
 
 app = FastAPI(title="Claude Connector", lifespan=lifespan)
+
+mcp_server = Server("claude-web")
+sse = SseServerTransport("/messages")
+
+@mcp_server.list_tools()
+async def list_tools() -> list[Tool]:
+    return [
+        Tool(
+            name="ask_claude",
+            description="Ask Claude (via web browser session) any question. Excellent for complex reasoning, code generation, and deep analysis.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "prompt": {
+                        "type": "string",
+                        "description": "The prompt or question to send to Claude"
+                    },
+                    "chat_url": {
+                        "type": "string",
+                        "description": "Optional URL of an existing chat to continue the conversation"
+                    }
+                },
+                "required": ["prompt"]
+            }
+        )
+    ]
+
+@mcp_server.call_tool()
+async def call_tool(name: str, arguments: dict) -> list[TextContent]:
+    if name == "ask_claude":
+        prompt = arguments.get("prompt", "")
+        chat_url = arguments.get("chat_url")
+        try:
+            response_text, final_url = await send_message(prompt, chat_url=chat_url)
+            result = {
+                "response": response_text,
+                "chat_url": final_url
+            }
+            return [TextContent(type="text", text=json.dumps(result, ensure_ascii=False, indent=2))]
+        except Exception as e:
+            return [TextContent(type="text", text=f"Error: {str(e)}")]
+    return []
+
+@app.get("/sse")
+@app.get("/")
+async def sse_endpoint(request: Request):
+    async with sse.connect_scope(request.scope, request.receive, request._send):
+        await mcp_server.run(sse.read_stream(), sse.write_stream(), mcp_server.create_initialization_options())
+
+@app.post("/messages")
+async def messages_endpoint(request: Request):
+    await sse.handle_post_request(request.scope, request.receive, request._send)
 
 
 @app.post("/v1/messages")
