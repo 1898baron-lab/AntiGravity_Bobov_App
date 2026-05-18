@@ -11,14 +11,12 @@
             "id": "d44461ac63ed11c8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "2_KNOWLEDGE/Engineering/TZ/ZEUS_Main_TZ.md",
-                "mode": "source",
-                "source": false
+                "file": "2_KNOWLEDGE/WIKI/AI/3 расширения для работы с NotebookLM.pdf"
               },
-              "icon": "lucide-file",
-              "title": "ZEUS_Main_TZ"
+              "icon": "lucide-file-text",
+              "title": "3 расширения для работы с NotebookLM"
             }
           }
         ]
@@ -185,6 +183,13 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "2_KNOWLEDGE/WIKI/AI/3 расширения для работы с NotebookLM.md",
+    "2_KNOWLEDGE/SYNTHESIS/ZEUS_MASTER_DOSSIER.md",
+    "2_KNOWLEDGE/SYNTHESIS/MASTODONT_INFRASTRUCTURE.md",
+    "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/Claude Code СТАЛ НЕУДЕРЖИМ (Skills 2.0).md",
+    "2_KNOWLEDGE/SYNTHESIS/NotebookLM_Superpowers/Gemini 3.1 Pro + AntiGravity УНИЧТОЖАЮТ веб-дизайнеров.md",
+    "2_KNOWLEDGE/NOTEBOOKLM_SYCH/KNOWLEDGE_MAP_SUMMARIES.md",
+    "2_KNOWLEDGE/Engineering/TZ/ZEUS_Main_TZ.md",
     "2_KNOWLEDGE/Engineering/TZ/main_tz.pdf",
     "2_KNOWLEDGE/Engineering/Specs/Epoxy_Painting_Guide.md",
     "2_KNOWLEDGE/Welding_Standards_Comparison.md",
@@ -211,16 +216,9 @@
     "2_KNOWLEDGE/Archived_Notes_Backup/CLAUDE.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/Knowledge_Base/user_profile.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Pilot_Stapel_1200x800_TZ.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Machine_Building_Tech.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/AI_Interaction_Directive.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Standards/OST_95_Series_Summary.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Standards/Internship_Knowledge_Check.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Session_Logs/Mentor_Report_2026-04-21.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Session_Logs/2026-04-21_Engineering_Audit.md",
     "1_PROJECTS/ZEUS/MAIN_TZ.pdf",
     "1_PROJECTS/Clippings/Как научить ИИ не врать.pdf",
     "1_PROJECTS/Clippings/3 правила работы с ИИ.pdf",
-    "1_PROJECTS/ZEUS/Zeus_Valve_DN170",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
     "Archives/ChatGPT_Project_Knowledge/project_view.png",
     "1_PROJECTS/BOBOV/1000019882.jpg",
