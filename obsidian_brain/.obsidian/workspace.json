@@ -11,14 +11,12 @@
             "id": "d44461ac63ed11c8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "4_ARCHIVE/ChatGPT_Project_Knowledge/Chats/K_.md",
-                "mode": "source",
-                "source": false
+                "file": "1_PROJECTS/Clippings/3 правила работы с ИИ.pdf"
               },
-              "icon": "lucide-file",
-              "title": "K_"
+              "icon": "lucide-file-text",
+              "title": "3 правила работы с ИИ"
             }
           }
         ]
@@ -185,6 +183,7 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "4_ARCHIVE/ChatGPT_Project_Knowledge/Chats/K_.md",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
     "4_ARCHIVE/ChatGPT_Total_Dump/Приветствие беседы.md",
     "4_ARCHIVE/ChatGPT_Total_Dump/Приветствие и ответ.md",
