@@ -25,7 +25,7 @@
 
 ---
 **Связи:**
-- [[1_PROJECTS/Summaries/Project_FREELANCER_Summary|📂 Архивные данные по делу]]
+- [[1_PROJECTS/BOBOV/Case_History/Legal_Attack_2025|📂 Подробная история дела (Архив)]]
 - [[DASHBOARD|🚀 Центр управления]]
 
 > [!CAUTION]
