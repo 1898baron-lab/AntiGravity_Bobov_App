@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
+                "file": "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Design_Office/Tooling/Calculations/Frame_Fixture_Design_ASCII.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ESKD_BASIC_GUIDE"
+              "title": "Frame_Fixture_Design_ASCII"
             }
           }
         ]
@@ -185,6 +185,7 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
     "1_PROJECTS/ZEUS/ZEUS_LOG.md",
     "1_PROJECTS/ZEUS/EXTERNAL_FILES_INDEX.md",
     "1_PROJECTS/ZEUS/AUTOCADE_FIX.md",
@@ -216,7 +217,6 @@
     "2_KNOWLEDGE/Archived_Notes_Backup/_Skills",
     "2_KNOWLEDGE/Archived_Notes_Backup/_Inbox",
     "2_KNOWLEDGE/Archived_Notes_Backup/_AI_EXCHANGE/TO_CHATGPT.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/_AI_EXCHANGE/FROM_CHATGPT.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/_AI_EXCHANGE",
     "2_KNOWLEDGE/Archived_Notes_Backup/Tasks",
     "2_KNOWLEDGE/Archived_Notes_Backup/Projects",
