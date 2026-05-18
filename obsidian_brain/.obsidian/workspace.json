@@ -11,12 +11,14 @@
             "id": "d44461ac63ed11c8",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "2_KNOWLEDGE/WIKI/AI/3 расширения для работы с NotebookLM.pdf"
+                "file": "2_KNOWLEDGE/WIKI/Data/prompt-improver.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "3 расширения для работы с NotebookLM"
+              "icon": "lucide-file",
+              "title": "prompt-improver"
             }
           }
         ]
@@ -183,6 +185,14 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "2_KNOWLEDGE/WIKI/Business/Как_Google_навсегда_изменил_документы_таблицы_презентации_диск_и.md",
+    "2_KNOWLEDGE/WIKI/Business/Как_Google_навсегда_изменил_документы_таблицы_презентации_диск_и.pdf",
+    "2_KNOWLEDGE/WIKI/AI/Claude-Design-обзор.pdf",
+    "2_KNOWLEDGE/WIKI/AI/gem_2_prompt_engineer.md",
+    "2_KNOWLEDGE/WIKI/AI/Чек-лист_расширений_для_NotebookLM.pdf",
+    "2_KNOWLEDGE/WIKI/AI/5 google gems.pdf",
+    "2_KNOWLEDGE/WIKI/AI/5 google gems.md",
+    "2_KNOWLEDGE/WIKI/AI/3 расширения для работы с NotebookLM.pdf",
     "2_KNOWLEDGE/WIKI/AI/3 расширения для работы с NotebookLM.md",
     "2_KNOWLEDGE/SYNTHESIS/ZEUS_MASTER_DOSSIER.md",
     "2_KNOWLEDGE/SYNTHESIS/MASTODONT_INFRASTRUCTURE.md",
@@ -207,18 +217,10 @@
     "1_PROJECTS/MARCH_YACHTS/Catamaran_Design/Steering_Kinematics_3dsMax.md",
     "1_PROJECTS/MARCH_YACHTS/MARCH_Project_State.md",
     "1_PROJECTS/MARCH_YACHTS/Hull_Technology",
-    "1_PROJECTS/MARCH_YACHTS/Catamaran_Design",
-    "1_PROJECTS/MARCH_YACHTS",
     "1_PROJECTS/ZEUS/Zeus_Modernization_2026.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/vpn_troubleshooting.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/MASTADONT_DASHBOARD.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/Home.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/CLAUDE.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/Knowledge_Base/user_profile.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Pilot_Stapel_1200x800_TZ.md",
-    "1_PROJECTS/ZEUS/MAIN_TZ.pdf",
-    "1_PROJECTS/Clippings/Как научить ИИ не врать.pdf",
-    "1_PROJECTS/Clippings/3 правила работы с ИИ.pdf",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
     "Archives/ChatGPT_Project_Knowledge/project_view.png",
     "1_PROJECTS/BOBOV/1000019882.jpg",
