@@ -13,8 +13,8 @@ Write-Host "--- AntiGravity: GitHub Exclusive Sync ---" -ForegroundColor Cyan
 Write-Host "Mode: Git Pull/Push (Cloud Mirror)" -ForegroundColor Gray
 
 # 1. Проверка Git
-if (-not (Test-Path $git)) {
-    Write-Host "ERROR: Portable Git not found at $git" -ForegroundColor Red
+if (-not (Get-Command $git -ErrorAction SilentlyContinue)) {
+    Write-Host "ERROR: Git not found in PATH or at $git" -ForegroundColor Red
     exit 1
 }
 
