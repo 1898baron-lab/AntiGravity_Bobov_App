@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_KNOWLEDGE/WIKI/Health/gem_3_health_assistant.md",
+                "file": "2_KNOWLEDGE/KNOWLEDGE_INDEX.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "gem_3_health_assistant"
+              "title": "KNOWLEDGE_INDEX"
             }
           }
         ]
@@ -185,6 +185,13 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "2_KNOWLEDGE/Welding_Standards_Comparison.md",
+    "2_KNOWLEDGE/WIKI/WebDevelopment/Сайт_c_Claude_Code.pdf",
+    "2_KNOWLEDGE/WIKI/WebDevelopment/Сайт_c_Claude_Code.md",
+    "2_KNOWLEDGE/WIKI/Technical/prompt-improver.md",
+    "2_KNOWLEDGE/WIKI/Productivity/Claude + Notion- универсальная связка агентов.pdf",
+    "2_KNOWLEDGE/WIKI/Productivity/Claude + Notion- универсальная связка агентов.md",
+    "2_KNOWLEDGE/WIKI/Health/gem_3_health_assistant.md",
     "2_KNOWLEDGE/WIKI/Engineering/Топ-3 правила CLAUDE.md для идеального вайбкодинга.pdf",
     "2_KNOWLEDGE/WIKI/Data/prompt-improver.md",
     "2_KNOWLEDGE/WIKI/Business/Как_Google_навсегда_изменил_документы_таблицы_презентации_диск_и.md",
@@ -204,23 +211,15 @@
     "2_KNOWLEDGE/Engineering/TZ/ZEUS_Main_TZ.md",
     "2_KNOWLEDGE/Engineering/TZ/main_tz.pdf",
     "2_KNOWLEDGE/Engineering/Specs/Epoxy_Painting_Guide.md",
-    "2_KNOWLEDGE/Welding_Standards_Comparison.md",
     "2_KNOWLEDGE/GOST_References.md",
     "1_PROJECTS/FFU/FFU_Assembly_Tree.md",
     "1_PROJECTS/FFU",
     "1_PROJECTS/ZAKRJEP/ZAKRJEP_2026_Pilot.md",
-    "1_PROJECTS/ZAKRJEP",
     "1_PROJECTS/MANGAL/Mangal_Flange_Calc.md",
     "1_PROJECTS/KUPE/KUPE_Spec.md",
     "1_PROJECTS/KUPE/KUPE_Pneumo_Scheme.md",
     "1_PROJECTS/KUPE/KUPE_Clamp_Node.md",
-    "1_PROJECTS/KUPE",
     "1_PROJECTS/MARCH_YACHTS/Hull_Technology/SIS_Technology_Notes.md",
-    "1_PROJECTS/MARCH_YACHTS/Catamaran_Design/Steering_Kinematics_3dsMax.md",
-    "1_PROJECTS/MARCH_YACHTS/MARCH_Project_State.md",
-    "1_PROJECTS/MARCH_YACHTS/Hull_Technology",
-    "1_PROJECTS/ZEUS/Zeus_Modernization_2026.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/vpn_troubleshooting.md",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
     "Archives/ChatGPT_Project_Knowledge/project_view.png",
     "1_PROJECTS/BOBOV/1000019882.jpg",
