@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Knowledge_Base/PTO_Standard_Guidelines.md",
+                "file": "1_PROJECTS/KOMPAS_LEARNING/📚 Трекер обучения КОМПАС-3D.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PTO_Standard_Guidelines"
+              "title": "📚 Трекер обучения КОМПАС-3D"
             }
           }
         ]
@@ -185,8 +185,11 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
-    "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Knowledge_Base/Incident_Analysis_Akkuyu.md",
     "1_PROJECTS/KOMPAS_LEARNING/📋 План работы по клапану DN170.md",
+    "2_KNOWLEDGE/Archived_Notes_Backup/_Skills/Legal_Attack_Skill.md",
+    "2_KNOWLEDGE/Archived_Notes_Backup/_Skills/Engineering_Review_Skill.md",
+    "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Knowledge_Base/PTO_Standard_Guidelines.md",
+    "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Knowledge_Base/Incident_Analysis_Akkuyu.md",
     "1_PROJECTS/KOMPAS_LEARNING/📚 Трекер обучения КОМПАС-3D.md",
     "1_PROJECTS/KUPE/KUPE_Project_State.md",
     "1_PROJECTS/KUPE/KUPE_Pneumo_Scheme.md",
@@ -214,11 +217,8 @@
     "2_KNOWLEDGE/WIKI/Productivity/Claude + Notion- универсальная связка агентов.md",
     "2_KNOWLEDGE/WIKI/Health/gem_3_health_assistant.md",
     "2_KNOWLEDGE/WIKI/Engineering/Топ-3 правила CLAUDE.md для идеального вайбкодинга.pdf",
-    "2_KNOWLEDGE/WIKI/Data/prompt-improver.md",
-    "2_KNOWLEDGE/WIKI/Business/Как_Google_навсегда_изменил_документы_таблицы_презентации_диск_и.md",
     "2_KNOWLEDGE/WIKI/Business/Как_Google_навсегда_изменил_документы_таблицы_презентации_диск_и.pdf",
     "2_KNOWLEDGE/WIKI/AI/Claude-Design-обзор.pdf",
-    "2_KNOWLEDGE/WIKI/AI/gem_2_prompt_engineer.md",
     "2_KNOWLEDGE/WIKI/AI/Чек-лист_расширений_для_NotebookLM.pdf",
     "2_KNOWLEDGE/WIKI/AI/5 google gems.pdf",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
