@@ -105,7 +105,7 @@ async def list_tools() -> List[Tool]:
                 "type": "object",
                 "properties": {
                     "prompt": {"type": "string", "description": "Запрос к нейросети"},
-                    "model": {"type": "string", "description": "Модель (например, deepseek-r1:8b)", "default": "deepseek-r1:8b"}
+                    "model": {"type": "string", "description": "Модель (например, gemma4:latest)", "default": "gemma4:latest"}
                 },
                 "required": ["prompt"]
             }
@@ -127,7 +127,7 @@ async def call_tool(name: str, arguments: dict) -> List[TextContent]:
 
     elif name == "ask_ollama":
         prompt = arguments.get("prompt", "")
-        model = arguments.get("model", "deepseek-r1:8b")
+        model = arguments.get("model", "gemma4:latest")
         data = {"model": model, "prompt": prompt, "stream": False}
         try:
             req = urllib.request.Request(OLLAMA_URL, data=json.dumps(data).encode('utf-8'), headers={'Content-Type': 'application/json'})
