@@ -42,4 +42,4 @@
 - [[1_PROJECTS/Summaries/Сообщение для друзей_Summary|Сообщение для друзей]]
 - [[1_PROJECTS/Summaries/ТЭО на понтон_Summary|ТЭО на понтон]]
 ---
-[Вернуться в DASHBOARD]([[DASHBOARD]])
+[[DASHBOARD|Вернуться в DASHBOARD]]

@@ -19,4 +19,4 @@
 - Пропорции смешивания строго по весам, а не по объему.
 
 ---
-[Вернуться к Досье ZEUS]([[2_KNOWLEDGE/SYNTHESIS/ZEUS_MASTER_DOSSIER]])
+[[2_KNOWLEDGE/SYNTHESIS/ZEUS_MASTER_DOSSIER|Вернуться к Досье ZEUS]]

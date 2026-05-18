@@ -12,4 +12,4 @@
 - [[3_META/api_specs/docs/aiBoomb_NotebookLM_Source|NotebookLM Source Guide]]
 
 ---
-[Вернуться в DASHBOARD]([[DASHBOARD]])
+[[DASHBOARD|Вернуться в DASHBOARD]]
