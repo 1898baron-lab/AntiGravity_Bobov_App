@@ -10,11 +10,13 @@ from mcp.server.stdio import stdio_server
 from mcp.types import Tool, TextContent
 
 # Настройка логирования
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', filename='mcp_obsidian_ollama.log')
+LOG_FILE = Path(__file__).parent / 'mcp_obsidian_ollama.log'
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', filename=str(LOG_FILE))
 logger = logging.getLogger("mcp_obsidian_ollama")
 
 # Загрузка переменных окружения
-load_dotenv(".env.mcp")
+ENV_PATH = Path(__file__).parent.parent / '.env.mcp'
+load_dotenv(ENV_PATH)
 
 KNOWLEDGE_PATH = Path(os.getenv("KNOWLEDGE_PATH", "c:/ANTIGRAVITY/1/obsidian_brain/")).resolve()
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/api/generate")
