@@ -44,6 +44,12 @@ load_dotenv(os.path.join(BASE_DIR, ".env"))
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 if not BOT_TOKEN:
+    # Попробуем найти в корне проекта, если файл был перенесен в архив
+    ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", ".."))
+    load_dotenv(os.path.join(ROOT_DIR, ".env"))
+    BOT_TOKEN = os.getenv("BOT_TOKEN")
+
+if not BOT_TOKEN and __name__ == "__main__":
     print("[ERROR] BOT_TOKEN not found in .env file")
     sys.exit(1)
 
