@@ -8,30 +8,24 @@ tokens = load_cached_tokens()
 os.environ['NOTEBOOKLM_AUTHUSER'] = '0'
 client = NotebookLMClient(cookies=tokens.cookies, csrf_token="", session_id="")
 
-# Find the Bobov notebook
-notebook_id = None
-nbs = client.list_notebooks()
-for nb in nbs:
-    if "Бобова" in nb.title or "Bobov" in nb.title:
-        notebook_id = nb.id
-        print(f"Found notebook: {nb.title} -> {nb.id}")
-        break
+notebook_id = "fa23a402-6e1b-4f36-8820-5128a4f18f90"
 
-if not notebook_id:
-    print("ERROR: Bobov notebook not found.")
-    sys.exit(1)
-
-# Delete old partial version first
-sources = client.list_sources(notebook_id)
+# Get sources and delete old partial version
+sources = client.get_notebook_sources_with_types(notebook_id)
+print(f"Found {len(sources)} sources in notebook")
 for s in sources:
-    if "Gemini_Chat_Bobov" in s.title or "Gemini_Chat_Extraction" in s.title:
-        print(f"Deleting old source: {s.title} ({s.id})")
-        client.delete_source(s.id)
+    title = getattr(s, 'title', str(s))
+    sid = getattr(s, 'id', None)
+    print(f"  - {title} ({sid})")
+    if sid and ("Gemini_Chat_Bobov" in title or "Gemini_Chat_Extraction" in title):
+        print(f"    -> Deleting old source: {title}")
+        client.delete_source(sid)
 
 # Upload the full 31-message version
 filepath = r"C:\ANTIGRAVITY\1\obsidian_brain\1_PROJECTS\BOBOV\Gemini_Chat_Full.md"
 with open(filepath, 'r', encoding='utf-8') as f:
     content = f.read()
 
+print(f"\nUploading full chat ({len(content)} chars, {len(content)//1024} KB)...")
 source_id = client.add_text_source(notebook_id, text=content, title="Gemini_Chat_Bobov_FULL_31msg.md")
-print(f"Uploaded full chat ({len(content)} chars): {source_id}")
+print(f"Done: {source_id}")
