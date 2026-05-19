@@ -15,38 +15,69 @@ for item in cookie_str.split('; '):
 TARGET_URL = 'https://gemini.google.com/u/1/app/d0cd10e79a509c2c?pageId=none'
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(headless=True)
-    context = browser.new_context(viewport={"width": 1280, "height": 900})
+    # Use headed mode so Gemini renders fully like a real browser
+    browser = p.chromium.launch(headless=False)
+    context = browser.new_context(
+        viewport={"width": 1280, "height": 900},
+        user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    )
     context.add_cookies(cookies)
     page = context.new_page()
     
     print("Navigating to Gemini...")
     page.goto(TARGET_URL, timeout=60000)
     page.wait_for_selector('message-content', timeout=25000)
-    time.sleep(3)
+    time.sleep(4)
 
-    # Scroll to top to trigger loading of older messages
-    print("Scrolling to top to load all messages...")
-    prev_count = 0
-    for attempt in range(20):
-        page.evaluate("window.scrollTo(0, 0)")
-        time.sleep(1.5)
-        # Also try scrolling the chat container
+    print("Finding chat scroll container...")
+    # Dump all scrollable elements to find the right one
+    scroll_info = page.evaluate("""
+        () => {
+            const results = [];
+            document.querySelectorAll('*').forEach(el => {
+                const style = window.getComputedStyle(el);
+                const overflowY = style.overflowY;
+                if ((overflowY === 'auto' || overflowY === 'scroll') && el.scrollHeight > el.clientHeight + 100) {
+                    results.push({
+                        tag: el.tagName,
+                        id: el.id,
+                        className: el.className.substring(0, 80),
+                        scrollHeight: el.scrollHeight,
+                        clientHeight: el.clientHeight,
+                        scrollTop: el.scrollTop
+                    });
+                }
+            });
+            return results;
+        }
+    """)
+    print("Scrollable elements found:")
+    for el in scroll_info:
+        print(f"  <{el['tag']}> id={el['id']} class={el['className'][:50]} scrollH={el['scrollHeight']} clientH={el['clientHeight']} scrollTop={el['scrollTop']}")
+
+    # Try scrolling each one to the top
+    print("\nScrolling all scrollable elements to top and waiting...")
+    for attempt in range(15):
         page.evaluate("""
-            const scroller = document.querySelector('.conversation-container, [data-conversation-id], chat-window, .chat-history');
-            if (scroller) scroller.scrollTop = 0;
+            () => {
+                document.querySelectorAll('*').forEach(el => {
+                    const style = window.getComputedStyle(el);
+                    if ((style.overflowY === 'auto' || style.overflowY === 'scroll') && el.scrollHeight > el.clientHeight) {
+                        el.scrollTop = 0;
+                    }
+                });
+                window.scrollTo(0, 0);
+            }
         """)
-        time.sleep(1.5)
+        time.sleep(2)
         count = page.locator('message-content').count()
-        print(f"  Attempt {attempt+1}: {count} messages loaded")
-        if count == prev_count and attempt > 3:
-            print("  No new messages after scrolling, stopping.")
-            break
-        prev_count = count
+        print(f"  Attempt {attempt+1}: {count} messages")
+        if attempt > 5 and count == page.locator('message-content').count():
+            pass  # keep trying
 
-    # Final count
+    # Final extraction
     messages = page.locator('message-content').all_inner_texts()
-    print(f"Total messages extracted: {len(messages)}")
+    print(f"\nFinal count: {len(messages)} messages")
 
     output_path = r"C:\ANTIGRAVITY\1\obsidian_brain\1_PROJECTS\BOBOV\Gemini_Chat_Full.md"
     with open(output_path, 'w', encoding='utf-8') as f:
@@ -56,11 +87,4 @@ with sync_playwright() as p:
             f.write(f"---\n## Сообщение {i+1} [{role}]\n{msg}\n\n")
 
     print(f"Saved to {output_path}")
-
-    # Also save a raw HTML snapshot for manual inspection
-    html_path = r"C:\ANTIGRAVITY\1\obsidian_brain\1_PROJECTS\BOBOV\Gemini_Chat_Snapshot.html"
-    with open(html_path, 'w', encoding='utf-8') as f:
-        f.write(page.content())
-    print(f"HTML snapshot saved to {html_path}")
-
     browser.close()
