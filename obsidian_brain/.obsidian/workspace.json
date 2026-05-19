@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_KNOWLEDGE/Legal_Tactics/CAREER_PATH_BOBOV.md",
+                "file": "DASHBOARD.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CAREER_PATH_BOBOV"
+              "title": "DASHBOARD"
             }
           }
         ]
@@ -211,6 +211,10 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "INDEX.md",
+    "DASHBOARD.md",
+    "3_META/obsidian_and_mcp_guide.md",
+    "2_KNOWLEDGE/Legal_Tactics/CAREER_PATH_BOBOV.md",
     "1_PROJECTS/ZEUS/Design_History/Claude_Chat_Zeus_Cost.md",
     "4_ARCHIVE/ChatGPT_Projects/Claude_Chat_Custom_Skill.md",
     "1_PROJECTS/BOBOV/Claude_Chat_History_Bobov.md",
@@ -233,10 +237,6 @@
     "4_ARCHIVE/ChatGPT_Projects/PC__Software_Upgrade/Ноутбук для нейросетей.md",
     "4_ARCHIVE/ChatGPT_Projects/PC__Software_Upgrade/Конфигурация ПК для ТО.md",
     "4_ARCHIVE/ChatGPT_Projects/PC__Software_Upgrade/Видео анализ станка.md",
-    "4_ARCHIVE/ChatGPT_Projects/PC__Software_Upgrade/00_Оглавление_PC _ Software Upgrade.md",
-    "4_ARCHIVE/ChatGPT_Projects/PC__Software_Upgrade/00_INDEX_PC _ Software Upgrade.md",
-    "4_ARCHIVE/ChatGPT_Projects/Gemini_Prompt_Creation/00_INDEX_Gemini Prompt Creation.md",
-    "4_ARCHIVE/ChatGPT_Projects/EAGLE_Project/Работа с Микро.md",
     "2_KNOWLEDGE/AI_Business",
     "0_INBOX",
     "1_PROJECTS/BOBOV/Gemini_Chat_Snapshot.html",
