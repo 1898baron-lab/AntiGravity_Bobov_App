@@ -164,6 +164,16 @@
               "icon": "lucide-list",
               "title": "Структура AutoCAD_Troubleshooting_Log"
             }
+          },
+          {
+            "id": "71dd4a95127f5999",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
           }
         ]
       }
@@ -180,7 +190,10 @@
       "daily-notes:Сегодняшняя заметка": false,
       "templates:Вставить шаблон": false,
       "command-palette:Открыть палитру команд": false,
-      "bases:Создать новую базу": false
+      "bases:Создать новую базу": false,
+      "obsidian-git:Open Git source control": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Создать новый чертеж": false
     }
   },
   "active": "d44461ac63ed11c8",
