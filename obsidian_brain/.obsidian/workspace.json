@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "INDEX.md",
+                "file": "DASHBOARD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "INDEX"
+              "title": "DASHBOARD"
             }
           }
         ]
@@ -209,11 +209,12 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b84c1c8fa5391108",
+  "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "INDEX.md",
+    "Excalidraw/Scripts/AntiGravity Dashboard Builder.md",
     "Excalidraw/Scripts",
     "DASHBOARD.md",
-    "INDEX.md",
     "Excalidraw/AntiGravity_Dashboard.excalidraw.md",
     "0_INBOX/📰 Дайджест новостей ИИ и Obsidian 2026-05-19.md",
     "2_KNOWLEDGE/STUDY_GUIDE.md",
@@ -246,7 +247,6 @@
     "1_PROJECTS/ZEUS/build_zakrep_fixture.py",
     "1_PROJECTS/ZEUS/kompas_dn170_builder.py",
     "1_PROJECTS/Clippings/Как научить ИИ не врать.pdf",
-    "1_PROJECTS/Clippings/3 правила работы с ИИ.pdf",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
     "Archives/ChatGPT_Project_Knowledge/project_view.png",
     "1_PROJECTS/BOBOV/1000019882.jpg",
