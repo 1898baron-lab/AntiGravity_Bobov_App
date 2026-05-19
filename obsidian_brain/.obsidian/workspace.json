@@ -190,7 +190,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -208,8 +209,9 @@
       "obsidian-kanban:Create new board": false
     }
   },
-  "active": "b89e757c536a31da",
+  "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "0_INBOX/📰 Дайджест новостей ИИ и Obsidian 2026-05-19.md",
     "0_INBOX/📰 Новости ИИ 2026-05-19.md",
     "0_INBOX",
     "1_PROJECTS/BOBOV/Gemini_Chat_Snapshot.html",
@@ -243,7 +245,6 @@
     "2_KNOWLEDGE/NOTEBOOKLM_SYCH/KNOWLEDGE_MAP_SUMMARIES.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/_Skills/Legal_Attack_Skill.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/_Skills/Engineering_Review_Skill.md",
-    "Archives/ChatGPT_Projects/Технология_машиностроения/Изучение_файлов.md",
     "Archives/ChatGPT_Projects/ВЕЛИК_2025_-_Ronin_Elite_L",
     "Archives/ChatGPT_Projects/Технология_машиностроения",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
