@@ -58,3 +58,31 @@
 2026-05-19T05:55:54Z ERR Request failed error="read tcp 127.0.0.1:50073->127.0.0.1:8766: wsarecv: An existing connection was forcibly closed by the remote host." connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
 2026-05-19T05:55:54Z ERR Request failed error="read tcp 127.0.0.1:60820->127.0.0.1:8766: wsarecv: An existing connection was forcibly closed by the remote host." connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
 2026-05-19T05:55:54Z ERR Request failed error="read tcp 127.0.0.1:50066->127.0.0.1:8766: wsarecv: An existing connection was forcibly closed by the remote host." connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:03:33Z ERR  error="stream 205 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:03:33Z ERR Request failed error="stream 205 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:03:37Z ERR  error="stream 213 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:03:37Z ERR Request failed error="stream 213 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:03:43Z ERR  error="stream 221 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:03:43Z ERR Request failed error="stream 221 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:04:22Z ERR  error="stream 229 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:04:22Z ERR Request failed error="stream 229 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:04:27Z ERR  error="stream 237 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:04:27Z ERR Request failed error="stream 237 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:04:32Z ERR  error="stream 245 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:04:32Z ERR Request failed error="stream 245 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:07:32Z ERR  error="stream 253 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:07:32Z ERR Request failed error="stream 253 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:07:37Z ERR  error="stream 261 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:07:37Z ERR Request failed error="stream 261 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:07:40Z ERR  error="stream 269 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:07:40Z ERR Request failed error="stream 269 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:07:45Z ERR  error="stream 277 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:07:45Z ERR Request failed error="stream 277 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:07:50Z ERR  error="stream 285 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:07:50Z ERR Request failed error="stream 285 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:08:07Z ERR  error="stream 293 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:08:07Z ERR Request failed error="stream 293 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:08:12Z ERR  error="stream 301 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:08:12Z ERR Request failed error="stream 301 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
+2026-05-19T06:08:17Z ERR  error="stream 309 canceled by remote with error code 0" connIndex=0 event=1 ingressRule=0 originService=http://127.0.0.1:8766
+2026-05-19T06:08:17Z ERR Request failed error="stream 309 canceled by remote with error code 0" connIndex=0 dest=https://advertisement-ground-scuba-morning.trycloudflare.com/sse event=0 ip=198.41.200.73 type=http
