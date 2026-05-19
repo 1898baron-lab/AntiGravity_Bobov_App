@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DASHBOARD.md",
+                "file": "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DASHBOARD"
+              "title": "ESKD_BASIC_GUIDE"
             }
           }
         ]
@@ -186,6 +186,7 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "DASHBOARD.md",
     "INDEX.md",
     "4_ARCHIVE/ZAKREP/ZAKRJEP_2026_Pilot.md",
     "4_ARCHIVE/ZAKREP/build_zakrep_fixture.py",
@@ -207,7 +208,6 @@
     "1_PROJECTS/Clippings/Как научить ИИ не врать.pdf",
     "1_PROJECTS/Clippings/3 правила работы с ИИ.pdf",
     "1_PROJECTS/KOMPAS_LEARNING/📋 План работы по клапану DN170.md",
-    "DASHBOARD.md",
     "3_META/AUDIT_2026-05-18.md",
     "2_KNOWLEDGE/NOTEBOOKLM_SYCH/KNOWLEDGE_MAP_SUMMARIES.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/_Skills/Legal_Attack_Skill.md",
