@@ -14,8 +14,18 @@ for item in cookie_str.split('; '):
 
 TARGET_URL = 'https://gemini.google.com/u/1/app/d0cd10e79a509c2c?pageId=none'
 
+def scroll_infinite_scroller_to_top(page):
+    """Scrolls the Gemini INFINITE-SCROLLER element all the way to top."""
+    return page.evaluate("""
+        () => {
+            const scroller = document.querySelector('infinite-scroller');
+            if (!scroller) return 'NOT_FOUND';
+            scroller.scrollTop = 0;
+            return `scrollTop=${scroller.scrollTop}, scrollHeight=${scroller.scrollHeight}`;
+        }
+    """)
+
 with sync_playwright() as p:
-    # Use headed mode so Gemini renders fully like a real browser
     browser = p.chromium.launch(headless=False)
     context = browser.new_context(
         viewport={"width": 1280, "height": 900},
@@ -27,55 +37,26 @@ with sync_playwright() as p:
     print("Navigating to Gemini...")
     page.goto(TARGET_URL, timeout=60000)
     page.wait_for_selector('message-content', timeout=25000)
-    time.sleep(4)
+    time.sleep(5)
 
-    print("Finding chat scroll container...")
-    # Dump all scrollable elements to find the right one
-    scroll_info = page.evaluate("""
-        () => {
-            const results = [];
-            document.querySelectorAll('*').forEach(el => {
-                const style = window.getComputedStyle(el);
-                const overflowY = style.overflowY;
-                if ((overflowY === 'auto' || overflowY === 'scroll') && el.scrollHeight > el.clientHeight + 100) {
-                    results.push({
-                        tag: el.tagName,
-                        id: el.id,
-                        className: el.className.substring(0, 80),
-                        scrollHeight: el.scrollHeight,
-                        clientHeight: el.clientHeight,
-                        scrollTop: el.scrollTop
-                    });
-                }
-            });
-            return results;
-        }
-    """)
-    print("Scrollable elements found:")
-    for el in scroll_info:
-        print(f"  <{el['tag']}> id={el['id']} class={el['className'][:50]} scrollH={el['scrollHeight']} clientH={el['clientHeight']} scrollTop={el['scrollTop']}")
-
-    # Try scrolling each one to the top
-    print("\nScrolling all scrollable elements to top and waiting...")
-    for attempt in range(15):
-        page.evaluate("""
-            () => {
-                document.querySelectorAll('*').forEach(el => {
-                    const style = window.getComputedStyle(el);
-                    if ((style.overflowY === 'auto' || style.overflowY === 'scroll') && el.scrollHeight > el.clientHeight) {
-                        el.scrollTop = 0;
-                    }
-                });
-                window.scrollTo(0, 0);
-            }
-        """)
-        time.sleep(2)
+    prev_count = 0
+    stable_rounds = 0
+    print("Scrolling infinite-scroller to top repeatedly...")
+    for attempt in range(30):
+        result = scroll_infinite_scroller_to_top(page)
+        time.sleep(2.5)
         count = page.locator('message-content').count()
-        print(f"  Attempt {attempt+1}: {count} messages")
-        if attempt > 5 and count == page.locator('message-content').count():
-            pass  # keep trying
+        print(f"  [{attempt+1}] scroller={result} | messages={count}")
+        
+        if count == prev_count:
+            stable_rounds += 1
+            if stable_rounds >= 5:
+                print("  Count stable for 5 rounds, stopping.")
+                break
+        else:
+            stable_rounds = 0
+        prev_count = count
 
-    # Final extraction
     messages = page.locator('message-content').all_inner_texts()
     print(f"\nFinal count: {len(messages)} messages")
 
