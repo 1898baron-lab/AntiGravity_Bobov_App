@@ -70,13 +70,14 @@ mindmap
 
 ---
 
-## 🎯 КАНБАН-ДОСКИ ПРОЕКТОВ
+## 🎯 КАНБАН-ДОСКИ И ВИЗУАЛЬНЫЕ КАРТЫ
 
-| Проект | Канбан-доска |
+| Проект | Инструмент |
 |:---|:---|
 | ⚖️ Дело Бобова | [[1_PROJECTS/BOBOV/BOBOV_KANBAN\|📋 BOBOV_KANBAN]] |
 | 🎓 Обучение КОМПАС-3D | [[1_PROJECTS/KOMPAS_LEARNING/KOMPAS_KANBAN\|📋 KOMPAS_KANBAN]] |
-| 🛸 Визуальный пульт | [[Excalidraw/AntiGravity_Dashboard\|🗺️ AntiGravity Dashboard]] |
+| 🛸 Визуальный хаб (Excalidraw) | [[Excalidraw/AntiGravity_Hub\|🗺️ AntiGravity Hub — Интерактивная карта]] |
+| 🖼️ Dashboard (статичный) | [[Excalidraw/AntiGravity_Dashboard\|🖼️ AntiGravity Dashboard]] |
 
 ---
 
