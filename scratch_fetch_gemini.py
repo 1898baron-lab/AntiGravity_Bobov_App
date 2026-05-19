@@ -1,6 +1,5 @@
 import sys
 import os
-import json
 import time
 from playwright.sync_api import sync_playwright
 sys.stdout.reconfigure(encoding='utf-8')
@@ -12,10 +11,9 @@ for item in cookie_str.split('; '):
     if '=' in item:
         name, value = item.split('=', 1)
         cookies.append({
-            'name': name,
-            'value': value,
-            'domain': '.google.com',
-            'path': '/'
+            'name': name.strip(),
+            'value': value.strip(),
+            'url': 'https://gemini.google.com'
         })
 
 with sync_playwright() as p:
@@ -28,7 +26,7 @@ with sync_playwright() as p:
     print("Navigating to Gemini...")
     page.goto('https://gemini.google.com/u/1/app/d0cd10e79a509c2c?pageId=none', timeout=60000)
     page.wait_for_selector('message-content', timeout=20000)
-    time.sleep(2) # Allow for dynamic loading
+    time.sleep(5) # Allow for dynamic loading
     
     # Extract the messages
     messages = page.locator('message-content').all_inner_texts()
