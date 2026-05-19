@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
+                "file": "DASHBOARD.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ESKD_BASIC_GUIDE"
+              "title": "DASHBOARD"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "deacec21ed0dfb0a",
@@ -186,9 +185,10 @@
   },
   "active": "d44461ac63ed11c8",
   "lastOpenFiles": [
+    "INDEX.md",
+    "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
     "1_PROJECTS/BOBOV/Property_Damage_Report.md",
     "DASHBOARD.md",
-    "INDEX.md",
     "4_ARCHIVE/ZAKREP/ZAKRJEP_2026_Pilot.md",
     "4_ARCHIVE/ZAKREP/build_zakrep_fixture.py",
     "4_ARCHIVE/ZAKREP/zakrep_fixture_design.md",
@@ -218,7 +218,6 @@
     "Archives/ChatGPT_Projects/ВЕЛИК_2025_-_Ronin_Elite_L",
     "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Projects/Project_Catalog.md",
     "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Standards/OST_95_Series_Summary.md",
-    "2_KNOWLEDGE/Archived_Notes_Backup/Engineering/Standards/Internship_Knowledge_Check.md",
     "Archives/ChatGPT_Projects/Технология_машиностроения",
     "Archives/ChatGPT_Projects",
     "Archives",
