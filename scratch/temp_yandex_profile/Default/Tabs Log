@@ -1,0 +1,17 @@
+
+2026-05-19 05:34:50.081 [0] InitSessionLog done
+2026-05-19 05:34:50.081 [0] ReadLastSessionCommands
+2026-05-19 05:34:50.081 [0]   LegacySessionState
+2026-05-19 05:34:50.081 [1]   Init
+2026-05-19 05:34:50.085 [0]   Init done
+2026-05-19 05:34:50.085 [0]   ReadCommandsFromFile
+2026-05-19 05:34:50.085 [0]   Session file not found
+2026-05-19 05:34:50.085 [-4]   ! Read error
+2026-05-19 05:34:50.085 [1]   ReadCommandsFromFile done: -1 (0/no mraker)
+2026-05-19 05:34:50.085 [0] ReadLastSessionCommands done
+2026-05-19 05:34:57.417 [14] AppendCommandsWithReset
+2026-05-19 05:34:57.417 [0] TruncateOrOpenFile
+2026-05-19 05:34:57.417 [0] OpenAndWriteHeader
+2026-05-19 05:34:57.418 [0] OpenAndWriteHeader done
+2026-05-19 05:34:57.418 [0] TruncateOrOpenFile done
+2026-05-19 05:34:57.422 [0] CommandStorageBackend done

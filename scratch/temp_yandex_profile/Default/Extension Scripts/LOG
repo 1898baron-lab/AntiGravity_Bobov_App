@@ -1,0 +1,6 @@
+2026/05/19-10:34:50.085 8a1c File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Extension Scripts is locked for recovering successfully
+2026/05/19-10:34:50.085 8a1c Creating DB C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Extension Scripts since it was missing.
+2026/05/19-10:34:50.089 8a1c Reusing MANIFEST C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Extension Scripts/MANIFEST-000001
+2026/05/19-10:34:57.420 c31c Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Extension Scripts, waiting for background work finished
+2026/05/19-10:34:57.420 c31c Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Extension Scripts, background work finished
+2026/05/19-10:34:57.421 c31c File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Extension Scripts unlocked successfully

@@ -1,0 +1,6 @@
+2026/05/19-10:34:50.051 e16c File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Site Characteristics Database is locked for recovering successfully
+2026/05/19-10:34:50.051 e16c Creating DB C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Site Characteristics Database since it was missing.
+2026/05/19-10:34:50.060 e16c Reusing MANIFEST C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Site Characteristics Database/MANIFEST-000001
+2026/05/19-10:34:57.420 e0c Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Site Characteristics Database, waiting for background work finished
+2026/05/19-10:34:57.421 e0c Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Site Characteristics Database, background work finished
+2026/05/19-10:34:57.423 e0c File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Site Characteristics Database unlocked successfully

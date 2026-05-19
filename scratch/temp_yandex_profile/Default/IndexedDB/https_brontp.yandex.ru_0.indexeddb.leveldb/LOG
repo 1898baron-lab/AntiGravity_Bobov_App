@@ -1,0 +1,6 @@
+2026/05/19-10:34:50.709 b1f8 File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\IndexedDB\https_brontp.yandex.ru_0.indexeddb.leveldb is locked for recovering successfully
+2026/05/19-10:34:50.709 b1f8 Creating DB C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\IndexedDB\https_brontp.yandex.ru_0.indexeddb.leveldb since it was missing.
+2026/05/19-10:34:50.714 b1f8 Reusing MANIFEST C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\IndexedDB\https_brontp.yandex.ru_0.indexeddb.leveldb/MANIFEST-000001
+2026/05/19-10:34:57.424 b118 Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\IndexedDB\https_brontp.yandex.ru_0.indexeddb.leveldb, waiting for background work finished
+2026/05/19-10:34:57.425 b118 Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\IndexedDB\https_brontp.yandex.ru_0.indexeddb.leveldb, background work finished
+2026/05/19-10:34:57.425 b118 File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\IndexedDB\https_brontp.yandex.ru_0.indexeddb.leveldb unlocked successfully

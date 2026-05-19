@@ -1,0 +1,6 @@
+2026/05/19-10:34:50.039 d24c File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Sync Data\LevelDB is locked for recovering successfully
+2026/05/19-10:34:50.040 d24c Creating DB C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Sync Data\LevelDB since it was missing.
+2026/05/19-10:34:50.048 d24c Reusing MANIFEST C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Sync Data\LevelDB/MANIFEST-000001
+2026/05/19-10:34:57.422 c784 Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Sync Data\LevelDB, waiting for background work finished
+2026/05/19-10:34:57.422 c784 Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Sync Data\LevelDB, background work finished
+2026/05/19-10:34:57.422 c784 File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Sync Data\LevelDB unlocked successfully

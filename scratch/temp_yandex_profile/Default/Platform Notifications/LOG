@@ -1,0 +1,6 @@
+2026/05/19-10:34:50.183 7214 File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Platform Notifications is locked for recovering successfully
+2026/05/19-10:34:50.184 7214 Creating DB C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Platform Notifications since it was missing.
+2026/05/19-10:34:50.188 7214 Reusing MANIFEST C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Platform Notifications/MANIFEST-000001
+2026/05/19-10:34:57.424 c26c Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Platform Notifications, waiting for background work finished
+2026/05/19-10:34:57.424 c26c Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Platform Notifications, background work finished
+2026/05/19-10:34:57.424 c26c File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Platform Notifications unlocked successfully

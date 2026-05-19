@@ -1,0 +1,6 @@
+2026/05/19-10:34:50.183 df38 File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\shared_proto_db\metadata is locked for recovering successfully
+2026/05/19-10:34:50.183 df38 Creating DB C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\shared_proto_db\metadata since it was missing.
+2026/05/19-10:34:50.187 df38 Reusing MANIFEST C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\shared_proto_db\metadata/MANIFEST-000001
+2026/05/19-10:34:57.440 d24c Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\shared_proto_db\metadata, waiting for background work finished
+2026/05/19-10:34:57.440 d24c Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\shared_proto_db\metadata, background work finished
+2026/05/19-10:34:57.465 d24c File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\shared_proto_db\metadata unlocked successfully

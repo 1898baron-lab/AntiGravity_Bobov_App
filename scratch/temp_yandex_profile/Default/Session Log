@@ -1,0 +1,36 @@
+
+2026-05-19 05:34:50.054 [0] InitSessionLog done
+2026-05-19 05:34:50.055 [1] New session 26.4.1.1026 (spaces: 1)
+2026-05-19 05:34:50.055 [0] ScheduleResetCommands
+2026-05-19 05:34:50.055 [0] ClearPendingCommands
+2026-05-19 05:34:50.055 [0] RegisterProfile background mode
+2026-05-19 05:34:50.060 [38] AddKeepAlive: keep_alives=2
+2026-05-19 05:34:50.067 [1] OpenTabsInBrowser
+2026-05-19 05:34:50.069 [1] AddKeepAlive: keep_alives=3
+2026-05-19 05:34:50.115 [0] WindowOpened
+2026-05-19 05:34:50.116 [1] OnSpaceAdded: 344432705
+2026-05-19 05:34:50.116 [1] OnActiveSpaceChanged
+2026-05-19 05:34:50.131 [1] OnTabInsertedAt: tabs=1, pinned=0, space=344432705
+2026-05-19 05:34:50.136 [0] ActiveTabChanged
+2026-05-19 05:34:50.142 [0] ! SkipEntry
+2026-05-19 05:34:50.164 [0] Session restored
+2026-05-19 05:34:50.164 [0] OnWindowsAndTabsRestored
+2026-05-19 05:34:50.165 [0] LegacySessionState
+2026-05-19 05:34:50.165 [0] ! LostTabs=0; LostPinnedTabs=47
+2026-05-19 05:34:50.165 [0] ! Tabs cannot be restored
+2026-05-19 05:34:50.165 [1] Launch
+2026-05-19 05:34:50.344 [1] OnTabInsertedAt: tabs=2, pinned=0, space=344432705
+2026-05-19 05:34:50.348 [1] ActiveTabChanged
+2026-05-19 05:34:53.555 [6] AddKeepAlive: keep_alives=3
+2026-05-19 05:34:54.978 [57] AppendCommandsWithReset
+2026-05-19 05:34:54.978 [1] Init
+2026-05-19 05:34:54.978 [0] Init done
+2026-05-19 05:34:54.978 [0] TruncateOrOpenFile
+2026-05-19 05:34:54.978 [0] OpenAndWriteHeader
+2026-05-19 05:34:54.978 [0] OpenAndWriteHeader done
+2026-05-19 05:34:54.978 [0] TruncateOrOpenFile done
+2026-05-19 05:34:54.981 [18] AddKeepAlive: keep_alives=4
+2026-05-19 05:34:54.981 [18] RemoveKeepAlive: keep_alives=3
+2026-05-19 05:34:55.189 [6] RemoveKeepAlive: keep_alives=2
+2026-05-19 05:34:57.335 [11] AppendCommands
+2026-05-19 05:34:57.335 [0] CommandStorageBackend done

@@ -1,0 +1,6 @@
+2026/05/19-10:34:50.168 9fb8 File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Session Storage is locked for recovering successfully
+2026/05/19-10:34:50.169 9fb8 Creating DB C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Session Storage since it was missing.
+2026/05/19-10:34:50.180 9fb8 Reusing MANIFEST C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Session Storage/MANIFEST-000001
+2026/05/19-10:34:57.422 9fb8 Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Session Storage, waiting for background work finished
+2026/05/19-10:34:57.422 9fb8 Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Session Storage, background work finished
+2026/05/19-10:34:57.424 9fb8 File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Session Storage unlocked successfully

@@ -1,0 +1,6 @@
+2026/05/19-10:34:50.374 b960 File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Extension State is locked for recovering successfully
+2026/05/19-10:34:50.374 b960 Creating DB C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Extension State since it was missing.
+2026/05/19-10:34:50.378 b960 Reusing MANIFEST C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Extension State/MANIFEST-000001
+2026/05/19-10:34:57.424 c31c Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Extension State, waiting for background work finished
+2026/05/19-10:34:57.424 c31c Deletion DBImpl for C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Extension State, background work finished
+2026/05/19-10:34:57.425 c31c File C:\ANTIGRAVITY\1\scratch\temp_yandex_profile\Default\Extension State unlocked successfully
