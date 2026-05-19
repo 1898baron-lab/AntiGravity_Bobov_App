@@ -1,0 +1,44 @@
+2026/05/18-13:30:17.522 a368 Reusing MANIFEST C:\Users\Sasha  Baron\AppData\Roaming\Claude\Local Storage\leveldb/MANIFEST-000001
+2026/05/18-13:30:17.527 a368 Recovering log #136
+2026/05/18-13:30:17.529 a368 Level-0 table #139: started
+2026/05/18-13:30:17.535 a368 Level-0 table #139: 575993 bytes OK
+2026/05/18-13:30:17.537 a368 Delete type=0 #136
+2026/05/18-13:31:17.560 8af0 Level-0 table #142: started
+2026/05/18-13:31:17.576 8af0 Level-0 table #142: 683162 bytes OK
+2026/05/18-13:31:17.577 8af0 Delete type=0 #140
+2026/05/18-13:35:26.506 8af0 Level-0 table #144: started
+2026/05/18-13:35:26.513 8af0 Level-0 table #144: 682785 bytes OK
+2026/05/18-13:35:26.514 8af0 Delete type=0 #141
+2026/05/18-13:35:26.514 8af0 Compacting 4@0 + 1@1 files
+2026/05/18-13:35:26.526 8af0 Generated table #145@0: 14 keys, 684512 bytes
+2026/05/18-13:35:26.526 8af0 Compacted 4@0 + 1@1 files => 684512 bytes
+2026/05/18-13:35:26.527 8af0 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/18-13:35:26.527 8af0 Delete type=2 #135
+2026/05/18-13:35:26.527 8af0 Delete type=2 #137
+2026/05/18-13:35:26.527 8af0 Delete type=2 #139
+2026/05/18-13:35:26.527 8af0 Delete type=2 #142
+2026/05/18-13:35:26.527 8af0 Delete type=2 #144
+2026/05/18-13:40:05.212 8af0 Level-0 table #147: started
+2026/05/18-13:40:05.223 8af0 Level-0 table #147: 682796 bytes OK
+2026/05/18-13:40:05.225 8af0 Delete type=0 #143
+2026/05/18-13:45:05.225 8af0 Level-0 table #149: started
+2026/05/18-13:45:05.234 8af0 Level-0 table #149: 682409 bytes OK
+2026/05/18-13:45:05.235 8af0 Delete type=0 #146
+2026/05/18-14:27:59.605 8af0 Level-0 table #151: started
+2026/05/18-14:27:59.613 8af0 Level-0 table #151: 682397 bytes OK
+2026/05/18-14:27:59.614 8af0 Delete type=0 #148
+2026/05/18-14:32:57.271 8af0 Level-0 table #153: started
+2026/05/18-14:32:57.283 8af0 Level-0 table #153: 682409 bytes OK
+2026/05/18-14:32:57.284 8af0 Delete type=0 #150
+2026/05/18-14:32:57.284 8af0 Compacting 4@0 + 1@1 files
+2026/05/18-14:32:57.297 8af0 Generated table #154@0: 14 keys, 684024 bytes
+2026/05/18-14:32:57.297 8af0 Compacted 4@0 + 1@1 files => 684024 bytes
+2026/05/18-14:32:57.297 8af0 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/05/18-14:32:57.298 8af0 Delete type=2 #145
+2026/05/18-14:32:57.298 8af0 Delete type=2 #147
+2026/05/18-14:32:57.298 8af0 Delete type=2 #149
+2026/05/18-14:32:57.298 8af0 Delete type=2 #151
+2026/05/18-14:32:57.298 8af0 Delete type=2 #153
+2026/05/18-14:46:14.794 8af0 Level-0 table #156: started
+2026/05/18-14:46:14.802 8af0 Level-0 table #156: 682407 bytes OK
+2026/05/18-14:46:14.804 8af0 Delete type=0 #152
