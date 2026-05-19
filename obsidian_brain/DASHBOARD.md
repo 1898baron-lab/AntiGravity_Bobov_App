@@ -59,7 +59,8 @@ mindmap
 
 ---
 
-## 🐘 СИСТЕМНОЕ ОКРУЖЕНИЕ И RAG-БОТ MASTODONT
+## 🐘 СИСТЕМНОЕ ОКРУЖЕНИЕ, RAG И ИИ-БИЗНЕС
+*   [[2_KNOWLEDGE/AI_Business/AI_Business_Strategy_2026|🚀 ИИ-Автоматизация Бизнеса в СНГ 2026]] — Инструменты за 0$, связки B2B, безопасность по 152-ФЗ, ROI-математика.
 *   [[2_KNOWLEDGE/SYNTHESIS/MASTODONT_INFRASTRUCTURE|🐘 Архитектура бота MASTODONT, RAG-база и стриминг]]
 *   [[3_META/PROJECT_STATE|🚩 Системный статус проекта (PROJECT_STATE.md)]]
 
