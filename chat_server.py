@@ -350,9 +350,27 @@ class Handler(http.server.BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
+    socketserver.TCPServer.allow_reuse_address = True
+    srv = None
+    for port_attempt in range(PORT, PORT + 10):
+        try:
+            srv = socketserver.TCPServer(("", port_attempt), Handler)
+            PORT = port_attempt
+            break
+        except OSError:
+            continue
+
+    if not srv:
+        print("[AntiGravity] Blocker: Ports 5050-5059 are all busy!")
+        sys.exit(1)
+
     print(f"[AntiGravity] Local Chat Server zapushchen!")
     print(f"   Otkroj v brauzere: http://localhost:{PORT}")
     print(f"   Ollama: {OLLAMA_URL}")
     print(f"   Ostanovit: Ctrl+C\n")
-    with socketserver.TCPServer(("", PORT), Handler) as srv:
+    
+    try:
         srv.serve_forever()
+    except KeyboardInterrupt:
+        print("\n[AntiGravity] Server stopped.")
+        srv.server_close()
