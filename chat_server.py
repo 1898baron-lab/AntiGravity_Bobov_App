@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
 """
-🛸 AntiGravity Local Chat Server
+AntiGravity Local Chat Server
 Запускает красивый веб-чат на localhost:5050, подключённый к Ollama.
 Зависимости: НОЛЬ (только стандартная библиотека Python).
 """
 import http.server
 import json
 import socketserver
+import sys
 import urllib.error
 import urllib.request
 from pathlib import Path
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 PORT = 5050
 OLLAMA_URL = "http://localhost:11434"
