@@ -55,13 +55,23 @@ def normalize_query(query: str) -> List[str]:
 
 
 def score_document(text: str, query_tokens: List[str]) -> int:
+    """
+    Продвинутый скоринг с двумя факторами:
+    1. log1p(count) — сглаживает влияние огромных файлов с высокой частотой.
+    2. unique_matches^3 — сильно поднимает документы, покрывающие БОЛЬШЕ слов запроса.
+    """
     if not query_tokens:
         return 0
     lower = text.lower()
-    score = 0
+    score = 0.0
+    unique_matches = 0
     for token in query_tokens:
-        score += lower.count(token) * 10
-    return score
+        count = lower.count(token)
+        if count > 0:
+            unique_matches += 1
+            score += math.log1p(count) * 10.0
+    # Кубический буст за покрытие: документ с 3 из 3 слов >> документа с 1 из 3
+    return int(score * (unique_matches ** 3))
 
 
 def build_context(query: str, max_words: int = 800) -> Tuple[str, List[str]]:
