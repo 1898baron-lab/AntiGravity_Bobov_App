@@ -8,11 +8,13 @@ SEARCH_EXTENSIONS = {".md", ".txt"}
 
 # Основные пути
 KNOWLEDGE_BASE = ROOT / "knowledge_base"
+OBSIDIAN_BRAIN = ROOT / "obsidian_brain"
 DOCS_DIR = ROOT / ".docs"
 
 # Директории для поиска (только база знаний по умолчанию)
 DEFAULT_SEARCH_PATHS = [
     KNOWLEDGE_BASE,
+    OBSIDIAN_BRAIN,
 ]
 
 CHAT_HISTORY_FILE = KNOWLEDGE_BASE / "archive" / "chat_history.md"
