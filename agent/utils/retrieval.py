@@ -74,6 +74,25 @@ def score_document(text: str, query_tokens: List[str]) -> int:
     return int(score * (unique_matches ** 3))
 
 
+def extract_relevant_snippet(content: str, query_tokens: List[str], window: int = 250) -> str:
+    """Извлекает кусок текста вокруг первого совпадения с ключевыми словами запроса."""
+    lower = content.lower()
+    best_pos = len(content)
+    for token in query_tokens:
+        pos = lower.find(token)
+        if 0 <= pos < best_pos:
+            best_pos = pos
+    if best_pos == len(content):
+        # Совпадений нет — берём начало
+        words = content.split()
+        return " ".join(words[:window])
+    # Берём окно слов вокруг найденной позиции
+    prefix = content[:best_pos]
+    start_word = max(0, len(prefix.split()) - window // 2)
+    words = content.split()
+    return " ".join(words[start_word: start_word + window])
+
+
 def build_context(query: str, max_words: int = 800) -> Tuple[str, List[str]]:
     query_tokens = normalize_query(query)
     documents = list_document_paths(DEFAULT_SEARCH_PATHS)
@@ -84,9 +103,14 @@ def build_context(query: str, max_words: int = 800) -> Tuple[str, List[str]]:
             content = path.read_text(encoding="utf-8")
         except Exception:
             continue
-        score = score_document(content, query_tokens)
-        if score > 0:
-            scored.append((score, path, content))
+        raw_score = score_document(content, query_tokens)
+        if raw_score <= 0:
+            continue
+        # Штраф за размер: делим на log размера файла в KB (минимум 1)
+        file_kb = max(1.0, len(content) / 1024.0)
+        size_penalty = math.log1p(file_kb)
+        final_score = raw_score / size_penalty
+        scored.append((final_score, path, content))
 
     scored.sort(key=lambda item: item[0], reverse=True)
 
@@ -96,15 +120,17 @@ def build_context(query: str, max_words: int = 800) -> Tuple[str, List[str]]:
 
     for _, path, content in scored:
         words = content.split()
-        if word_count + len(words) <= max_words:
+        remaining = max_words - word_count
+        if remaining <= 0:
+            break
+        if len(words) <= remaining:
             context_blocks.append(f"--- ФАЙЛ: {path.name} ---\n{content}\n")
             word_count += len(words)
-            included_files.append(str(path.relative_to(Path.cwd())))
         else:
-            snippet = " ".join(words[:300])
+            snippet = extract_relevant_snippet(content, query_tokens, window=min(remaining, 300))
             context_blocks.append(f"--- ФАЙЛ: {path.name} (фрагмент) ---\n{snippet}...\n")
-            included_files.append(str(path.relative_to(Path.cwd())))
-            break
+            word_count += len(snippet.split())
+        included_files.append(str(path.relative_to(Path.cwd())))
 
     return "\n".join(context_blocks), included_files
 
