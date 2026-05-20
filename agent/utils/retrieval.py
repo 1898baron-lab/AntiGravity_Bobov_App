@@ -24,14 +24,43 @@ def list_document_paths(paths: Iterable[Path]) -> List[Path]:
     return sorted(files)
 
 
+STOP_WORDS = {
+    "для", "или", "как", "это", "что", "этот", "все", "всех", "был", "была", "было", "были", 
+    "какая", "какой", "какое", "какие", "под", "над", "при", "про", "без", "около", 
+    "перед", "через", "после", "между", "один", "два", "три", "ваш", "ваша", "ваше", "ваши",
+    "твой", "твоя", "твое", "твои", "свой", "своя", "свое", "свои"
+}
+
+
+def stem_word(word: str) -> str:
+    word = word.lower()
+    if not re.match(r"^[а-яё]+$", word):
+        return word
+    # Усекаем падежные окончания русских существительных и прилагательных
+    word = re.sub(r"(ами|ями|ов|ев|ам|ям|ах|ях|ом|ем|ой|ей|ия|ию|ие|ии|ия|ы|и|а|я|о|е|у|ю)$", "", word)
+    return word
+
+
 def normalize_query(query: str) -> List[str]:
     tokens = re.findall(r"\w+", query.lower())
-    return [token for token in tokens if len(token) > 2]
+    result = []
+    for token in tokens:
+        if len(token) <= 2:
+            continue
+        if token in STOP_WORDS:
+            continue
+        result.append(stem_word(token))
+    return result
 
 
 def score_document(text: str, query_tokens: List[str]) -> int:
+    if not query_tokens:
+        return 0
     lower = text.lower()
-    return sum(lower.count(token) for token in query_tokens)
+    score = 0
+    for token in query_tokens:
+        score += lower.count(token) * 10
+    return score
 
 
 def build_context(query: str, max_words: int = 800) -> Tuple[str, List[str]]:
