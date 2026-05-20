@@ -350,9 +350,9 @@ class Handler(http.server.BaseHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    print(f"🛸 AntiGravity Local Chat запущен!")
-    print(f"   Открой в браузере: http://localhost:{PORT}")
+    print(f"[AntiGravity] Local Chat Server zapushchen!")
+    print(f"   Otkroj v brauzere: http://localhost:{PORT}")
     print(f"   Ollama: {OLLAMA_URL}")
-    print(f"   Остановить: Ctrl+C\n")
+    print(f"   Ostanovit: Ctrl+C\n")
     with socketserver.TCPServer(("", PORT), Handler) as srv:
         srv.serve_forever()
