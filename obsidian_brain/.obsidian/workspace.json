@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DASHBOARD.md",
+                "file": "2_KNOWLEDGE/STUDY_GUIDE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "DASHBOARD"
+              "title": "STUDY_GUIDE"
             }
           }
         ]
@@ -211,10 +211,11 @@
   },
   "active": "14a3a7799b062e26",
   "lastOpenFiles": [
-    "0_INBOX/📰 Новости ИИ 2026-05-21.md",
-    "1_PROJECTS/KOMPAS_LEARNING/📚 Трекер обучения КОМПАС-3D.md",
     "DASHBOARD.md",
+    "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
     "INDEX.md",
+    "1_PROJECTS/KOMPAS_LEARNING/📚 Трекер обучения КОМПАС-3D.md",
+    "0_INBOX/📰 Новости ИИ 2026-05-21.md",
     "3_META/PROJECT_STATE.md",
     "1_PROJECTS/ZEUS/weight_calculation_report.md",
     "1_PROJECTS/KOMPAS_LEARNING/KOMPAS_KANBAN.md",
@@ -239,7 +240,6 @@
     "1_PROJECTS/Summaries/Gemma 4 E2B-it обзор_Summary.md",
     "1_PROJECTS/PROJECTS_INDEX.md",
     "1_PROJECTS/Summaries/ChatGPT Prompt Creation_Summary.md",
-    "1_PROJECTS/Summaries/Project_EAGLE Project_Summary.md",
     "1_PROJECTS/Downloads_GDrive_Parsed/Ткачев В.В_Презентация_Out_Pic_Новая папка_Сводка.txt",
     "1_PROJECTS/Downloads_GDrive_Parsed/Ткачев В.В_Презентация_Out_Pic_Сводка.txt",
     "1_PROJECTS/Downloads_GDrive_Parsed/Ткачев В.В_Презентация_COREL_Сводка.txt",
