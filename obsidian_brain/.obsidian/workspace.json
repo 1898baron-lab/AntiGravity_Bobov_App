@@ -11,14 +11,12 @@
             "id": "14a3a7799b062e26",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "DASHBOARD.md",
-                "mode": "source",
-                "source": false
+                "file": "1_PROJECTS/BOBOV/Сроки давности и дальнейшие действия.pdf"
               },
-              "icon": "lucide-file",
-              "title": "DASHBOARD"
+              "icon": "lucide-file-text",
+              "title": "Сроки давности и дальнейшие действия"
             }
           }
         ]
@@ -211,18 +209,25 @@
   },
   "active": "14a3a7799b062e26",
   "lastOpenFiles": [
+    "1_PROJECTS/BOBOV/Разбор ст. 131 ГПК и отказа в возбуждении дела.pdf",
+    "1_PROJECTS/BOBOV/Клапан_запорный_Ду_170_Эскизы_31_03_26.pdf",
+    "1_PROJECTS/BOBOV/1000019882.jpg",
+    "0_INBOX/📰 Дайджест новостей ИИ и Obsidian 2026-05-19.md",
+    "0_INBOX/📰 Новости ИИ 2026-05-20.md",
+    "4_ARCHIVE/ZAKREP/ZAKRJEP_2026_Pilot.md",
+    "4_ARCHIVE/ZAKREP/zakrep_fixture_design.md",
+    "DASHBOARD.md",
+    "1_PROJECTS/BOBOV/BOBOV_KANBAN.md",
+    "Excalidraw/AntiGravity_Dashboard.md",
     "INDEX.md",
     "2_KNOWLEDGE/STUDY_GUIDE.md",
-    "DASHBOARD.md",
     "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
     "1_PROJECTS/KOMPAS_LEARNING/📚 Трекер обучения КОМПАС-3D.md",
     "0_INBOX/📰 Новости ИИ 2026-05-21.md",
     "3_META/PROJECT_STATE.md",
     "1_PROJECTS/ZEUS/weight_calculation_report.md",
     "1_PROJECTS/KOMPAS_LEARNING/KOMPAS_KANBAN.md",
-    "Excalidraw/AntiGravity_Dashboard.md",
     "Excalidraw/AntiGravity_Hub.md",
-    "1_PROJECTS/BOBOV/BOBOV_KANBAN.md",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/project_view.png",
     "4_ARCHIVE/ChatGPT_Project_Knowledge/Chats/K_.md",
     "Excalidraw/Scripts/AntiGravity Dashboard Builder.md",
@@ -233,13 +238,8 @@
     "1_PROJECTS/KOMPAS_LEARNING/Тема 6. Состав изделия и спецификация.md",
     "1_PROJECTS/KOMPAS_LEARNING/Тема 2. Сборка червячной передачи.md",
     "2_KNOWLEDGE/WIKI/AI/Как_использовать_расширения_NotebookLM.md",
-    "1_PROJECTS/KOMPAS_LEARNING/📋 План работы по клапану DN170.md",
     "1_PROJECTS/Clippings/Как научить ИИ не врать.pdf",
     "1_PROJECTS/Clippings/3 правила работы с ИИ.pdf",
-    "0_INBOX/📰 Новости ИИ 2026-05-20.md",
-    "0_INBOX/📰 Дайджест новостей ИИ и Obsidian 2026-05-19.md",
-    "1_PROJECTS/Summaries/Gemma 4 E2B-it обзор_Summary.md",
-    "1_PROJECTS/PROJECTS_INDEX.md",
     "1_PROJECTS/Downloads_GDrive_Parsed/Ткачев В.В_Презентация_Out_Pic_Новая папка_Сводка.txt",
     "1_PROJECTS/Downloads_GDrive_Parsed/Ткачев В.В_Презентация_Out_Pic_Сводка.txt",
     "1_PROJECTS/Downloads_GDrive_Parsed/Ткачев В.В_Презентация_COREL_Сводка.txt",
@@ -247,9 +247,7 @@
     "1_PROJECTS/Downloads_GDrive_Parsed/Ткачев В.В_Презентация_Сводка.txt",
     "1_PROJECTS/Downloads_GDrive_Parsed/Ткачев В.В_Клапан_Сводка.txt",
     "1_PROJECTS/Downloads_GDrive_Parsed/Ткачев В.В_Attachments_KOBobov@rosatom.ru_2026-04-21_12-29-54_Сводка.txt",
-    "1_PROJECTS/Downloads_GDrive_Parsed/Ткачев В.В_Сводка.txt",
     "Archives/ChatGPT_Project_Knowledge/project_view.png",
-    "1_PROJECTS/BOBOV/1000019882.jpg",
     "1_PROJECTS/BOBOV/evidence/Дело Бобова_ Хроника крушения клуба маломерных суд.svg",
     "1_PROJECTS/BOBOV/evidence/IMG_0137.JPG",
     "1_PROJECTS/BOBOV/evidence/IMG_0136.JPG",
