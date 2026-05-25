@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meat Boutique | Order Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050505;
+            --card: #111111;
+            --accent: #E31E24;
+            --text: #F5F5F5;
+            --sub: #888888;
+            --transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Syne', sans-serif;
+            margin: 0;
+            padding: 4vw;
+            min-height: 100vh;
+        }
+
+        .container { max-width: 1300px; margin: 0 auto; }
+
+        h1 { font-size: clamp(2.5rem, 6vw, 5rem); font-weight: 800; text-transform: uppercase; line-height: 0.8; margin-bottom: 60px; }
+
+        /* Bento Grid */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 320px) 240px;
+            gap: 20px;
+        }
+
+        .item {
+            background: var(--card);
+            border-radius: 40px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Layout areas */
+        .item:nth-child(1) { grid-area: 1 / 1 / 3 / 3; } /* Карбонад */
+        .item:nth-child(2) { grid-area: 1 / 3 / 2 / 4; } /* Птица */
+        .item:nth-child(3) { grid-area: 1 / 4 / 3 / 5; background: var(--accent); } /* Карпаччо */
+        .item:nth-child(4) { grid-area: 2 / 3 / 4 / 4; } /* Пельмени */
+        .item:nth-child(5) { grid-area: 3 / 1 / 4 / 2; } /* Говядина */
+        .item:nth-child(6) { grid-area: 3 / 2 / 4 / 3; } /* Фарш */
+        .item:nth-child(7) { grid-area: 3 / 4 / 4 / 5; } /* Грудинка */
+
+        .item:hover { transform: scale(0.98); background: #161616; border-color: var(--accent); }
+        .item:nth-child(3):hover { background: #ff2a2a; }
+
+        /* Typography */
+        .tag { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 3px; color: var(--accent); margin-bottom: 15px; display: block; }
+        .item:nth-child(3) .tag { color: rgba(255,255,255,0.6); }
+        
+        .title { font-size: 2rem; font-weight: 700; margin-bottom: 10px; line-height: 1; }
+        .price { font-size: 3.5rem; font-weight: 800; letter-spacing: -2px; }
+        .currency { font-size: 1.2rem; color: var(--sub); margin-left: 5px; }
+
+        /* Button Order */
+        .order-btn {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 100px;
+            font-family: 'Syne', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            width: fit-content;
+            margin-top: 20px;
+        }
+
+        .order-btn:hover { background: white; color: black; border-color: white; }
+        .item:nth-child(3) .order-btn { border-color: rgba(255,255,255,0.4); }
+        .item:nth-child(3) .order-btn:hover { background: white; color: var(--accent); }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(15px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+
+        .modal-content {
+            background: #111;
+            padding: 60px;
+            border-radius: 40px;
+            max-width: 500px;
+            width: 90%;
+            border: 1px solid rgba(255,255,255,0.1);
+            position: relative;
+        }
+
+        .modal-content h2 { font-size: 2.5rem; margin-top: 0; text-transform: uppercase; }
+
+        input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #333;
+            padding: 15px 0;
+            color: white;
+            font-family: 'Syne', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus { border-bottom-color: var(--accent); }
+
+        .submit-btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 20px;
+            width: 100%;
+            border-radius: 100px;
+            font-weight: 800;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-family: 'Syne', sans-serif;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 30px; right: 30px;
+            cursor: pointer;
+            font-size: 1.5rem;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 1000px) {
+            .bento-grid { display: flex; flex-direction: column; }
+            .item { min-height: 350px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Meat<br>Selection</h1>
+
+        <div class="bento-grid">
+            <div class="item" data-product="Запеченный карбонад">
+                <div><span class="tag">Premium</span><div class="title">Запеченный<br>карбонад</div></div>
+                <div><div class="price">950<span class="currency">RUB</span></div><button class="order-btn">Заказать</button></div>
+            </div>
+
+            <div class="item" data-product="Тушка птицы">
+                <div><span class="tag">Basic</span><div class="title">Тушка птицы</div></div>
+                <div><div class="price">195<span class="currency">RUB</span></div><button class="order-btn">Заказать</button></div>
+            </div>
+
+            <div class="item" data-product="Карпаччо">
+                <div><span class="tag">Exclusive</span><div class="title">Карпаччо<br>говяжье</div></div>
+                <div><div class="price" style="color: white;">900<span class="currency">RUB</span></div><button class="order-btn">Заказать</button></div>
+            </div>
+
+            <div class="item" data-product="Крафтовые пельмени">
+                <div><span class="tag">Tradition</span><div class="title">Крафтовые<br>пельмени</div></div>
+                <div><div class="price" style="font-size: 2rem;">570 / 530<span class="currency">RUB</span></div><button class="order-btn">Заказать</button></div>
+            </div>
+
+            <div class="item" data-product="Говядина отборная">
+                <div class="title">Говядина</div>
+                <div><div class="price" style="font-size: 2.2rem;">750</div><button class="order-btn">Заказать</button></div>
+            </div>
+
+            <div class="item" data-product="Фарш">
+                <div class="title">Фарш</div>
+                <div><div class="price" style="font-size: 2.2rem;">680</div><button class="order-btn">Заказать</button></div>
+            </div>
+
+            <div class="item" data-product="Грудинка">
+                <div class="title">Грудинка</div>
+                <div><div class="price" style="font-size: 2.2rem;">700</div><button class="order-btn">Заказать</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="overlay">
+        <div class="modal-content">
+            <div class="close-modal" id="closeBtn">✕</div>
+            <h2 id="modalTitle">Заказ</h2>
+            <form>
+                <input type="text" placeholder="ВАШЕ ИМЯ" required>
+                <input type="tel" placeholder="ТЕЛЕФОН" required>
+                <input type="hidden" id="productInput">
+                <button type="submit" class="submit-btn">Оформить доставку</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const overlay = document.getElementById('overlay');
+        const closeBtn = document.getElementById('closeBtn');
+        const modalTitle = document.getElementById('modalTitle');
+        const productInput = document.getElementById('productInput');
+
+        document.querySelectorAll('.order-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const product = e.target.closest('.item').dataset.product;
+                modalTitle.innerText = product;
+                productInput.value = product;
+                overlay.classList.add('active');
+            });
+        });
+
+        closeBtn.addEventListener('click', () => overlay.classList.remove('active'));
+        overlay.addEventListener('click', (e) => { if(e.target === overlay) overlay.classList.remove('active'); });
+    </script>
+</body>
+</html>
