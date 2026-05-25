@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "2_KNOWLEDGE/STUDY_GUIDE.md",
+                "file": "DASHBOARD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "STUDY_GUIDE"
+              "title": "DASHBOARD"
             }
           }
         ]
@@ -211,9 +211,10 @@
   },
   "active": "14a3a7799b062e26",
   "lastOpenFiles": [
+    "INDEX.md",
+    "2_KNOWLEDGE/STUDY_GUIDE.md",
     "DASHBOARD.md",
     "2_KNOWLEDGE/ESKD/ESKD_BASIC_GUIDE.md",
-    "INDEX.md",
     "1_PROJECTS/KOMPAS_LEARNING/📚 Трекер обучения КОМПАС-3D.md",
     "0_INBOX/📰 Новости ИИ 2026-05-21.md",
     "3_META/PROJECT_STATE.md",
@@ -239,7 +240,6 @@
     "0_INBOX/📰 Дайджест новостей ИИ и Obsidian 2026-05-19.md",
     "1_PROJECTS/Summaries/Gemma 4 E2B-it обзор_Summary.md",
     "1_PROJECTS/PROJECTS_INDEX.md",
-    "1_PROJECTS/Summaries/ChatGPT Prompt Creation_Summary.md",
     "1_PROJECTS/Downloads_GDrive_Parsed/Ткачев В.В_Презентация_Out_Pic_Новая папка_Сводка.txt",
     "1_PROJECTS/Downloads_GDrive_Parsed/Ткачев В.В_Презентация_Out_Pic_Сводка.txt",
     "1_PROJECTS/Downloads_GDrive_Parsed/Ткачев В.В_Презентация_COREL_Сводка.txt",
